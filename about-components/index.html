@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        About components &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/assets/scss/origin.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Origin
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/principles/">
+    Principles
+  </a>
+  <a class="menu-item " href="/code-style/">
+    Code style
+  </a>
+  <a class="menu-item " href="/about-utilities/">
+    About utilities
+  </a>
+  <a class="menu-item selected" href="/about-components/">
+    About components
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/border/">
+    border
+  </a>
+  <a class="menu-item " href="/border-radius/">
+    border-radius
+  </a>
+  <a class="menu-item " href="/color/">
+    color
+  </a>
+  <a class="menu-item " href="/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/font-weight/">
+    font-weight
+  </a>
+  <a class="menu-item " href="/list-item/">
+    list-item
+  </a>
+  <a class="menu-item " href="/spacing/">
+    spacing
+  </a>
+  <a class="menu-item " href="/z-index/">
+    z-index
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/button/">
+    Button
+  </a>
+  <a class="menu-item " href="/segmented-control/">
+    Segmented Control
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      About components
+    </h1>
+    <div class="markdown-body">
+      <p>A component is a self-contained collection of HTML, CSS, and often JS, that performs a specific function. Buttons, cards, dialogs, tableviews, and navigation bars are all examples of components. Each component should have a dedicated CSS file, and live in a distinct <code>/components</code> directory.</p>
+
+<p>Each component should implement a single part of the UI. Don’t try to do
+too much. In addition to core styles, components often have variants; modified states for specific contexts.</p>
+
+<p>Most components should not set their own width, margin, and positioning. By authoring a component to be full-width or inline, it can better adapt to the dimensions of an ancestral context.</p>
+
+<h2 id="component-scope">Component scope</h2>
+
+<p>The component’s core class name (e.g., <code>ComponentName</code>) reserves a namespace
+that can only be used by that component.</p>
+
+<p>All selectors in a component file must start with the component’s
+namespace. For example, a component called <code>MyComponent</code> could have the
+following CSS, where every selector starts with the string <code>MyComponent</code>.</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyComponent</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="nc">.MyComponent--large</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="nc">.MyComponent-title</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="nc">.MyComponent-image</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="nc">.MyComponent-text</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="nc">.MyComponent-time</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span></code></pre></div>
+
+<p>Each class provides a hook to style specific elements within the HTML definition.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">className=</span><span class="s">"MyComponent u-floatContainer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">className=</span><span class="s">"MyComponent-title"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">className=</span><span class="s">"MyComponent-image"</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">className=</span><span class="s">"MyComponent-text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">className=</span><span class="s">"MyComponent-time"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    ...
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="documenting-implementation-details">Documenting implementation details</h2>
+
+<p>Components must document their implementation. The CSS comments for a component
+should seek to answer the following questions:</p>
+
+<ul>
+  <li>What is the intended presentation?</li>
+  <li>What are the modifiers and states?</li>
+  <li>What are the reasons for specific, opaque property values.</li>
+  <li>What are the known limitations?</li>
+</ul>
+
+<p><a href="HTML-&amp;-CSS-code-style#css-comments">How to write your CSS comments</a></p>
+
+<h2 id="naming-components">Naming components</h2>
+<p>Syntax: <code>&lt;ComponentName&gt;[--modifierName|-descendentName]</code></p>
+
+<p>Component names should be in upper camel case. In addition to no other elements of our HTML &amp; CSS using upper camel case, there are several benefits:</p>
+
+<ul>
+  <li>It helps to distinguish between the classes for the root of the component, descendent elements, and modifications</li>
+  <li>It keeps the specificity of selectors low</li>
+  <li>It helps to decouple presentation semantics from document semantics</li>
+</ul>
+
+<h4 id="componentname">ComponentName</h4>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyComponent</span>
+<span class="nc">.TableView</span>
+<span class="nc">.DropdownMenu</span>
+<span class="nc">.Button</span>
+<span class="nc">.Card</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"MyComponent"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="componentname--modifiername">ComponentName–modifierName</h4>
+
+<p>A component modifier is a class that modifies the presentation of the base component in some form (for a certain configuration of the component)</p>
+
+<ul>
+  <li>Write modifier names in lower camel case</li>
+  <li>Separate modifiers from the component name by two hyphens</li>
+  <li>Include modifiers <em>in addition</em> to the base component class</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Core `SegmentedControl` styles */</span>
+
+<span class="nc">.SegmentedControl</span> <span class="p">{</span> <span class="cm">/* … */</span> <span class="p">}</span>
+
+<span class="cm">/* High-contrast `SegementedControl` styles */</span>
+
+<span class="nc">.SegmentedControl--contrastHigh</span> <span class="p">{</span> <span class="cm">/* … */</span> <span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"SegmentedControl SegmentedControl--contrastHigh"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="componentname-descendentname">ComponentName-descendentName</h4>
+
+<p>A component descendent is a class that is attached to a descendent (child) node of a component. It’s responsible for applying presentation directly to the descendent on behalf of a particular component. Write descendent names in lower camel case.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">className=</span><span class="s">"TableView"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">className=</span><span class="s">"TableView-cell"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">className=</span><span class="s">"TableView-cell-title"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">className=</span><span class="s">"TableView-cell-label"</span><span class="nt">&gt;</span>…<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></div>
+
+<h4 id="componentnameis-stateofcomponent">ComponentName.is-stateOfComponent</h4>
+
+<p>Use <code>is-stateName</code> to reflect changes to a component’s state. The state name must be lower camel case. <strong>Never style these classes directly; they should always be used as an adjoining class.</strong></p>
+
+<p>This means that the same state names can be used in multiple contexts, but every component must define its own styles for the state (as they are scoped to the component).</p>
+
+<p>Don’t use <code>is-stateName</code> classes when you should be using a <code>ComponentName--modifierName</code> class. <code>is-stateName</code> classes should only be used for <strong>temporary</strong> states (e.g. don’t use <code>is-flash</code> to create a flash notice when it should actually be <code>Notice--flash</code>).</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.DropdownMenu</span> <span class="p">{</span> <span class="cm">/* … */</span> <span class="p">}</span>
+<span class="nc">.DropdownMenu.is-expanded</span> <span class="p">{</span> <span class="cm">/* … */</span> <span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"DropdownMenu is-expanded"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="styling-dependencies">Styling dependencies</h3>
+
+<p><strong>A component should not know about the implementation of its dependencies</strong>.
+The appearance of dependencies must be configured using the interface they provide.</p>
+
+<p>Controlling dimensions, margins, position, and inheritable styles of a
+component can be done <em>indirectly</em>. Add a class to its root element, or wrap
+it in another element.</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Excerpt */</span>
+
+<span class="nc">.Excerpt</span> <span class="p">{</span>
+  <span class="cm">/* ... */</span>
+<span class="p">}</span>
+
+<span class="cm">/* Attaches to a nested component */</span>
+
+<span class="nc">.Excerpt-button</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Wraps a nested component */</span>
+
+<span class="nc">.Excerpt-wrapButton</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"Excerpt u-floatContainer"</span><span class="nt">&gt;</span>
+  
+
+  <span class="nt">&lt;read-button</span> <span class="na">class=</span><span class="s">"Excerpt-button"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/read-button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Excerpt-wrapButton"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;read-button&gt;</span>Read more<span class="nt">&lt;/read-button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span></code></pre></div>
+
+<h2 id="creating-components">Creating components</h2>
+<p>Our mobile app (nicknamed <a href="https://github.com/fac/fieldagent">fieldagent</a>) uses a number of components which we’ll be making global and sharing across our other projects over the coming months.</p>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright GitHub 2015.<br>
+        Created and maintained by the CSS team at GitHub. <strong>Currently v0.1.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

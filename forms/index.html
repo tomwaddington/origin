@@ -10,14 +10,17 @@
     <meta name="author" content="">
 
     <title>
-      Forms &middot; Primer
+        Forms &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="/docs.css">
+    <link rel="stylesheet" href="/assets/scss/origin.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
 
@@ -25,14 +28,14 @@
       <div class="container">
         <a href="/" class="masthead-logo">
           <span class="mega-octicon octicon-package"></span>
-          Primer
+          Origin
         </a>
 
         <nav class="masthead-nav">
           <a  href="/scaffolding">Docs</a>
           <a  href="/about">About</a>
-          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
-          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
         </nav>
       </div>
     </header>
@@ -43,54 +46,66 @@
       <div class="columns docs-layout">
   <div class="one-fourth column">
     
-      <nav class="menu docs-menu">
-  <a class="menu-item " href="/scaffolding/">
-    Scaffolding
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/principles/">
+    Principles
   </a>
-  <a class="menu-item " href="/layout/">
-    Layout
+  <a class="menu-item " href="/code-style/">
+    Code style
   </a>
-  <a class="menu-item " href="/type/">
-    Type
+  <a class="menu-item " href="/about-utilities/">
+    About utilities
   </a>
-  <a class="menu-item " href="/buttons/">
-    Buttons
-  </a>
-  <a class="menu-item selected" href="/forms/">
-    Forms
-  </a>
-  <a class="menu-item " href="/nav/">
-    Navigation
-  </a>
-  <a class="menu-item " href="/alerts/">
-    Alerts
-  </a>
-  <a class="menu-item " href="/blankslate/">
-    Blankslate
-  </a>
-  <a class="menu-item " href="/avatars/">
-    Avatars
-  </a>
-  <a class="menu-item " href="/states/">
-    States
-  </a>
-  <a class="menu-item " href="/tooltips/">
-    Tooltips
-  </a>
-  <a class="menu-item " href="/utilities/">
-    Utilities
+  <a class="menu-item " href="/about-components/">
+    About components
   </a>
 </nav>
 
+<h4 class="menu-title">
+  Utilities
+</h4>
 <nav class="menu docs-menu">
-  <a class="menu-item " href="/guidelines/">
-    Code guidelines
+  <a class="menu-item " href="/border/">
+    border
   </a>
-  <a class="menu-item " href="/colors/">
-    Colors
+  <a class="menu-item " href="/border-radius/">
+    border-radius
   </a>
-  <a class="menu-item " href="/markdown/">
-    Markdown
+  <a class="menu-item " href="/color/">
+    color
+  </a>
+  <a class="menu-item " href="/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/font-weight/">
+    font-weight
+  </a>
+  <a class="menu-item " href="/list-item/">
+    list-item
+  </a>
+  <a class="menu-item " href="/spacing/">
+    spacing
+  </a>
+  <a class="menu-item " href="/z-index/">
+    z-index
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/button/">
+    Button
+  </a>
+  <a class="menu-item " href="/segmented-control/">
+    Segmented Control
   </a>
 </nav>
 
@@ -110,26 +125,26 @@
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
-  <li><a href="#example-form" id="markdown-toc-example-form">Example form</a></li>
-  <li><a href="#form-contrast" id="markdown-toc-form-contrast">Form contrast</a></li>
-  <li><a href="#sizing" id="markdown-toc-sizing">Sizing</a>    <ul>
-      <li><a href="#mini" id="markdown-toc-mini">Mini</a></li>
-      <li><a href="#large" id="markdown-toc-large">Large</a></li>
-      <li><a href="#block" id="markdown-toc-block">Block</a></li>
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#example-form">Example form</a></li>
+  <li><a href="#form-contrast">Form contrast</a></li>
+  <li><a href="#sizing">Sizing</a>    <ul>
+      <li><a href="#mini">Mini</a></li>
+      <li><a href="#large">Large</a></li>
+      <li><a href="#block">Block</a></li>
     </ul>
   </li>
-  <li><a href="#selects" id="markdown-toc-selects">Selects</a>    <ul>
-      <li><a href="#custom" id="markdown-toc-custom">Custom</a></li>
-      <li><a href="#small" id="markdown-toc-small">Small</a></li>
+  <li><a href="#selects">Selects</a>    <ul>
+      <li><a href="#custom">Custom</a></li>
+      <li><a href="#small">Small</a></li>
     </ul>
   </li>
-  <li><a href="#form-groups" id="markdown-toc-form-groups">Form groups</a></li>
-  <li><a href="#form-group-validation" id="markdown-toc-form-group-validation">Form group validation</a></li>
-  <li><a href="#checkboxes-and-radios" id="markdown-toc-checkboxes-and-radios">Checkboxes and radios</a></li>
-  <li><a href="#input-group" id="markdown-toc-input-group">Input group</a></li>
-  <li><a href="#form-actions" id="markdown-toc-form-actions">Form actions</a></li>
+  <li><a href="#form-groups">Form groups</a></li>
+  <li><a href="#form-group-validation">Form group validation</a></li>
+  <li><a href="#checkboxes-and-radios">Checkboxes and radios</a></li>
+  <li><a href="#input-group">Input group</a></li>
+  <li><a href="#form-actions">Form actions</a></li>
 </ul>
 
 <h2 id="overview">Overview</h2>
@@ -145,7 +160,7 @@
 
 <p>Form controls in Primer currently have no basic layout specified (this is by design). You’ll need to use <code>&lt;fieldset&gt;</code>s, <code>&lt;div&gt;</code>s, or other elements and styles to rearrange them.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <label for="name">Name</label>
   <input type="text" id="name" />
 
@@ -190,7 +205,7 @@
 
 <p>Textual form controls have a white background by default. You can change this to a light gray with <code>.input-contrast</code>.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <input type="text" placeholder="Default input" />
   <input class="input-contrast" type="text" placeholder="Input with contrast" />
 </form></div>
@@ -205,7 +220,7 @@
 
 <h3 id="mini">Mini</h3>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <input class="input-mini" type="text" placeholder="Mini input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
@@ -214,7 +229,7 @@
 
 <h3 id="large">Large</h3>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <input class="input-large" type="text" placeholder="Large input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
@@ -223,7 +238,7 @@
 
 <h3 id="block">Block</h3>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <input class="input-block" type="text" placeholder="Full-width input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
@@ -234,7 +249,7 @@
 
 <p>Primer adds light <code>height</code> and <code>vertical-align</code> styles to <code>&lt;select&gt;</code>s for all browsers to render them consistently with textual inputs.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <select>
     <option>Choose an option</option>
     <option>Git</option>
@@ -261,7 +276,7 @@
 
 <p>Custom <code>&lt;select&gt;</code>s are also available—just add <code>.select</code>. <strong>Only available in latest WebKit, Firefox, and IE browsers.</strong></p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <select class="select">
     <option>Choose an option</option>
     <option>Git</option>
@@ -288,7 +303,7 @@
 
 <p>Use the <code>.select-sm</code> class to resize both default and custom <code>&lt;select&gt;</code>s to match the size of <a href="/buttons/#default-buttons">our small buttons</a>.</p>
 
-<div class="docs-example clearfix"><select class="select-sm">
+<div class="DocsExample-render clearfix"><select class="select-sm">
   <option>Choose an option</option>
   <option>Git</option>
   <option>Subversion</option>
@@ -329,7 +344,7 @@
 
 <h2 id="form-groups">Form groups</h2>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <dl class="form">
     <dt><label>Example Text</label></dt>
     <dd><input type="text" value="Example Value" /></dd>
@@ -376,7 +391,7 @@
 
 <p>Convey errors and warnings for form groups. Add the appropriate class—either <code>.errored</code> or <code>.warn</code>—to the <code>&lt;dl class="form"&gt;</code> to start. Then, house your error messaging in an additional <code>&lt;dd&gt;</code> with either <code>.error</code> or <code>.warning</code>.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <dl class="form errored">
     <dt><label>Example Text</label></dt>
     <dd><input type="text" value="Example Value" /></dd>
@@ -407,7 +422,7 @@
 
 <p>Utilities to spice up the alignment and styling of checkbox and radio controls.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <div class="form-checkbox">
     <label>
       <input type="checkbox" checked="checked" />
@@ -432,7 +447,7 @@
 
 <p>You may also add emphasis to the label:</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <div class="form-checkbox">
     <label>
       <input type="checkbox" checked="checked" />
@@ -453,7 +468,7 @@
 
 <p>Attached an input and button to one another.</p>
 
-<div class="docs-example clearfix"><form>
+<div class="DocsExample-render clearfix"><form>
   <div class="input-group">
     <input type="text" placeholder="Username" />
     <span class="input-group-button">
@@ -478,7 +493,7 @@
 
 <p>Align buttons to the right—via <code>float: right</code> on the buttons—in forms with <code>.form-actions</code>. The floats are automatically cleared for you.</p>
 
-<div class="docs-example clearfix"><div class="form-actions">
+<div class="DocsExample-render clearfix"><div class="form-actions">
   <button type="button" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn">Cancel</button>
 </div></div>
@@ -495,11 +510,11 @@
 
       <footer class="footer">
         Copyright GitHub 2015.<br>
-        Created and maintained by the CSS team at GitHub. <strong>Currently v2.3.3.</strong>
+        Created and maintained by the CSS team at GitHub. <strong>Currently v0.1.0.</strong>
       </footer>
     </div>
 
-    <script src="/js/anchor.min.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
     <script>
       var selector = '.markdown-body h2, .markdown-body h3';
       anchors.options = {

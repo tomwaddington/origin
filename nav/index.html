@@ -10,14 +10,17 @@
     <meta name="author" content="">
 
     <title>
-      Navigation &middot; Primer
+        Navigation &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="/docs.css">
+    <link rel="stylesheet" href="/assets/scss/origin.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
 
@@ -25,14 +28,14 @@
       <div class="container">
         <a href="/" class="masthead-logo">
           <span class="mega-octicon octicon-package"></span>
-          Primer
+          Origin
         </a>
 
         <nav class="masthead-nav">
           <a  href="/scaffolding">Docs</a>
           <a  href="/about">About</a>
-          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
-          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
         </nav>
       </div>
     </header>
@@ -43,54 +46,66 @@
       <div class="columns docs-layout">
   <div class="one-fourth column">
     
-      <nav class="menu docs-menu">
-  <a class="menu-item " href="/scaffolding/">
-    Scaffolding
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/principles/">
+    Principles
   </a>
-  <a class="menu-item " href="/layout/">
-    Layout
+  <a class="menu-item " href="/code-style/">
+    Code style
   </a>
-  <a class="menu-item " href="/type/">
-    Type
+  <a class="menu-item " href="/about-utilities/">
+    About utilities
   </a>
-  <a class="menu-item " href="/buttons/">
-    Buttons
-  </a>
-  <a class="menu-item " href="/forms/">
-    Forms
-  </a>
-  <a class="menu-item selected" href="/nav/">
-    Navigation
-  </a>
-  <a class="menu-item " href="/alerts/">
-    Alerts
-  </a>
-  <a class="menu-item " href="/blankslate/">
-    Blankslate
-  </a>
-  <a class="menu-item " href="/avatars/">
-    Avatars
-  </a>
-  <a class="menu-item " href="/states/">
-    States
-  </a>
-  <a class="menu-item " href="/tooltips/">
-    Tooltips
-  </a>
-  <a class="menu-item " href="/utilities/">
-    Utilities
+  <a class="menu-item " href="/about-components/">
+    About components
   </a>
 </nav>
 
+<h4 class="menu-title">
+  Utilities
+</h4>
 <nav class="menu docs-menu">
-  <a class="menu-item " href="/guidelines/">
-    Code guidelines
+  <a class="menu-item " href="/border/">
+    border
   </a>
-  <a class="menu-item " href="/colors/">
-    Colors
+  <a class="menu-item " href="/border-radius/">
+    border-radius
   </a>
-  <a class="menu-item " href="/markdown/">
-    Markdown
+  <a class="menu-item " href="/color/">
+    color
+  </a>
+  <a class="menu-item " href="/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/font-weight/">
+    font-weight
+  </a>
+  <a class="menu-item " href="/list-item/">
+    list-item
+  </a>
+  <a class="menu-item " href="/spacing/">
+    spacing
+  </a>
+  <a class="menu-item " href="/z-index/">
+    z-index
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/button/">
+    Button
+  </a>
+  <a class="menu-item " href="/segmented-control/">
+    Segmented Control
   </a>
 </nav>
 
@@ -106,18 +121,18 @@
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#menu" id="markdown-toc-menu">Menu</a></li>
-  <li><a href="#tabnav" id="markdown-toc-tabnav">Tabnav</a></li>
-  <li><a href="#filter-list" id="markdown-toc-filter-list">Filter list</a></li>
-  <li><a href="#breadcrumb" id="markdown-toc-breadcrumb">Breadcrumb</a></li>
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#menu">Menu</a></li>
+  <li><a href="#tabnav">Tabnav</a></li>
+  <li><a href="#filter-list">Filter list</a></li>
+  <li><a href="#breadcrumb">Breadcrumb</a></li>
 </ul>
 
 <h2 id="menu">Menu</h2>
 
 <p>The menu is a vertical list of navigational links. <strong>A menu’s width and placement must be set by you.</strong> If you like, just use our grid columns as a parent. Otherwise, apply a custom <code>width</code>.</p>
 
-<div class="docs-example clearfix"><nav class="menu">
+<div class="DocsExample-render clearfix"><nav class="menu">
   <a class="menu-item selected" href="#">Account</a>
   <a class="menu-item" href="#">Profile</a>
   <a class="menu-item" href="#">Emails</a>
@@ -132,7 +147,7 @@
 
 <p>There are a few subcomponents and add-ons that work well with the menu, including avatars, counters, and Octicons.</p>
 
-<div class="docs-example clearfix"><nav class="menu">
+<div class="DocsExample-render clearfix"><nav class="menu">
   <a class="menu-item selected" href="#">
     <span class="octicon octicon-tools"></span>
     Account
@@ -173,7 +188,7 @@
 
 <p>You can also add optional headings to a menu. Feel free to use nearly any semantic element with the <code>.menu-heading</code> class, including inline elements, headings, and more.</p>
 
-<div class="docs-example clearfix"><nav class="menu">
+<div class="DocsExample-render clearfix"><nav class="menu">
   <span class="menu-heading">Menu heading</span>
   <a class="menu-item selected" href="#">Account</a>
   <a class="menu-item" href="#">Profile</a>
@@ -192,7 +207,7 @@
 
 <p>When you need to toggle between different views, consider using a tabnav. It’ll given you a left-aligned horizontal row of… tabs!</p>
 
-<div class="docs-example clearfix"><div class="tabnav">
+<div class="DocsExample-render clearfix"><div class="tabnav">
   <nav class="tabnav-tabs">
     <a href="#" class="tabnav-tab selected">Foo tab</a>
     <a href="#" class="tabnav-tab">Bar tab</a>
@@ -207,7 +222,7 @@
 
 <p>Use <code>.right</code> to align additional elements in the <code>.tabnav</code>:</p>
 
-<div class="docs-example clearfix"><div class="tabnav">
+<div class="DocsExample-render clearfix"><div class="tabnav">
   <a class="btn btn-sm right" href="#">Button</a>
   <nav class="tabnav-tabs">
     <a href="#" class="tabnav-tab selected">Foo Tab</a>
@@ -224,7 +239,7 @@
 
 <p>Additional bits of text and links can be styled for optimal placement with <code>.tabnav-extra</code>:</p>
 
-<div class="docs-example clearfix"><div class="tabnav">
+<div class="DocsExample-render clearfix"><div class="tabnav">
   <div class="tabnav-extra right">
     Tabnav widget text here.
   </div>
@@ -243,7 +258,7 @@
   <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<div class="docs-example clearfix"><div class="tabnav">
+<div class="DocsExample-render clearfix"><div class="tabnav">
   <div class="right">
     <a class="tabnav-extra" href="#">
       Tabnav extra link
@@ -276,7 +291,7 @@
 
 <p>A vertical list of filters. Grey text on white background. Selecting a filter from the list will fill its background with blue and make the text white.</p>
 
-<div class="docs-example clearfix"><ul class="filter-list">
+<div class="DocsExample-render clearfix"><ul class="filter-list">
   <li>
     <a href="#" class="filter-item selected">
       <span class="count">21</span>
@@ -326,11 +341,11 @@
 
       <footer class="footer">
         Copyright GitHub 2015.<br>
-        Created and maintained by the CSS team at GitHub. <strong>Currently v2.3.3.</strong>
+        Created and maintained by the CSS team at GitHub. <strong>Currently v0.1.0.</strong>
       </footer>
     </div>
 
-    <script src="/js/anchor.min.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
     <script>
       var selector = '.markdown-body h2, .markdown-body h3';
       anchors.options = {

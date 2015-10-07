@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        font-size &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/assets/scss/origin.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Origin
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/principles/">
+    Principles
+  </a>
+  <a class="menu-item " href="/code-style/">
+    Code style
+  </a>
+  <a class="menu-item " href="/about-utilities/">
+    About utilities
+  </a>
+  <a class="menu-item " href="/about-components/">
+    About components
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/border/">
+    border
+  </a>
+  <a class="menu-item " href="/border-radius/">
+    border-radius
+  </a>
+  <a class="menu-item " href="/color/">
+    color
+  </a>
+  <a class="menu-item " href="/font-family/">
+    font-family
+  </a>
+  <a class="menu-item selected" href="/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/font-weight/">
+    font-weight
+  </a>
+  <a class="menu-item " href="/list-item/">
+    list-item
+  </a>
+  <a class="menu-item " href="/spacing/">
+    spacing
+  </a>
+  <a class="menu-item " href="/z-index/">
+    z-index
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/button/">
+    Button
+  </a>
+  <a class="menu-item " href="/segmented-control/">
+    Segmented Control
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      font-size
+    </h1>
+    <div class="markdown-body">
+      <h2 id="standard-scale">Standard scale</h2>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--3">
+      <strong>xx-small; size 3</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(xx-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">xx-small</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--4">
+      <strong>x-small; size 4</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(x-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-small</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--5">
+      <strong>small; size 5</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="n">small</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--6">
+      <strong>default; size 6</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(default);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--7">
+      <strong>large; size 7</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--8">
+      <strong>x-large; size 8</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(x-large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-large</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--10">
+      <strong>xx-large; size 10</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(xx-large);
+@include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">xx-large</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<h2 id="full-scale">Full scale</h2>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--1">
+      <strong>Size 1</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+  
+<div class="DocsExample-render clearfix">@include font-size(1);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--2">
+      <strong>Size 2</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(2);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--3">
+      <strong>Size 3; xx-small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(3);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">3</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--4">
+      <strong>Size 4; x-small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(4);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">4</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--5">
+      <strong>Size 5; small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(5);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">5</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--6">
+      <strong>Size 6; default</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(6);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">6</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--7">
+      <strong>Size 7; large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(7);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">7</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--8">
+      <strong>Size 8; x-large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(8);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">8</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--9">
+      <strong>Size 9</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(9);
+@include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">9</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--10">
+      <strong>Size 10; xx-large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(10);
+@include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">10</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--11">
+      <strong>Size 11</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(11);
+@include line-height(x-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">x-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--12">
+      <strong>Size 12</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(12);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">12</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--13">
+      <strong>Size 13</strong>. Business finances are just too damn hard.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(13);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">13</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--14">
+      <strong>Size 14</strong>. Business finances are just too damn hard.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(14);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">14</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--15">
+      <strong>Size 15</strong>. Business finances.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(15);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">15</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--16">
+      <strong>Size 16</strong>. Business finances.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(16);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">16</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--17">
+      <strong>Size 17</strong>. Business.
+    </p>
+  </div>
+
+<div class="DocsExample-render clearfix">@include font-size(17);
+@include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">17</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright GitHub 2015.<br>
+        Created and maintained by the CSS team at GitHub. <strong>Currently v0.1.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>
