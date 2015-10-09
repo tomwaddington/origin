@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-        list-item &middot; Origin
+        Base styles &middot; Origin
     </title>
 
     <link rel="stylesheet" href="/origin/assets/scss/docs.css">
@@ -56,7 +56,7 @@
   <a class="menu-item " href="/origin/code-style/">
     Code style
   </a>
-  <a class="menu-item " href="/origin/base-styles/">
+  <a class="menu-item selected" href="/origin/base-styles/">
     Base styles
   </a>
   <a class="menu-item " href="/origin/utilities/">
@@ -140,10 +140,29 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      list-item
+      Base styles
     </h1>
     <div class="markdown-body">
-      
+      <p>These are the base rules upon which everything in Origin is built.</p>
+
+<h2 id="html5-doctype">HTML5 doctype</h2>
+
+<p>Origin makes use of certain HTML elements and CSS properties that <strong>require</strong> the use of the HTML5 doctype. Include it at the beginning of all your views/pages.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<h2 id="box-sizing">Box-sizing</h2>
+
+<p>We reset <code>box-sizing</code> to <code>border-box</code> for every element in Origin. This allows us to more easily assign widths to elements that also have <code>padding</code> and <code>border</code>s.</p>
+
+<h2 id="built-on-normalize">Built on Normalize</h2>
+
+<p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to correct small inconsistencies across browsers and devices.</p>
+
+<p><a href="https://github.com/fac/origin/blob/master/assets/scss/local/base/_base.scss"><strong>View the source <code>_base.scss</code> for more information</strong></a></p>
 
     </div>
   </div>

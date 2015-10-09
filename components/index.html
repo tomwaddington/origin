@@ -56,6 +56,9 @@
   <a class="menu-item " href="/origin/code-style/">
     Code style
   </a>
+  <a class="menu-item " href="/origin/base-styles/">
+    Base styles
+  </a>
   <a class="menu-item " href="/origin/utilities/">
     Utilities
   </a>
@@ -268,37 +271,6 @@ The appearance of dependencies must be configured using the interface they provi
 <p>Controlling dimensions, margins, position, and inheritable styles of a
 component can be done <em>indirectly</em>. Add a class to its root element, or wrap
 it in another element.</p>
-
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Excerpt */</span>
-
-<span class="nc">.Excerpt</span> <span class="p">{</span>
-  <span class="cm">/* ... */</span>
-<span class="p">}</span>
-
-<span class="cm">/* Attaches to a nested component */</span>
-
-<span class="nc">.Excerpt-button</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
-  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="cm">/* Wraps a nested component */</span>
-
-<span class="nc">.Excerpt-wrapButton</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
-  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"Excerpt u-floatContainer"</span><span class="nt">&gt;</span>
-  
-
-  <span class="nt">&lt;read-button</span> <span class="na">class=</span><span class="s">"Excerpt-button"</span><span class="nt">&gt;</span>Read more<span class="nt">&lt;/read-button&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Excerpt-wrapButton"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;read-button&gt;</span>Read more<span class="nt">&lt;/read-button&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/article&gt;</span></code></pre></div>
-
 
     </div>
   </div>
