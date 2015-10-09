@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        Code style &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/scss/docs.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/origin/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/origin/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Origin
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/origin/guidance/principles">Docs</a>
+          <a  href="/origin/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/origin/guidance/principles/">
+    Principles
+  </a>
+  <a class="menu-item selected" href="/origin/guidance/code-style/">
+    Code style
+  </a>
+  <a class="menu-item " href="/origin/guidance/base-styles/">
+    Base styles
+  </a>
+  <a class="menu-item " href="/origin/guidance/utilities/">
+    Utilities
+  </a>
+  <a class="menu-item " href="/origin/guidance/components/">
+    Components
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    border
+  </span>
+  <span class="menu-item">
+    border-radius
+  </span>
+  <a class="menu-item " href="/origin/utilities/color/">
+    color
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-weight/">
+    font-weight
+  </a>
+  <span class="menu-item">
+    list-item
+  </span>
+  <a class="menu-item " href="/origin/utilities/spacing/">
+    spacing
+  </a>
+  <span class="menu-item">
+    z-index
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    Button
+  </span>
+  <span class="menu-item">
+    NavBar
+  </span>
+  <span class="menu-item">
+    Notice
+  </span>
+  <a class="menu-item " href="/origin/components/segmented-control/">
+    Segmented Control
+  </a>
+  <span class="menu-item">
+    Table
+  </span>
+  <span class="menu-item">
+    TableView
+  </span>
+  <span class="menu-item">
+    Tabs
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Layout
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    Grid
+  </span>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Code style
+    </h1>
+    <div class="markdown-body">
+      <ul id="markdown-toc">
+  <li><a href="#whitespace">Whitespace</a></li>
+  <li><a href="#css">CSS</a>    <ul>
+      <li><a href="#css-formatting">CSS formatting</a></li>
+      <li><a href="#css-writing-style">CSS writing style</a>        <ul>
+          <li><a href="#css-declaration-order">CSS declaration order</a></li>
+          <li><a href="#exceptions-and-deviations">Exceptions and deviations</a></li>
+        </ul>
+      </li>
+      <li><a href="#css-comments">CSS comments</a></li>
+      <li><a href="#css-practical-example">CSS practical example</a></li>
+    </ul>
+  </li>
+  <li><a href="#html">HTML</a>    <ul>
+      <li><a href="#html-formatting">HTML formatting</a>        <ul>
+          <li><a href="#html-class-and-attribute-order">HTML class and attribute order</a></li>
+        </ul>
+      </li>
+      <li><a href="#html-practical-example">HTML practical example</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="whitespace">Whitespace</h2>
+<ul>
+  <li>Use soft-tabs with a two space indent.</li>
+  <li>Keep lines equal to or fewer than 115 characters. <em>(Width of GitHub diff view without wrapping.)</em></li>
+  <li>Never leave trailing whitespace.</li>
+  <li>End each file with a blank newline.</li>
+</ul>
+
+<h2 id="css">CSS</h2>
+
+<h3 id="css-formatting">CSS formatting</h3>
+<ul>
+  <li>Always put each CSS selector on a separate line.</li>
+  <li>Leave one blank line between every CSS comment and rule set.</li>
+  <li>Leave one space between your CSS selector and opening curly brace.</li>
+  <li>Write one CSS declaration per-line.</li>
+  <li>Leave one space between your CSS property and value.</li>
+  <li>Place the closing rule set curly brace on a separate line, in the same column as the selector.</li>
+  <li>Leave one space between each CSS combinator character and your selectors.</li>
+  <li>Use a semi-colon after every CSS declaration, even the last one in a rule set.</li>
+  <li>Include a space after each comma in comma-separated property or function values.</li>
+  <li>Don’t nest declarations more than one-level deep.</li>
+</ul>
+
+<h3 id="css-writing-style">CSS writing style</h3>
+<ul>
+  <li>Use lowercase and shorthand hex values (e.g. <code>#aaa</code>).</li>
+  <li>Use single or double quotes consistently. Preference is for double quotes (e.g. <code>content: “”</code>).</li>
+  <li>Quote attribute values in selectors (e.g. <code>input[type="checkbox”]</code>).</li>
+  <li>Avoid ID selectors whenever possible.</li>
+  <li>Avoid using element types as part of selectors (e.g. <code>.button</code> instead of <code>a.button</code>).</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/**
+ * Comment for the rule set below
+ */</span>
+
+<span class="nc">.selector-1</span><span class="o">,</span>
+<span class="nc">.selector-2</span><span class="o">,</span>
+<span class="nc">.selector-3</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"text"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * Another comment
+ */</span>
+
+<span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span><span class="o">,</span>
+<span class="nt">h3</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">fa-margin-bottom</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="css-declaration-order">CSS declaration order</h4>
+<p>List all ‘vanilla’ CSS declarations alphabetically, and always <code>@include</code> rules afterwards, but still in alphabetical order with other <code>@include</code> rules.</p>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyComponent</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-13</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">fa-font-family</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="exceptions-and-deviations">Exceptions and deviations</h4>
+<p>Large blocks of single declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.</p>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.selector-1</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">10%</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.selector-2</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">20%</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.selector-3</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">30%</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+
+<p>Long, comma-separated property values—such as collections of gradients or shadows—can be arranged across multiple lines in an effort to improve readability and produce more useful diffs.</p>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">multiple-background-thing</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span>
+    <span class="nb">repeat-x</span> <span class="nb">top</span> <span class="nb">left</span> <span class="o">/</span> <span class="m">100%</span> <span class="m">1px</span> <span class="nf">image-url</span><span class="p">(</span><span class="s2">"hairline-horizontal.png"</span><span class="p">)</span><span class="o">,</span>
+    <span class="nb">repeat-x</span> <span class="nb">bottom</span> <span class="nb">left</span> <span class="o">/</span> <span class="m">100%</span> <span class="m">1px</span> <span class="nf">image-url</span><span class="p">(</span><span class="s2">"hairline-horizontal.png"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="css-comments">CSS comments</h3>
+<p>Every CSS rule set should have a comment stating what it does, why it exists and why it’s been implemented the way it has. Don’t leave others guessing about the decisions you’ve made.</p>
+
+<p>Comment style should be simple and consistent:</p>
+
+<ul>
+  <li>Place comments on a new line above their rule set, leave one blank line between every CSS comment and rule set.</li>
+  <li>Keep lines equal to or fewer than 115 characters.</li>
+  <li>Make liberal use of comments to break CSS code into discrete sections.</li>
+  <li>Use “sentence case” comments and consistent text indentation.</li>
+  <li>Always reference components and utilities <em>exactly</em> by name: <code>DropdownMenu-header</code>, not “header”</li>
+  <li>When extra clarity is required, use numeric end-of-line comments to reference documentation for individual declarations.</li>
+  <li>When referencing another component, utility class or other class in a comment, always format the class name exactly as it’s written elsewhere.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * 1. A helpful description of a declaration's purpose.
+ * 2. Another declaration or collection of declarations can reference this
+ *    comment with an inline comment corresponding to the lists number.
+ */</span>
+
+<span class="cm">/* Thematic section comment block
+   ========================================================================== */</span>
+
+<span class="cm">/* Basic comment */</span></code></pre></div>
+
+<p>When using thematic blocks in CSS comments, there can be variance of spacing — use 2 spaces between thematic blocks if majority of declarations use one-line comments.</p>
+
+<h3 id="css-practical-example">CSS practical example</h3>
+<p>An example of various conventions.</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/**
+ * Segmented control
+ *
+ * A segmented control is a horizontal control made of multiple segments, each
+ * segment functioning as a discrete button. Segment text get truncated when
+ * too long to fit into the width of the segment.
+ *
+ * There are three variants of SegmentedControl:
+ * — Low contrast variant: your default choice; contrasts well with other form elements  
+ * — Base colour variant: use within a view when it really needs to stick out
+ * — High contrast version: to be used against a base colour background (like the NavBar)
+ */</span>
+
+<span class="nc">.SegmentedControl</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$color--gray-9</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$segmented-control-height</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">fa-border-radius</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flexbox</span><span class="p">(</span><span class="n">flex</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-align-items</span><span class="p">(</span><span class="n">stretch</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-direction</span><span class="p">(</span><span class="n">row</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-justify-content</span><span class="p">(</span><span class="nb">center</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * Individual segment buttons
+ */</span>
+
+<span class="nc">.SegmentedControl-segment</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$color--gray-9</span><span class="p">;</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-width</span><span class="p">:</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">1px</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">flex</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">text-truncate</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* High contrast variant
+   ========================================================================== */</span>
+
+<span class="cm">/**
+ * A higher contrast variant of the SegmentedControl, to be used primarily on
+ * the base colour background
+ */</span>
+
+<span class="nc">.SegmentedControl--contrastHigh</span> <span class="p">{</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$color--base</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.SegmentedControl--contrastHigh</span> <span class="nc">.SegmentedControl-segment</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$color--base</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$color--base</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="html">HTML</h2>
+
+<h3 id="html-formatting">HTML formatting</h3>
+<ul>
+  <li>Always use lowercase tag and attribute names.</li>
+  <li>Write one discrete, block-level element per line.</li>
+  <li>Use one additional level of indentation for each nested block-level element.</li>
+  <li>Use valueless boolean attributes (e.g. <code>checked</code> rather than <code>checked="checked"</code>).</li>
+  <li>Always use double quotes to quote attribute values.</li>
+  <li>Omit the <code>type</code> attributes from <code>link</code> stylesheet, <code>style</code> and <code>script</code> elements.</li>
+  <li>Always include closing tags.</li>
+</ul>
+
+<p>Example (uses JSX syntax):</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"TableView"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"TableView-cell"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">disabled</span><span class="nt">&gt;</span>Send<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h4 id="html-class-and-attribute-order">HTML class and attribute order</h4>
+<p>Component classes (including their <code>--modifierName</code> classes) should always be listed first, in alphabetical order. <code>u-UtilityName</code> classes should be listed last, except when temporary <code>is-stateOfComponent</code> are being applied, in which case they should be listed last.</p>
+
+<p>HTML attributes should be listed in alphabetical order.</p>
+
+<p>Example (uses JSX syntax):</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"TableView-cell TableView-cell--borderBottomNone u-textWeight--medium is-disabled"</span> <span class="na">data-ui-component=</span><span class="s">"tableview-cell"</span><span class="nt">&gt;</span></code></pre></div>
+
+<h3 id="html-practical-example">HTML practical example</h3>
+<p>An example of various conventions (uses JSX syntax):</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>FreeAgent Mobile App<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"format-detection"</span> <span class="na">content=</span><span class="s">"telephone=no"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="na">content=</span><span class="s">"black-translucent"</span><span class="nt">&gt;</span>
+    <span class="err">&lt;</span>%= stylesheet_link_tag    'fieldagent', media: 'all'%&gt;
+    <span class="err">&lt;</span>%= javascript_include_tag 'fieldagent' %&gt;
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;ViewContent&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">{classes}</span> <span class="na">data-ui-component=</span><span class="s">"list-filter"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">className=</span><span class="s">"DropdownMenu-header"</span> <span class="na">onClick=</span><span class="s">{this.toggle}</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"DropdownMenu-header-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h3</span> <span class="na">className=</span><span class="s">"DropdownMenu-header-title"</span><span class="nt">&gt;</span>{selectedFilterName}<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;b</span> <span class="na">className=</span><span class="s">"Icon Icon--align--right Icon--vertical-align--center Icon--arrow Icon--arrow--pointsDown"</span><span class="nt">&gt;&lt;/b&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+
+        { this.filterOptions() }
+
+        <span class="nt">&lt;Overlay</span> <span class="na">ref=</span><span class="s">"overlay"</span> <span class="na">parent=</span><span class="s">{this}</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;ol</span> <span class="na">className=</span><span class="s">"TableView TableView--titlesMultiple"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;InfiniteScroll</span> <span class="na">loadMore=</span><span class="s">{loadFunc}</span> <span class="na">hasMore=</span><span class="s">{hasMore}</span><span class="nt">&gt;</span>
+          {list}
+        <span class="nt">&lt;/InfiniteScroll&gt;</span>
+      <span class="nt">&lt;/ol&gt;</span>
+
+    <span class="nt">&lt;/ViewContent&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>This documentation and the conventions in it are based on <a href="https://github.com/suitcss/suit/blob/master/doc/STYLE.md">SUITCSS HTML/CSS code style</a>. Many thanks to <a href="https://github.com/necolas">Nicolas Gallagher</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+      </footer>
+    </div>
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

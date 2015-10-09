@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        Utilities &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/scss/docs.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/origin/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/origin/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Origin
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/origin/guidance/principles">Docs</a>
+          <a  href="/origin/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/origin/guidance/principles/">
+    Principles
+  </a>
+  <a class="menu-item " href="/origin/guidance/code-style/">
+    Code style
+  </a>
+  <a class="menu-item " href="/origin/guidance/base-styles/">
+    Base styles
+  </a>
+  <a class="menu-item selected" href="/origin/guidance/utilities/">
+    Utilities
+  </a>
+  <a class="menu-item " href="/origin/guidance/components/">
+    Components
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    border
+  </span>
+  <span class="menu-item">
+    border-radius
+  </span>
+  <a class="menu-item " href="/origin/utilities/color/">
+    color
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-weight/">
+    font-weight
+  </a>
+  <span class="menu-item">
+    list-item
+  </span>
+  <a class="menu-item " href="/origin/utilities/spacing/">
+    spacing
+  </a>
+  <span class="menu-item">
+    z-index
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    Button
+  </span>
+  <span class="menu-item">
+    NavBar
+  </span>
+  <span class="menu-item">
+    Notice
+  </span>
+  <a class="menu-item " href="/origin/components/segmented-control/">
+    Segmented Control
+  </a>
+  <span class="menu-item">
+    Table
+  </span>
+  <span class="menu-item">
+    TableView
+  </span>
+  <span class="menu-item">
+    Tabs
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Layout
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    Grid
+  </span>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Utilities
+    </h1>
+    <div class="markdown-body">
+      <p>Our CSS utilities define all of our global CSS values and provide universal methods of declaring them. They’re managed in the <a href="https://github.com/fac/fa-css-utilities">fa-css-utilities</a> repo and made available to projects via NPM and Bower.</p>
+
+<h2 id="key-files">Key files</h2>
+
+<p><strong><a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss"><code>_utility-values.scss</code></a></strong><br />
+Where we define all of our raw CSS values and assign them to variables.</p>
+
+<p><strong><a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss"><code>_utility-aliases.scss</code></a></strong><br />
+Where we map aliases to our variables. Doing so lets us reference those aliases in mixins, and lets us optionally generate utility classes in the output CSS.</p>
+
+<p><strong><a href="https://github.com/fac/fa-css-utilities/blob/master/_project-aliases.scss"><code>_project-aliases.scss</code></a></strong><br />
+Where project-specific aliases are defined. Doing so means we aren’t continually declaring things like <code>@include line-height(x-loose)</code> when <code>x-loose</code> is actually the default <code>line-height</code> for a particular project. In this file we can just assign <code>x-loose</code> to <code>default</code> for that project only.</p>
+
+<p><strong><a href="https://github.com/fac/fa-origin/blob/master/assets/scss/_utility-settings.scss"><code>_utility-settings.scss</code></a></strong><br />
+Where we define whether or not to render utility classes in the output CSS. This file is cloned and customised for each project.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>Where we might have previously written:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span><span class="p">;</span>
+<span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="s2">"Helvetica Neue"</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="nl">line-height</span><span class="p">:</span> <span class="m">140%</span><span class="p">;</span></code></pre></div>
+
+<p>We now write:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-family</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span></code></pre></div>
+
+<p>Components might look like:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyComponent</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-13</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">border</span><span class="p">(</span><span class="nb">thin</span><span class="o">,</span> <span class="n">gray-11</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">font-family</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.MyOtherComponent</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">flexbox</span><span class="p">(</span><span class="n">flex</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-direction</span><span class="p">(</span><span class="n">row-reverse</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-justify-content</span><span class="p">(</span><span class="nb">center</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-grow</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">flex-shrink</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">margin-top</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p><code>!important</code> can optionally be added to any mixin declaration:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">padding</span><span class="p">(</span><span class="nb">large</span><span class="o">,</span> <span class="o">!</span><span class="n">important</span><span class="p">);</span></code></pre></div>
+
+<p>This is especially useful for refactoring; <code>!important</code> allows us a way to turn existing UI patterns that rely on the cascade into completely self-contained components — <em>without</em> breaking lots of stuff. Once a component has been created and rolled out, any <code>!important</code> arguments can just be removed.</p>
+
+<h2 id="benefits">Benefits</h2>
+
+<p>Utilities create a simpler, faster, and more meaningful way to write CSS. Mixins are referenced instead of writing regular property/value declarations. They provide:</p>
+
+<ul>
+  <li><strong>Universal scales and aliases</strong> for: <code>font-size</code>, <code>font-family</code>, <code>line-height</code>, <code>color</code>, and much more.</li>
+  <li><strong>Library of colours</strong> for text and block-level elements.</li>
+  <li><strong>Mixins and utility classes</strong> for 40+ CSS properties.</li>
+</ul>
+
+<p>This functionality provides a range of benefits:</p>
+
+<ul>
+  <li>Technical debt and stylistic deviations are avoided because every declaration always maps back to a pre-defined value.</li>
+  <li>Finding things like the right <code>font-size</code> or <code>line-height</code> is quicker and easier because their values exists in scales. Want a slightly bigger size? Increase the number by one.</li>
+  <li>“Human friendly” aliases like <code>x-small</code> and <code>xx-large</code> communicate styles more effectively to developers</li>
+  <li>Switching between different projects and codebases is easier because there’s a universal way of writing CSS across all of them</li>
+  <li>Mixins allow us to bake in any vendor prefixing, so they don’t have to be typed manually.</li>
+</ul>
+
+<h2 id="utility-classes">Utility classes</h2>
+
+<p>Utility classes can be generated in your output CSS so they can be applied directly to HTML elements. They will produce the same effect as using the utility mixins, with one very important difference: <strong>utility classes all have <code>!important</code> set</strong>. This is deliberate; utility classes should <em>do one thing no matter what</em>.</p>
+
+<p>Utility classes should be used sparingly. They’re useful for quickly prototyping ideas or hacking together a quick modification of a component before deciding whether to actually make that modification <em>part</em> of the component. But always aim to use utility mixins; doing so encourages the idea of building self-contained components. Components should define and control their own states and variations.</p>
+
+<h3 id="how-to-generate-utility-classes">How to generate utility classes</h3>
+<p>Set a utility to <code>true</code> in your project’s <a href="https://github.com/fac/fa-origin/blob/master/assets/scss/_utility-settings.scss"><code>_utility-settings.scss</code></a> and the associated utility classes will appear in your output CSS file. Naturally these will add weight to your file, so keep an eye on the file size.</p>
+
+<h3 id="example">Example</h3>
+
+<p>You might start with this:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-margin--0 u-padding--0 u-text-align--center u-border-radius--default u-border--thin--solid--fa-blue u-line-height--tight u-flexbox u-flex-align-items--stretch u-flex-direction--row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"u-background--none u-display--inline-block u-margin--0 u-border-right--thin--solid--blue u-padding--x-small--small u-text-color--x-light u-flex-grow--1 u-text-truncate"</span><span class="nt">&gt;</span>Payment<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"u-background--none u-display--inline-block u-margin--0 u-padding--x-small--small u-text-color--x-light u-flex-grow--1 u-text-truncate"</span><span class="nt">&gt;</span>Refund<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>But you should end up with:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"SegmentedControl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"SegmentedControl-segment"</span><span class="nt">&gt;</span>Payment<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"SegmentedControl-segment"</span><span class="nt">&gt;</span>Refund<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+      </footer>
+    </div>
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>
