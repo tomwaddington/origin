@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-        color &middot; Origin
+        background-color &middot; Origin
     </title>
 
     <link rel="stylesheet" href="/origin/assets/scss/docs.css">
@@ -77,8 +77,8 @@
   <span class="menu-item">
     border-radius
   </span>
-  <a class="menu-item selected" href="/origin/utilities/color/">
-    color
+  <a class="menu-item selected" href="/origin/utilities/background-color/">
+    background-color
   </a>
   <a class="menu-item " href="/origin/utilities/font-family/">
     font-family
@@ -94,6 +94,9 @@
   </span>
   <a class="menu-item " href="/origin/utilities/spacing/">
     spacing
+  </a>
+  <a class="menu-item " href="/origin/utilities/text-color/">
+    text-color
   </a>
   <span class="menu-item">
     z-index
@@ -140,14 +143,23 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      color
+      background-color
     </h1>
     <div class="markdown-body">
-      <p>These are the colors we’re actually using right now in production applications — no more. All colors are managed by <a href="https://github.com/fac/fa-css-utilities">fa-css-utilities</a>.</p>
+      <h2 id="contents">Contents</h2>
 
-<p>New colors should added only when they’re actually being used in a component or other element in production. When adding a new colour, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.</p>
+<ul id="markdown-toc">
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#primary-palette">Primary palette</a></li>
+  <li><a href="#darker-variants">Darker variants</a></li>
+  <li><a href="#lighter-variants">Lighter variants</a></li>
+  <li><a href="#grays">Grays</a></li>
+</ul>
+
+<p>These are the background colors we’re using in production — no more. All colors are managed in <a href="https://github.com/fac/fa-css-utilities">fa-css-utilities</a>. New colors should be added only when they’re actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.</p>
 
 <h2 id="primary-palette">Primary palette</h2>
+
 <section class="SwatchGroup">
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -155,9 +167,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-yellow);
-@include text-color(fa-yellow);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-yellow</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-yellow</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-yellow);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-yellow</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -166,9 +176,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-amber);
-@include text-color(fa-amber);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-amber</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-amber</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-amber);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-amber</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -177,9 +185,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-red);
-@include text-color(fa-red--text);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-red</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-red--text</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-red);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-red</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -188,9 +194,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-purple);
-@include text-color(fa-purple);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-purple</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-purple</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-purple);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-purple</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -199,9 +203,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-blue);
-@include text-color(fa-blue);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-blue);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -210,9 +212,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-green);
-@include text-color(fa-green--text);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-green</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-green--text</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-green);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-green</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -227,9 +227,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-amber--dark);
-@include text-color(fa-amber--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-amber--dark</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-amber--dark</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-amber--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-amber--dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -238,9 +236,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-red--dark);
-@include text-color(fa-red--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-red--dark</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-red--dark</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-red--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-red--dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -249,9 +245,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-blue--dark);
-@include text-color(fa-blue--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--dark</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue--dark</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-blue--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -260,9 +254,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-blue--x-dark);
-@include text-color(fa-blue--x-dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--x-dark</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue--x-dark</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-blue--x-dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--x-dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -271,9 +263,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(fa-green--dark);
-@include text-color(fa-green--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-green--dark</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-green--dark</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(fa-green--dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-green--dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -339,9 +329,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-1);
-@include text-color(gray-1);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-1</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-1</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-1);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-1</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -350,9 +338,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-2);
-@include text-color(gray-2);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-2</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-2</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-2);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-2</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -361,9 +347,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-3);
-@include text-color(gray-3);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-3</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-3</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-3);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-3</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -372,9 +356,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-4);
-@include text-color(gray-4);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-4</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-4</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-4);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-4</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -383,9 +365,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-5);
-@include text-color(gray-5);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-5</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-5</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-5);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-5</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -394,9 +374,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-6);
-@include text-color(gray-6);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-6</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-6</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-6);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-6</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -405,9 +383,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-7);
-@include text-color(gray-7);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-7</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-7</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-7);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-7</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -416,9 +392,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-8);
-@include text-color(gray-8);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-8</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-8</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-8);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-8</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -427,9 +401,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-9);
-@include text-color(gray-9);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-9);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -438,9 +410,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-10);
-@include text-color(gray-10);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-10</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-10</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-10);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-10</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -449,9 +419,7 @@
       &nbsp;
     </div>
 
-<div class="DocsExample-render clearfix">@include background-color(gray-11);
-@include text-color(gray-11);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-11</span><span class="p">);</span>
-<span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-11</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render clearfix">@include background-color(gray-11);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-11</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -501,6 +469,8 @@
   </div>
 
 </section>
+
+<p>Related: <a href="/origin/utilities/text-color/"><code>text-color</code></a></p>
 
     </div>
   </div>
