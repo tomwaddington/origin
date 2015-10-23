@@ -82,17 +82,25 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
+ * Base rules for table header cells.
+ */
+
+.Table th {
+  @include font-weight(normal);
+  @include text-color(gray-7);
+}
+
+/**
  * Apply to `<th>` elements when they should appear as table headers.
  *
  * 1. Create horizontal separation when multiple `Table-header` elements are
  *    stacked on top of each other.
  */
 
-.Table-header {
+.Table-header--prominent {
+  /* 1 */
   border-top: 1px solid white;
   @include background-color(gray-16);
-  @include font-weight(normal);
-  @include text-color(gray-7);
 }
 
 /**
@@ -158,10 +166,10 @@ $Table-border-color: $color--gray-15;
  * Reduce the prominence of metadata displayed inside tables.
  */
 
-.Table-cell--metadata,
-.Table-row--metadata,
-.Table-header--metadata {
-  @include text-color(gray-7);
+.Table .Table-cell--minor,
+.Table-row--minor,
+.Table-header--minor {
+  @include text-color(gray-9);
 }
 
 /**
