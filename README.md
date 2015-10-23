@@ -134,7 +134,21 @@ All team members should be contributing back to this repo in order to improve it
 
 Editor preferences are available in the [editor config](https://github.com/fac/origin/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
-The process:
+### Creating a new component
+
+There are two distinct steps involved in creating a new CSS component: authoring and testing it locally as part of the docs, then copying it over to the `assets` folder and publishing out into the world via npm.
+
+1. Make sure you're up to date with the master branch (`git fetch; git pull origin master`)
+2. Branch off master (`git checkout -b <add-amazing-component>`)
+3. Create a new `.scss` partial for your component in [`docs/assets/scss/global/components`](https://github.com/fac/origin/tree/master/docs/assets/scss/global/components) and give it a (singular, not plural) name
+4. `@import` your partial into [`docs.scss`](https://github.com/fac/origin/blob/master/docs/assets/scss/docs.scss)
+5. Create a new `.md` file in [`docs/components`](https://github.com/fac/origin/tree/master/docs/components) that matches your `.scss` partial name, and document examples of all use cases and variants of your component
+6. Test that the component renders as expected in all use cases
+7. Make a copy of your partial in [`assets/scss/global/components`](https://github.com/fac/origin/tree/master/assets/scss/global/components)
+8. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
+9. Create a new pull request and provide a helpful description of what the component does and why its been created 
+
+### Creating a new release
 
 #### Branch off, make changes, create a PR
 
