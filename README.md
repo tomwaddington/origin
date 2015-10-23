@@ -35,8 +35,6 @@ $ chruby ruby-2.1.2 (or whatever your non-system version of Ruby is)
 $ bundle install
 $ npm install
 $ npm install -g grunt-cli (if you don’t already have Grunt installed)
-$ npm install -g bower (if you don’t already have Bower installed)
-$ bower install
 ```
 
 Then start a local Jekyll server:
@@ -146,7 +144,7 @@ There are two distinct steps involved in creating a new CSS component: authoring
 6. Test that the component renders as expected in all use cases
 7. Make a copy of your partial in [`assets/scss/global/components`](https://github.com/fac/origin/tree/master/assets/scss/global/components)
 8. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
-9. Create a new pull request and provide a helpful description of what the component does and why its been created 
+9. Create a new pull request and provide a helpful description of what the component does and why its been created
 
 ### Creating a new release
 
