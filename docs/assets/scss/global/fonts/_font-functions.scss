@@ -1,17 +1,4 @@
-/* Font settings
-   ========================================================================== */
-
-/* Directory path where fonts live */
-$font-path: "../fonts" !default;
-
-/* If `false` the `src` references to EOT format files won’t be rendered */
-$support-ie8: true !default;
-
-/* If `true` OpenType variants will be used instead of TrueType */
-$use-opentype: false !default;
-
-
-/* Note: below are utility functions for generating correct `@font-face` code
+/* Utility functions for generating correct `@font-face` code
    ========================================================================== */
 
 /**

@@ -4,27 +4,37 @@
 
 @charset "UTF-8";
 
-/* Define font settings */
-@import "fonts/_font-settings";
+/**
+ * This file is essentially a copy of `assets/scss/origin.scss` as published on
+ * npm (minus a few different `@import` paths), but is used solely for the
+ * purposes of previewing changes to Origin prior to actually making those
+ * changes to the files in the `assets/scss` directory and publishing everywhere.
+ */
 
-/* Load fonts for `@font-face` use */
-@import "fonts/_source-sans-pro";
+/* Local: font settings */
+@import "local/fonts/_font-settings";
 
-/* Define CSS utility settings */
-@import "_utility-settings";
+/* Global: functions to handle fonts correctly based on font settings */
+@import "global/fonts/_font-functions";
 
-/* Import utilities from npm or Bower directories, depending on install method */
+/* Global: load fonts for `@font-face` use */
+@import "global/fonts/_source-sans-pro";
+
+/* Local: CSS utility settings */
+@import "local/utilities/_utility-settings";
+
+/* Global: import utilities */
 @import "../../../node_modules/fa-css-utilities/_utilities";
 
-/* Import base typographic, box model and colour declarations */
-@import "_base";
+/* Local: base typographic, box model and colour declarations */
+@import "local/base/_base";
 
 /* Styles used for docs; based on GitHub’s Primer: http://primercss.io */
-@import "_primer";
+@import "docs/_docs-styles";
 
-/* Global components */
-@import "components/_button";
-@import "components/_navbar";
-@import "components/_notice";
-@import "components/_segmented-control";
-@import "components/_tabs";
+/* Global: import any required components */
+@import "global/components/_button";
+@import "global/components/_navbar";
+@import "global/components/_notice";
+@import "global/components/_segmented-control";
+@import "global/components/_tabs";
