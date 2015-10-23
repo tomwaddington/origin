@@ -1,26 +1,22 @@
 /*
- * Primer documentation styles
- * http://primercss.io
- *
- * Released under MIT license. Copyright 2015 GitHub, Inc.
+ * Documentation styles
  */
 
-/* Base Primer styles */
-//@import "../../../bower_components/primer-user-content/components/markdown";
-@import "primer/_variables";
-@import "primer/_mixins";
-@import "primer/_layout";
-@import "primer/_anchor";
-@import "primer/_syntax";
+@import "docs/_variables";
+@import "docs/_mixins";
+@import "docs/_markdown";
+@import "docs/_syntax";
+@import "docs/_layout";
 
-/* Primer documentation components */
-@import "primer/components/_buttons";
-@import "primer/components/_docs-example";
-@import "primer/components/_menu";
-@import "primer/components/_spacing";
-@import "primer/components/_swatches";
-@import "primer/components/_text-example";
-@import "primer/components/_text-color";
+/* Documentation components */
+@import "docs/components/_anchor";
+@import "docs/components/_buttons";
+@import "docs/components/_docs-example";
+@import "docs/components/_menu";
+@import "docs/components/_spacing";
+@import "docs/components/_swatches";
+@import "docs/components/_text-example";
+@import "docs/components/_text-color";
 
 a {
   text-decoration: none;
@@ -31,28 +27,6 @@ a:active,
 a:focus,
 a:hover {
   @include text-color(fa-blue--x-dark);
-}
-
-/*
- * Overrides for GitHub markdown styles
- */
-
-.markdown-body {
-  @include font-family(default);
-  @include line-height(default);
-}
-
-.markdown-body code,
-.markdown-body pre > code {
-  @include font-family(monospace);
-  @include font-size(x-small);
-}
-
-.page-title + .markdown-body > p:first-child {
-  @include font-weight(light, !important);
-  @include font-size(x-large, !important);
-  @include line-height(tight, !important);
-  @include text-color(gray-6, !important);
 }
 
 .highlight .cm {
