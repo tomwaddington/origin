@@ -171,25 +171,36 @@
       NavBar
     </h1>
     <div class="markdown-body">
-      <ul id="markdown-toc">
-  <li><a href="#desktop-navbar">Desktop NavBar</a></li>
+      <p>The NavBar is the section in each of our apps which contains the main view
+heading along with the primary (and often the secondary) navigation.</p>
+
+<p><strong>Usage Note:</strong> Because of the difference between the nav bars in each of our projects,
+the basic component is rarely used on its own. It should be combined with one
+of the variants below.</p>
+
+<h2 id="variants">Variants</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#variants">Variants</a></li>
+  <li><a href="#desktop">Desktop</a></li>
 </ul>
 
-<h2 id="desktop-navbar">Desktop NavBar</h2>
+<h2 id="desktop">Desktop</h2>
 
-<p>The simplest version of the NavBar</p>
+<p>The desktop app variant adds desktop-specific padding to the top of the NavBar
+and margins to the left and bottom of the title.</p>
 
 <div class="DocsExample-render clearfix"><nav class="NavBar NavBar--desktop" role="navigation">
   <h1 class="NavBar-title">
-    <a class="NavBar-title-link" href="/"> <!-- optional -->
-      NavBar title
+    <a class="NavBar-title-link" href="#"> <!-- optional -->
+      NavBar Title
     </a>
   </h1>
 </nav></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"NavBar NavBar--desktop"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"NavBar-title"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"NavBar-title-link"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- optional --&gt;</span>
-      NavBar title
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"NavBar-title-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span> <span class="c">&lt;!-- optional --&gt;</span>
+      NavBar Title
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
