@@ -53,6 +53,15 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
+ * Variant of the default table which uses the legacy font-family.
+ * This will be rendered absolete once Helvetica is no longer used in the app.
+ */
+
+.Table--desktop {
+  @include font-family(legacy);
+}
+
+/**
  * Base rules for table cells and headers. While we wouldn't normally directly
  * HTML elements (because doing so often results in unwanted inheritence issues),
  * in this case it makes more practical sense to do so; applying a class to every

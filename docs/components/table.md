@@ -33,6 +33,29 @@ title: Table
 </table>
 {% endexample %}
 
+## Desktop variant
+
+Applies the app's legacy font-family, Helvetica.
+
+{% example html %}
+<table class="Table Table--desktop">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
 ## Right-aligned content
 
 Primarily used for displaying monetary values.
