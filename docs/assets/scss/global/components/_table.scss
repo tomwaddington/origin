@@ -31,9 +31,9 @@ $Table-border-color: $color--gray-15;
 /**
  * 1. Collapse borders so only a single border appears for adjacent cells.
  * 2. Ensure there's no spacing between cells. We use `padding` inside cells.
- * 3. Our typical pattern is to only add margins to the bottom of elements, rather
+ * 3. Tables should give their content as much room as possible by default.
+ * 4. Our typical pattern is to only add margins to the bottom of elements, rather
  *    than top and bottom, to prevent excessive vertical spacing.
- * 4. Tables should give their content as much room as possible by default.
  */
 
 .Table {
@@ -41,14 +41,15 @@ $Table-border-color: $color--gray-15;
   border-collapse: collapse;
   /* 2 */
   border-spacing: 0;
-  /* 3 */
-  margin: 0 0 1em 0;
+  margin: 0;
   padding: 0;
   text-align: left;
-  /* 4 */
+  /* 3 */
   width: 100%;
   @include font-weight(default);
   @include line-height(4);
+  /* 4 */
+  @include margin-bottom(default);
   @include text-color(gray-5);
 }
 
