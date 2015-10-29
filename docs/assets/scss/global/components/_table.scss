@@ -31,9 +31,9 @@ $Table-border-color: $color--gray-15;
 /**
  * 1. Collapse borders so only a single border appears for adjacent cells.
  * 2. Ensure there's no spacing between cells. We use `padding` inside cells.
- * 3. Tables should give their content as much room as possible by default.
- * 4. Our typical pattern is to only add margins to the bottom of elements, rather
+ * 3. Our typical pattern is to only add margins to the bottom of elements, rather
  *    than top and bottom, to prevent excessive vertical spacing.
+ * 4. Tables should give their content as much room as possible by default.
  */
 
 .Table {
@@ -41,15 +41,14 @@ $Table-border-color: $color--gray-15;
   border-collapse: collapse;
   /* 2 */
   border-spacing: 0;
-  margin: 0;
+  /* 3 */
+  margin: 0 0 1em 0;
   padding: 0;
   text-align: left;
-  /* 3 */
+  /* 4 */
   width: 100%;
   @include font-weight(default);
   @include line-height(4);
-  /* 4 */
-  @include margin-bottom(default);
   @include text-color(gray-5);
 }
 
@@ -75,12 +74,9 @@ $Table-border-color: $color--gray-15;
 .Table td,
 .Table th {
   margin: 0;
+  padding: 0.5em;
   /* 1 */
   vertical-align: middle;
-  @include padding-bottom(small);
-  @include padding-left(small);
-  @include padding-right(small);
-  @include padding-top(small);
 }
 
 /**
@@ -180,6 +176,22 @@ $Table-border-color: $color--gray-15;
 .Table-row--minor,
 .Table-header--minor {
   @include text-color(gray-9);
+}
+
+/**
+ * Explicitly center text in table cells or headers, either by
+ * applying a class to a table row or the cell/header itself.
+ *
+ * Syntax follows the convention set forth in our text formatting utilities:
+ * https://github.com/fac/css-utilities/blob/master/utilities/_text-formatting.scss
+ */
+
+.Table--text-align--center td,
+.Table--text-align--center th,
+.Table .Table-cell--text-align--center,
+.Table .Table-row--text-align--center td,
+.Table .Table-row--text-align--center th {
+  text-align: center;
 }
 
 /**
