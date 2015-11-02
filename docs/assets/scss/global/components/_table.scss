@@ -79,6 +79,18 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
+ * Remove the `border-top` from all table cells in a row when the cells in the
+ * previous row are given a background using the `Table-row--prominent` class.
+ *
+ * This prevents a fuzzy edge appearing when the darker cell background touches
+ * the lighter cell border stroke.
+ */
+
+.Table-row--prominent + tr td {
+  border-top: 0;
+}
+
+/**
  * Base rules for table header cells.
  */
 
