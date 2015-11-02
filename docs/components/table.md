@@ -163,7 +163,7 @@ otherwise exists as metadata for other data in the table.
 
 ## Parent rows
 
-Used to demonstrate hierarchy within a table.
+Used to demonstrate hierarchy within dense tables by grouping a number of child rows under a parent row.
 
 {% example html %}
 <table class="Table">
@@ -175,20 +175,35 @@ Used to demonstrate hierarchy within a table.
     </tr>
   </thead>
   <tbody>
+    <tr class="Table-row Table-row--parent">
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+    </tr>
     <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
     </tr>
     <tr class="Table-row Table-row--parent">
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
     </tr>
     <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
     </tr>
   </tbody>
 </table>
