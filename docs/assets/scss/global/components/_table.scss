@@ -53,15 +53,6 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
- * Variant of the default table which uses the legacy font-family.
- * This will be rendered absolete once Helvetica is no longer used in the app.
- */
-
-.Table--desktop {
-  @include font-family(legacy);
-}
-
-/**
  * Base rules for table cells and headers. While we wouldn't normally directly
  * HTML elements (because doing so often results in unwanted inheritence issues),
  * in this case it makes more practical sense to do so; applying a class to every
@@ -95,6 +86,30 @@ $Table-border-color: $color--gray-15;
   @include font-weight(normal);
   @include text-color(gray-7);
 }
+
+/* Desktop variant
+   ==========================================================================
+   Controls font-family and padding to more closely match legacy styles.
+   This will be rendered absolete once Helvetica is no longer used in the app.
+*/
+
+.Table--desktop {
+  @include font-family(legacy);
+}
+
+/**
+ * Override the default table cell padding for desktop
+ */
+
+.Table--desktop td,
+.Table--desktop th {
+ padding: 0.615em;
+}
+
+/* Highlighting variants
+   ==========================================================================
+   Prominent, bold, parent, separated, and minor variants
+*/
 
 /**
  * Apply to `<th>` elements when they should appear as table headers.
@@ -178,6 +193,11 @@ $Table-border-color: $color--gray-15;
   @include text-color(gray-9);
 }
 
+/* Text-alignment variants
+   ==========================================================================
+   Center, left, and right variants
+*/
+
 /**
  * Explicitly center text in table cells or headers, either by
  * applying a class to a table row or the cell/header itself.
@@ -225,6 +245,11 @@ $Table-border-color: $color--gray-15;
 .Table .Table-row--text-align--right th {
   text-align: right;
 }
+
+/* Interaction
+   ==========================================================================
+   To be expanded
+*/
 
 /**
  * Element used to toggle expand/collapse behaviour of a table row. Note that
