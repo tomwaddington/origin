@@ -33,29 +33,6 @@ title: Table
 </table>
 {% endexample %}
 
-## Desktop variant
-
-Applies the app's legacy font-family, Helvetica.
-
-{% example html %}
-<table class="Table Table--desktop">
-  <thead>
-    <tr>
-      <th>Table header</th>
-      <th>Table header</th>
-      <th>Table header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-  </tbody>
-</table>
-{% endexample %}
-
 ## Right-aligned content
 
 Primarily used for displaying monetary values.
@@ -249,6 +226,34 @@ Used for clarity in tables which may not be fully filled and therefore hard to s
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
+## Desktop variant
+
+Applies the app's legacy `font-family`, Helvetica Neue.
+
+{% example html %}
+<table class="Table Table--desktop">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr class="Table-row Table-row--bold">
+      <td class="Table-cell">Bold table cell</td>
+      <td class="Table-cell">Bold table cell</td>
+      <td class="Table-cell">Bold table cell</td>
     </tr>
   </tbody>
 </table>
