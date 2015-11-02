@@ -312,6 +312,28 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
+ * Remove left-hand border from first cell in a cell or header.
+ */
+
+.Table--verticalBorders tr td:first-child,
+.Table--verticalBorders tr th:first-child,
+.Table-row--verticalBorders td:first-child,
+.Table-row--verticalBorders th:first-child {
+  border-left: 0;
+}
+
+/**
+ * Remove right-hand border from last cell in a cell or header.
+ */
+
+.Table--verticalBorders tr td:last-child,
+.Table--verticalBorders tr th:last-child,
+.Table-row--verticalBorders td:last-child,
+.Table-row--verticalBorders th:last-child {
+  border-right: 0;
+}
+
+/**
  * Make table cell and header borders white, e.g. when the table row has a class
  * of `Table-row--prominent`.
  */
