@@ -150,7 +150,7 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table-row--bold {
-  @include font-weight(bold);
+  @include font-weight(semi-bold);
 }
 
 /**
