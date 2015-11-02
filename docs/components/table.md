@@ -61,7 +61,7 @@ Primarily used for displaying monetary values.
 </table>
 {% endexample %}
 
-## Highlighted rows and headers
+## Prominent rows and headers
 
 Used to give prominence to unique rows, such as totals in a reporting table.
 
@@ -99,7 +99,7 @@ Used to give prominence to unique rows, such as totals in a reporting table.
 </table>
 {% endexample %}
 
-### Highlighted rows with vertical borders
+## Rows with vertical borders
 
 Used when the standard styling doesn't provide enough clarity for the content. Requires the use of the prominent styling on the table header.
 
@@ -127,9 +127,10 @@ Used when the standard styling doesn't provide enough clarity for the content. R
 </table>
 {% endexample %}
 
-### Rows with less prominence
+## Rows with minor content
 
-Used for rows (or cells) that contain secondary data.
+Used for rows (or cells) that contain minor/inessential data, or data that
+otherwise exists as metadata for other data in the table.
 
 {% example html %}
 <table class="Table">
