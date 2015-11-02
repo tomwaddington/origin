@@ -118,6 +118,15 @@ $Table-border-color: $color--gray-15;
  padding: 0.615em;
 }
 
+/**
+ * Override Source Sans Pro semi-bold with bold, as the Helvetica Neue system
+ * font doesn't come in a semi-bold weight.
+ */
+
+.Table--desktop .Table-row--bold {
+  @include font-weight(bold);
+}
+
 /* Highlighting variants
    ==========================================================================
    Prominent, bold, parent, separated, and minor variants
