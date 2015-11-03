@@ -58,7 +58,6 @@ html {
 .Form-fieldLabel {
   float: left;
   text-align: right;
-  width: 16em; /* IE 8 Fallback */
   width: 16rem;
   @include padding-top(x-small);
 }
@@ -92,7 +91,6 @@ html {
   border-style: solid;
   border-width: 1px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
-  min-width: 16em; /* IE 8 Fallback */
   min-width: 16rem;
   @include border-radius(small);
   @include font-family(default);
@@ -114,7 +112,6 @@ html {
 
 .Form-inputNote {
   display: block;
-  max-width: 45em; /* IE 8 Fallback */
   max-width: 45rem;
   @include font-size(small);
   @include margin-top(xx-small);
@@ -122,13 +119,11 @@ html {
 }
 
 .Form-actions {
-  margin-left: 16em; /* IE 8 Fallback */
   margin-left: 16rem;
   @include padding-left(small);
 }
 
 .Form-fieldset--block + .Form-actions {
-  margin-left: 16em; /* IE 8 Fallback */
   margin-left: 17rem;
 }
 
