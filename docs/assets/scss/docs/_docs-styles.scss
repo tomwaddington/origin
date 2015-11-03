@@ -34,6 +34,11 @@ a:hover {
   @include text-color(gray-9);
 }
 
+// Add spacing between documentation code examples and subsequent headings
+.markdown-body .highlight {
+  @include margin-bottom(xx-large);
+}
+
 // Make containers responsive
 .container {
   width: auto;
