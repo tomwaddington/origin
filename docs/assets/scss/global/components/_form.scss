@@ -62,6 +62,10 @@ html {
   @include padding-top(x-small);
 }
 
+.Form-fieldset--block .Form-fieldLabel {
+  width: 15rem;
+}
+
 .Form-fieldLabel--required:after {
   content: " *";
   display: inline;
@@ -79,9 +83,11 @@ html {
 }
 
 .Form-field-inputs:first-child {
-  float: left;
   margin-left: 16rem;
-  @include padding-left(small);
+}
+
+.Form-fieldset--block .Form-field-inputs:first-child {
+  margin-left: 15rem;
 }
 
 .Form-input {
@@ -121,10 +127,6 @@ html {
 .Form-actions {
   margin-left: 16rem;
   @include padding-left(small);
-}
-
-.Form-fieldset--block + .Form-actions {
-  margin-left: 17rem;
 }
 
 .Form-cancel {
