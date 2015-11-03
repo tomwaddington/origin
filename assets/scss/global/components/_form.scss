@@ -1,0 +1,151 @@
+/* Form
+   ==========================================================================
+   The Form component is used to display interactive form elements.
+*/
+
+html {
+  //font-size: 13px;
+}
+
+/**
+ * Base styles for the Form
+ */
+
+.Form {
+  border: none;
+  display: block;
+  text-align: left;
+  @include clearfix();
+  @include font-weight(default);
+  @include line-height(default);
+  @include text-color(gray-5);
+}
+
+.Form-fieldset {
+  border: none;
+  display: block;
+  padding: 0;
+  @include margin-bottom(default);
+}
+
+/**
+ * Block variant of `Form-fieldset`
+ */
+
+.Form-fieldset--block {
+  border: none;
+  @include background-color(gray-16);
+  @include border-radius(large);
+  @include margin-bottom(default);
+  @include padding(default);
+}
+
+.Form-fieldset-legend {
+  display: block;
+  @include font-size(large);
+  @include font-weight(bold);
+  @include margin-bottom(default);
+  @include text-color(gray-5);
+}
+
+.Form-field {
+  clear: both;
+  display: block;
+  @include clearfix();
+  @include margin-bottom(default);
+}
+
+.Form-fieldLabel {
+  float: left;
+  text-align: right;
+  width: 16em; /* IE 8 Fallback */
+  width: 16rem;
+  @include padding-top(x-small);
+}
+
+.Form-fieldLabel--required:after {
+  content: " *";
+  display: inline;
+  @include text-color(fa-red);
+}
+
+.Form-inlineLabel {
+  display: inline;
+  @include margin-left(x-small);
+}
+
+.Form-field-inputs {
+  float: left;
+  @include padding-left(small);
+}
+
+.Form-field-inputs:first-child {
+  float: left;
+  margin-left: 16rem;
+  @include padding-left(small);
+}
+
+.Form-input {
+  border-color: $color--gray-12;
+  border-bottom-color: $color--gray-13;
+  border-top-color: $color--gray-11;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
+  min-width: 16em; /* IE 8 Fallback */
+  min-width: 16rem;
+  @include border-radius(small);
+  @include font-family(default);
+  @include line-height(x-tight);
+  @include padding-bottom(x-small);
+  @include padding-left(small);
+  @include padding-right(small);
+  @include padding-top(x-small);
+  @include text-color(gray-5);
+}
+
+.Form-input:focus {
+  border-color: $color--fa-blue;
+}
+
+.Form-checkbox {
+  @include margin-top(small);
+}
+
+.Form-inputNote {
+  display: block;
+  max-width: 45em; /* IE 8 Fallback */
+  max-width: 45rem;
+  @include font-size(small);
+  @include margin-top(xx-small);
+  @include text-color(gray-8);
+}
+
+.Form-actions {
+  margin-left: 16em; /* IE 8 Fallback */
+  margin-left: 16rem;
+  @include padding-left(small);
+}
+
+.Form-fieldset--block + .Form-actions {
+  margin-left: 16em; /* IE 8 Fallback */
+  margin-left: 17rem;
+}
+
+.Form-cancel {
+  @include margin-left(default);
+}
+
+
+/* Legacy Variant
+   ==========================================================================
+   A variant that uses the legacy desktop font
+   */
+
+.Form--legacy {
+  @include font-family(legacy);
+  }
+
+.Form--legacy .Form-input {
+  @include font-family(legacy);
+}
