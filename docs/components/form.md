@@ -23,7 +23,7 @@ Add a description here
         First Name
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="first-name" placeholder="Nathan" type="text" />
+        <input class="Form-textInput" name="first-name" placeholder="Nathan" type="text" />
       </div>
     </div>
     <div class="Form-field">
@@ -31,7 +31,7 @@ Add a description here
         Last Name
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="last-name" placeholder="Barley" type="text" />
+        <input class="Form-textInput" name="last-name" placeholder="Barley" type="text" />
       </div>
     </div>
     <div class="Form-field">
@@ -39,7 +39,7 @@ Add a description here
         Billing Email Address
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="email-address" placeholder="nathan@medianode.com" type="email" />
+        <input class="Form-textInput" name="email-address" placeholder="nathan@medianode.com" type="email" />
         <span class="Form-inputNote">
           This is the address that invoices will be sent to.
         </span>
@@ -83,6 +83,18 @@ Add a description here
         <label class="Form-inlineLabel" for="paypal">
           PayPal
         </label>
+      </div>
+    </div>
+    <div class="Form-field">
+      <label class="Form-fieldLabel" for="subdomain">
+        Subdomain
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-textInput Form-textInput--short" name="subdomain" placeholder="medianode" type="text" />
+        <span>.freeagent.com</span>
+        <span class="Form-inputNote">
+          The URL where you will log in to FreeAgent.
+        </span>
       </div>
     </div>
   </fieldset>
@@ -98,7 +110,7 @@ Add a description here
 {% endexample %}
 
 
-## Desktop Block Fieldsets
+## Desktop with Block Fieldsets
 
 Add a description here
 
@@ -113,7 +125,7 @@ Add a description here
         First Name
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="first-name" placeholder="Nathan" type="text" />
+        <input class="Form-textInput" name="first-name" placeholder="Nathan" type="text" />
       </div>
     </div>
     <div class="Form-field">
@@ -121,7 +133,7 @@ Add a description here
         Last Name
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="last-name" placeholder="Barley" type="text" />
+        <input class="Form-textInput" name="last-name" placeholder="Barley" type="text" />
       </div>
     </div>
     <div class="Form-field">
@@ -129,7 +141,7 @@ Add a description here
         Billing Email Address
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-input" name="email-address" placeholder="nathan@medianode.com" type="email" />
+        <input class="Form-textInput" name="email-address" placeholder="nathan@medianode.com" type="email" />
         <span class="Form-inputNote">
           This is the address that invoices will be sent to.
         </span>
@@ -173,6 +185,18 @@ Add a description here
         <label class="Form-inlineLabel" for="paypal">
           PayPal
         </label>
+      </div>
+    </div>
+    <div class="Form-field">
+      <label class="Form-fieldLabel" for="subdomain">
+        Subdomain
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-textInput Form-textInput--short" name="subdomain" placeholder="medianode" type="text" />
+        <span>.freeagent.com</span>
+        <span class="Form-inputNote">
+          The URL where you will log in to FreeAgent.
+        </span>
       </div>
     </div>
   </fieldset>
