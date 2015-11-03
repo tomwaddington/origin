@@ -33,29 +33,6 @@ title: Table
 </table>
 {% endexample %}
 
-## Desktop variant
-
-Applies the app's legacy font-family, Helvetica.
-
-{% example html %}
-<table class="Table Table--desktop">
-  <thead>
-    <tr>
-      <th>Table header</th>
-      <th>Table header</th>
-      <th>Table header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-  </tbody>
-</table>
-{% endexample %}
-
 ## Right-aligned content
 
 Primarily used for displaying monetary values.
@@ -84,7 +61,7 @@ Primarily used for displaying monetary values.
 </table>
 {% endexample %}
 
-## Highlighted rows and headers
+## Prominent rows and headers
 
 Used to give prominence to unique rows, such as totals in a reporting table.
 
@@ -122,7 +99,7 @@ Used to give prominence to unique rows, such as totals in a reporting table.
 </table>
 {% endexample %}
 
-### Highlighted rows with vertical borders
+## Rows with vertical borders
 
 Used when the standard styling doesn't provide enough clarity for the content. Requires the use of the prominent styling on the table header.
 
@@ -150,9 +127,10 @@ Used when the standard styling doesn't provide enough clarity for the content. R
 </table>
 {% endexample %}
 
-### Rows with less prominence
+## Rows with minor content
 
-Used for rows (or cells) that contain secondary data.
+Used for rows (or cells) that contain minor/inessential data, or data that
+otherwise exists as metadata for other data in the table.
 
 {% example html %}
 <table class="Table">
@@ -185,7 +163,7 @@ Used for rows (or cells) that contain secondary data.
 
 ## Parent rows
 
-Used to demonstrate hierarchy within a table.
+Used to demonstrate hierarchy within dense tables by grouping a number of child rows under a parent row.
 
 {% example html %}
 <table class="Table">
@@ -197,20 +175,35 @@ Used to demonstrate hierarchy within a table.
     </tr>
   </thead>
   <tbody>
+    <tr class="Table-row Table-row--parent">
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+    </tr>
     <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
     </tr>
     <tr class="Table-row Table-row--parent">
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
+      <td>Parent cell</td>
     </tr>
     <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
     </tr>
   </tbody>
 </table>
@@ -249,6 +242,34 @@ Used for clarity in tables which may not be fully filled and therefore hard to s
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
+## Desktop variant
+
+Applies the app's legacy `font-family`, Helvetica Neue.
+
+{% example html %}
+<table class="Table Table--desktop">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr class="Table-row Table-row--bold">
+      <td class="Table-cell">Bold table cell</td>
+      <td class="Table-cell">Bold table cell</td>
+      <td class="Table-cell">Bold table cell</td>
     </tr>
   </tbody>
 </table>

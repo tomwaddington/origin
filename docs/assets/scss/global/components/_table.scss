@@ -79,6 +79,18 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
+ * Remove the `border-top` from all table cells in a row when the cells in the
+ * previous row are given a background using the `Table-row--prominent` class.
+ *
+ * This prevents a fuzzy edge appearing when the darker cell background touches
+ * the lighter cell border stroke.
+ */
+
+.Table-row--prominent + tr td {
+  border-top: 0;
+}
+
+/**
  * Base rules for table header cells.
  */
 
@@ -106,6 +118,15 @@ $Table-border-color: $color--gray-15;
  padding: 0.615em;
 }
 
+/**
+ * Override Source Sans Pro semi-bold with bold, as the Helvetica Neue system
+ * font doesn't come in a semi-bold weight.
+ */
+
+.Table--desktop .Table-row--bold {
+  @include font-weight(bold);
+}
+
 /* Highlighting variants
    ==========================================================================
    Prominent, bold, parent, separated, and minor variants
@@ -129,7 +150,7 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table-row--bold {
-  @include font-weight(bold);
+  @include font-weight(semi-bold);
 }
 
 /**
@@ -288,6 +309,28 @@ $Table-border-color: $color--gray-15;
 .Table-row--verticalBorders th {
   border-left: 1px solid $Table-border-color;
   border-right: 1px solid $Table-border-color;
+}
+
+/**
+ * Remove left-hand border from first cell in a cell or header.
+ */
+
+.Table--verticalBorders tr td:first-child,
+.Table--verticalBorders tr th:first-child,
+.Table-row--verticalBorders td:first-child,
+.Table-row--verticalBorders th:first-child {
+  border-left: 0;
+}
+
+/**
+ * Remove right-hand border from last cell in a cell or header.
+ */
+
+.Table--verticalBorders tr td:last-child,
+.Table--verticalBorders tr th:last-child,
+.Table-row--verticalBorders td:last-child,
+.Table-row--verticalBorders th:last-child {
+  border-right: 0;
 }
 
 /**
