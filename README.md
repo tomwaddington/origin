@@ -143,8 +143,9 @@ There are two distinct steps involved in creating a new CSS component: authoring
 5. Create a new `.md` file in [`docs/components`](https://github.com/fac/origin/tree/master/docs/components) that matches your `.scss` partial name, and document examples of all use cases and variants of your component
 6. Test that the component renders as expected in all use cases
 7. Make a copy of your partial in [`assets/scss/global/components`](https://github.com/fac/origin/tree/master/assets/scss/global/components)
-8. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
-9. Create a new pull request and provide a helpful description of what the component does and why its been created
+8. `@import` your new component partial into the [`https://github.com/fac/origin/blob/master/assets/scss/local/origin.scss`](origin.scss) example implementation file
+9. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
+10. Create a new pull request and provide a helpful description of what the component does and why its been created
 
 ### Creating a new release
 
