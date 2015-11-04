@@ -84,16 +84,12 @@ module.exports = function(grunt) {
         bsFiles: {
           src : [
             '_site/*.*',
-            '_site/**/*.*',
-            '_site/**/**/*.*',
-            '_site/**/**/**/*.*',
-            '_site/**/**/**/**/*.*',
-            '_site/**/**/**/**/**/*.*'
+            '_site/**/*.*'
           ]
         },
         options: {
-          port: 5001,
-          proxy: "http://0.0.0.0:4001/origin/"
+          port: 9001,
+          proxy: "http://0.0.0.0:8001/origin/"
         }
       }
     },
@@ -102,10 +98,8 @@ module.exports = function(grunt) {
     // Run tasks in parallel
     concurrent: {
       serve: [
-        'sass',
         'watch',
-        'shell:jekyllServe',
-        'browserSync'
+        'shell:jekyllServe'
       ],
       options: {
         logConcurrentOutput: true
@@ -119,7 +113,6 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/*.scss',
           'assets/scss/**/*.scss',
-          'assets/scss/**/**/*.scss'
         ],
         tasks: ['sass']
       }
@@ -131,7 +124,13 @@ module.exports = function(grunt) {
   // Task for build and serve documentation locally
   grunt.registerTask('serve', [
     'copy',
+    'sass',
     'concurrent:serve'
+  ]);
+
+  // Task for running Browsersync
+  grunt.registerTask('sync', [
+    'browserSync'
   ]);
 
   // Task to only build documentation locally

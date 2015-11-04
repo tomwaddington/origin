@@ -3,7 +3,7 @@ source: docs
 
 permalink: pretty
 
-port: 4001
+port: 8001
 
 # Because the deployed site doesn’t live at the root fac.github.io URL; it lives
 # at fac.github.io/origin

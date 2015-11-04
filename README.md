@@ -43,7 +43,15 @@ Then build and serve the documentation locally using Grunt:
 $ grunt
 ```
 
-A new browser tab should open to `http://localhost:5001/origin/`. The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
+In a new terminal window, run Browsersync for live reloads, synced up browsing and scrolling:
+
+```bash
+$ grunt sync
+```
+
+A new browser tab should open automatically to `http://localhost:9001/origin/`.
+
+The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
 
 
 ## Structure
@@ -56,7 +64,8 @@ Very little of this repository is actually part of the [`origin-css`](https://ww
 |   ├── fonts
 |   └── scss
 |       ├── global
-|       └── local
+|       ├── local
+|       └── origin.scss
 ├── LICENSE.md
 ├── package.json
 └── README.md
