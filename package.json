@@ -30,7 +30,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "fa-css-utilities": "~1.6.0"
+    "fa-css-utilities": "~1.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
