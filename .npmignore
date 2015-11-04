@@ -1,3 +1,5 @@
+assets/scss/docs/
+assets/scss/origin.scss
 .bundle/config
 bower_components/
 bin/
