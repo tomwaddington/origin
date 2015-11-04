@@ -24,3 +24,6 @@ sass:
 
 github:
   repo: https://github.com/fac/origin
+
+# Prevent Jekyll from clobbering assets that Grunt handles
+keep_files: ['_site/assets/css', '_site/assets/fonts', '_site/assets/js']
