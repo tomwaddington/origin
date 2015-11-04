@@ -35,13 +35,17 @@ button:focus {
   @include user-select(none);
 }
 
-.Button:active,
-.Button:focus,
 .Button:hover {
-  background: darken(#fff, 6%);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: darken(#fff, 4%);
+  border-bottom-color: rgba(0,0,0,0.20);
   color: darken($color--base, 10%);
   text-decoration: none;
+}
+
+.Button:active,
+.Button:focus {
+  background: darken(#fff, 6%);
+  border-color: rgba(0, 0, 0, 0.08);
   @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
 }
 
