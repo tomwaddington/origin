@@ -97,6 +97,20 @@ Add a description here
         </span>
       </div>
     </div>
+    <div class="Form-field">
+      <label class="Form-fieldLabel Form-fieldLabel--required" for="subdomain">
+        Were you on a flat rate scheme on your VAT Registration Date?
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-radioInput" id="vat-frs-yes" placeholder="medianode" type="radio" />
+        <label class="Form-inlineLabel" for="vat-frs-yes">Yes</label>
+        <input class="Form-radioInput Form-inlineInput" id="vat-frs-no" placeholder="medianode" type="radio" />
+        <label class="Form-inlineLabel" for="vat-frs-no">No</label>
+        <span class="Form-inputNote">
+          Only affects the automatically-created initial VAT returns
+        </span>
+      </div>
+    </div>
   </fieldset>
   <div class="Form-actions">
     <button class="Button Button--legacy" type="submit">
@@ -196,6 +210,20 @@ Add a description here
         <span>.freeagent.com</span>
         <span class="Form-inputNote">
           The URL where you will log in to FreeAgent.
+        </span>
+      </div>
+    </div>
+    <div class="Form-field">
+      <label class="Form-fieldLabel Form-fieldLabel--required" for="subdomain">
+        Were you on a flat rate scheme on your VAT Registration Date?
+      </label>
+      <div class="Form-field-inputs">
+        <input class="Form-radioInput" id="vat-frs-yes" placeholder="medianode" type="radio" />
+        <label class="Form-inlineLabel" for="vat-frs-yes">Yes</label>
+        <input class="Form-radioInput Form-inlineInput" id="vat-frs-no" placeholder="medianode" type="radio" />
+        <label class="Form-inlineLabel" for="vat-frs-no">No</label>
+        <span class="Form-inputNote">
+          Only affects the automatically-created initial VAT returns
         </span>
       </div>
     </div>
