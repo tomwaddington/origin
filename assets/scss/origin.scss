@@ -13,30 +13,33 @@
  */
 
 /* Local: font settings */
-@import "fonts/_font-settings";
+@import "local/fonts/_font-settings";
 
 /* Global: functions to handle fonts correctly based on font settings */
-@import "../../../node_modules/origin-css/assets/scss/global/fonts/_font-functions";
+@import "global/fonts/_font-functions";
 
 /* Global: load fonts for `@font-face` use */
-@import "../../../node_modules/origin-css/assets/scss/global/fonts/_source-sans-pro";
+@import "global/fonts/_source-sans-pro";
 
 /* Local: CSS utility settings */
-@import "utilities/_utility-settings";
+@import "local/utilities/_utility-settings";
 
 /* Global: import utilities */
-@import "../../../node_modules/origin-css/node_modules/fa-css-utilities/_utilities";
+@import "../../node_modules/fa-css-utilities/_utilities";
 
 /* Local: base typographic, box model and colour declarations */
-@import "base/_base";
+@import "local/base/_base";
+
+/* Styles used for documentation */
+@import "docs/_docs";
 
 /* Global: import any required components; comment out those not required */
-@import "../../../node_modules/origin-css/assets/scss/global/components/_button";
-@import "../../../node_modules/origin-css/assets/scss/global/components/_navbar";
-@import "../../../node_modules/origin-css/assets/scss/global/components/_notice";
-@import "../../../node_modules/origin-css/assets/scss/global/components/_segmented-control";
-@import "../../../node_modules/origin-css/assets/scss/global/components/_table";
-@import "../../../node_modules/origin-css/assets/scss/global/components/_tabs";
+@import "global/components/_button";
+@import "global/components/_navbar";
+@import "global/components/_notice";
+@import "global/components/_segmented-control";
+@import "global/components/_table";
+@import "global/components/_tabs";
 
 /**
  * You’re safe to include your project styles below here...

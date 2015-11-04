@@ -37,19 +37,21 @@ $ npm install
 $ npm install -g grunt-cli (if you don’t already have Grunt installed)
 ```
 
-Then start a local Jekyll server:
-
-```bash
-$ bundle exec jekyll serve
-```
-
-Now open a new terminal window and start Browsersync:
+Then build and serve the documentation locally using Grunt:
 
 ```bash
 $ grunt
 ```
 
-A new browser tab should open to `http://localhost:3001/origin/`. The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
+In a new terminal window, run Browsersync for live reloads, synced up browsing and scrolling:
+
+```bash
+$ grunt sync
+```
+
+A new browser tab should open automatically to `http://localhost:9001/origin/`.
+
+The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
 
 
 ## Structure
@@ -61,6 +63,9 @@ Very little of this repository is actually part of the [`origin-css`](https://ww
 ├── assets
 |   ├── fonts
 |   └── scss
+|       ├── global
+|       ├── local
+|       └── origin.scss
 ├── LICENSE.md
 ├── package.json
 └── README.md
@@ -74,14 +79,9 @@ If you want to make changes to Origin, it’s these files you want to change. Th
 
 Origin’s documentation is built with Jekyll and Grunt. It can be run locally, and is published to [http://fac.github.io/origin/](http://fac.github.io/origin/) via the [`gh-pages`](https://github.com/fac/origin/tree/gh-pages) branch.
 
+The local documentation give us a sandbox for trying new ideas and approaches before considering them for deployment. It’s our “kitchen sink” view of utilities and components.
+
 Aside from Jekyll’s [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and Grunt’s [`Gruntfile.js`](https://github.com/fac/origin/blob/master/Gruntfile.js), all files related to documentation live in [`/docs`](https://github.com/fac/origin/tree/master/docs).
-
-Here’s where things get a bit inception-y: **Origin’s documentation _uses Origin_ to document Origin**.
-
-The [`/docs/assets`](https://github.com/fac/origin/tree/master/docs/assets) directory contains many of the same files as the root `/assets` directory (the one included in the npm package). In this sense, the Origin docs are a good example of how you might implement Origin into a project.
-
-But the real purpose of the docs (aside from the obvious) is to give us a sandbox for trying new ideas and approaches before considering them for deployment. It’s our “kitchen sink” view of utilities and components.
-
 
 ### Publishing
 
@@ -110,7 +110,7 @@ This will add the Origin files to a new `/origin-css` directory inside the `/nod
 After installing, do the following:
 
 1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself.
-2. Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to the global Sass partials if the location of your stylesheets directory isn’t the standard Rails `app/assets/stylesheets`.
+2. Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to suit your project.
 
 
 ## Development
@@ -119,7 +119,7 @@ Development of Origin happens in our primary branch, `master`. For stable versio
 
 ### Developing ideas locally
 
-As mentioned [above](#documentation), Origin’s documentation _uses_ Origin. The [`/docs`](https://github.com/fac/origin/tree/master/docs) directory is the place to experiment with new ideas before considering adding any of them to the root [`/assets`](https://github.com/fac/origin/tree/master/assets) directory.
+As mentioned above, Origin’s documentation is the place to experiment with new ideas prior to submitting a pull request.
 
 It’s also possible to try out new ideas for Origin in any other projects where it’s implemented. npm provides a way to point to your _local version of Origin_ instead of referencing the one installed by npm. This means you could, for example, trial changing the `background-color` of a button in Origin and see the effect it has in your app without actually having to push a new version of the Origin package to npm.
 
@@ -134,18 +134,14 @@ Editor preferences are available in the [editor config](https://github.com/fac/o
 
 ### Creating a new component
 
-There are two distinct steps involved in creating a new CSS component: authoring and testing it locally as part of the docs, then copying it over to the `assets` folder and publishing out into the world via npm.
-
 1. Make sure you're up to date with the master branch (`git fetch; git pull origin master`)
 2. Branch off master (`git checkout -b <add-amazing-component>`)
-3. Create a new `.scss` partial for your component in [`docs/assets/scss/global/components`](https://github.com/fac/origin/tree/master/docs/assets/scss/global/components) and give it a (singular, not plural) name
-4. `@import` your partial into [`docs.scss`](https://github.com/fac/origin/blob/master/docs/assets/scss/docs.scss)
+3. Create a new `.scss` partial for your component in [`assets/scss/global/components`](https://github.com/fac/origin/tree/master/assets/scss/global/components) and give it a (singular, not plural) name
+4. `@import` your partial into [`origin.scss`](https://github.com/fac/origin/blob/master/assets/scss/origin.scss)
 5. Create a new `.md` file in [`docs/components`](https://github.com/fac/origin/tree/master/docs/components) that matches your `.scss` partial name, and document examples of all use cases and variants of your component
 6. Test that the component renders as expected in all use cases
-7. Make a copy of your partial in [`assets/scss/global/components`](https://github.com/fac/origin/tree/master/assets/scss/global/components)
-8. `@import` your new component partial into the [`https://github.com/fac/origin/blob/master/assets/scss/local/origin.scss`](origin.scss) example implementation file
-9. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
-10. Create a new pull request and provide a helpful description of what the component does and why its been created
+7. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
+8. Create a new pull request and provide a helpful description of what the component does and why its been created
 
 ### Creating a new release
 
