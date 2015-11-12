@@ -105,7 +105,9 @@ $ cd <your-project-directory>
 $ npm install origin-css --save
 ```
 
-This will add the Origin files to a new `/origin-css` directory inside the `/node_modules` directory at the root of your project, and save `origin-css` as a dependency in your `package.json` file. If npm isn’t yet being used in your project, running the above command will create the `/node_modules` directory too. You’ll want to [create a package](https://docs.npmjs.com/cli/init) to manage your npm dependencies.
+This will add the Origin files to a new `origin-css` directory inside the `node_modules` directory at the root of your project, and save `origin-css` as a dependency in your `package.json` file.
+
+If npm isn’t yet being used in your project, running the above command will create the `node_modules` directory too. You’ll want to [create a package](https://docs.npmjs.com/cli/init) to manage your npm dependencies, and most likely add a new rule to `.gitignore` to ignore the `node_modules` directory unless your project explicitly dictates that you shouldn't.
 
 After installing, do the following:
 
