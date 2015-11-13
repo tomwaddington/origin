@@ -144,6 +144,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'serve');
 
   // Task for publishing documentation to GitHub Pages
-  grunt.registerTask('publish', ['jekyll', 'buildcontrol:pages']);
+  grunt.registerTask('publish', ['shell:jekyllBuild', 'buildcontrol:pages']);
 
 };
