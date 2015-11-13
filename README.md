@@ -114,6 +114,7 @@ After installing, do the following:
 1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself.
 2. Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to suit your project.
 
+If your project already includes [normalize.css](https://github.com/necolas/normalize.css/), delete it, as Origin already uses it.
 
 ## Development
 
