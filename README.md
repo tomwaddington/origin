@@ -2,7 +2,7 @@
 
 Origin is FreeAgent’s internal CSS framework. We’re a growing team working across a range of different projects and codebases, and making CSS work at scale is hard. Agreed principles, approaches, and patterns mean we can do better work faster. That’s what Origin gives us.
 
-Origin consumes our [CSS utilities](https://github.com/fac/fa-css-utilities) and provides some global UI components. It also documents our [principles](http://fac.github.io/origin/principles/) and HTML & CSS [code style](http://fac.github.io/origin/code-style/). We use it in our desktop app, mobile apps, website, and a bunch of other projects.
+Origin consumes our [CSS utilities](https://github.com/fac/fa-css-utilities) and provides some global UI components. It also documents our [principles](http://fac.github.io/origin/principles/), HTML & CSS [naming conventions](http://fac.github.io/origin/guidance/naming-conventions/) and [code style](http://fac.github.io/origin/guidance/code-style/). We use it in our desktop app, mobile apps, website, and a bunch of other projects.
 
 [**Read the Origin documentation**](http://fac.github.io/origin/) to learn more.
 
