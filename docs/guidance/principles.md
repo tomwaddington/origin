@@ -3,21 +3,19 @@ layout: page
 title: Principles
 ---
 
-We write HTML & CSS using a component-based methodology. It massively improves the authoring experience, ease of maintenance and code quality.
+We write HTML & CSS using a component-based methodology. It massively improves the authoring experience, ease of maintenance, and code quality.
 
-This method is different to “traditional” standards-compliant HTML & CSS in that our semantics are _not_ typically content-derived. Instead we overrule the inherited styles of global HTML elements (`h1`, `p`, `li` etc) and derive class names from our design patterns and functionality. Doing so means we can:
+This method is different to “traditional” standards-compliant HTML & CSS in that our semantics are _not_ typically content-derived. Instead we overrule the inherited styles of global HTML elements (`h1`, `p`, `li` etc) and try to avoid the cascade entirely. This helps prevent the kind of inheritance issues that often plague large CSS codebases.
 
-* Create highly reusable [utilities]({{ site.baseurl }}/guidance/utilities/) and [components]({{ site.baseurl }}/guidance/components/), named in ways that communicate useful information to developers
-* Add semantic value for machines using global HTML elements without worrying how they affect about presentation
+We derive class names from design patterns and functionality rather than content. This approach not only provides more useful information to developers, but also lets us add semantic value for machines using global HTML elements — _without_ worrying how they affect about presentation.
 
-We also use attributes like `data-ui-component` to add extra semantic value.
+### Utilities and components
 
-### Further reading
-* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
-* [Block Element Modifier method](http://bem.info/method/)
-* [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* [Object Oriented CSS](https://github.com/stubbornella/oocss/wiki)
-* [Scalable Modular Architecture CSS](http://smacss.com/book/)
+The key elements of Origin are [utilities]({{ site.baseurl }}/guidance/utilities/) and [components]({{ site.baseurl }}/guidance/components/), highly-reusable patterns that we can use across different projects in different scenarios.
+
+### Syntax
+
+The syntax of Origin is based on [SUIT CSS](https://suitcss.github.io/), which is a flavour of [BEM](http://bem.info/). The [naming conventions]({{ site.baseurl }}/guidance/naming-conventions/) section should contain everything you need to know. If not, [raise an issue](https://github.com/fac/origin/issues) so we can update the docs!
 
 ## Principles
 
@@ -59,3 +57,11 @@ Complexity is a significant problem for large, adaptive applications. The more y
 ### Documentation
 
 Write small, independent components that are well documented to describe how the components should be used, and why specific CSS properties are needed in the implementation. Do not assume that CSS is self-documenting.
+
+
+### Further reading
+* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+* [Block Element Modifier method](http://bem.info/method/)
+* [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* [Object Oriented CSS](https://github.com/stubbornella/oocss/wiki)
+* [Scalable Modular Architecture CSS](http://smacss.com/book/)
