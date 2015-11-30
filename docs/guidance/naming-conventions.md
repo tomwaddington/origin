@@ -30,7 +30,15 @@ Set in regular, lowercase CSS syntax because they typically only manipulate a si
 
 [Learn more about utility syntax]({{ site.baseurl }}/guidance/utilities/)
 
+### Using utilities in `.scss` files
 {% highlight scss %}
-@include background-color(fa-blue);
-@include margin(default large);
+.SomeComponent {
+  @include background-color(fa-blue);
+  @include margin(large);  
+}
+{% endhighlight %}
+
+### Using utilities in HTML
+{% highlight html %}
+<div class="u-background-color--fa-blue u-margin--large"></div>
 {% endhighlight %}
