@@ -171,25 +171,19 @@
       Principles
     </h1>
     <div class="markdown-body">
-      <p>We write HTML &amp; CSS using a component-based methodology. It massively improves the authoring experience, ease of maintenance and code quality.</p>
+      <p>We write HTML &amp; CSS using a component-based methodology. It massively improves the authoring experience, ease of maintenance, and code quality.</p>
 
-<p>This method is different to “traditional” standards-compliant HTML &amp; CSS in that our semantics are <em>not</em> typically content-derived. Instead we overrule the inherited styles of global HTML elements (<code>h1</code>, <code>p</code>, <code>li</code> etc) and derive class names from our design patterns and functionality. Doing so means we can:</p>
+<p>This method is different to “traditional” standards-compliant HTML &amp; CSS in that our semantics are <em>not</em> typically content-derived. Instead we overrule the inherited styles of global HTML elements (<code>h1</code>, <code>p</code>, <code>li</code> etc) and try to avoid the cascade entirely. This helps prevent the kind of inheritance issues that often plague large CSS codebases.</p>
 
-<ul>
-  <li>Create highly reusable <a href="/origin/guidance/utilities/">utilities</a> and <a href="/origin/guidance/components/">components</a>, named in ways that communicate useful information to developers</li>
-  <li>Add semantic value for machines using global HTML elements without worrying how they affect about presentation</li>
-</ul>
+<p>We derive class names from design patterns and functionality rather than content. This approach not only provides more useful information to developers, but also lets us add semantic value for machines using global HTML elements — <em>without</em> worrying how they affect about presentation.</p>
 
-<p>We also use attributes like <code>data-ui-component</code> to add extra semantic value.</p>
+<h3 id="utilities-and-components">Utilities and components</h3>
 
-<h3 id="further-reading">Further reading</h3>
-<ul>
-  <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">About HTML semantics and front-end architecture</a></li>
-  <li><a href="http://bem.info/method/">Block Element Modifier method</a></li>
-  <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head ’round BEM syntax</a></li>
-  <li><a href="https://github.com/stubbornella/oocss/wiki">Object Oriented CSS</a></li>
-  <li><a href="http://smacss.com/book/">Scalable Modular Architecture CSS</a></li>
-</ul>
+<p>The key elements of Origin are <a href="/origin/guidance/utilities/">utilities</a> and <a href="/origin/guidance/components/">components</a>, highly-reusable patterns that we can use across different projects in different scenarios.</p>
+
+<h3 id="syntax">Syntax</h3>
+
+<p>The syntax of Origin is based on <a href="https://suitcss.github.io/">SUIT CSS</a>, which is a flavour of <a href="http://bem.info/">BEM</a>. The <a href="/origin/guidance/naming-conventions/">naming conventions</a> section should contain everything you need to know. If not, <a href="https://github.com/fac/origin/issues">raise an issue</a> so we can update the docs!</p>
 
 <h2 id="principles">Principles</h2>
 
@@ -233,6 +227,15 @@
 <h3 id="documentation">Documentation</h3>
 
 <p>Write small, independent components that are well documented to describe how the components should be used, and why specific CSS properties are needed in the implementation. Do not assume that CSS is self-documenting.</p>
+
+<h3 id="further-reading">Further reading</h3>
+<ul>
+  <li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">About HTML semantics and front-end architecture</a></li>
+  <li><a href="http://bem.info/method/">Block Element Modifier method</a></li>
+  <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head ’round BEM syntax</a></li>
+  <li><a href="https://github.com/stubbornella/oocss/wiki">Object Oriented CSS</a></li>
+  <li><a href="http://smacss.com/book/">Scalable Modular Architecture CSS</a></li>
+</ul>
 
     </div>
   </div>

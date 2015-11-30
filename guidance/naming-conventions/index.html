@@ -171,28 +171,29 @@
       Naming conventions
     </h1>
     <div class="markdown-body">
-      <h2 id="components">Components</h2>
+      <p>Our naming conventions are based largely on that of <a href="https://suitcss.github.io/">SUIT CSS</a>. The combination of <code>UpperCamelCase</code>, <code>lowerCamelCase</code>, and <code>regular-css-syntax</code> helps developers to distinguish what the intended role, behaviour, and structure of the code should be.</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.ComponentName</span> <span class="p">{}</span></code></pre></div>
+<h2 id="components">Components</h2>
+<p>Set in upper camel case. Each component reserves a namespace that can only be used by that component. If you see an element set in upper camel case, you know it’s a component and therefore has its own <code>.scss</code> partial in the <code>/components</code> directory of your project, or is already a global component managed by Origin.</p>
 
-<p>Upper camel case syntax because they’re the heroes of the show.</p>
+<p><a href="/origin/guidance/components/">Learn more about component syntax</a></p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.ComponentName</span> <span class="p">{}</span>
+<span class="nc">.NavBar</span> <span class="p">{}</span></code></pre></div>
 
 <h2 id="layout-components">Layout components</h2>
+<p>Set in upper camel case and <code>l-</code> namespaced to signal that they’re purely concerned with layout rather than functional or interaction behaviour.</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.l-ComponentName</span> <span class="p">{}</span></code></pre></div>
-
-<p>Given a specific <code>l-</code> namespacing to differentiate them from normal components.</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.l-ComponentName</span> <span class="p">{}</span>
+<span class="nc">.l-Container</span> <span class="p">{}</span></code></pre></div>
 
 <h2 id="utilities">Utilities</h2>
+<p>Set in regular, lowercase CSS syntax because they typically only manipulate a single CSS property and value.</p>
 
-<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span> <span class="p">{}</span></code></pre></div>
+<p><a href="/origin/guidance/utilities/">Learn more about utility syntax</a></p>
 
-<p>Follows regular CSS syntax, as that’s all the simple property/value nature of utilities are manipulating.</p>
-
-<h2 id="variables">Variables</h2>
-<p>Match the naming convention of utilities or components when creating global variables:</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="err">$</span><span class="nt">padding--action</span><span class="o">:</span> <span class="err">$</span><span class="nt">spacing--5</span><span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">margin</span><span class="p">(</span><span class="nb">default</span> <span class="nb">large</span><span class="p">);</span></code></pre></div>
 
 
     </div>
