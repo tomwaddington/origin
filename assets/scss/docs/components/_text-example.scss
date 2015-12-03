@@ -165,45 +165,56 @@
 
 
 .TextExample--line-height--1 {
+  @include font-size(default);
   @include line-height(1);
 }
 
 .TextExample--line-height--2 {
+  @include font-size(default);
   @include line-height(2);
 }
 
 .TextExample--line-height--3 {
+  @include font-size(default);
   @include line-height(3);
 }
 
 .TextExample--line-height--4 {
+  @include font-size(default);
   @include line-height(4);
 }
 
 .TextExample--line-height--5 {
+  @include font-size(default);
   @include line-height(5);
 }
 
 .TextExample--line-height--6 {
+  @include font-size(default);
   @include line-height(6);
 }
 
 .TextExample--line-height--7 {
+  @include font-size(default);
   @include line-height(7);
 }
 
 .TextExample--line-height--8 {
+  @include font-size(default);
   @include line-height(8);
 }
 
 .TextExample--line-height--9 {
+  @include font-size(default);
   @include line-height(9);
 }
 
 .TextExample--line-height--10 {
+  @include font-size(default);
   @include line-height(10);
 }
 
 .TextExample--line-height--11 {
+  @include font-size(default);
   @include line-height(11);
 }
