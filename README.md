@@ -26,7 +26,7 @@ Following these steps will install Origin and it’s docs locally, and allow you
 
 **If you want to implement Origin into a project and don’t want the documentation, [follow these instructions](#implementing-origin-into-a-project)**
 
-Prerequisites: Ruby, [Bundler](http://bundler.io/), [Node.js](http://nodejs.org/download/)
+Prerequisites: Ruby 2.1, [Bundler](http://bundler.io/), [Node.js](http://nodejs.org/download/)
 
 ```bash
 $ git clone git@github.com:fac/origin.git
