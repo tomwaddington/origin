@@ -59,10 +59,10 @@ button:focus {
  * 1. Ensures `Button--outline` border gets overridden
  */
 
-.Button.is-disabled,
-.Button.is-disabled:active,
-.Button.is-disabled:focus,
-.Button.is-disabled:hover {
+.Button--disabled,
+.Button--disabled:active,
+.Button--disabled:focus,
+.Button--disabled:hover {
   @include linear-gradient($color--gray-14, $color--gray-14);
   @include text-color(gray-10, !important);
   @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
