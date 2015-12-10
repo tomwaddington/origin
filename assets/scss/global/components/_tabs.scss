@@ -8,6 +8,13 @@
  */
 
 .Tabs {
+  @include background-color(fa-blue--dark);
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, .08), inset);
+  @include line-height(default);
+  @include flexbox(flex);
+  @include flex-align-items(stretch);
+  @include flex-direction(row);
+  @include flex-justify-content(center);
   display: block;
   height: 55px;
   margin: 0;
@@ -15,13 +22,6 @@
   position: relative;
   text-align: center;
   width: 100%;
-  @include background-color(fa-blue--dark);
-  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.08), inset);
-  @include line-height(default);
-  @include flexbox(flex);
-  @include flex-align-items(stretch);
-  @include flex-direction(row);
-  @include flex-justify-content(center);
 }
 
 /**
@@ -29,24 +29,24 @@
  */
 
 .Tabs-tab {
+  @include font-size(small);
+  @include flex(1);
+  @include text-truncate;
   background: none;
   border-color: $color--fa-blue--x-dark;
   border-style: solid;
   border-width: 0 1px 0 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, .5);
   display: inline-block;
   height: 100%;
   margin: 0;
   overflow: visible !important;
-  padding: 0 0.5em;
+  padding: 0 .5em;
   position: relative;
-  @include font-size(small);
-  @include flex(1);
-  @include text-truncate;
 }
 
-.retina .Tabs-tab {
-  border-right-width: 0.5px;
+.is-retina .Tabs-tab {
+  border-right-width: .5px;
 }
 
 /**
@@ -61,7 +61,7 @@
 .Tabs-tab:active,
 .Tabs-tab:hover {
   /* 1 */
-  background-color: #0060A3;
+  background-color: #0060a3;
 }
 
 /**
@@ -70,8 +70,8 @@
 
 .Tabs-tab--selected,
 .Tabs-tab--selected:active {
-  color: #fff;
   @include background-color(fa-blue--x-dark);
+  color: #fff;
 }
 
 /**
@@ -83,24 +83,24 @@
 }
 
 .Count--tab-count {
+  @include transform(translateX(-50%) translateY(-50%));
   left: 50%;
   position: absolute;
   top: 0;
-  @include transform(translateX(-50%) translateY(-50%));
 }
 
 .Count--tab-count--bottom {
+  @include transform(translateX(-50%) translateY(50%));
   bottom: 0;
   top: auto;
-  @include transform(translateX(-50%) translateY(50%));
 }
 
-.Count--tab-count:before {
-  background: rgba(0, 0, 0, 0.1);
+.Count--tab-count::before {
+  background: rgba(0, 0, 0, .1);
   border-radius: 100px;
   content: "";
-  left: -4px;
   height: calc(100% + 8px);
+  left: -4px;
   position: absolute;
   top: -4px;
   width: calc(100% + 8px);
@@ -111,14 +111,14 @@
 }
 
 .Count-digit {
-  color: #fff;
-  border-radius: 100px;
-  display: inline-block;
-  min-width: 1.75em;
-  padding: 0.35em;
-  position: relative;
-  text-align: center;
   @include font-size(x-small);
   @include font-weight(semi-bold);
   @include line-height(tight);
+  border-radius: 100px;
+  color: #fff;
+  display: inline-block;
+  min-width: 1.75em;
+  padding: .35em;
+  position: relative;
+  text-align: center;
 }
