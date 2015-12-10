@@ -47,6 +47,19 @@ module.exports = function(grunt) {
       }
     },
 
+    // SCSS lint
+    scsslint: {
+      allFiles: [
+        'assets/scss/*.scss',
+        'assets/scss/global/**/*.scss',
+        'assets/scss/local/**/*.scss'
+      ],
+      options: {
+        config: '.scss-lint.yml',
+        reporterOutput: 'scss-lint-report.xml',
+        colorizeOutput: true
+      }
+    },
 
     // Copy content of fonts directory
     copy: {
