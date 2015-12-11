@@ -6,3 +6,4 @@ vendor/
 _site/
 node_modules/
 bower_components/
+scss-lint-report.xml

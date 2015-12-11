@@ -47,6 +47,19 @@ module.exports = function(grunt) {
       }
     },
 
+    // SCSS lint
+    scsslint: {
+      allFiles: [
+        'assets/scss/*.scss',
+        'assets/scss/global/**/*.scss',
+        'assets/scss/local/**/*.scss'
+      ],
+      options: {
+        config: '.scss-lint.yml',
+        reporterOutput: 'scss-lint-report.xml',
+        colorizeOutput: true
+      }
+    },
 
     // Copy content of fonts directory
     copy: {
@@ -109,6 +122,14 @@ module.exports = function(grunt) {
 
     // Watch for files to change and run tasks when they do
     watch: {
+      scsslint: {
+        files: [
+          'assets/scss/*.scss',
+          'assets/scss/global/**/*.scss',
+          'assets/scss/local/**/*.scss'
+        ],
+        tasks: ['scsslint']
+      },
       sass: {
         files: [
           'assets/scss/*.scss',

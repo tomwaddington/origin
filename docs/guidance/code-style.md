@@ -14,6 +14,8 @@ title: Code style
 
 ## CSS
 
+Note that [scss-lint](https://github.com/brigade/scss-lint) will check for SCSS syntax issues automatically when running the Origin docs. We have it built into Grunt.
+
 ### CSS formatting
 * Always put each CSS selector on a separate line.
 * Leave one blank line between every CSS comment and rule set.
@@ -28,7 +30,7 @@ title: Code style
 
 ### CSS writing style
 * Use lowercase and shorthand hex values (e.g. `#aaa`).
-* Use single or double quotes consistently. Preference is for double quotes (e.g. `content: “”`).
+* Use single or double quotes consistently. Preference is for double quotes (e.g. `content: ""`).
 * Quote attribute values in selectors (e.g. `input[type="checkbox”]`).
 * Avoid ID selectors whenever possible.
 * Avoid using element types as part of selectors (e.g. `.button` instead of `a.button`).
@@ -43,10 +45,10 @@ Example:
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-  display: block;
-  float: left;
   @include line-height(tight);
   @include text-color(fa-blue);
+  display: block;
+  float: left;
 }
 
 /**
@@ -55,24 +57,24 @@ Example:
 
 p + p,
 h3 > p {
-  @include fa-margin-bottom(large);
+  @include margin-bottom(large);
 }
 {% endhighlight %}
 
 #### CSS declaration order
-List all ‘vanilla’ CSS declarations alphabetically, and always `@include` rules afterwards, but still in alphabetical order with other `@include` rules.
+`@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from [fa-css-utilities](https://github.com/fac/fa-css-utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
 
 Example:
 
 {% highlight scss %}
 .MyComponent {
-  display: inline-block;
-  opacity: 0.5;
   @include background-color(gray-13);
-  @include fa-font-family(default);
+  @include font-family(default);
   @include font-size(large);
   @include line-height(tight);
   @include text-color(fa-blue);
+  display: inline-block;
+  opacity: .5;
 }
 {% endhighlight %}
 
@@ -162,17 +164,17 @@ An example of various conventions.
  */
 
 .SegmentedControl {
-  border: 1px solid $color--gray-9;
-  height: $segmented-control-height;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  @include fa-border-radius(default);
+  @include border-radius(default);
   @include line-height(tight);
   @include flexbox(flex);
   @include flex-align-items(stretch);
   @include flex-direction(row);
   @include flex-justify-content(center);
+  border: 1px solid $color--gray-9;
+  height: $segmented-control-height;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 /**
@@ -180,6 +182,9 @@ An example of various conventions.
  */
 
 .SegmentedControl-segment {
+  @include flex(1);
+  @include text-truncate;
+  @include text-color(gray-9);
   background: none;
   border-color: $color--gray-9;
   border-style: solid;
@@ -187,9 +192,6 @@ An example of various conventions.
   display: inline-block;
   margin: 0;
   padding: 0 4px 1px 4px;
-  @include flex(1);
-  @include text-truncate;
-  @include text-color(gray-9);
 }
 
 /* High contrast variant
