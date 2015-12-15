@@ -131,6 +131,82 @@ Group buttons by wrapping them in a `.ButtonGroup`.
 {% endexample %}
 
 
+## Dropdown buttons
+
+A single button can contain multiple actions by converting it into a dropdown button
+
+{% example html %}
+<div class="ButtonGroup">
+  <button class="Button Button--legacy" type="button">Button</button>
+  <div class="Button Button--legacy Button--dropdown" type="button">
+    Button
+    <ul class="Button--dropdown--contents">
+      <li><a href="">One</a></li>
+    </ul>
+  </div>
+  <div class="Button Button--legacy Button--dropdown" type="button">
+    Button
+    <ul class="Button--dropdown--contents">
+      <li><a href="">One</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="ButtonGroup">
+  <div class="Button Button--legacy Button--outline Button--dropdown" type="button">
+    Button
+    <ul class="Button--dropdown--contents">
+      <li><a href="http://freeagent.com">One</a></li>
+      <li><a href="http://google.co.uk">Two</a></li>
+      <li><a href="http://bbc.co.uk">And three</a></li>
+    </ul>
+  </div>
+  <button class="Button Button--legacy Button--outline" type="button">Button</button>
+  <button class="Button Button--legacy Button--outline" type="button">Button</button>
+</div>
+{% endexample %}
+
+{% example html %}
+<div class="ButtonGroup">
+  <button class="Button Button--legacy" type="button">Button</button>
+  <div class="Button Button--legacy Button--dropdown" type="button">
+    Button
+    <ul class="Button--dropdown--contents">
+      <li><a href="">One</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="Button Button--legacy Button--primary Button--dropdown" type="button">
+  Button
+  <ul class="Button--dropdown--contents">
+    <li><a href="">One</a></li>
+  </ul>
+</div>
+{% endexample %}
+
+{% example html %}
+<button class="Button Button--legacy Button--primary Button--dropdown" type="button">
+  Primary button
+  <ul class="Button--dropdown--contents">
+    <li><a href="">One</a></li>
+  </ul>
+</button>
+<button class="Button Button--legacy Button--primary Button--large Button--dropdown" type="button">
+  Large primary button
+  <ul class="Button--dropdown--contents">
+    <li><a href="">One</a></li>
+  </ul>
+</button>
+<button class="Button Button--legacy Button--primary Button--small Button--dropdown" type="button">
+  Small primary button
+  <ul class="Button--dropdown--contents">
+    <li><a href="">One</a></li>
+  </ul>
+</button>
+{% endexample %}
+
+
 ## Different fonts
 
 Buttons can be set using different fonts, if required.
