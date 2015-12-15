@@ -36,6 +36,17 @@ Primary buttons are used to indicate the **one** primary action on a view/page. 
 {% endexample %}
 
 
+## Primary (white text)
+
+Currently used across the website for primary actions.
+
+{% example html %}
+<button class="Button Button--primary Button--primary--white" type="button">Primary button</button>
+<button class="Button Button--primary Button--primary--white Button--large" type="button">Large primary button</button>
+<button class="Button Button--primary Button--primary--white Button--small" type="button">Small primary button</button>
+{% endexample %}
+
+
 ## Negative
 
 Negative buttons have red label text on `:hover`, `:active`, and `:focus` states. They help reiterate that the intended action can have negative consequences (e.g. disabling or cancelling something).

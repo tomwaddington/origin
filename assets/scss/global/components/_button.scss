@@ -128,6 +128,26 @@ button:focus {
 }
 
 /**
+ * Positive button variant with white text
+ *
+ * Used on freeagent.com
+ */
+
+.Button--primary--white {
+  color: #fff;
+  text-shadow: 0 1px 0 darken($color--fa-green, 14%);
+}
+
+.Button--primary--white:hover {
+  color: #fff;
+}
+
+.Button--primary--white:active,
+.Button--primary--white:focus {
+  text-shadow: 0 1px 0 darken($color--fa-green, 20%);
+}
+
+/**
  * Neutral button variant
  *
  * Used when a button shouldn’t command as much attention as normal
