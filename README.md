@@ -135,6 +135,12 @@ All team members should be contributing back to this repo in order to improve it
 
 Editor preferences are available in the [editor config](https://github.com/fac/origin/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
+### SCSS Linter
+
+We use [SCSS-Lint](https://github.com/brigade/scss-lint) to catch any formatting or syntax issues with SCSS during development. It’s integrated into our [Gruntfile](https://github.com/fac/origin/blob/master/Gruntfile.js), and will automatically lint `.scss` as soon as they’re saved.
+
+The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/blob/master/.scss-lint.yml).  
+
 ### Creating a new component
 
 1. Make sure you're up to date with the master branch (`git fetch; git pull origin master`)
