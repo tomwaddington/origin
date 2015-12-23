@@ -30,6 +30,9 @@
 /* Global: import utilities */
 @import "../../node_modules/fa-css-utilities/_utilities";
 
+/* Global mixins */
+@import "mixins/_breakpoints";
+
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";
 
@@ -38,6 +41,7 @@
 
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
+@import "global/components/_heading";
 @import "global/components/_navbar";
 @import "global/components/_notice";
 @import "global/components/_segmented-control";
