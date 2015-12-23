@@ -1,0 +1,66 @@
+/* Heading
+   ========================================================================== */
+
+.Heading {
+  @include font-family(default);
+  @include font-size(default);
+  @include font-weight(bold);
+  @include line-height(x-tight);
+  @include margin(0 0 small 0);
+}
+
+.Heading--xx-large {
+  @include font-size(xx-large);
+
+  @include break(small) {
+    @include font-size(12);
+  }
+}
+
+.Heading--x-large {
+   @include font-size(x-large);
+   @include margin-top(6);
+
+   @include break(small) {
+     @include font-size(10);
+   }
+}
+
+.Heading--large {
+  @include font-size(large);
+  @include margin-top(6);
+
+  @include break(small) {
+    @include font-size(8);
+  }
+}
+
+.Heading--small {
+  @include font-size(small);
+  @include font-weight(semi-bold);
+  @include margin-top(small);
+
+  @include break(small) {
+    @include font-size(6);
+  }
+}
+
+.Heading--x-small {
+  @include font-size(x-small);
+  @include font-weight(semi-bold);
+  @include margin-top(small);
+
+  @include break(small) {
+    @include font-size(5);
+  }
+}
+
+.Heading--xx-small {
+  @include font-size(xx-small);
+  @include font-weight(semi-bold);
+  @include margin-top(small);
+
+  @include break(small) {
+    @include font-size(4);
+  }
+}
