@@ -1,66 +1,214 @@
-/* Heading
-   ========================================================================== */
+/* Heading component
+   ==========================================================================
+   The Heading component provides a scale of headings that can be applied to
+   any element, creating consistency and avoiding inheritance issues that come
+   with targeting bare HTML elements.
+*/
 
-.Heading {
-  @include font-family(default);
-  @include font-size(default);
-  @include font-weight(bold);
+
+/* Mixin
+  ========================================================================== */
+
+/**
+ * Example usage:
+ * `@include Heading(small);`
+ * `@include Heading(fa-blue--xx-dark, large);`
+ * `@include Heading(editorial, x-large);`
+ * `@include Heading(fa-green, editorial, small);`
+ * `@include Heading(legacy, large);`
+ * `@include Heading(editorial, xx-large, semi-bold);`
+ */
+
+/**
+ * Values for `$Heading-color`, `$Heading-font`, and `$Heading-weight` are all
+ * defined locally in _heading-settings.scss.
+ */
+
+@mixin Heading(
+  $color: $Heading-color,
+  $font: $Heading-font,
+  $size: default,
+  $weight: $Heading-weight,
+  $important: null
+  ) {
+  color: map-get($text-color-values, $Heading-color) $important;
+  font-family: map-get($font-family-values, $Heading-font) $important;
+  font-size: map-get($font-size-values, $size) $important;
+  font-weight: map-get($font-weight-values, $Heading-weight) $important;
   @include line-height(x-tight);
   @include margin(0 0 small 0);
 }
 
-.Heading--xx-large {
-  @include font-size(xx-large);
+
+/* Sizes
+  ========================================================================== */
+
+.Heading--xx-large,
+.l-editorial h1 {
+  @include Heading(xx-large);
 
   @include break(small) {
     @include font-size(12);
   }
 }
 
-.Heading--x-large {
-   @include font-size(x-large);
-   @include margin-top(6);
+.Heading--x-large,
+.l-editorial h2 {
+  @include Heading(x-large);
 
-   @include break(small) {
-     @include font-size(10);
-   }
+  @include break(small) {
+    @include font-size(10);
+  }
 }
 
-.Heading--large {
-  @include font-size(large);
-  @include margin-top(6);
+.Heading--large,
+.l-editorial h3 {
+  @include Heading(large);
 
   @include break(small) {
     @include font-size(8);
   }
 }
 
-.Heading--small {
-  @include font-size(small);
-  @include font-weight(semi-bold);
-  @include margin-top(small);
+.Heading--small,
+.l-editorial h4 {
+  @include Heading(small);
 
   @include break(small) {
     @include font-size(6);
   }
 }
 
-.Heading--x-small {
-  @include font-size(x-small);
-  @include font-weight(semi-bold);
-  @include margin-top(small);
+.Heading--x-small,
+.l-editorial h5 {
+  @include Heading(x-small);
 
   @include break(small) {
     @include font-size(5);
   }
 }
 
-.Heading--xx-small {
-  @include font-size(xx-small);
-  @include font-weight(semi-bold);
-  @include margin-top(small);
+.Heading--xx-small,
+.l-editorial h6 {
+  @include Heading(xx-small);
 
   @include break(small) {
     @include font-size(4);
   }
+}
+
+
+/* Colors
+  ========================================================================== */
+
+.Heading--dark {
+  @include text-color(dark);
+}
+
+.Heading--default {
+  @include text-color(default);
+}
+
+.Heading--light {
+  @include text-color(light);
+}
+
+.Heading--x-light {
+  @include text-color(x-light);
+}
+
+.Heading--xx-light {
+  @include text-color(xx-light);
+}
+
+.Heading--negative {
+  @include text-color(negative);
+}
+
+.Heading--positive {
+  @include text-color(positive);
+}
+
+.Heading--warning {
+  @include text-color(warning);
+}
+
+
+/* Fonts
+  ========================================================================== */
+
+.Heading--default {
+  @include font-family(default);
+}
+
+.Heading--editorial {
+  @include font-family(editorial);
+}
+
+.Heading--legacy {
+  @include font-family(legacy);
+}
+
+
+/* Weights
+  ========================================================================== */
+
+.Heading--weight--thin {
+  @include font-weight(thin);
+}
+
+.Heading--weight--x-light {
+  @include font-weight(x-light);
+}
+
+.Heading--weight--light {
+  @include font-weight(light);
+}
+
+.Heading--weight--normal {
+  @include font-weight(normal);
+}
+
+.Heading--weight--medium {
+  @include font-weight(medium);
+}
+
+.Heading--weight--semi-bold {
+  @include font-weight(semi-bold);
+}
+
+.Heading--weight--bold {
+  @include font-weight(bold);
+}
+
+.Heading--weight--x-bold {
+  @include font-weight(x-bold);
+}
+
+.Heading--weight--black {
+  @include font-weight(black);
+}
+
+
+/* Editorial modifications
+  ========================================================================== */
+
+.l-editorial h2 {
+  @include margin-top(large);
+}
+
+.l-editorial h3 {
+  @include margin-top(large);
+}
+
+.l-editorial h4 {
+  @include margin-top(small);
+}
+
+.l-editorial h5 {
+  @include margin-top(small);
+}
+
+.l-editorial h6 {
+  @include margin-top(small);
 }

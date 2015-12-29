@@ -30,14 +30,14 @@
 /* Global: import utilities */
 @import "../../node_modules/fa-css-utilities/_utilities";
 
+/* Local: heading settings — copy file if implementing Origin into a project */
+@import "local/fonts/_heading-settings";
+
 /* Global mixins */
 @import "mixins/_breakpoints";
 
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";
-
-/* Docs styles — remove file reference if documentation styles aren’t needed */
-@import "docs/_docs";
 
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
@@ -47,6 +47,9 @@
 @import "global/components/_segmented-control";
 @import "global/components/_table";
 @import "global/components/_tabs";
+
+/* Docs styles — remove file reference if documentation styles aren’t needed */
+@import "docs/_docs";
 
 /**
  * You’re safe to include your project styles below here...
