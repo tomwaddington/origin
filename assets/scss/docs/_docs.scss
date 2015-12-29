@@ -29,6 +29,14 @@ a:hover {
   @include text-color(fa-blue--x-dark);
 }
 
+.markdown-body {
+  overflow: visible;
+}
+
+.markdown-body .highlight + h2 {
+  @include margin-top(xx-large);
+}
+
 .highlight .cm {
   font-style: normal;
   @include text-color(gray-9);
@@ -36,7 +44,7 @@ a:hover {
 
 // Add spacing between documentation code examples and subsequent headings
 .markdown-body .highlight {
-  @include margin-bottom(xx-large);
+  @include margin-bottom(x-large);
 }
 
 // Make containers responsive
@@ -47,8 +55,8 @@ a:hover {
   padding-right: 20px;
 }
 
-.markdown-body {
-  overflow: visible;
+.markdown-body .page-title {
+  @include margin-top(large);
 }
 
 //
@@ -374,23 +382,39 @@ a.menu-item:hover {
   @include background-color(gray-16);
 }
 
-.page-title + .markdown-body > p:first-child {
-  margin-bottom: 30px;
-  font-size: 20px;
-  font-weight: 300;
-  color: #555;
+.DocsExample--adjacentExample,
+.DocsExample--adjacentExample .highlight {
+  margin-bottom: 0;
 }
 
+.markdown-body .DocsExample--adjacentExample .highlight pre,
+.DocsExample--adjacentExample .DocsExample-render + .highlight {
+  border-radius: 0;
+}
+
+.page-title + .markdown-body > p:first-child {
+  @include font-size(large);
+  @include font-weight(light);
+  @include text-color(gray-5);
+}
+
+.page-title + .markdown-body > p:first-child + p {
+  margin-top: -0.5rem;
+}
 
 //
 // Markdown generated ToC
 //
 
-// Hide the first child li because it's always going to be "Contents".
-#markdown-toc > li:first-child {
-  display: none;
+#markdown-toc {
+  @include margin(large 0 x-large 0);
+  @include padding(0);
+  @include text-color(gray-7);
 }
 
+#markdown-toc li {
+  list-style-position: inside;
+}
 
 //
 // Branding colors
