@@ -113,6 +113,15 @@ These are the background colors we’re using in production — no more. All col
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
+    <div class="DocsExample-preview DocsExample-preview--fa-blue--xx-dark">
+      &nbsp;
+    </div>
+{% example scss %}
+@include background-color(fa-blue--xx-dark);
+{% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--fa-green--dark">
       &nbsp;
     </div>
