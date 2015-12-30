@@ -1,7 +1,15 @@
 /* Global breakpoints
    ========================================================================== */
 
-$supported: true !default; // make this stylesheet output media queries from our mixin
+/**
+ * Note: these are only candidate breakpoints, not yet being used in production.
+ *
+ * The breakpoints and associated mixin were originally used in the `Heading`
+ * component to scale headings up and down depending on viewport width, but were
+ * pulled from that component until global breakpoints have been agreed.
+ */
+
+$supported: true !default; // set to `false` to disable media queries
 
 @mixin break($point, $support: $supported) {
   @if $support == true {
