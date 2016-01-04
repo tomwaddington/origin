@@ -10,33 +10,37 @@
   ========================================================================== */
 
 /**
- * Example usage:
- * `@include Heading(small);`
- * `@include Heading(fa-blue--xx-dark, large);`
- * `@include Heading(editorial, x-large);`
- * `@include Heading(fa-green, editorial, small);`
- * `@include Heading(legacy, large);`
- * `@include Heading(editorial, xx-large, semi-bold);`
+ * See http://fac.github.io/origin/components/heading/ for example usage
  */
 
 /**
  * Values for `$Heading-color`, `$Heading-font`, and `$Heading-weight` are all
  * defined locally in _heading-settings.scss.
+ *
+ * `$Heading-size` and `$Heading-spacing` are defined here because they are
+ * global and should not be modified.
  */
+
+$Heading-size: default;
+$Heading-spacing: 0;
 
 @mixin Heading(
   $color: $Heading-color,
   $font: $Heading-font,
-  $size: default,
+  $size: $Heading-size,
+  $spacing: $Heading-spacing,
   $weight: $Heading-weight,
   $important: null
   ) {
   color: map-get($text-color-values, $Heading-color) $important;
   font-family: map-get($font-family-values, $Heading-font) $important;
-  font-size: map-get($font-size-values, $size) $important;
+  font-size: map-get($font-size-values, $Heading-size) $important;
   font-weight: map-get($font-weight-values, $Heading-weight) $important;
   @include line-height(x-tight);
-  @include margin(0 0 small 0);
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: map-get($spacing-values, $Heading-spacing) $important;
 }
 
 
