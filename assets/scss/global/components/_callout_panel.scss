@@ -1,0 +1,22 @@
+.CalloutPanel {
+  @include border-radius(default);
+  -webkit-box-shadow: 0 1px 1px rgba(34,52,64,0.3);
+  -moz-box-shadow: 0 1px 1px rgba(34,52,64,0.3);
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(34,52,64,0.3);
+  padding: 0 0 1em 0;
+}
+
+.CalloutPanel-heading {
+  @include background-color(fa-blue);
+}
+
+.CalloutPanel p {
+  padding: 0 0.7em 0 0.7em;
+}
+
+.CalloutPanel-heading h3 {
+  color: #fff;
+  margin: 0 0 1em 0;
+  padding: 0.7em;
+}
