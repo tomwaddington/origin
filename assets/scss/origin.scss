@@ -30,11 +30,8 @@
 /* Global: import utilities */
 @import "../../node_modules/fa-css-utilities/_utilities";
 
-/* Local: heading settings — copy file if implementing Origin into a project */
+/* Local: Heading component settings — copy file if implementing Origin into a project */
 @import "local/fonts/_heading-settings";
-
-/* Global mixins */
-@import "mixins/_breakpoints";
 
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";

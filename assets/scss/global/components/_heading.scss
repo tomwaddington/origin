@@ -10,126 +10,120 @@
   ========================================================================== */
 
 /**
- * Example usage:
- * `@include Heading(small);`
- * `@include Heading(fa-blue--xx-dark, large);`
- * `@include Heading(editorial, x-large);`
- * `@include Heading(fa-green, editorial, small);`
- * `@include Heading(legacy, large);`
- * `@include Heading(editorial, xx-large, semi-bold);`
+ * See http://fac.github.io/origin/components/heading/ for example usage
  */
 
 /**
  * Values for `$Heading-color`, `$Heading-font`, and `$Heading-weight` are all
  * defined locally in _heading-settings.scss.
+ *
+ * `$Heading-size` and `$Heading-spacing` are defined here because they are
+ * global and should not be modified.
  */
+
+$Heading-size: default;
+$Heading-spacing: 0;
 
 @mixin Heading(
   $color: $Heading-color,
   $font: $Heading-font,
-  $size: default,
+  $size: $Heading-size,
+  $spacing: $Heading-spacing,
   $weight: $Heading-weight,
   $important: null
   ) {
   color: map-get($text-color-values, $Heading-color) $important;
   font-family: map-get($font-family-values, $Heading-font) $important;
-  font-size: map-get($font-size-values, $size) $important;
+  font-size: map-get($font-size-values, $Heading-size) $important;
   font-weight: map-get($font-weight-values, $Heading-weight) $important;
   @include line-height(x-tight);
-  @include margin(0 0 small 0);
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: map-get($spacing-values, $Heading-spacing) $important;
 }
 
 
 /* Sizes
   ========================================================================== */
 
+/**
+ * Apply the Heading mixin to all heading instances
+ */
+
+.Heading,
+.l-editorial h1,
+.l-editorial h2,
+.l-editorial h3,
+.l-editorial h4,
+.l-editorial h5,
+.l-editorial h6 {
+  @include Heading;
+}
+
 .Heading--xx-large,
 .l-editorial h1 {
-  @include Heading(xx-large);
-
-  @include break(small) {
-    @include font-size(12);
-  }
+  @include font-size(12);
 }
 
 .Heading--x-large,
 .l-editorial h2 {
-  @include Heading(x-large);
-
-  @include break(small) {
-    @include font-size(10);
-  }
+  @include font-size(10);
 }
 
 .Heading--large,
 .l-editorial h3 {
-  @include Heading(large);
+  @include font-size(8);
+}
 
-  @include break(small) {
-    @include font-size(8);
-  }
+.Heading--default,
+.l-editorial h4 {
+  @include font-size(7);
 }
 
 .Heading--small,
-.l-editorial h4 {
-  @include Heading(small);
-
-  @include break(small) {
-    @include font-size(6);
-  }
+.l-editorial h5 {
+  @include font-size(6);
 }
 
 .Heading--x-small,
-.l-editorial h5 {
-  @include Heading(x-small);
-
-  @include break(small) {
-    @include font-size(5);
-  }
-}
-
-.Heading--xx-small,
 .l-editorial h6 {
-  @include Heading(xx-small);
-
-  @include break(small) {
-    @include font-size(4);
-  }
+  @include font-size(5);
 }
 
 
 /* Colors
   ========================================================================== */
 
-.Heading--dark {
+.Heading--color--dark {
   @include text-color(dark);
 }
 
-.Heading--default {
+.Heading--color--default {
   @include text-color(default);
 }
 
-.Heading--light {
+.Heading--color--light {
   @include text-color(light);
 }
 
-.Heading--x-light {
+.Heading--color--x-light {
   @include text-color(x-light);
 }
 
-.Heading--xx-light {
+.Heading--color--xx-light {
   @include text-color(xx-light);
 }
 
-.Heading--negative {
+.Heading--color--negative {
   @include text-color(negative);
 }
 
-.Heading--positive {
+.Heading--color--positive {
   @include text-color(positive);
 }
 
-.Heading--warning {
+.Heading--color--warning {
   @include text-color(warning);
 }
 
@@ -137,16 +131,47 @@
 /* Fonts
   ========================================================================== */
 
-.Heading--default {
+.Heading--font--default {
   @include font-family(default);
 }
 
-.Heading--editorial {
+.Heading--font--editorial {
   @include font-family(editorial);
+  @include font-weight(normal);
 }
 
-.Heading--legacy {
+.Heading--font--legacy {
   @include font-family(legacy);
+}
+
+
+/* Spacing
+  ========================================================================== */
+
+/**
+ * These values deliberately avoid using our standard `margin` utility mixin
+ * because it serves `rem`s, but here we want the margins to adapt based on the
+ * size of the headings.
+ */
+
+.Heading--space--xx-small {
+  margin-bottom: 0.15em;
+}
+
+.Heading--space--x-small {
+  margin-bottom: 0.25em;
+}
+
+.Heading--space--small {
+  margin-bottom: 0.35em;
+}
+
+.Heading--space--default {
+  margin-bottom: 0.5em;
+}
+
+.Heading--space--large {
+  margin-bottom: 0.75em;
 }
 
 
@@ -193,22 +218,31 @@
 /* Editorial modifications
   ========================================================================== */
 
+.l-editorial h1,
+.l-editorial h2,
+.l-editorial h3,
+.l-editorial h4,
+.l-editorial h5,
+.l-editorial h6 {
+  margin-bottom: 0.25em;
+}
+
 .l-editorial h2 {
-  @include margin-top(large);
+  margin-top: 1em;
 }
 
 .l-editorial h3 {
-  @include margin-top(large);
+  margin-top: 1em;
 }
 
 .l-editorial h4 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }
 
 .l-editorial h5 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }
 
 .l-editorial h6 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }

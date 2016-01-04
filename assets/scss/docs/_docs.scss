@@ -8,7 +8,10 @@
 @import "_syntax";
 @import "_layout";
 
-/* Documentation components */
+/**
+ * Documentation components
+ */
+
 @import "components/_anchor";
 @import "components/_buttons";
 @import "components/_docs-example";
@@ -17,6 +20,54 @@
 @import "components/_swatches";
 @import "components/_text-example";
 @import "components/_text-color";
+
+/**
+ * Base styles
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-weight(semi-bold);
+  @include line-height(x-tight);
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  @include font-size(12);
+}
+
+h2 {
+  @include font-size(11);
+  margin-top: 1.5em;
+}
+
+h3 {
+  @include font-weight(normal);
+  @include font-size(9);
+  @include text-color(x-light);
+  margin-top: 1em;
+}
+
+h4 {
+  @include font-weight(normal);
+  @include font-size(8);
+  @include text-color(x-light);
+  margin-top: 0.5em;
+}
+
+h5 {
+  @include font-size(6);
+  margin-top: 0.5em;
+}
+
+h6 {
+  @include font-size(5);
+  margin-top: 0.5em;
+}
 
 a {
   text-decoration: none;
@@ -29,12 +80,32 @@ a:hover {
   @include text-color(fa-blue--x-dark);
 }
 
-.markdown-body {
-  overflow: visible;
+ul,
+ol,
+dl {
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding: 0 0 0 1.5em;
 }
 
-.markdown-body .highlight + h2 {
-  @include margin-top(xx-large);
+ul,
+ul ul,
+ul ul ul {
+  list-style-type: disc;
+  margin: 0;
+}
+
+ul ul,
+ul ul ul {
+  margin: 0;
+}
+
+/**
+ * Markdown body styles used for code examples
+ */
+
+.markdown-body {
+  overflow: visible;
 }
 
 .highlight .cm {
@@ -42,12 +113,10 @@ a:hover {
   @include text-color(gray-9);
 }
 
-// Add spacing between documentation code examples and subsequent headings
-.markdown-body .highlight {
-  @include margin-bottom(x-large);
-}
+/**
+ * From Primer: make containers responsive
+ */
 
-// Make containers responsive
 .container {
   width: auto;
   max-width: 1020px;
@@ -55,13 +124,9 @@ a:hover {
   padding-right: 20px;
 }
 
-.markdown-body .page-title {
-  @include margin-top(large);
-}
-
-//
-// Menu customisations
-//
+/**
+ * From Primer: menu customisations
+ */
 
 .menu {
   @include text-color(gray-9);
@@ -75,10 +140,6 @@ a:hover {
   @include text-color(gray-8);
 }
 
-//
-// Only apply :active/:focus/:hover states to menu items that are actually links
-//
-
 .menu-item:active,
 .menu-item:focus,
 .menu-item:hover {
@@ -91,9 +152,9 @@ a.menu-item:hover {
   @include background-color(gray-16);
 }
 
-//
-// Custom button
-//
+/**
+ * From Primer: button
+ */
 
 .btn-reverse {
   color: #fff;
@@ -109,10 +170,9 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Site header
-//
+/**
+ * From Primer: masthead
+ */
 
 .masthead {
   padding-top:    1rem;
@@ -151,6 +211,10 @@ a.menu-item:hover {
   }
 }
 
+/**
+ * From Primer: masthead nav
+ */
+
 .masthead-nav {
   margin-top: 1rem;
   font-size: 1rem;
@@ -181,9 +245,9 @@ a.menu-item:hover {
 }
 
 
-//
-// Homepage jumbotron
-//
+/**
+ * From Primer: homepage jumbotron
+ */
 
 .jumbotron {
   margin-top: -2rem;
@@ -236,12 +300,11 @@ a.menu-item:hover {
   }
 }
 
+/**
+ * From Primer: layout
+ */
 
-//
-// Layout
-//
-
-// Override the default layout to make it stack
+/* Override the default layout to make it stack */
 .docs-layout {
   @media (max-width: 34em) {
     > .column {
@@ -251,9 +314,9 @@ a.menu-item:hover {
   }
 }
 
-//
-// Footer
-//
+/**
+ * From Primer: footer
+ */
 
 .footer {
   padding-top: 3rem;
@@ -268,10 +331,9 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Side menu
-//
+/**
+ * From Primer: sidebar menu
+ */
 
 .docs-menu {
   margin-bottom: 1.5rem;
@@ -282,17 +344,19 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Examples
-//
+/**
+ * Documentation examples
+ */
 
 .DocsExample {
   @include margin-bottom(large);
 }
 
-// `-preview` is for showing manually typed previews when only showing CSS
-// examples; `-render` is forHTML actually rendered by _plugins/example.rb.
+/**
+ * `-preview` is for showing manually typed previews when only showing CSS
+ * examples; `-render` is forHTML actually rendered by _plugins/example.rb.
+ */
+
 .DocsExample-preview,
 .DocsExample-render {
   position: relative;
@@ -321,7 +385,7 @@ a.menu-item:hover {
     max-width: 200px;
   }
 
-  // Grid
+  /* Grid */
   .container {
     width: 100%;
     @include padding-left(default);
@@ -336,7 +400,7 @@ a.menu-item:hover {
     @include padding(default);
   }
 
-  // Override Markdown styles to restore values from `_type.scss`
+  /* Override Markdown styles to restore values from `_type.scss` */
   ul,
   ol {
     padding: 0;
@@ -366,18 +430,18 @@ a.menu-item:hover {
     }
   }
 
-  // Flex table
+  /* Flex table */
   .flex-table-item > .btn {
     margin-left: 10px;
   }
 }
 
-// Hide the example preview block is we're only showing a CSS example
+/* Hide the example preview block is we're only showing a CSS example */
 .DocsExample--render--hidden .DocsExample-render {
   display: none;
 }
 
-// Used to show spacing examples
+/* Used to show spacing examples */
 .DocsExample-preview-child {
   @include background-color(gray-16);
 }
@@ -402,27 +466,21 @@ a.menu-item:hover {
   margin-top: -0.5rem;
 }
 
-//
-// Markdown generated ToC
-//
-
-#markdown-toc {
-  @include margin(large 0 x-large 0);
-  @include padding(0);
-  @include text-color(gray-7);
-}
-
-#markdown-toc li {
-  list-style-position: inside;
-}
-
-//
-// Branding colors
-//
+/**
+ * Branding colours
+ */
 
 .swatch {
   display: inline-block;
   width: 6rem;
   height: 6rem;
   border-radius: .25rem;
+}
+
+/**
+ * From Primer: table of contents
+ */
+
+#markdown-toc {
+  margin-bottom: 1em;
 }

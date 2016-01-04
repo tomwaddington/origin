@@ -3,22 +3,71 @@ layout: page
 title: Heading
 ---
 
-The Heading component provides a scale of headings that can be applied to _any_ element, creating consistency and avoiding inheritance issues that come with targeting bare HTML elements.
+The Heading component provides a scale of headings that can be applied to any element, creating consistency and avoiding inheritance issues that come with targeting bare HTML elements.
+
+Separating the structure and presentation of headings like is extremely useful. For example, if a heading should structurally be an `h2` but we want it to appear small, we can simply use the `Heading--small` class. We get the desired presentation, but retain the correct semantic structure.
 
 * Include a table of contents
 {:toc}
 
-Separating the structure and presentation of headings like is extremely useful. For example, if a heading should structurally be an `h2` but we want it to appear small, we can simply use the `Heading--small` class. We get the desired presentation, but retain the correct semantic structure.
 
-## Settings
-We use different colors, fonts, and weights for headings in different applications and contexts. The default for these can be changed on a per-project basis in [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_font-settings.scss). 
+## How to use
+1. Apply a base `Heading` class and a `Heading--size` modifier class to any HTML element, where `size` equals any of `xx-large`, `x-large`, `large`, `default`, `small`, `x-small`, or `xx-small`, as [listed below](#sizes).
+2. Optionally apply any other [color](#colors), [font](#fonts), [spacing](#spacing), or [weight](#weights) modifier classes to achieve whatever effect you need. List classes in alphabetical order.
 
-The Heading mixin accepts `color`, `font-family`, `font-size`, and `font-weight` arguments (which must be declared in alphabetical order), with values all sourced from our [utility aliases](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss). Styles can also be applied using classes directly in HTML.
+### Examples
+{% example html %}
+<h2 class="Heading Heading--xx-large">
+  XX-Large Heading
+</h2>
+{% endexample %}
 
-The `Heading` class should _not_ be used on its own — it simply resets an element to common defaults.
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--xx-small">
+  Large Heading With XX-Small Spacing
+</h3>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--color--x-light Heading--weight--light Heading--x-large">
+  X-Large Heading With X-Light-Color XX-Light-Weight
+</h3>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--font--editorial Heading--weight--normal Heading--x-large">
+  X-Large Editorial Normal Weight Heading
+</h3>
+{% endexample %}
+
+## Use with mixins
+The Heading component can be integrated into stylesheets for other components and layouts using the `Heading` mixin.
+
+The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility aliases](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss). Arguments must be declared in alphabetical order to work properly.
+
+### Examples
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+@include Heading(small);
+@include Heading(xx-large);
+@include Heading(fa-blue--xx-dark, large);
+@include Heading(editorial, x-large, large);
+@include Heading(fa-green, editorial, small);
+@include Heading(legacy, large);
+@include Heading(fa-blue, editorial, xx-large, semi-bold, default);
+{% endexample %}
+</div>
+
+## Default settings for projects
+We use different default colors, fonts, and weights for headings in different projects. We could just override our global defaults when required, but continually doing so would be painful.
+
+Instead we can define default settings for projects by editing the contents of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+
+This file exists locally for projects, so changing it wont't affect the Origin repo.
 
 
 ## Sizes
+These size examples show both HTML and CSS mixin implementations.  
 <div class="DocsExample DocsExample--adjacentExample">
 {% example html %}
 <h1 class="Heading Heading--xx-large">Heading xx-large</h1>
@@ -116,82 +165,122 @@ The `Heading` class should _not_ be used on its own — it simply resets an elem
 
 
 ## Colors
+If you need a color or shade outside of this selection, you can use a utility class (e.g. `u-text-color--fa-blue`) from our list of [text color values](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss) — only if there are only 1 or 2 instances of the heading color in whatever you're working on.
+
+If you want to set an alternative default heading color for your whole project, do so in your local copy of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+
 {% example html %}
-<h2 class="Heading Heading--dark Heading--x-large">
+<h2 class="Heading Heading--color--dark Heading--x-large">
   Dark Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--default Heading--x-large">
+<h2 class="Heading Heading--color--default Heading--x-large">
   Default Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--light Heading--x-large">
+<h2 class="Heading Heading--color--light Heading--x-large">
   Light Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--x-light Heading--x-large">
+<h2 class="Heading Heading--color--x-light Heading--x-large">
   X-Light Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--xx-light Heading--x-large">
+<h2 class="Heading Heading--color--xx-light Heading--x-large">
   XX-Light Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--negative Heading--x-large">
+<h2 class="Heading Heading--color--negative Heading--x-large">
   Negative Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--positive Heading--x-large">
+<h2 class="Heading Heading--color--positive Heading--x-large">
   Positive Heading
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--warning Heading--x-large">
+<h2 class="Heading Heading--color--warning Heading--x-large">
   Warning Heading
 </h2>
 {% endexample %}
 
 
 ## Fonts
+The `Heading--font--default` class isn't required if you're already using the default font for headings. Only if you're using an alternate font and want to override it.
 {% example html %}
-<h2 class="Heading Heading--editorial Heading--weight--normal Heading--x-large">
-  Editorial Heading
+<h2 class="Heading Heading--font--default Heading--x-large">
+  Default Font Heading
 </h2>
 {% endexample %}
 
+We automatically include `@include font-weight(normal)` as part of the `Heading--font--editorial` class as we don't use the bold weight of our editorial typeface.
 {% example html %}
-<h2 class="Heading Heading--legacy Heading--x-large">
-  Legacy Heading
+<h2 class="Heading Heading--font--editorial Heading--x-large">
+  Editorial Font Heading
 </h2>
+{% endexample %}
+
+Our legacy typeface is still used in a selection of application contexts, including desktop and mobile web. We'll remove it eventually, but until then it'll be available as part of the Heading component.
+{% example html %}
+<h2 class="Heading Heading--font--legacy Heading--x-large">
+  Legacy Font Heading
+</h2>
+{% endexample %}
+
+
+## Spacing
+The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.
+
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--xx-small">
+  Heading With XX-Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--x-small">
+  Heading With X-Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--small">
+  Heading With Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--default">
+  Heading With Default Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+{% endexample %}
+
+{% example html %}
+<h3 class="Heading Heading--large Heading--space--large">
+  Heading With Large Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
 {% endexample %}
 
 
 ## Weights
-{% example html %}
-<h2 class="Heading Heading--weight--thin Heading--x-large">
-  Thin Weight Heading
-</h2>
-{% endexample %}
-
-{% example html %}
-<h2 class="Heading Heading--weight--x-light Heading--x-large">
-  X-Light Weight Heading
-</h2>
-{% endexample %}
-
 {% example html %}
 <h2 class="Heading Heading--weight--light Heading--x-large">
   Light Weight Heading
@@ -201,12 +290,6 @@ The `Heading` class should _not_ be used on its own — it simply resets an elem
 {% example html %}
 <h2 class="Heading Heading--weight--normal Heading--x-large">
   Normal Weight Heading
-</h2>
-{% endexample %}
-
-{% example html %}
-<h2 class="Heading Heading--weight--medium Heading--x-large">
-  Medium Weight Heading
 </h2>
 {% endexample %}
 
@@ -222,17 +305,6 @@ The `Heading` class should _not_ be used on its own — it simply resets an elem
 </h2>
 {% endexample %}
 
-{% example html %}
-<h2 class="Heading Heading--weight--x-bold Heading--x-large">
-  X-Bold Weight Heading
-</h2>
-{% endexample %}
-
-{% example html %}
-<h2 class="Heading Heading--weight--black Heading--x-large">
-  Black Weight Heading
-</h2>
-{% endexample %}
 
 
 ## Editorial spacing
