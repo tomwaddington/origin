@@ -1,4 +1,5 @@
 ---
+categories: components
 layout: page
 title: Table
 ---
