@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        Heading &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/css/origin.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/origin/favicon.ico">
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/origin/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Origin
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/origin/guidance/principles">Docs</a>
+          <a  href="/origin/about">About</a>
+          <a  href="/origin/faq">FAQ</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/origin/guidance/principles/">
+    Principles
+  </a>
+  <a class="menu-item " href="/origin/guidance/code-style/">
+    Code style
+  </a>
+  <a class="menu-item " href="/origin/guidance/naming-conventions/">
+    Naming conventions
+  </a>
+  <a class="menu-item " href="/origin/guidance/base-styles/">
+    Base styles
+  </a>
+  <a class="menu-item " href="/origin/guidance/utilities/">
+    Utilities
+  </a>
+  <a class="menu-item " href="/origin/guidance/components/">
+    Components
+  </a>
+</nav>
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    border
+  </span>
+  <span class="menu-item">
+    border-radius
+  </span>
+  <a class="menu-item " href="/origin/utilities/background-color/">
+    background-color
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-family/">
+    font-family
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-size/">
+    font-size
+  </a>
+  <a class="menu-item " href="/origin/utilities/font-weight/">
+    font-weight
+  </a>
+  <a class="menu-item " href="/origin/utilities/line-height/">
+    line-height
+  </a>
+  <span class="menu-item">
+    list-item
+  </span>
+  <a class="menu-item " href="/origin/utilities/spacing/">
+    spacing
+  </a>
+  <a class="menu-item " href="/origin/utilities/text-color/">
+    text-color
+  </a>
+  <span class="menu-item">
+    z-index
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/origin/components/button/">
+    Button
+  </a>
+  <span class="menu-item">
+    Card
+  </span>
+  <span class="menu-item">
+    Checkbox
+  </span>
+  <a class="menu-item selected" href="/origin/components/heading/">
+    Heading
+  </a>
+  <span class="menu-item">
+    List
+  </span>
+  <a class="menu-item " href="/origin/components/navbar/">
+    NavBar
+  </a>
+  <span class="menu-item">
+    Notice
+  </span>
+  <span class="menu-item">
+    RadioButton
+  </span>
+  <a class="menu-item " href="/origin/components/segmented-control/">
+    Segmented Control
+  </a>
+  <a class="menu-item " href="/origin/components/table/">
+    Table
+  </a>
+  <span class="menu-item">
+    TableView
+  </span>
+  <span class="menu-item">
+    Tabs
+  </span>
+  <span class="menu-item">
+    TextArea
+  </span>
+  <span class="menu-item">
+    TextInput
+  </span>
+</nav>
+
+<h4 class="menu-title">
+  Layout
+</h4>
+<nav class="menu docs-menu">
+  <span class="menu-item">
+    Grid
+  </span>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Heading
+    </h1>
+    <div class="markdown-body">
+      <p>The Heading component provides a scale of headings that can be applied to any element, creating consistency and avoiding inheritance issues that come with targeting bare HTML elements.</p>
+
+<p>Separating the structure and presentation of headings like is extremely useful. For example, if a heading should structurally be an <code>h2</code> but we want it to appear small, we can simply use the <code>Heading--small</code> class. We get the desired presentation, but retain the correct semantic structure.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#how-to-use" id="markdown-toc-how-to-use">How to use</a>    <ul>
+      <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+    </ul>
+  </li>
+  <li><a href="#use-with-mixins" id="markdown-toc-use-with-mixins">Use with mixins</a>    <ul>
+      <li><a href="#examples-1" id="markdown-toc-examples-1">Examples</a></li>
+    </ul>
+  </li>
+  <li><a href="#default-settings-for-projects" id="markdown-toc-default-settings-for-projects">Default settings for projects</a></li>
+  <li><a href="#sizes" id="markdown-toc-sizes">Sizes</a></li>
+  <li><a href="#colors" id="markdown-toc-colors">Colors</a></li>
+  <li><a href="#fonts" id="markdown-toc-fonts">Fonts</a></li>
+  <li><a href="#spacing" id="markdown-toc-spacing">Spacing</a></li>
+  <li><a href="#weights" id="markdown-toc-weights">Weights</a></li>
+  <li><a href="#editorial-spacing" id="markdown-toc-editorial-spacing">Editorial spacing</a></li>
+</ul>
+
+<h2 id="how-to-use">How to use</h2>
+<ol>
+  <li>Apply a base <code>Heading</code> class and a <code>Heading--size</code> modifier class to any HTML element, where <code>size</code> equals any of <code>xx-large</code>, <code>x-large</code>, <code>large</code>, <code>default</code>, <code>small</code>, <code>x-small</code>, or <code>xx-small</code>, as <a href="#sizes">listed below</a>.</li>
+  <li>Optionally apply any other <a href="#colors">color</a>, <a href="#fonts">font</a>, <a href="#spacing">spacing</a>, or <a href="#weights">weight</a> modifier classes to achieve whatever effect you need. List classes in alphabetical order.</li>
+</ol>
+
+<h3 id="examples">Examples</h3>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--xx-large">
+  XX-Large Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--xx-large"</span><span class="nt">&gt;</span>
+  XX-Large Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--xx-small">
+  Large Heading With XX-Small Spacing
+</h3></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--xx-small"</span><span class="nt">&gt;</span>
+  Large Heading With XX-Small Spacing
+<span class="nt">&lt;/h3&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--color--x-light Heading--weight--light Heading--x-large">
+  X-Large Heading With X-Light-Color XX-Light-Weight
+</h3></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--color--x-light Heading--weight--light Heading--x-large"</span><span class="nt">&gt;</span>
+  X-Large Heading With X-Light-Color XX-Light-Weight
+<span class="nt">&lt;/h3&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--font--editorial Heading--weight--normal Heading--x-large">
+  X-Large Editorial Normal Weight Heading
+</h3></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--font--editorial Heading--weight--normal Heading--x-large"</span><span class="nt">&gt;</span>
+  X-Large Editorial Normal Weight Heading
+<span class="nt">&lt;/h3&gt;</span></code></pre></div>
+
+<h2 id="use-with-mixins">Use with mixins</h2>
+<p>The Heading component can be integrated into stylesheets for other components and layouts using the <code>Heading</code> mixin.</p>
+
+<p>The mixin accepts <code>color</code>, <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, and <code>margin-bottom</code> arguments with values sourced from our <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss">utility aliases</a>. Arguments must be declared in alphabetical order to work properly.</p>
+
+<h3 id="examples-1">Examples</h3>
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">@include Heading(small);
+@include Heading(xx-large);
+@include Heading(fa-blue--xx-dark, large);
+@include Heading(editorial, x-large, large);
+@include Heading(fa-green, editorial, small);
+@include Heading(legacy, large);
+@include Heading(fa-blue, editorial, xx-large, semi-bold, default);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">small</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">xx-large</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">fa-blue--xx-dark</span><span class="o">,</span> <span class="nb">large</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">editorial</span><span class="o">,</span> <span class="nb">x-large</span><span class="o">,</span> <span class="nb">large</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">fa-green</span><span class="o">,</span> <span class="n">editorial</span><span class="o">,</span> <span class="n">small</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">legacy</span><span class="o">,</span> <span class="nb">large</span><span class="p">);</span>
+<span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">fa-blue</span><span class="o">,</span> <span class="n">editorial</span><span class="o">,</span> <span class="nb">xx-large</span><span class="o">,</span> <span class="n">semi-bold</span><span class="o">,</span> <span class="nb">default</span><span class="p">);</span></code></pre></div>
+
+</div>
+
+<h2 id="default-settings-for-projects">Default settings for projects</h2>
+<p>We use different default colors, fonts, and weights for headings in different projects. We could just override our global defaults when required, but continually doing so would be painful.</p>
+
+<p>Instead we can define default settings for projects by editing the contents of <a href="https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss">_heading-settings.scss</a>.</p>
+
+<p>This file exists locally for projects, so changing it wont’t affect the Origin repo.</p>
+
+<h2 id="sizes">Sizes</h2>
+<p>These size examples show both HTML and CSS mixin implementations.</p>
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h1 class="Heading Heading--xx-large">Heading xx-large</h1>
+<span class="Heading Heading--xx-large">Heading xx-large</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"Heading Heading--xx-large"</span><span class="nt">&gt;</span>Heading xx-large<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--xx-large"</span><span class="nt">&gt;</span>Heading xx-large<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(xx-large);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">xx-large</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--x-large">Heading x-large</h2>
+<span class="Heading Heading--x-large">Heading x-large</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--x-large"</span><span class="nt">&gt;</span>Heading x-large<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--x-large"</span><span class="nt">&gt;</span>Heading x-large<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(x-large);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">x-large</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large">Heading large</h3>
+<span class="Heading Heading--large">Heading large</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large"</span><span class="nt">&gt;</span>Heading large<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--large"</span><span class="nt">&gt;</span>Heading large<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(large);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h4 class="Heading Heading--small">Heading small</h4>
+<span class="Heading Heading--small">Heading small</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"Heading Heading--small"</span><span class="nt">&gt;</span>Heading small<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--small"</span><span class="nt">&gt;</span>Heading small<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(small);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="n">small</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h5 class="Heading Heading--x-small">Heading x-small</h5>
+<span class="Heading Heading--x-small">Heading x-small</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"Heading Heading--x-small"</span><span class="nt">&gt;</span>Heading x-small<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--x-small"</span><span class="nt">&gt;</span>Heading x-small<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(x-small);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">x-small</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--adjacentExample">
+
+<div class="DocsExample-render clearfix"><h6 class="Heading Heading--xx-small">Heading xx-small</h6>
+<span class="Heading Heading--xx-small">Heading xx-small</span></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"Heading Heading--xx-small"</span><span class="nt">&gt;</span>Heading xx-small<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"Heading Heading--xx-small"</span><span class="nt">&gt;</span>Heading xx-small<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+
+<div class="DocsExample-render clearfix">.MyElement {
+  @include Heading(xx-small);
+}</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyElement</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">Heading</span><span class="p">(</span><span class="nb">xx-small</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+</div>
+
+<h2 id="colors">Colors</h2>
+<p>If you need a color or shade outside of this selection, you can use a utility class (e.g. <code>u-text-color--fa-blue</code>) from our list of <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss">text color values</a> — only if there are only 1 or 2 instances of the heading color in whatever you’re working on.</p>
+
+<p>If you want to set an alternative default heading color for your whole project, do so in your local copy of <a href="https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss">_heading-settings.scss</a>.</p>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--dark Heading--x-large">
+  Dark Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--dark Heading--x-large"</span><span class="nt">&gt;</span>
+  Dark Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--default Heading--x-large">
+  Default Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--default Heading--x-large"</span><span class="nt">&gt;</span>
+  Default Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--light Heading--x-large">
+  Light Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--light Heading--x-large"</span><span class="nt">&gt;</span>
+  Light Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--x-light Heading--x-large">
+  X-Light Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--x-light Heading--x-large"</span><span class="nt">&gt;</span>
+  X-Light Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--xx-light Heading--x-large">
+  XX-Light Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--xx-light Heading--x-large"</span><span class="nt">&gt;</span>
+  XX-Light Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--negative Heading--x-large">
+  Negative Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--negative Heading--x-large"</span><span class="nt">&gt;</span>
+  Negative Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--positive Heading--x-large">
+  Positive Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--positive Heading--x-large"</span><span class="nt">&gt;</span>
+  Positive Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--color--warning Heading--x-large">
+  Warning Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--color--warning Heading--x-large"</span><span class="nt">&gt;</span>
+  Warning Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<h2 id="fonts">Fonts</h2>
+<p>The <code>Heading--font--default</code> class isn’t required if you’re already using the default font for headings. Only if you’re using an alternate font and want to override it.</p>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--font--default Heading--x-large">
+  Default Font Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--font--default Heading--x-large"</span><span class="nt">&gt;</span>
+  Default Font Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<p>We automatically include <code>@include font-weight(normal)</code> as part of the <code>Heading--font--editorial</code> class as we don’t use the bold weight of our editorial typeface.</p>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--font--editorial Heading--x-large">
+  Editorial Font Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--font--editorial Heading--x-large"</span><span class="nt">&gt;</span>
+  Editorial Font Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<p>Our legacy typeface is still used in a selection of application contexts, including desktop and mobile web. We’ll remove it eventually, but until then it’ll be available as part of the Heading component.</p>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--font--legacy Heading--x-large">
+  Legacy Font Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--font--legacy Heading--x-large"</span><span class="nt">&gt;</span>
+  Legacy Font Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<h2 id="spacing">Spacing</h2>
+<p>The Heading component doesn’t have any margin by default, so it’s very flexible. But we’ll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--xx-small">
+  Heading With XX-Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--xx-small"</span><span class="nt">&gt;</span>
+  Heading With XX-Small Spacing
+<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--x-small">
+  Heading With X-Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--x-small"</span><span class="nt">&gt;</span>
+  Heading With X-Small Spacing
+<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--small">
+  Heading With Small Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--small"</span><span class="nt">&gt;</span>
+  Heading With Small Spacing
+<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--default">
+  Heading With Default Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--default"</span><span class="nt">&gt;</span>
+  Heading With Default Spacing
+<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h3 class="Heading Heading--large Heading--space--large">
+  Heading With Large Spacing
+</h3>
+<p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"Heading Heading--large Heading--space--large"</span><span class="nt">&gt;</span>
+  Heading With Large Spacing
+<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="weights">Weights</h2>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--weight--light Heading--x-large">
+  Light Weight Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--weight--light Heading--x-large"</span><span class="nt">&gt;</span>
+  Light Weight Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--weight--normal Heading--x-large">
+  Normal Weight Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--weight--normal Heading--x-large"</span><span class="nt">&gt;</span>
+  Normal Weight Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--weight--semi-bold Heading--x-large">
+  Semi-bold Weight Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--weight--semi-bold Heading--x-large"</span><span class="nt">&gt;</span>
+  Semi-bold Weight Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<div class="DocsExample-render clearfix"><h2 class="Heading Heading--weight--bold Heading--x-large">
+  Bold Weight Heading
+</h2></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"Heading Heading--weight--bold Heading--x-large"</span><span class="nt">&gt;</span>
+  Bold Weight Heading
+<span class="nt">&lt;/h2&gt;</span></code></pre></div>
+
+<h2 id="editorial-spacing">Editorial spacing</h2>
+<p>By default, the <code>Heading</code> component has no margins other than a small <code>margin-bottom</code>. Being so unopinionated means it can be used in a multitude of contexts without alteration.</p>
+
+<p>But when we’re writing editorial content like articles and blog posts, we want headings to be spaced sympathetically. Spacing that improves the reading experience, but also doesn’t require us to add classes to every single heading. By wrapping editorial content in a <code>l-editorial</code> container, that’s what we get.</p>
+
+<div class="DocsExample-render clearfix"><div class="l-editorial">
+  <h1>Heading one</h1>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+
+  <h2>Heading two</h2>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+
+  <h3>Heading three</h3>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+
+  <h4>Heading four</h4>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+
+  <h5>Heading five</h5>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+
+  <h6>Heading six</h6>
+  <p>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.</p>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-editorial"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Heading one<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h2&gt;</span>Heading two<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h3&gt;</span>Heading three<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h4&gt;</span>Heading four<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h5&gt;</span>Heading five<span class="nt">&lt;/h5&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;h6&gt;</span>Heading six<span class="nt">&lt;/h6&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Spacing between paragraphs and headings in editorial content should be comfortable without having to add classes to every heading.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2016.<br>
+      </footer>
+    </div>
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

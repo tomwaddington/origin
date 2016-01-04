@@ -123,9 +123,9 @@
   <span class="menu-item">
     Checkbox
   </span>
-  <span class="menu-item">
+  <a class="menu-item " href="/origin/components/heading/">
     Heading
-  </span>
+  </a>
   <span class="menu-item">
     List
   </span>
@@ -175,24 +175,24 @@
     </h1>
     <div class="markdown-body">
       <ul id="markdown-toc">
-  <li><a href="#whitespace">Whitespace</a></li>
-  <li><a href="#css">CSS</a>    <ul>
-      <li><a href="#css-formatting">CSS formatting</a></li>
-      <li><a href="#css-writing-style">CSS writing style</a>        <ul>
-          <li><a href="#css-declaration-order">CSS declaration order</a></li>
-          <li><a href="#exceptions-and-deviations">Exceptions and deviations</a></li>
+  <li><a href="#whitespace" id="markdown-toc-whitespace">Whitespace</a></li>
+  <li><a href="#css" id="markdown-toc-css">CSS</a>    <ul>
+      <li><a href="#css-formatting" id="markdown-toc-css-formatting">CSS formatting</a></li>
+      <li><a href="#css-writing-style" id="markdown-toc-css-writing-style">CSS writing style</a>        <ul>
+          <li><a href="#css-declaration-order" id="markdown-toc-css-declaration-order">CSS declaration order</a></li>
+          <li><a href="#exceptions-and-deviations" id="markdown-toc-exceptions-and-deviations">Exceptions and deviations</a></li>
         </ul>
       </li>
-      <li><a href="#css-comments">CSS comments</a></li>
-      <li><a href="#css-practical-example">CSS practical example</a></li>
+      <li><a href="#css-comments" id="markdown-toc-css-comments">CSS comments</a></li>
+      <li><a href="#css-practical-example" id="markdown-toc-css-practical-example">CSS practical example</a></li>
     </ul>
   </li>
-  <li><a href="#html">HTML</a>    <ul>
-      <li><a href="#html-formatting">HTML formatting</a>        <ul>
-          <li><a href="#html-class-and-attribute-order">HTML class and attribute order</a></li>
+  <li><a href="#html" id="markdown-toc-html">HTML</a>    <ul>
+      <li><a href="#html-formatting" id="markdown-toc-html-formatting">HTML formatting</a>        <ul>
+          <li><a href="#html-class-and-attribute-order" id="markdown-toc-html-class-and-attribute-order">HTML class and attribute order</a></li>
         </ul>
       </li>
-      <li><a href="#html-practical-example">HTML practical example</a></li>
+      <li><a href="#html-practical-example" id="markdown-toc-html-practical-example">HTML practical example</a></li>
     </ul>
   </li>
 </ul>
@@ -206,6 +206,8 @@
 </ul>
 
 <h2 id="css">CSS</h2>
+
+<p>Note that <a href="https://github.com/brigade/scss-lint">scss-lint</a> will check for SCSS syntax issues automatically when running the Origin docs. We have it built into Grunt.</p>
 
 <h3 id="css-formatting">CSS formatting</h3>
 <ul>
@@ -224,7 +226,7 @@
 <h3 id="css-writing-style">CSS writing style</h3>
 <ul>
   <li>Use lowercase and shorthand hex values (e.g. <code>#aaa</code>).</li>
-  <li>Use single or double quotes consistently. Preference is for double quotes (e.g. <code>content: “”</code>).</li>
+  <li>Use single or double quotes consistently. Preference is for double quotes (e.g. <code>content: ""</code>).</li>
   <li>Quote attribute values in selectors (e.g. <code>input[type="checkbox”]</code>).</li>
   <li>Avoid ID selectors whenever possible.</li>
   <li>Avoid using element types as part of selectors (e.g. <code>.button</code> instead of <code>a.button</code>).</li>
@@ -239,10 +241,10 @@
 <span class="nc">.selector-1</span><span class="o">,</span>
 <span class="nc">.selector-2</span><span class="o">,</span>
 <span class="nc">.selector-3</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"text"</span><span class="o">]</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
   <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="cm">/**
@@ -251,22 +253,22 @@
 
 <span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span><span class="o">,</span>
 <span class="nt">h3</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">fa-margin-bottom</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">margin-bottom</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h4 id="css-declaration-order">CSS declaration order</h4>
-<p>List all ‘vanilla’ CSS declarations alphabetically, and always <code>@include</code> rules afterwards, but still in alphabetical order with other <code>@include</code> rules.</p>
+<p><code>@include</code> rules are declared first, as they are our first class citizens; our own properties and values as derived from <a href="https://github.com/fac/fa-css-utilities">fa-css-utilities</a>. Regular CSS declarations are listed afterwards. Be sure to write all <code>@include</code> and regular CSS rules in alphabetical order.</p>
 
 <p>Example:</p>
 
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.MyComponent</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
-  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0</span><span class="mi">.5</span><span class="p">;</span>
   <span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">gray-13</span><span class="p">);</span>
-  <span class="k">@include</span> <span class="nd">fa-font-family</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">font-family</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">fa-blue</span><span class="p">);</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="mi">.5</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h4 id="exceptions-and-deviations">Exceptions and deviations</h4>
@@ -350,17 +352,17 @@
  */</span>
 
 <span class="nc">.SegmentedControl</span> <span class="p">{</span>
-  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$color--gray-9</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="nv">$segmented-control-height</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">fa-border-radius</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">border-radius</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">flexbox</span><span class="p">(</span><span class="n">flex</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">flex-align-items</span><span class="p">(</span><span class="n">stretch</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">flex-direction</span><span class="p">(</span><span class="n">row</span><span class="p">);</span>
   <span class="k">@include</span> <span class="nd">flex-justify-content</span><span class="p">(</span><span class="nb">center</span><span class="p">);</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$color--gray-9</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$segmented-control-height</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="cm">/**
@@ -368,6 +370,9 @@
  */</span>
 
 <span class="nc">.SegmentedControl-segment</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">flex</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+  <span class="k">@include</span> <span class="nd">text-truncate</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span>
   <span class="nl">background</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$color--gray-9</span><span class="p">;</span>
   <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
@@ -375,9 +380,6 @@
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
   <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">1px</span> <span class="m">4px</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">flex</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="k">@include</span> <span class="nd">text-truncate</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">text-color</span><span class="p">(</span><span class="n">gray-9</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="cm">/* High contrast variant
@@ -475,7 +477,7 @@
 
 
       <footer class="footer">
-        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2016.<br>
       </footer>
     </div>
 

@@ -123,9 +123,9 @@
   <span class="menu-item">
     Checkbox
   </span>
-  <span class="menu-item">
+  <a class="menu-item " href="/origin/components/heading/">
     Heading
-  </span>
+  </a>
   <span class="menu-item">
     List
   </span>
@@ -177,17 +177,17 @@
       <p>Note: this is candidate component and is not currently being used in production</p>
 
 <ul id="markdown-toc">
-  <li><a href="#default-buttons">Default buttons</a></li>
-  <li><a href="#primary">Primary</a></li>
-  <li><a href="#negative">Negative</a></li>
-  <li><a href="#danger">Danger</a></li>
-  <li><a href="#neutral">Neutral</a></li>
-  <li><a href="#outline">Outline</a></li>
-  <li><a href="#disabled-state">Disabled state</a></li>
-  <li><a href="#block-buttons">Block buttons</a></li>
-  <li><a href="#button-groups">Button groups</a></li>
-  <li><a href="#different-fonts">Different fonts</a></li>
-  <li><a href="#multiple-labels">Multiple labels</a></li>
+  <li><a href="#default-buttons" id="markdown-toc-default-buttons">Default buttons</a></li>
+  <li><a href="#primary" id="markdown-toc-primary">Primary</a></li>
+  <li><a href="#negative" id="markdown-toc-negative">Negative</a></li>
+  <li><a href="#danger" id="markdown-toc-danger">Danger</a></li>
+  <li><a href="#neutral" id="markdown-toc-neutral">Neutral</a></li>
+  <li><a href="#outline" id="markdown-toc-outline">Outline</a></li>
+  <li><a href="#disabled-state" id="markdown-toc-disabled-state">Disabled state</a></li>
+  <li><a href="#block-buttons" id="markdown-toc-block-buttons">Block buttons</a></li>
+  <li><a href="#button-groups" id="markdown-toc-button-groups">Button groups</a></li>
+  <li><a href="#different-fonts" id="markdown-toc-different-fonts">Different fonts</a></li>
+  <li><a href="#multiple-labels" id="markdown-toc-multiple-labels">Multiple labels</a></li>
 </ul>
 
 <h2 id="default-buttons">Default buttons</h2>
@@ -265,12 +265,12 @@
 
 <h2 id="disabled-state">Disabled state</h2>
 
-<p>Disable <code>&lt;button&gt;</code> elements with the <code>.is-disabled</code> class and boolean <code>disabled</code> attribute. <code>&lt;a&gt;</code> elements only need the <code>.is-disabled</code> class. The <code>.is-disabled</code> is really a utility class, so should be placed after any other component-specific <code>.Button</code> classes.</p>
+<p>Disable <code>&lt;button&gt;</code> elements with the <code>.Button--disabled</code> class and boolean <code>disabled</code> attribute (unless using an <code>&lt;a&gt;</code>, in which case only the <code>.Button--disabled</code> is applied.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button is-disabled" type="button" disabled="">Disabled button</button>
-<a class="Button is-disabled" href="#" role="button">Disabled button</a></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button is-disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"Button is-disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/a&gt;</span></code></pre></div>
+<div class="DocsExample-render clearfix"><button class="Button Button--disabled" type="button" disabled="">Disabled button</button>
+<a class="Button Button--disabled" href="#" role="button">Disabled button</a></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"Button Button--disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
 <h2 id="block-buttons">Block buttons</h2>
 
@@ -380,7 +380,7 @@
 
 
       <footer class="footer">
-        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2016.<br>
       </footer>
     </div>
 

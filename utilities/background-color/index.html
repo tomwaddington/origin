@@ -123,9 +123,9 @@
   <span class="menu-item">
     Checkbox
   </span>
-  <span class="menu-item">
+  <a class="menu-item " href="/origin/components/heading/">
     Heading
-  </span>
+  </a>
   <span class="menu-item">
     List
   </span>
@@ -174,14 +174,11 @@
       background-color
     </h1>
     <div class="markdown-body">
-      <h2 id="contents">Contents</h2>
-
-<ul id="markdown-toc">
-  <li><a href="#contents">Contents</a></li>
-  <li><a href="#primary-palette">Primary palette</a></li>
-  <li><a href="#darker-variants">Darker variants</a></li>
-  <li><a href="#lighter-variants">Lighter variants</a></li>
-  <li><a href="#grays">Grays</a></li>
+      <ul id="markdown-toc">
+  <li><a href="#primary-palette" id="markdown-toc-primary-palette">Primary palette</a></li>
+  <li><a href="#darker-variants" id="markdown-toc-darker-variants">Darker variants</a></li>
+  <li><a href="#lighter-variants" id="markdown-toc-lighter-variants">Lighter variants</a></li>
+  <li><a href="#grays" id="markdown-toc-grays">Grays</a></li>
 </ul>
 
 <p>These are the background colors we’re using in production — no more. All colors are managed in <a href="https://github.com/fac/fa-css-utilities">fa-css-utilities</a>. New colors should be added only when they’re actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.</p>
@@ -283,6 +280,15 @@
     </div>
 
 <div class="DocsExample-render clearfix">@include background-color(fa-blue--x-dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--x-dark</span><span class="p">);</span></code></pre></div>
+
+  </div>
+
+  <div class="DocsExample DocsExample--render--hidden">
+    <div class="DocsExample-preview DocsExample-preview--fa-blue--xx-dark">
+      &nbsp;
+    </div>
+
+<div class="DocsExample-render clearfix">@include background-color(fa-blue--xx-dark);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">background-color</span><span class="p">(</span><span class="n">fa-blue--xx-dark</span><span class="p">);</span></code></pre></div>
 
   </div>
 
@@ -506,7 +512,7 @@
 
 
       <footer class="footer">
-        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2016.<br>
       </footer>
     </div>
 

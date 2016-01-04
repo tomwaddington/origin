@@ -123,9 +123,9 @@
   <span class="menu-item">
     Checkbox
   </span>
-  <span class="menu-item">
+  <a class="menu-item " href="/origin/components/heading/">
     Heading
-  </span>
+  </a>
   <span class="menu-item">
     List
   </span>
@@ -176,6 +176,8 @@
     <div class="markdown-body">
       <p>Our naming conventions are based largely on that of <a href="https://suitcss.github.io/">SUIT CSS</a>. The combination of <code>UpperCamelCase</code>, <code>lowerCamelCase</code>, and <code>regular-css-syntax</code> helps developers to distinguish what the intended role, behaviour, and structure of the code should be.</p>
 
+<p>Note that <a href="https://github.com/brigade/scss-lint">scss-lint</a> will check for SCSS syntax issues automatically when running the Origin docs. We have it built into Grunt.</p>
+
 <h2 id="components">Components</h2>
 <p>Set in upper camel case. Each component reserves a namespace that can only be used by that component. If you see an element set in upper camel case, you know it’s a component and therefore has its own <code>.scss</code> partial in the <code>/components</code> directory of your project, or is already a global component managed by Origin.</p>
 
@@ -213,7 +215,7 @@
 
 
       <footer class="footer">
-        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2015.<br>
+        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub 2016.<br>
       </footer>
     </div>
 
