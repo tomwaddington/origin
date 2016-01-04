@@ -95,35 +95,35 @@ $Heading-spacing: 0;
 /* Colors
   ========================================================================== */
 
-.Heading--dark {
+.Heading--color--dark {
   @include text-color(dark);
 }
 
-.Heading--default {
+.Heading--color--default {
   @include text-color(default);
 }
 
-.Heading--light {
+.Heading--color--light {
   @include text-color(light);
 }
 
-.Heading--x-light {
+.Heading--color--x-light {
   @include text-color(x-light);
 }
 
-.Heading--xx-light {
+.Heading--color--xx-light {
   @include text-color(xx-light);
 }
 
-.Heading--negative {
+.Heading--color--negative {
   @include text-color(negative);
 }
 
-.Heading--positive {
+.Heading--color--positive {
   @include text-color(positive);
 }
 
-.Heading--warning {
+.Heading--color--warning {
   @include text-color(warning);
 }
 
@@ -131,15 +131,16 @@ $Heading-spacing: 0;
 /* Fonts
   ========================================================================== */
 
-.Heading--default {
+.Heading--font--default {
   @include font-family(default);
 }
 
-.Heading--editorial {
+.Heading--font--editorial {
   @include font-family(editorial);
+  @include font-weight(normal);
 }
 
-.Heading--legacy {
+.Heading--font--legacy {
   @include font-family(legacy);
 }
 
