@@ -40,7 +40,7 @@ Separating the structure and presentation of headings like is extremely useful. 
 </h3>
 {% endexample %}
 
-## Use with mixins
+## Mixin
 The Heading component can be integrated into stylesheets for other components and layouts using the `Heading` mixin.
 
 The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility aliases](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss). Arguments must be declared in alphabetical order to work properly.
