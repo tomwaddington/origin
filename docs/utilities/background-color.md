@@ -3,8 +3,6 @@ layout: page
 title: background-color
 ---
 
-## Contents
-
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
