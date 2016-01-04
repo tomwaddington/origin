@@ -112,6 +112,13 @@
   @include text-color(fa-blue--x-dark);
 }
 
+.DocsExample-preview--fa-blue--xx-dark {
+  @include background-color(fa-blue--xx-dark);
+}
+
+.DocsExample-preview--fa-blue--xx-dark .Swatch-detail {
+  @include text-color(fa-blue--xx-dark);
+}
 
 .DocsExample-preview--fa-purple {
   @include background-color(fa-purple);

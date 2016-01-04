@@ -127,6 +127,15 @@ New colors should be added only when they’re actually being used in a componen
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
+    <div class="DocsExample-preview DocsExample-preview--text-color--fa-blue--xx-dark">
+      The fa-blue--xx-dark color for text
+    </div>
+  {% example scss %}
+@include text-color(fa-blue--xx-dark);
+{% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--fa-green--text">
       The fa-green--text color for text
     </div>

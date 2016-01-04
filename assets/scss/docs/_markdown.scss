@@ -61,11 +61,11 @@ $margin: 1rem;
 
 .markdown-body .highlight pre,
 .markdown-body pre {
+  @include border-radius(default);
   margin: 0;
   padding: $margin;
   overflow: auto;
   background-color: #f7f7f7;
-  border-radius: 3px;
 }
 
 .markdown-body .highlight pre {

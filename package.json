@@ -1,6 +1,6 @@
 {
   "name": "origin-css",
-  "version": "1.0.6",
+  "version": "1.1.2",
   "homepage": "http://fac.github.io/origin",
   "author": "FreeAgent",
   "scss": "./assets/scss/origin.scss",
@@ -17,6 +17,7 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-sass": "^1.1.0",
+    "grunt-scss-lint": "^0.3.8",
     "grunt-shell": "^1.1.2",
     "load-grunt-tasks": "~0.6.0",
     "time-grunt": "~0.4.0"
@@ -30,7 +31,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "fa-css-utilities": "~1.6.1"
+    "fa-css-utilities": "~1.6.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

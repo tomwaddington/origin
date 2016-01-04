@@ -5,6 +5,8 @@ title: Naming conventions
 
 Our naming conventions are based largely on that of [SUIT CSS](https://suitcss.github.io/). The combination of `UpperCamelCase`, `lowerCamelCase`, and `regular-css-syntax` helps developers to distinguish what the intended role, behaviour, and structure of the code should be.
 
+Note that [scss-lint](https://github.com/brigade/scss-lint) will check for SCSS syntax issues automatically when running the Origin docs. We have it built into Grunt.
+
 ## Components
 Set in upper camel case. Each component reserves a namespace that can only be used by that component. If you see an element set in upper camel case, you know it’s a component and therefore has its own `.scss` partial in the `/components` directory of your project, or is already a global component managed by Origin.
 

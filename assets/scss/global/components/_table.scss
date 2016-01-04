@@ -37,19 +37,19 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table {
+  @include font-weight(default);
+  @include line-height(4);
+  @include text-color(gray-5);
   /* 1 */
   border-collapse: collapse;
   /* 2 */
   border-spacing: 0;
   /* 3 */
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
   padding: 0;
   text-align: left;
   /* 4 */
   width: 100%;
-  @include font-weight(default);
-  @include line-height(4);
-  @include text-color(gray-5);
 }
 
 /**
@@ -65,7 +65,7 @@ $Table-border-color: $color--gray-15;
 .Table td,
 .Table th {
   margin: 0;
-  padding: 0.5em;
+  padding: .5em;
   /* 1 */
   vertical-align: middle;
 }
@@ -112,9 +112,9 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table-header--prominent {
-  /* 1 */
-  border-top: 1px solid white;
   @include background-color(gray-16);
+  /* 1 */
+  border-top: 1px solid #fff;
 }
 
 /**
@@ -131,9 +131,9 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table-row--parent {
-  background-color: #E0EDF4;
-  color: #174F73;
   @include font-weight(semi-bold);
+  background-color: #e0edf4;
+  color: #174f73;
 }
 
 /**
@@ -160,9 +160,9 @@ $Table-border-color: $color--gray-15;
 
 .Table-row--prominent .Table-cell,
 .Table-row--prominent .Table-header {
-  border-top: 0;
   @include background-color(gray-14);
   @include text-color(gray-4);
+  border-top: 0;
 }
 
 /**
@@ -258,14 +258,18 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
- * Ensure suspense amounts are coloured appropriately. In due course this should
- * reference a colour from our utilities library, e.g.:
+ * Ensure suspense amounts are coloured appropriately.
+ * In due course this should reference a colour from our utilities library, e.g.:
  *
  * `@include text-color(red);`
+ *
+ * The `suspense` class also breaks our class naming conventions; it should be
+ * `is-suspense`. But this requires changing in the desktop app, so for the time
+ * being we're maintaining the current class.
  */
 
 .Table .suspense a {
-  color: #CA131D;
+  color: #ca131d;
 }
 
 
@@ -314,7 +318,7 @@ $Table-border-color: $color--gray-15;
 .Table--verticalBorders--white th,
 .Table-row--verticalBorders--white td,
 .Table-row--verticalBorders--white th {
-  border-color: white;
+  border-color: #fff;
 }
 
 
@@ -326,7 +330,7 @@ $Table-border-color: $color--gray-15;
 
 .Table--zebraStripes tbody tr:nth-child(even),
 .Table-row--zebraStripes:nth-child(even) {
-  background-color: rgba(200, 200, 200, 0.14);
+  background-color: rgba(200, 200, 200, .14);
 }
 
 /**
@@ -367,7 +371,7 @@ $Table-border-color: $color--gray-15;
 
 .Table--desktop td,
 .Table--desktop th {
-  padding: 0.75em;
+  padding: .75em;
 }
 
 /**
