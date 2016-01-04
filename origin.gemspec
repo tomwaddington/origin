@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Origin::VERSION
   spec.authors       = ["Murray Summers"]
   spec.email         = ["murray@freeagent.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Origin is FreeAgent's internal CSS framework"
+  spec.description   = "Origin consumes our CSS utilities and provides some global UI components. It also documents our principles, HTML & CSS naming conventions and code style."
   spec.homepage      = ""
   spec.license       = "MIT"
 
