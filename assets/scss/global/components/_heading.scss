@@ -145,6 +145,36 @@ $Heading-spacing: 0;
 }
 
 
+/* Spacing
+  ========================================================================== */
+
+/**
+ * These values deliberately avoid using our standard `margin` utility mixin
+ * because it serves `rem`s, but here we want the margins to adapt based on the
+ * size of the headings.
+ */
+
+.Heading--space--xx-small {
+  margin-bottom: 0.15em;
+}
+
+.Heading--space--x-small {
+  margin-bottom: 0.25em;
+}
+
+.Heading--space--small {
+  margin-bottom: 0.35em;
+}
+
+.Heading--space--default {
+  margin-bottom: 0.5em;
+}
+
+.Heading--space--large {
+  margin-bottom: 0.75em;
+}
+
+
 /* Weights
   ========================================================================== */
 
