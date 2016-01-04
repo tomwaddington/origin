@@ -218,22 +218,31 @@ $Heading-spacing: 0;
 /* Editorial modifications
   ========================================================================== */
 
+.l-editorial h1,
+.l-editorial h2,
+.l-editorial h3,
+.l-editorial h4,
+.l-editorial h5,
+.l-editorial h6 {
+  margin-bottom: 0.25em;
+}
+
 .l-editorial h2 {
-  @include margin-top(large);
+  margin-top: 1em;
 }
 
 .l-editorial h3 {
-  @include margin-top(large);
+  margin-top: 1em;
 }
 
 .l-editorial h4 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }
 
 .l-editorial h5 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }
 
 .l-editorial h6 {
-  @include margin-top(small);
+  margin-top: 0.5em;
 }
