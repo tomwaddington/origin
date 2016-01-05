@@ -21,6 +21,8 @@
 @import "components/_text-example";
 @import "components/_text-color";
 
+$masthead-margin: 1.5rem;
+
 /**
  * Base styles
  */
@@ -118,10 +120,10 @@ ul ul ul {
  */
 
 .container {
-  width: auto;
+  @include padding(large);
+  margin: 0 auto;
   max-width: 1020px;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: auto;
 }
 
 /**
@@ -175,11 +177,9 @@ a.menu-item:hover {
  */
 
 .masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
   @include background-color(fa-blue);
+  margin-bottom: $masthead-margin;
+  text-align: center;
 
   a {
     color: rgba(255,255,255,.5);
@@ -249,55 +249,45 @@ a.menu-item:hover {
  * From Primer: homepage jumbotron
  */
 
-.jumbotron {
-  margin-top: -2rem;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  font-size: 1.25rem;
-  color: #fff;
-  text-align: center;
+.Hero {
   @include background-color(fa-blue);
   @include border-bottom(xx-thick, fa-green);
-
-  h1 {
-    font-size: 2.5em;
-    font-weight: normal;
-  }
-
-  .btn {
-    padding: .75em 1.15em;
-    font-size: inherit;
-    font-weight: normal;
-    line-height: 1;
-  }
-
-  @media (min-width: 34em) {
-    padding-top: 6rem;
-    padding-bottom: 8rem;
-    font-size: 1.5rem;
-    text-align: left;
-  }
+  @include padding(x-large 0);
+  text-color: #fff;
 }
 
-.about-that {
+.masthead + .Hero {
+  margin-top: -($masthead-margin);
+}
 
-  @media (max-width: 760px) {
-    .column {
-      float: none;
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
+.Hero-heading {
+  @include font-weight(normal);
+  @include margin-bottom(default);
+  color: #fff;
+  font-size: 4em;
+  letter-spacing: -0.02em;
+}
 
-  p {
-    padding-right: .5rem;
-    @include text-color(gray-6);
-  }
+.Hero-body {
+  @include font-size(large);
+  @include line-height(x-tight);
+  color: #fff;
+}
 
-  h2 {
-    font-weight: normal;
-  }
+.Hero-leader {
+  @include font-size(xx-large);
+  @include margin-bottom(default);
+}
+
+.Hero a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.Hero a:active,
+.Hero a:focus,
+.Hero a:hover {
+  text-decoration: none;
 }
 
 /**
