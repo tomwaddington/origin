@@ -261,9 +261,11 @@ a.menu-item:hover {
 }
 
 .Hero-heading {
+  @include font-weight(normal);
   @include margin-bottom(default);
   color: #fff;
   font-size: 4em;
+  letter-spacing: -0.02em;
 }
 
 .Hero-body {
