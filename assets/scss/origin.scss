@@ -15,6 +15,9 @@
  * https://github.com/fac/origin/blob/master/README.md
  */
 
+ /* Mixins */
+ @import "mixins/_heading";
+
 /* Local: font settings — copy file if implementing Origin into a project */
 @import "local/fonts/_font-settings";
 
