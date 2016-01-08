@@ -159,9 +159,9 @@ tbody tr:first-child td {
  */
 
 .Table-row--parent {
-  background-color: #e0edf4;
-  color: #174F73;
   @include font-weight(semi-bold);
+  background-color: #e0edf4;
+  color: #174f73;
 }
 
 /**
@@ -188,9 +188,9 @@ tbody tr:first-child td {
 
 .Table-row--prominent .Table-cell,
 .Table-row--prominent .Table-header {
-  border-top: 0;
   @include background-color(gray-14);
   @include text-color(gray-4);
+  border-top: 0;
 }
 
 /**
