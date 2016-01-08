@@ -316,16 +316,24 @@ tbody tr:first-child td {
  * Add a left-hand border to an individual table cell.
  */
 
-.Table-cell--verticalBorder--left {
-  border-left: 1px solid $Table-border-color;
+.Table .Table-cell--verticalBorder--left {
+  border-left: 1px solid $color--gray-13;
+}
+
+.Table .Table-cell--verticalBorder--header--left {
+  border-left: 1px solid desaturate(lighten($color--fa-blue, 45), 50);
 }
 
 /**
  * Add a right-hand border to an individual table cell.
  */
 
-.Table-cell--verticalBorder--right {
-  border-right: 1px solid $Table-border-color;
+.Table .Table-cell--verticalBorder--right {
+  border-right: 1px solid $color--gray-13;
+}
+
+.Table .Table-cell--verticalBorder--header--right {
+  border-right: 1px solid desaturate(lighten($color--fa-blue, 45), 50);
 }
 
 /**
