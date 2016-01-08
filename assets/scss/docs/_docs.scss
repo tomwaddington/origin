@@ -384,11 +384,6 @@ a.menu-item:hover {
   .columns + .columns {
     margin-top: 10px;
   }
-  .column {
-    @include background-color(fa-green--x-light);
-    @include font-family(monospace);
-    @include padding(default);
-  }
 
   /* Override Markdown styles to restore values from `_type.scss` */
   ul,

@@ -134,6 +134,7 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/*.scss',
           'assets/scss/**/*.scss',
+          'assets/scss/**/**/*.scss'
         ],
         tasks: ['sass']
       }
