@@ -1,5 +1,5 @@
 /* Mixin
-  ========================================================================== */
+========================================================================== */
 
 /**
  * See http://fac.github.io/origin/components/heading/ for example usage
@@ -24,13 +24,13 @@ $Heading-spacing: 0;
   $weight: $Heading-weight,
   $important: null
   ) {
-  color: map-get($text-color-values, $Heading-color) $important;
-  font-family: map-get($font-family-values, $Heading-font) $important;
-  font-size: map-get($font-size-values, $Heading-size) $important;
-  font-weight: map-get($font-weight-values, $Heading-weight) $important;
+  color: map-get($text-color-values, $color) $important;
+  font-family: map-get($font-family-values, $font) $important;
+  font-size: map-get($font-size-values, $size) $important;
+  font-weight: map-get($font-weight-values, $weight) $important;
   @include line-height(x-tight);
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  margin-bottom: map-get($spacing-values, $Heading-spacing) $important;
+  margin-bottom: map-get($spacing-values, $spacing) $important;
 }
