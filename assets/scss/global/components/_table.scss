@@ -37,6 +37,9 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table {
+  @include font-weight(default);
+  @include line-height(4);
+  @include text-color(gray-5);
   /* 1 */
   border-collapse: collapse;
   /* 2 */
@@ -47,9 +50,6 @@ $Table-border-color: $color--gray-15;
   text-align: left;
   /* 4 */
   width: 100%;
-  @include font-weight(default);
-  @include line-height(4);
-  @include text-color(gray-5);
 }
 
 /**
@@ -123,9 +123,9 @@ tbody tr:first-child td {
  */
 
 .Table-header--prominent {
+  @include background-color(gray-16);
   /* 1 */
   border-top: 1px solid white;
-  @include background-color(gray-16);
 }
 
 /**
