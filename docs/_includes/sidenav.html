@@ -110,7 +110,10 @@
   Layout
 </h4>
 <nav class="menu docs-menu">
-  <span class="menu-item">
+  <a class="menu-item {% if page.title == "Block Grid" %}selected{% endif %}" href="{{ site.baseurl }}/components/block-grid/">
+    Block Grid
+  </a>
+  <a class="menu-item {% if page.title == "Grid" %}selected{% endif %}" href="{{ site.baseurl }}/components/grid/">
     Grid
-  </span>
+  </a>
 </nav>
