@@ -10,7 +10,7 @@ port: 8001
 baseurl: "/origin"
 
 # Because we use pages rather than posts for our content, we have to list those
-# categories here to be able to list pages by category 
+# categories here to be able to list pages by category
 categories: [guidance, utilities, components, layout]
 
 # Markdown processors
