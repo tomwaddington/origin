@@ -142,6 +142,37 @@ Used when the standard styling doesn't provide enough clarity for the content. R
 </table>
 {% endexample %}
 
+## Individual cells with vertical borders
+
+Used for creating a divider between columns or to highlight column groups.
+
+{% example html %}
+<table class="Table">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th class="Table-cell--verticalBorder--header--left">Left border</th>
+      <th class="Table-cell--verticalBorder--header--right">Right border</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
 ## Rows with minor content
 
 Used for rows (or cells) that contain minor/inessential data, or data that
