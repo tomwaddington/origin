@@ -2,11 +2,14 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@import 'global';
-
 //
 // Block Grid Variables
 //
+
+// IMPORT ONCE
+// We use this to prevent styles from being loaded multiple times for components that rely on other components.
+$modules: () !default;
+
 $include-html-block-grid-classes: $include-html-classes !default;
 $include-xl-html-block-grid-classes: false !default;
 
@@ -25,6 +28,17 @@ $block-grid-media-queries: true !default;
 //
 // Block Grid Mixins
 //
+
+@mixin exports($name) {
+  // Import from global scope
+  $modules: $modules !global;
+  // Check if a module is already on the list
+  $module_index: index($modules, $name);
+  @if (($module_index == null) or ($module_index == false)) {
+    $modules: append($modules, $name) !global;
+    @content;
+  }
+}
 
 // Create a custom block grid
 //
@@ -46,7 +60,7 @@ $block-grid-media-queries: true !default;
     } @else {
       margin: 0 (-$spacing/2);
     }
-    @include clearfix;
+    @include floatContainer;
 
     > li {
       display: block;
