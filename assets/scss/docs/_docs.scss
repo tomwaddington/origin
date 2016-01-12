@@ -291,20 +291,6 @@ a.menu-item:hover {
 }
 
 /**
- * From Primer: layout
- */
-
-/* Override the default layout to make it stack */
-.docs-layout {
-  @media (max-width: 34em) {
-    > .column {
-      float: none;
-      width: 100%;
-    }
-  }
-}
-
-/**
  * From Primer: footer
  */
 
@@ -341,6 +327,7 @@ a.menu-item:hover {
 .DocsExample {
   @include margin-bottom(large);
 }
+
 
 /**
  * `-preview` is for showing manually typed previews when only showing CSS
@@ -434,6 +421,45 @@ a.menu-item:hover {
 .DocsExample--adjacentExample,
 .DocsExample--adjacentExample .highlight {
   margin-bottom: 0;
+}
+
+/* Grid examples */
+.DocsExample--grid .DocsExample-render {
+  @include padding-left(x-large);
+  @include padding-right(x-large);
+}
+
+.DocsExample--grid .g-row {
+  @include background-color(gray-15);
+}
+
+.DocsExample--grid .g-row,
+.DocsExample--grid .g-row .g-col {
+  line-height: 60px;
+}
+
+.DocsExample--grid .g-row .g-col {
+  border-color: $color--gray-15;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  @include background-color(gray-12);
+}
+
+.DocsExample--grid .g-row .g-col:last-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+.DocsExample--grid--sourceOrder .g-row .g-col:first-child {
+  border-left-width: 1px;
+}
+
+.DocsExample--grid .g-row + .g-row .g-col {
+  border-top: 0;
+}
+
+.DocsExample--grid .g-row .g-row:last-child .g-col {
+  border-bottom-width: 0;
 }
 
 .markdown-body .DocsExample--adjacentExample .highlight pre,
