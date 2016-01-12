@@ -42,7 +42,7 @@
   @return $remValues;
 }
 
-$rem-base: 16px !default;
+$rem-base: $base-unit !default;
 $default-float: left !default;
 $opposite-direction: right !default;
 $include-html-classes: true !default;
