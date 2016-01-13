@@ -176,7 +176,9 @@
   <li><a href="#right-aligned-content" id="markdown-toc-right-aligned-content">Right-aligned content</a></li>
   <li><a href="#prominent-rows-and-headers" id="markdown-toc-prominent-rows-and-headers">Prominent rows and headers</a></li>
   <li><a href="#rows-with-vertical-borders" id="markdown-toc-rows-with-vertical-borders">Rows with vertical borders</a></li>
+  <li><a href="#individual-cells-with-vertical-borders" id="markdown-toc-individual-cells-with-vertical-borders">Individual cells with vertical borders</a></li>
   <li><a href="#rows-with-minor-content" id="markdown-toc-rows-with-minor-content">Rows with minor content</a></li>
+  <li><a href="#parent-headers" id="markdown-toc-parent-headers">Parent headers</a></li>
   <li><a href="#parent-rows" id="markdown-toc-parent-rows">Parent rows</a></li>
   <li><a href="#zebra-stripes" id="markdown-toc-zebra-stripes">Zebra stripes</a></li>
   <li><a href="#desktop-variant" id="markdown-toc-desktop-variant">Desktop variant</a></li>
@@ -347,10 +349,19 @@
 
 <div class="DocsExample-render clearfix"><table class="Table">
   <thead>
-    <tr class="Table-row Table-row--verticalBorders Table-row--verticalBorders--white">
-      <th class="Table-header Table-header--prominent">Table header</th>
-      <th class="Table-header Table-header--prominent">Table header</th>
-      <th class="Table-header Table-header--prominent">Table header</th>
+    <tr class="Table-row Table-row--parentHeader Table-row--verticalBorders Table-row--verticalBorders--header">
+      <th>Parent header</th>
+      <th>Parent header</th>
+      <th class="Table-cell Table-cell--bold">
+        Parent header
+      </th>
+    </tr>
+  </thead>
+  <thead>
+    <tr class="Table-row Table-row--verticalBorders Table-row--verticalBorders--header">
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
     </tr>
   </thead>
   <tbody>
@@ -358,6 +369,11 @@
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
+    </tr>
+    <tr class="Table-row Table-row--prominent Table-row--verticalBorders Table-row--verticalBorders--white">
+      <td class="Table-cell">Prominent table cell</td>
+      <td class="Table-cell">Prominent table cell</td>
+      <td class="Table-cell">Prominent table cell</td>
     </tr>
     <tr class="Table-row Table-row--verticalBorders">
       <td>Table cell</td>
@@ -368,10 +384,19 @@
 </table></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"Table"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--verticalBorders Table-row--verticalBorders--white"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-header Table-header--prominent"</span><span class="nt">&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-header Table-header--prominent"</span><span class="nt">&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-header Table-header--prominent"</span><span class="nt">&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--parentHeader Table-row--verticalBorders Table-row--verticalBorders--header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Parent header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Parent header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-cell Table-cell--bold"</span><span class="nt">&gt;</span>
+        Parent header
+      <span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--verticalBorders Table-row--verticalBorders--header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -380,9 +405,67 @@
       <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--prominent Table-row--verticalBorders Table-row--verticalBorders--white"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell"</span><span class="nt">&gt;</span>Prominent table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell"</span><span class="nt">&gt;</span>Prominent table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell"</span><span class="nt">&gt;</span>Prominent table cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--verticalBorders"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+<h2 id="individual-cells-with-vertical-borders">Individual cells with vertical borders</h2>
+
+<p>Used for creating a divider between columns or to highlight column groups.</p>
+
+<div class="DocsExample-render clearfix"><table class="Table">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th class="Table-cell--verticalBorder--header--left">Left border</th>
+      <th class="Table-cell--verticalBorder--header--right">Right border</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"Table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--header--left"</span><span class="nt">&gt;</span>Left border<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--header--right"</span><span class="nt">&gt;</span>Right border<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--left"</span><span class="nt">&gt;</span>Left border<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--right"</span><span class="nt">&gt;</span>Right border<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--left"</span><span class="nt">&gt;</span>Left border<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"Table-cell--verticalBorder--right"</span><span class="nt">&gt;</span>Right border<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>Table cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
@@ -442,6 +525,69 @@ otherwise exists as metadata for other data in the table.</p>
       <span class="nt">&lt;td&gt;</span>Minor table row<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>Minor table row<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>Minor table row<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+<h2 id="parent-headers">Parent headers</h2>
+
+<p>Used when regular table headers require grouping.</p>
+
+<div class="DocsExample-render clearfix"><table class="Table">
+  <thead>
+    <tr class="Table-row Table-row--parentHeader">
+      <th colspan="3">Parent table header</th>
+    </tr>
+    <tr>
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"Table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"Table-row Table-row--parentHeader"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">colspan=</span><span class="s">"3"</span><span class="nt">&gt;</span>Parent table header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Table header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Child cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
