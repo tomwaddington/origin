@@ -45,7 +45,7 @@ $Table-border-color: $color--gray-15;
   /* 2 */
   border-spacing: 0;
   /* 3 */
-  margin: 0 0 1em;
+  margin: 0 0 1em 0;
   padding: 0;
   text-align: left;
   /* 4 */
@@ -65,7 +65,7 @@ $Table-border-color: $color--gray-15;
 .Table td,
 .Table th {
   margin: 0;
-  padding: .5em;
+  padding: 0.5em;
   /* 1 */
   vertical-align: middle;
 }
@@ -76,6 +76,16 @@ $Table-border-color: $color--gray-15;
 
 .Table td {
   border-top: 1px solid $Table-border-color;
+}
+
+/**
+ * Remove the `border-top` from all table cells in the first row in a <tbody>,
+ * which prevents a fuzzy edge from appearing, as the <thead> preceding it is
+ * coloured light blue.
+ */
+
+tbody tr:first-child td {
+  border-top: 0;
 }
 
 /**
@@ -95,8 +105,9 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table th {
-  @include font-weight(normal);
-  @include text-color(gray-7);
+  @include background-color(fa-blue--x-light);
+  @include font-weight(semi-bold);
+  @include text-color(fa-blue--x-dark);
 }
 
 /* Highlighting variants
@@ -114,15 +125,32 @@ $Table-border-color: $color--gray-15;
 .Table-header--prominent {
   @include background-color(gray-16);
   /* 1 */
-  border-top: 1px solid #fff;
+  border-top: 1px solid white;
 }
 
 /**
- * Make the text contents of a row bold.
+ * Style a parent table header row so that it appears more subdued than a regular
+ * table header.
+ *
+ * 1. This header is designed to group together the cell columns of the row
+ *    underneath it, so we centre align the text as the best way of doing so. 
  */
 
+.Table .Table-row--parentHeader th {
+  @include background-color(fa-blue--xx-light);
+  @include font-weight(normal);
+  color: desaturate(lighten($color--fa-blue, 22), 55);
+  /* 1 */
+  text-align: center;
+}
+
+/**
+ * Make the text contents of a cell or row bold.
+ */
+
+.Table-cell--bold,
 .Table-row--bold {
-  @include font-weight(semi-bold);
+  @include font-weight(semi-bold, !important);
 }
 
 /**
@@ -142,8 +170,8 @@ $Table-border-color: $color--gray-15;
  */
 
 .Table-row--parent td {
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff !important;
+  border-top: 1px solid #fff !important;
 }
 
 /**
@@ -258,14 +286,10 @@ $Table-border-color: $color--gray-15;
 }
 
 /**
- * Ensure suspense amounts are coloured appropriately.
- * In due course this should reference a colour from our utilities library, e.g.:
+ * Ensure suspense amounts are coloured appropriately. In due course this should
+ * reference a colour from our utilities library, e.g.:
  *
  * `@include text-color(red);`
- *
- * The `suspense` class also breaks our class naming conventions; it should be
- * `is-suspense`. But this requires changing in the desktop app, so for the time
- * being we're maintaining the current class.
  */
 
 .Table .suspense a {
@@ -282,9 +306,34 @@ $Table-border-color: $color--gray-15;
 .Table--verticalBorders td,
 .Table--verticalBorders th,
 .Table-row--verticalBorders td,
-.Table-row--verticalBorders th {
+.Table-row--verticalBorders th,
+.Table-cell--verticalBorders {
   border-left: 1px solid $Table-border-color;
   border-right: 1px solid $Table-border-color;
+}
+
+/**
+ * Add a left-hand border to an individual table cell.
+ */
+
+.Table .Table-cell--verticalBorder--left {
+  border-left: 1px solid $color--gray-13;
+}
+
+.Table .Table-cell--verticalBorder--header--left {
+  border-left: 1px solid desaturate(lighten($color--fa-blue, 45), 50);
+}
+
+/**
+ * Add a right-hand border to an individual table cell.
+ */
+
+.Table .Table-cell--verticalBorder--right {
+  border-right: 1px solid $color--gray-13;
+}
+
+.Table .Table-cell--verticalBorder--header--right {
+  border-right: 1px solid desaturate(lighten($color--fa-blue, 45), 50);
 }
 
 /**
@@ -317,10 +366,54 @@ $Table-border-color: $color--gray-15;
 .Table--verticalBorders--white td,
 .Table--verticalBorders--white th,
 .Table-row--verticalBorders--white td,
-.Table-row--verticalBorders--white th {
-  border-color: #fff;
+.Table-row--verticalBorders--white th,
+.Table-cell--verticalBorders--white {
+  border-color: white;
 }
 
+/**
+ * Add a white left-hand border to an individual table cell.
+ */
+
+.Table-cell--verticalBorder--white--left {
+  border-left: 1px solid white;
+}
+
+/**
+ * Add a white right-hand border to an individual table cell.
+ */
+
+.Table-cell--verticalBorder--white--right {
+  border-right: 1px solid white;
+}
+
+/**
+ * Give table cells inside <thead> vertical borders.
+ */
+
+.Table--verticalBorders--header td,
+.Table--verticalBorders--header th,
+.Table-row--verticalBorders--header td,
+.Table-row--verticalBorders--header th,
+.Table-cell--verticalBorders--header {
+  border-color: desaturate(lighten($color--fa-blue, 45), 50);
+}
+
+/**
+ * Add a left-hand border to a cell inside a <thead>.
+ */
+
+.Table-cell--verticalBorder--white--left {
+  border-left: 1px solid white;
+}
+
+/**
+ * Add a right-hand border to a cell inside a <thead>.
+ */
+
+.Table-cell--verticalBorder--white--right {
+  border-right: 1px solid white;
+}
 
 /* `Table--zebraStripes` variant
    ==========================================================================
@@ -330,7 +423,7 @@ $Table-border-color: $color--gray-15;
 
 .Table--zebraStripes tbody tr:nth-child(even),
 .Table-row--zebraStripes:nth-child(even) {
-  background-color: rgba(200, 200, 200, .14);
+  background-color: rgba(200, 200, 200, 0.14);
 }
 
 /**
@@ -371,7 +464,11 @@ $Table-border-color: $color--gray-15;
 
 .Table--desktop td,
 .Table--desktop th {
-  padding: .75em;
+  padding: 0.75em;
+}
+
+.Table--desktop th {
+  @include font-weight(bold);
 }
 
 /**
@@ -379,6 +476,7 @@ $Table-border-color: $color--gray-15;
  * font doesn't come in a semi-bold weight.
  */
 
+.Table--desktop .Table-cell--bold,
 .Table--desktop .Table-row--bold {
   @include font-weight(bold);
 }
