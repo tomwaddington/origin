@@ -75,9 +75,9 @@ $last-child-float: right;
 
 $small-range:   (0, $medium-breakpoint) !default;
 $medium-range:  ($medium-breakpoint, $large-breakpoint) !default;
-$large-range:   ($large-breakpoint, $xlarge-breakpoint) !default;
-$xlarge-range:  ($xlarge-breakpoint, $xxlarge-breakpoint) !default;
-$xxlarge-range: ($xxlarge-breakpoint, 99999999rem) !default;
+$large-range:   ($large-breakpoint, $x-large-breakpoint) !default;
+$xlarge-range:  ($x-large-breakpoint, $xx-large-breakpoint) !default;
+$xxlarge-range: ($xx-large-breakpoint, 99999999rem) !default;
 
 $default-float: left !default;
 $opposite-direction: right !default;
@@ -96,10 +96,10 @@ $medium-only:  "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (ma
 $large-min:    "#{$screen} and (min-width:#{$large-breakpoint})" !default;
 $large-up:     "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
 $large-only:   "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
-$xlarge-min:   "#{$screen} and (min-width:#{$xlarge-breakpoint})" !default;
+$xlarge-min:   "#{$screen} and (min-width:#{$x-large-breakpoint})" !default;
 $xlarge-up:    "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
 $xlarge-only:  "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
-$xxlarge-min:  "#{$screen} and (min-width:#{$xxlarge-breakpoint})" !default;
+$xxlarge-min:  "#{$screen} and (min-width:#{$xx-large-breakpoint})" !default;
 $xxlarge-up:   "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 $retina: (
