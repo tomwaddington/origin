@@ -1,4 +1,5 @@
 ---
+categories: components
 layout: page
 title: Table
 ---
@@ -106,10 +107,19 @@ Used when the standard styling doesn't provide enough clarity for the content. R
 {% example html %}
 <table class="Table">
   <thead>
-    <tr class="Table-row Table-row--verticalBorders Table-row--verticalBorders--white">
-      <th class="Table-header Table-header--prominent">Table header</th>
-      <th class="Table-header Table-header--prominent">Table header</th>
-      <th class="Table-header Table-header--prominent">Table header</th>
+    <tr class="Table-row Table-row--parentHeader Table-row--verticalBorders Table-row--verticalBorders--header">
+      <th>Parent header</th>
+      <th>Parent header</th>
+      <th class="Table-cell Table-cell--bold">
+        Parent header
+      </th>
+    </tr>
+  </thead>
+  <thead>
+    <tr class="Table-row Table-row--verticalBorders Table-row--verticalBorders--header">
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
     </tr>
   </thead>
   <tbody>
@@ -118,9 +128,45 @@ Used when the standard styling doesn't provide enough clarity for the content. R
       <td>Table cell</td>
       <td>Table cell</td>
     </tr>
+    <tr class="Table-row Table-row--prominent Table-row--verticalBorders Table-row--verticalBorders--white">
+      <td class="Table-cell">Prominent table cell</td>
+      <td class="Table-cell">Prominent table cell</td>
+      <td class="Table-cell">Prominent table cell</td>
+    </tr>
     <tr class="Table-row Table-row--verticalBorders">
       <td>Table cell</td>
       <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
+## Individual cells with vertical borders
+
+Used for creating a divider between columns or to highlight column groups.
+
+{% example html %}
+<table class="Table">
+  <thead>
+    <tr>
+      <th>Table header</th>
+      <th class="Table-cell--verticalBorder--header--left">Left border</th>
+      <th class="Table-cell--verticalBorder--header--right">Right border</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>Table cell</td>
+      <td class="Table-cell--verticalBorder--left">Left border</td>
+      <td class="Table-cell--verticalBorder--right">Right border</td>
       <td>Table cell</td>
     </tr>
   </tbody>
@@ -156,6 +202,42 @@ otherwise exists as metadata for other data in the table.
       <td>Minor table row</td>
       <td>Minor table row</td>
       <td>Minor table row</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
+## Parent headers
+
+Used when regular table headers require grouping. 
+
+{% example html %}
+<table class="Table">
+  <thead>
+    <tr class="Table-row Table-row--parentHeader">
+      <th colspan="3">Parent table header</th>
+    </tr>
+    <tr>
+      <th>Table header</th>
+      <th>Table header</th>
+      <th>Table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
+    </tr>
+    <tr>
+      <td>Child cell</td>
+      <td>Child cell</td>
+      <td>Child cell</td>
     </tr>
   </tbody>
 </table>

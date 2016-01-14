@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/**
+ * The paths below are set up to work ‘out of the box’ for the Origin docs.
+ *
+ * If you’re implementing Origin into a project, you’ll need to change these as
+ * per your project structure.
+ *
+ * Don’t change the order of the files being imported.
+ *
+ * ‘Local’ files are those you’d copy into your project structure and reference.
+ * ‘Global’ files are those you’d leave in `node_modules` and reference there.
+ *
+ * Full instructions for implementing Origin into a project are in the README:
+ * https://github.com/fac/origin/blob/master/README.md
+ */
+
+/* Local: font settings — copy file if implementing Origin into a project */
+@import "local/fonts/_font-settings";
+
+/* Global: functions to handle fonts correctly based on font settings */
+@import "global/fonts/_font-functions";
+
+/* Global: load fonts for `@font-face` use */
+@import "global/fonts/_source-sans-pro";
+
+/* Local: utility settings — copy file if implementing Origin into a project */
+@import "local/utilities/_utility-settings";
+
+/* Global: import utilities */
+@import "../../node_modules/fa-css-utilities/_utilities";
+
+/* Local: Heading component settings — copy file if implementing Origin into a project */
+@import "local/fonts/_heading-settings";
+
+/* Local: base styles — copy file if implementing Origin into a project */
+@import "local/base/_base";
+
+/* Global: import any required components; comment out those not required */
+@import "global/components/_button";
+@import "global/components/_heading";
+@import "global/components/_list";
+@import "global/components/_navbar";
+@import "global/components/_notice";
+@import "global/components/_segmented-control";
+@import "global/components/_table";
+@import "global/components/_tabs";
+
+/* Docs styles — remove file reference if documentation styles aren’t needed */
+@import "docs/_docs";
+
+/**
+ * You’re safe to include your project styles below here...
+ */

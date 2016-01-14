@@ -1,4 +1,5 @@
 ---
+categories: utilities
 layout: page
 title: font-weight
 ---

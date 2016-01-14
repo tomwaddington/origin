@@ -12,11 +12,11 @@
  */
 
 @function map-select-values($map, $selection, $separator) {
-   $values: ();
-   @each $key in $selection {
-     $values: append($values, map-get($map, $key), $separator);
-   }
-   @return $values;
+  $values: ();
+  @each $key in $selection {
+    $values: append($values, map-get($map, $key), $separator);
+  }
+  @return $values;
 }
 
 
@@ -31,19 +31,19 @@
  */
 
 @function choose-browser-formats() {
-   $chosen-formats: ();
+  $chosen-formats: ();
 
-   @if $support-ie8 {
-      $chosen-formats: append($chosen-formats, embedded-opentype);
-   }
+  @if $support-ie8 {
+    $chosen-formats: append($chosen-formats, embedded-opentype);
+  }
 
-   @if $use-opentype {
-      $chosen-formats: join($chosen-formats, opentype-woff opentype-woff2 opentype);
-   } @else {
-      $chosen-formats: join($chosen-formats, truetype-woff truetype-woff2 truetype);
-   }
+  @if $use-opentype {
+    $chosen-formats: join($chosen-formats, opentype-woff opentype-woff2 opentype);
+  } @else {
+    $chosen-formats: join($chosen-formats, truetype-woff truetype-woff2 truetype);
+  }
 
-   @return $chosen-formats;
+  @return $chosen-formats;
 }
 
 
@@ -72,6 +72,6 @@
  */
 
 @function supported-font-sources($sources) {
-   $chosen-formats: choose-browser-formats();
-   @return map-select-values($sources, $chosen-formats, comma);
+  $chosen-formats: choose-browser-formats();
+  @return map-select-values($sources, $chosen-formats, comma);
 }

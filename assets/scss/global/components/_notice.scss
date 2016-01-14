@@ -15,17 +15,17 @@
  */
 
 .Notice {
-  /* 1 */
-  display: table;
-  padding: 7px 15px 8px 15px;
-  /* 2 */
-  position: relative;
-  text-align: center;
-  width: 100%;
   @include background-color(gray-14);
   @include font-size(small);
   @include line-height(loose);
   @include text-color(gray-5);
+  /* 1 */
+  display: table;
+  padding: 7px 15px 8px;
+  /* 2 */
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 /**
@@ -41,9 +41,9 @@
  */
 
 .Notice-title {
-  margin: 5px 0;
   @include font-size(default);
   @include font-weight(semi-bold);
+  margin: 5px 0;
 }
 
 /**
@@ -78,8 +78,8 @@
  */
 
 .Notice--negative-action {
-  color: #fff;
   @include background-color(fa-red);
+  color: #fff;
 }
 
 /**
@@ -114,8 +114,8 @@
  */
 
 .Notice--positive-action {
-  color: #fff;
   @include background-color(fa-green);
+  color: #fff;
 }
 
 /**
@@ -150,8 +150,8 @@
  */
 
 .Notice--warning-action {
-  color: #fff;
   @include background-color(fa-yellow);
+  color: #fff;
 }
 
 /**
@@ -168,8 +168,8 @@
  */
 
 .Notice--expired {
-  background: none;
   @include text-color(gray-5);
+  background: none;
 }
 
 /**
@@ -217,9 +217,9 @@
  * Visible state of flash message
  */
 
-.Notice--flash.is-visible {
-  visibility: visible;
+.Notice--flash--visible {
   @include transition;
+  visibility: visible;
 }
 
 /**
@@ -252,7 +252,7 @@
  */
 
 .Notice--infobox {
-  background: #F3EDBF;
+  background: #f3edbf;
   color: #635646;
 }
 
@@ -308,12 +308,9 @@
  */
 
 .Notice--negative .Icon--arrow--pointsDown {
+  @include transform(none);
   border-top-color: $color--fa-red--x-light;
-
-  //AndyI Added in these to fix positioning
   top: auto;
-  -webkit-transform: none;
-  transform: none;
 }
 
 /**
@@ -339,7 +336,7 @@
  */
 
 .has-Notice .TableView-cell--split {
-	padding-top: 41px;
+  padding-top: 41px;
 }
 
 /**
@@ -347,5 +344,5 @@
  */
 
 .Notice-content p {
-	white-space: normal;
+  white-space: normal;
 }

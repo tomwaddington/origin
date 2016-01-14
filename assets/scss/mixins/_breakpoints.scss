@@ -1,0 +1,43 @@
+/* Global breakpoints
+   ========================================================================== */
+
+/**
+ * Note: these are only candidate breakpoints, not yet being used in production.
+ *
+ * The breakpoints and associated mixin were originally used in the `Heading`
+ * component to scale headings up and down depending on viewport width, but were
+ * pulled from that component until global breakpoints have been agreed.
+ */
+
+$supported: true !default; // set to `false` to disable media queries
+
+@mixin break($point, $support: $supported) {
+  @if $support == true {
+
+    // output the mixin content inside of a media query
+    @if $point == xx-small {
+      @media (min-width: 440px) { @content; }
+    }
+    @else if $point == x-small {
+      @media (min-width: 540px) { @content; }
+    }
+    @else if $point == small {
+      @media (min-width: 740px) { @content; }
+    }
+    @else if $point == medium {
+      @media (min-width: 840px) { @content; }
+    }
+    @else if $point == large {
+      @media (min-width: 1000px) { @content; }
+    }
+    @else if $point == x-large {
+      @media (min-width: 1100px) { @content; }
+    }
+    @else if $point == xx-large {
+      @media (min-width: 1300px) { @content; }
+    }
+  } @else {
+    // output ALL the style content inside the mixin, without a media query
+    @content;
+  }
+}

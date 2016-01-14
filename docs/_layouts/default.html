@@ -13,7 +13,7 @@
         {{ page.title }} &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/scss/docs.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/origin.css">
 
     <!-- Favicons -->
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
@@ -42,53 +42,91 @@
     </header>
 
     {% if page.title == "Home" %}
-      <div class="jumbotron">
+      <div class="Hero">
         <div class="container">
-          <h1>Origin</h1>
-          <p>The CSS utilities, components, and guidelines that power FreeAgent.</p>
-
-          <a href="{{ site.baseurl }}/guidance/principles/" class="btn btn-reverse">
-            Read the docs
-          </a>
+          <h1 class="Hero-heading">
+            Origin
+          </h1>
+          <div class="Hero-body">
+            <p class="Hero-leader">
+              The CSS that powers FreeAgent.
+            </p>
+            <p>
+              Current build: <a href="https://github.com/fac/origin/releases">{% project_version %}</a>
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="container about-that">
+      <div class="container">
         <div class="columns">
           <div class="one-third column">
-            <h2>
+            <h2 class="Heading Heading--space--x-small Heading--x-large">
               Utilities
             </h2>
             <p>
-              The CSS that underpins everything. Utilities provide a quick way to write better CSS in a universal and controlled way.
+              The properties and values that underpin everything. Utilities let us write better CSS in a universal and controlled way.
             </p>
+            <ol class="List List--bare List--weight--semi-bold">
+            {% for page in site.pages %}
+              {% if page.categories contains 'utilities' %}
+              <li>
+                <a href="{{ page.url | prepend:site.baseurl }}">
+                  {{ page.title }}
+                </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+            </ol>
           </div>
+
           <div class="one-third column">
-            <h2>
+            <h2 class="Heading Heading--space--x-small Heading--x-large">
               Components
             </h2>
             <p>
               The building blocks of our interfaces. Self-contained, plug-and-play units that serve specific functions.
             </p>
+            <ol class="List List--bare List--weight--semi-bold">
+            {% for page in site.pages %}
+              {% if page.categories contains 'components' %}
+              <li>
+                <a href="{{ page.url | prepend:site.baseurl }}">
+                  {{ page.title }}
+                </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+            </ol>
           </div>
+
           <div class="one-third column">
-            <h2>
+            <h2 class="Heading Heading--space--x-small Heading--x-large">
               Guidance
             </h2>
             <p>
-              From <a href="{{ site.baseurl }}/guidance/principles/">broad principles</a> through to the specifics of <a href="{{ site.baseurl }}/guidance/code-style/">code style</a>.
+              Everything from our <a href="{{ site.baseurl }}/guidance/principles/">broad principles</a> through to the specifics of <a href="{{ site.baseurl }}/guidance/code-style/">code style</a>, <a href="{{ site.baseurl }}/guidance/naming-conventions/">naming conventions</a>, and more.
             </p>
+            <ol class="List List--bare List--weight--semi-bold">
+            {% for page in site.pages %}
+              {% if page.categories contains 'guidance' %}
+              <li>
+                <a href="{{ page.url | prepend:site.baseurl }}">
+                  {{ page.title }}
+                </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+            </ol>
           </div>
+
         </div>
       </div>
+
     {% endif %}
 
     <div class="container">
       {{ content }}
-
-      <footer class="footer">
-        This documentation format is forked from <a href="https://github.com/primer/primer">Primer</a>, copyright of GitHub {{ site.time | date: '%Y' }}.<br>
-      </footer>
     </div>
 
     <script src="{{ site.baseurl }}/assets/js/anchor.min.js"></script>

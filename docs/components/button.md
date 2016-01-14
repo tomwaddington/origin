@@ -1,7 +1,10 @@
 ---
+categories: components
 layout: page
 title: Button
 ---
+
+Note: this is candidate component and is not currently being used in production
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -82,11 +85,11 @@ Outline buttons reduce the overall emphasis of a button in an interace, while st
 
 ## Disabled state
 
-Disable `<button>` elements with the `.is-disabled` class and boolean `disabled` attribute. `<a>` elements only need the `.is-disabled` class. The `.is-disabled` is really a utility class, so should be placed after any other component-specific `.Button` classes.
+Disable `<button>` elements with the `.Button--disabled` class and boolean `disabled` attribute (unless using an `<a>`, in which case only the `.Button--disabled` is applied.
 
 {% example html %}
-<button class="Button is-disabled" type="button" disabled>Disabled button</button>
-<a class="Button is-disabled" href="#" role="button">Disabled button</a>
+<button class="Button Button--disabled" type="button" disabled>Disabled button</button>
+<a class="Button Button--disabled" href="#" role="button">Disabled button</a>
 {% endexample %}
 
 

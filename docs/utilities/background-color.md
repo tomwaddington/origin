@@ -1,9 +1,8 @@
 ---
+categories: utilities
 layout: page
 title: background-color
 ---
-
-## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
@@ -109,6 +108,15 @@ These are the background colors we’re using in production — no more. All col
     </div>
 {% example scss %}
 @include background-color(fa-blue--x-dark);
+{% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--render--hidden">
+    <div class="DocsExample-preview DocsExample-preview--fa-blue--xx-dark">
+      &nbsp;
+    </div>
+{% example scss %}
+@include background-color(fa-blue--xx-dark);
 {% endexample %}
   </div>
 

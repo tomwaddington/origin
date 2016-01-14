@@ -1,58 +1,80 @@
 module.exports = function(grunt) {
 
+
+  // Show elapsed time after tasks run to visualize performance
+  require('time-grunt')(grunt);
+
+
+  // Load all Grunt tasks that are listed in package.json automagically
+  require('load-grunt-tasks')(grunt);
+
+
   grunt.initConfig({
+
+
     // Project configuration.
     pkg: grunt.file.readJSON('package.json'),
 
-    // Compiles our Sass
+
+    // Shell commands for use in Grunt tasks
+    shell: {
+      jekyllBuild: {
+        command: 'bundle exec jekyll build'
+      },
+      jekyllServe: {
+        command: 'bundle exec jekyll serve'
+      }
+    },
+
+
+    // Sass (libsass) config
     sass: {
       options: {
-        precision: 6,
-        sourceComments: false,
-        outputStyle: 'compressed'
+        sourceMap: true,
+        relativeAssets: false,
+        outputStyle: 'compressed',
+        sassDir: 'assets/scss',
+        cssDir: '_site/assets/css'
       },
-      dist: {
-        files: {
-          'assets/css/origin.css': 'assets/scss/origin.scss'
-        }
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'assets/scss/',
+          src: ['*.scss'],
+          dest: '_site/assets/css',
+          ext: '.css'
+        }]
       }
     },
 
-    // Build tooling
-
-    watch: {
-      sass: {
-        files: ['assets/scss/*.scss', 'assets/scss/**/*.scss', 'assets/scss/**/**/*.scss'],
-        tasks: ['sass']
-      }
-    },
-
-    jekyll: {
+    // SCSS lint
+    scsslint: {
+      allFiles: [
+        'assets/scss/*.scss',
+        'assets/scss/global/**/*.scss',
+        'assets/scss/local/**/*.scss'
+      ],
       options: {
-        src: 'docs',
-        dest: '_site',
-        config: '_config.yml'
+        config: '.scss-lint.yml',
+        reporterOutput: 'scss-lint-report.xml',
+        colorizeOutput: true
       }
     },
 
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src : [
-            '_site/*.*',
-            '_site/**/*.*',
-            '_site/**/**/*.*',
-            '_site/**/**/**/*.*',
-            '_site/**/**/**/**/*.*',
-            '_site/**/**/**/**/**/*.*'
-          ]
-        },
-        options: {
-          proxy: "localhost:4001/origin/"
-        }
+    // Copy content of fonts directory
+    copy: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: 'assets/fonts/',
+          src: ['**'],
+          dest: '_site/assets/fonts'
+          }]
       }
     },
 
+
+    // Publishing docs to GitHub Pages
     buildcontrol: {
       options: {
         dir: '_site',
@@ -66,19 +88,83 @@ module.exports = function(grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+
+    // Live reload and sync up browsing across browsers
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+            '_site/*.*',
+            '_site/**/*.*'
+          ]
+        },
+        options: {
+          port: 9001,
+          proxy: "http://0.0.0.0:8001/origin/"
+        }
+      }
+    },
+
+
+    // Run tasks in parallel
+    concurrent: {
+      serve: [
+        'watch',
+        'shell:jekyllServe'
+      ],
+      options: {
+        logConcurrentOutput: true
+      }
+    },
+
+
+    // Watch for files to change and run tasks when they do
+    watch: {
+      scsslint: {
+        files: [
+          'assets/scss/*.scss',
+          'assets/scss/global/**/*.scss',
+          'assets/scss/local/**/*.scss'
+        ],
+        tasks: ['scsslint']
+      },
+      sass: {
+        files: [
+          'assets/scss/*.scss',
+          'assets/scss/**/*.scss',
+        ],
+        tasks: ['sass']
+      }
     }
+
   });
 
-  // Load dependencies
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-sass');
 
-  // Generate and format the CSS
-  grunt.registerTask('default', ['browserSync']);
+  // Task for build and serve documentation locally
+  grunt.registerTask('serve', [
+    'copy',
+    'sass',
+    'concurrent:serve'
+  ]);
 
-  // Publish to GitHub
-  grunt.registerTask('publish', ['jekyll', 'buildcontrol:pages']);
+  // Task for running Browsersync
+  grunt.registerTask('sync', [
+    'browserSync'
+  ]);
+
+  // Task to only build documentation locally
+  grunt.registerTask('build', [
+    'copy',
+    'sass',
+    'shell:jekyllBuild'
+  ]);
+
+  // Register build and serve task as the default
+  grunt.registerTask('default', 'serve');
+
+  // Task for publishing documentation to GitHub Pages
+  grunt.registerTask('publish', ['shell:jekyllBuild', 'buildcontrol:pages']);
+
 };
