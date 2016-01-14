@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
 
     <title>
         Button &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="/origin/assets/css/origin.css">
-
-    <!-- Favicons -->
-    <link rel="icon" href="/origin/favicon.ico">
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
 
     <!-- Typekit embed code for Effra and Swister -->
     <script src="https://use.typekit.net/hnj7chl.js"></script>
@@ -25,148 +20,31 @@
   <body>
 
     <header class="masthead">
-      <div class="container">
-        <a href="/origin/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          Origin
-        </a>
-
-        <nav class="masthead-nav">
-          <a  href="/origin/guidance/principles">Docs</a>
-          <a  href="/origin/about">About</a>
-          <a  href="/origin/faq">FAQ</a>
-          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
-          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
-        </nav>
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="/origin/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a  href="/origin/guidance/principles">Docs</a>
+              <a  href="/origin/about">About</a>
+              <a  href="/origin/faq">FAQ</a>
+              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
     
 
-    <div class="container">
-      <div class="columns docs-layout">
-  <div class="one-fourth column">
-    
-      <h4 class="menu-title">
-  Guidance
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item " href="/origin/guidance/principles/">
-    Principles
-  </a>
-  <a class="menu-item " href="/origin/guidance/code-style/">
-    Code style
-  </a>
-  <a class="menu-item " href="/origin/guidance/naming-conventions/">
-    Naming conventions
-  </a>
-  <a class="menu-item " href="/origin/guidance/base-styles/">
-    Base styles
-  </a>
-  <a class="menu-item " href="/origin/guidance/utilities/">
-    Utilities
-  </a>
-  <a class="menu-item " href="/origin/guidance/components/">
-    Components
-  </a>
-</nav>
+    <div class="Grid-row">
 
-<h4 class="menu-title">
-  Utilities
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    border
-  </span>
-  <span class="menu-item">
-    border-radius
-  </span>
-  <a class="menu-item " href="/origin/utilities/background-color/">
-    background-color
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-family/">
-    font-family
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-size/">
-    font-size
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-weight/">
-    font-weight
-  </a>
-  <a class="menu-item " href="/origin/utilities/line-height/">
-    line-height
-  </a>
-  <span class="menu-item">
-    list-item
-  </span>
-  <a class="menu-item " href="/origin/utilities/spacing/">
-    spacing
-  </a>
-  <a class="menu-item " href="/origin/utilities/text-color/">
-    text-color
-  </a>
-</nav>
-
-<h4 class="menu-title">
-  Components
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item selected" href="/origin/components/button/">
-    Button
-  </a>
-  <span class="menu-item">
-    Card
-  </span>
-  <span class="menu-item">
-    Checkbox
-  </span>
-  <a class="menu-item " href="/origin/components/heading/">
-    Heading
-  </a>
-  <span class="menu-item">
-    List
-  </span>
-  <a class="menu-item " href="/origin/components/navbar/">
-    NavBar
-  </a>
-  <span class="menu-item">
-    Notice
-  </span>
-  <span class="menu-item">
-    RadioButton
-  </span>
-  <a class="menu-item " href="/origin/components/segmented-control/">
-    Segmented Control
-  </a>
-  <a class="menu-item " href="/origin/components/table/">
-    Table
-  </a>
-  <span class="menu-item">
-    TableView
-  </span>
-  <span class="menu-item">
-    Tabs
-  </span>
-  <span class="menu-item">
-    TextArea
-  </span>
-  <span class="menu-item">
-    TextInput
-  </span>
-</nav>
-
-<h4 class="menu-title">
-  Layout
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    Grid
-  </span>
-</nav>
-
-    
-  </div>
-  <div class="three-fourths column markdown-body">
+  <div class="Grid-col md-9 md-push-3">
     <h1 class="page-title">
       Button
     </h1>
@@ -191,14 +69,14 @@
 
 <p>When using a <code>&lt;button&gt;</code> element, always specify a <code>type</code>. When using a <code>&lt;a&gt;</code> element, always add <code>role="button"</code> for accessibility.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button" type="button">Button button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button" type="button">Button button</button>
 <a class="Button" href="#" role="button">Link button</a></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"Button"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link button<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
 <p>You can find them in three sizes: standard <code>.Button</code>, <code>.Button--large</code>, and <code>.Button--small</code>.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button" type="button">Button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button" type="button">Button</button>
 <button class="Button Button--large" type="button">Large button</button>
 <button class="Button Button--small" type="button">Small button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
@@ -209,7 +87,7 @@
 
 <p>Primary buttons are used to indicate the <strong>one</strong> primary action on a view/page. Small buttons can also be given primary styling; remember to list the classes in alphabetical order.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--primary" type="button">Primary button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--primary" type="button">Primary button</button>
 <button class="Button Button--primary Button--large" type="button">Large primary button</button>
 <button class="Button Button--primary Button--small" type="button">Small primary button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
@@ -220,7 +98,7 @@
 
 <p>Negative buttons have red label text on <code>:hover</code>, <code>:active</code>, and <code>:focus</code> states. They help reiterate that the intended action can have negative consequences (e.g. disabling or cancelling something).</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--negative" type="button">Negative button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--negative" type="button">Negative button</button>
 <button class="Button Button--negative Button--large" type="button">Large negative button</button>
 <button class="Button Button--negative Button--small" type="button">Small negative button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--negative"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Negative button<span class="nt">&lt;/button&gt;</span>
@@ -231,7 +109,7 @@
 
 <p>Danger buttons always have red label text. They help reiterate that the intended action is potentially dangerous (e.g. deleting something).</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--danger" type="button">Danger button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--danger" type="button">Danger button</button>
 <button class="Button Button--danger Button--large" type="button">Large danger button</button>
 <button class="Button Button--danger Button--small" type="button">Small danger button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--danger"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Danger button<span class="nt">&lt;/button&gt;</span>
@@ -242,7 +120,7 @@
 
 <p>Neutral buttons have gray label text. They’re useful when a button shouldn’t command as much attention as normal.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--neutral" type="button">Neutral button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--neutral" type="button">Neutral button</button>
 <button class="Button Button--neutral Button--large" type="button">Large neutral button</button>
 <button class="Button Button--neutral Button--small" type="button">Small neutral button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--neutral"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Neutral button<span class="nt">&lt;/button&gt;</span>
@@ -253,7 +131,7 @@
 
 <p>Outline buttons reduce the overall emphasis of a button in an interace, while still retaining the same functionality.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--outline" type="button">Outline button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--outline" type="button">Outline button</button>
 <button class="Button Button--outline Button--large" type="button">Large outline button</button>
 <button class="Button Button--outline Button--small" type="button">Small outline button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--outline"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Outline button<span class="nt">&lt;/button&gt;</span>
@@ -264,7 +142,7 @@
 
 <p>Disable <code>&lt;button&gt;</code> elements with the <code>.Button--disabled</code> class and boolean <code>disabled</code> attribute (unless using an <code>&lt;a&gt;</code>, in which case only the <code>.Button--disabled</code> is applied.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--disabled" type="button" disabled="">Disabled button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--disabled" type="button" disabled="">Disabled button</button>
 <a class="Button Button--disabled" href="#" role="button">Disabled button</a></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"Button Button--disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/a&gt;</span></code></pre></div>
@@ -273,7 +151,7 @@
 
 <p>Make any button assume the full-width of it’s parent.</p>
 
-<div class="DocsExample-render clearfix"><p><button class="Button Button--block" type="button">Block button</button></p>
+<div class="DocsExample-render u-floatContainer"><p><button class="Button Button--block" type="button">Block button</button></p>
 <p><button class="Button Button--block Button--large" type="button">Large block button</button></p>
 <p><button class="Button Button--block Button--small" type="button">Small block button</button></p></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--block"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;&lt;/p&gt;</span>
@@ -284,7 +162,7 @@
 
 <p>Group buttons by wrapping them in a <code>.ButtonGroup</code>.</p>
 
-<div class="DocsExample-render clearfix"><div class="ButtonGroup">
+<div class="DocsExample-render u-floatContainer"><div class="ButtonGroup">
   <button class="Button" type="button">Button</button>
   <button class="Button" type="button">Button</button>
   <button class="Button" type="button">Button</button>
@@ -307,7 +185,7 @@
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button Button--outline"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<div class="DocsExample-render clearfix"><div class="ButtonGroup">
+<div class="DocsExample-render u-floatContainer"><div class="ButtonGroup">
   <button class="Button" type="button">Button</button>
   <button class="Button" type="button">Button</button>
 </div>
@@ -324,7 +202,7 @@
 
 <p>Buttons can be set using different fonts, if required.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button" type="button">Default button</button>
+<div class="DocsExample-render u-floatContainer"><button class="Button" type="button">Default button</button>
 <button class="Button Button--legacy" type="button">Helvetica button</button>
 <button class="Button Button--editorial" type="button">Effra button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"Button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
@@ -335,7 +213,7 @@
 
 <p>Buttons can have multiple labels. Secondary labels can be useful to lead into primary labels when the button represents a major action.</p>
 
-<div class="DocsExample-render clearfix"><button class="Button Button--large" type="button">
+<div class="DocsExample-render u-floatContainer"><button class="Button Button--large" type="button">
   <span class="Button-label Button-label--secondary">
     Button secondary label
   </span>
@@ -373,9 +251,252 @@
 
     </div>
   </div>
+  <div class="Grid-col md-3 md-pull-9">
+    <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/base-styles/">
+      Base styles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/code-style/">
+      Code style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/components/">
+      Components
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/naming-conventions/">
+      Naming conventions
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/principles/">
+      Principles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/utilities/">
+      Utilities
+    </a>
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/block-grid/">
+      Block Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/button/">
+      Button
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/grid/">
+      Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/heading/">
+      Heading
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/navbar/">
+      NavBar
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/segmented-control/">
+      Segmented Control
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/table/">
+      Table
+    </a>
+    
+  
+    
+  
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/background-color/">
+      background-color
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-family/">
+      font-family
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-size/">
+      font-size
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-weight/">
+      font-weight
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/line-height/">
+      line-height
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/spacing/">
+      spacing
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-color/">
+      text-color
+    </a>
+    
+  
+    
+  
+</nav>
+
+  </div>
+
 </div>
 
-    </div>
 
     <script src="/origin/assets/js/anchor.min.js"></script>
     <script>

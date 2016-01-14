@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
 
     <title>
         font-size &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="/origin/assets/css/origin.css">
-
-    <!-- Favicons -->
-    <link rel="icon" href="/origin/favicon.ico">
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
 
     <!-- Typekit embed code for Effra and Swister -->
     <script src="https://use.typekit.net/hnj7chl.js"></script>
@@ -25,148 +20,31 @@
   <body>
 
     <header class="masthead">
-      <div class="container">
-        <a href="/origin/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          Origin
-        </a>
-
-        <nav class="masthead-nav">
-          <a  href="/origin/guidance/principles">Docs</a>
-          <a  href="/origin/about">About</a>
-          <a  href="/origin/faq">FAQ</a>
-          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
-          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
-        </nav>
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="/origin/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a  href="/origin/guidance/principles">Docs</a>
+              <a  href="/origin/about">About</a>
+              <a  href="/origin/faq">FAQ</a>
+              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
     
 
-    <div class="container">
-      <div class="columns docs-layout">
-  <div class="one-fourth column">
-    
-      <h4 class="menu-title">
-  Guidance
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item " href="/origin/guidance/principles/">
-    Principles
-  </a>
-  <a class="menu-item " href="/origin/guidance/code-style/">
-    Code style
-  </a>
-  <a class="menu-item " href="/origin/guidance/naming-conventions/">
-    Naming conventions
-  </a>
-  <a class="menu-item " href="/origin/guidance/base-styles/">
-    Base styles
-  </a>
-  <a class="menu-item " href="/origin/guidance/utilities/">
-    Utilities
-  </a>
-  <a class="menu-item " href="/origin/guidance/components/">
-    Components
-  </a>
-</nav>
+    <div class="Grid-row">
 
-<h4 class="menu-title">
-  Utilities
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    border
-  </span>
-  <span class="menu-item">
-    border-radius
-  </span>
-  <a class="menu-item " href="/origin/utilities/background-color/">
-    background-color
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-family/">
-    font-family
-  </a>
-  <a class="menu-item selected" href="/origin/utilities/font-size/">
-    font-size
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-weight/">
-    font-weight
-  </a>
-  <a class="menu-item " href="/origin/utilities/line-height/">
-    line-height
-  </a>
-  <span class="menu-item">
-    list-item
-  </span>
-  <a class="menu-item " href="/origin/utilities/spacing/">
-    spacing
-  </a>
-  <a class="menu-item " href="/origin/utilities/text-color/">
-    text-color
-  </a>
-</nav>
-
-<h4 class="menu-title">
-  Components
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item " href="/origin/components/button/">
-    Button
-  </a>
-  <span class="menu-item">
-    Card
-  </span>
-  <span class="menu-item">
-    Checkbox
-  </span>
-  <a class="menu-item " href="/origin/components/heading/">
-    Heading
-  </a>
-  <span class="menu-item">
-    List
-  </span>
-  <a class="menu-item " href="/origin/components/navbar/">
-    NavBar
-  </a>
-  <span class="menu-item">
-    Notice
-  </span>
-  <span class="menu-item">
-    RadioButton
-  </span>
-  <a class="menu-item " href="/origin/components/segmented-control/">
-    Segmented Control
-  </a>
-  <a class="menu-item " href="/origin/components/table/">
-    Table
-  </a>
-  <span class="menu-item">
-    TableView
-  </span>
-  <span class="menu-item">
-    Tabs
-  </span>
-  <span class="menu-item">
-    TextArea
-  </span>
-  <span class="menu-item">
-    TextInput
-  </span>
-</nav>
-
-<h4 class="menu-title">
-  Layout
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    Grid
-  </span>
-</nav>
-
-    
-  </div>
-  <div class="three-fourths column markdown-body">
+  <div class="Grid-col md-9 md-push-3">
     <h1 class="page-title">
       font-size
     </h1>
@@ -180,7 +58,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(xx-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">xx-small</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(xx-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">xx-small</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -191,7 +69,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(x-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-small</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(x-small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-small</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -202,7 +80,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="n">small</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(small);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="n">small</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -213,7 +91,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(default);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(default);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">default</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -224,7 +102,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">large</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -235,7 +113,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(x-large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-large</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(x-large);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">x-large</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -246,7 +124,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(xx-large);
+<div class="DocsExample-render u-floatContainer">@include font-size(xx-large);
 @include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="nb">xx-large</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
 
@@ -261,7 +139,7 @@
     </p>
   </div>
   
-<div class="DocsExample-render clearfix">@include font-size(1);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(1);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -272,7 +150,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(2);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(2);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">2</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -283,7 +161,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(3);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">3</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(3);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">3</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -294,7 +172,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(4);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">4</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(4);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">4</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -305,7 +183,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(5);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">5</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(5);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">5</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -316,7 +194,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(6);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">6</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(6);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">6</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -327,7 +205,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(7);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">7</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(7);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">7</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -338,7 +216,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(8);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">8</span><span class="p">);</span></code></pre></div>
+<div class="DocsExample-render u-floatContainer">@include font-size(8);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">8</span><span class="p">);</span></code></pre></div>
 
 </div>
 
@@ -349,7 +227,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(9);
+<div class="DocsExample-render u-floatContainer">@include font-size(9);
 @include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">9</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
 
@@ -362,7 +240,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(10);
+<div class="DocsExample-render u-floatContainer">@include font-size(10);
 @include line-height(tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">10</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">tight</span><span class="p">);</span></code></pre></div>
 
@@ -375,7 +253,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(11);
+<div class="DocsExample-render u-floatContainer">@include font-size(11);
 @include line-height(x-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">x-tight</span><span class="p">);</span></code></pre></div>
 
@@ -388,7 +266,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(12);
+<div class="DocsExample-render u-floatContainer">@include font-size(12);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">12</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -401,7 +279,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(13);
+<div class="DocsExample-render u-floatContainer">@include font-size(13);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">13</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -414,7 +292,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(14);
+<div class="DocsExample-render u-floatContainer">@include font-size(14);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">14</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -427,7 +305,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(15);
+<div class="DocsExample-render u-floatContainer">@include font-size(15);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">15</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -440,7 +318,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(16);
+<div class="DocsExample-render u-floatContainer">@include font-size(16);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">16</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -453,7 +331,7 @@
     </p>
   </div>
 
-<div class="DocsExample-render clearfix">@include font-size(17);
+<div class="DocsExample-render u-floatContainer">@include font-size(17);
 @include line-height(xx-tight);</div><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">17</span><span class="p">);</span>
 <span class="k">@include</span> <span class="nd">line-height</span><span class="p">(</span><span class="n">xx-tight</span><span class="p">);</span></code></pre></div>
 
@@ -461,9 +339,252 @@
 
     </div>
   </div>
+  <div class="Grid-col md-3 md-pull-9">
+    <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/base-styles/">
+      Base styles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/code-style/">
+      Code style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/components/">
+      Components
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/naming-conventions/">
+      Naming conventions
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/principles/">
+      Principles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/utilities/">
+      Utilities
+    </a>
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/block-grid/">
+      Block Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/button/">
+      Button
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/grid/">
+      Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/heading/">
+      Heading
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/navbar/">
+      NavBar
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/segmented-control/">
+      Segmented Control
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/table/">
+      Table
+    </a>
+    
+  
+    
+  
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/background-color/">
+      background-color
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-family/">
+      font-family
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-size/">
+      font-size
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-weight/">
+      font-weight
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/line-height/">
+      line-height
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/spacing/">
+      spacing
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-color/">
+      text-color
+    </a>
+    
+  
+    
+  
+</nav>
+
+  </div>
+
 </div>
 
-    </div>
 
     <script src="/origin/assets/js/anchor.min.js"></script>
     <script>

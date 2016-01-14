@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
+
+    <title>
+        Grid &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="/origin/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a  href="/origin/guidance/principles">Docs</a>
+              <a  href="/origin/about">About</a>
+              <a  href="/origin/faq">FAQ</a>
+              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+
+    <div class="Grid-row Grid-row--large">
+
+  <div class="Grid-col">
+    <div class="l-limitTextWidth">
+      <h1 class="page-title">
+        Grid
+      </h1>
+      <div class="markdown-body">
+        <p>Our 12-column mobile-first responsive grid system helps us tightly control layouts as viewport widths vary. Breakpoints are defined in our <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss">utility values</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#how-to-use" id="markdown-toc-how-to-use">How to use</a></li>
+  <li><a href="#basic-example" id="markdown-toc-basic-example">Basic example</a></li>
+  <li><a href="#all-breakpoints-example" id="markdown-toc-all-breakpoints-example">All breakpoints example</a></li>
+  <li><a href="#centered-columns" id="markdown-toc-centered-columns">Centered Columns</a></li>
+  <li><a href="#offsets" id="markdown-toc-offsets">Offsets</a></li>
+  <li><a href="#incomplete-rows" id="markdown-toc-incomplete-rows">Incomplete rows</a></li>
+  <li><a href="#nested" id="markdown-toc-nested">Nested</a></li>
+  <li><a href="#collapseuncollapse-rows" id="markdown-toc-collapseuncollapse-rows">Collapse/Uncollapse Rows</a></li>
+  <li><a href="#source-ordering" id="markdown-toc-source-ordering">Source Ordering</a></li>
+  <li><a href="#example-of-all-column-widths" id="markdown-toc-example-of-all-column-widths">Example of all column widths</a></li>
+</ul>
+
+<h2 id="how-to-use">How to use</h2>
+<ol>
+  <li>
+    <p>Create a <code>&lt;div class="Grid-row"&gt;</code>, a horizontal container for our vertical columns (which always clears its floats).</p>
+  </li>
+  <li>
+    <p>Create a <code>&lt;div class="Grid-col"&gt;</code> for each column you want.</p>
+  </li>
+  <li>
+    <p>Add <code>sm-#</code>, <code>md-#</code>, <code>lg-#</code>, <code>x-lg-#</code>, or <code>xx-lg-#</code> classes to each <code>&lt;div class="Grid-col"&gt;</code> for the behaviour you want. Each class maps to <code>min-width</code> a breakpoint, so each class inherits the <code>width</code> value of the class which comes before it.</p>
+  </li>
+</ol>
+
+<p>Important: don’t directly modify <code>&lt;div class="Grid-row"&gt;</code> or <code>&lt;div class="Grid-col"&gt;</code> elements for presentation. If you want to add a <code>background-color</code>, <code>padding</code>, <code>margin</code> or other properties, add new <code>div</code>s inside grid elements to achieve whatever effect you need.</p>
+
+<h2 id="basic-example">Basic example</h2>
+<p>Resize your browser window to see how column widths change at different breakpoints.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col sm-6 md-4 lg-9">6, 4, and 9 cols</div>
+  <div class="Grid-col sm-6 md-8 lg-3">6, 8, and 3 cols</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6 md-4 lg-9"</span><span class="nt">&gt;</span>6, 4, and 9 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6 md-8 lg-3"</span><span class="nt">&gt;</span>6, 8, and 3 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="all-breakpoints-example">All breakpoints example</h2>
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col sm-6 md-4 lg-9 x-lg-6 xx-lg-1">6, 4, 9, 6, 1 cols</div>
+  <div class="Grid-col sm-6 md-8 lg-3 x-lg-6 xx-lg-11">6, 8, 3, 6, 11 cols</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6 md-4 lg-9 x-lg-6 xx-lg-1"</span><span class="nt">&gt;</span>6, 4, 9, 6, 1 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6 md-8 lg-3 x-lg-6 xx-lg-11"</span><span class="nt">&gt;</span>6, 8, 3, 6, 11 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="centered-columns">Centered Columns</h2>
+<p>Center your columns by adding a class of <code>sm-centered</code> to your <code>Grid-col</code>. Large will inherit small centering by default, but you can also center solely on large by applying a <code>lg-centered</code> class. To uncenter on large screens use <code>lg-uncentered</code>.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col sm-3 sm-centered">3 centered</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-6 lg-centered">6 centered</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-9 sm-centered lg-uncentered">9 uncentered</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-11 sm-centered">11 centered</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-3 sm-centered"</span><span class="nt">&gt;</span>3 centered<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6 lg-centered"</span><span class="nt">&gt;</span>6 centered<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-9 sm-centered lg-uncentered"</span><span class="nt">&gt;</span>9 uncentered<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-11 sm-centered"</span><span class="nt">&gt;</span>11 centered<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="offsets">Offsets</h2>
+<p>Move blocks up to 11 columns to the right by using classes like <code>.lg-offset-1</code> and <code>.sm-offset-3</code>.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col md-6 md-offset-6">6, offset 6</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">2</div>
+  <div class="Grid-col md-8 md-offset-2">8, offset 2</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-1">1</div>
+  <div class="Grid-col md-9 md-offset-2">9, offset 2</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-4">1</div>
+  <div class="Grid-col md-4 md-offset-4">4, offset 4</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-6 md-offset-6"</span><span class="nt">&gt;</span>6, offset 6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-8 md-offset-2"</span><span class="nt">&gt;</span>8, offset 2<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-9 md-offset-2"</span><span class="nt">&gt;</span>9, offset 2<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-4"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-4 md-offset-4"</span><span class="nt">&gt;</span>4, offset 4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="incomplete-rows">Incomplete rows</h2>
+<p>In order to work around browsers’ different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn’t have a count that adds up to 12 columns, you can tag the last column with a class of <code>end</code> in order to override that behavior.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2 end">3 end</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2 end"</span><span class="nt">&gt;</span>3 end<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="nested">Nested</h2>
+<p>You can nest the grids indefinitely, though at a certain point it will get absurd.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col sm-8">8
+    <div class="Grid-row">
+      <div class="Grid-col sm-8">8 Nested
+        <div class="Grid-row">
+          <div class="Grid-col sm-8">8 Nested Again</div>
+          <div class="Grid-col sm-4">4</div>
+        </div>
+      </div>
+      <div class="Grid-col sm-4">4</div>
+    </div>
+  </div>
+  <div class="Grid-col sm-4">4</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-8"</span><span class="nt">&gt;</span>8
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-8"</span><span class="nt">&gt;</span>8 Nested
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-8"</span><span class="nt">&gt;</span>8 Nested Again<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="collapseuncollapse-rows">Collapse/Uncollapse Rows</h2>
+<p>The <code>collapse</code> class lets you remove column gutters (padding).</p>
+
+<p>There are times when you won’t want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your <code>Grid-row</code> element. Example removes the gutter at the large breakpoint and then adds the gutter to columns at medium and small.</p>
+
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row md-collapse lg-uncollapse">
+  <div class="Grid-col sm-6">
+    Removes gutters at medium, adds back at large
+  </div>
+  <div class="Grid-col sm-6">
+    Removes gutters at medium, adds back at large
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row md-collapse lg-uncollapse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6"</span><span class="nt">&gt;</span>
+    Removes gutters at medium, adds back at large
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6"</span><span class="nt">&gt;</span>
+    Removes gutters at medium, adds back at large
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="source-ordering">Source Ordering</h2>
+<p>Using these source ordering classes, you can shift columns around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. <code>md-push-#</code>, <code>lg-push-#</code> is the syntax you’ll use. Use <code>lg-reset-order</code> to reset pushed or pulled columns to their original position on large screens.</p>
+
+<div class="DocsExample DocsExample--grid DocsExample--grid--sourceOrder">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col sm-10 sm-push-2">10</div>
+  <div class="Grid-col sm-2 sm-pull-10">2, last</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-9 lg-push-3">9</div>
+  <div class="Grid-col lg-3 lg-pull-9">3, last</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-8 lg-push-4">8</div>
+  <div class="Grid-col lg-4 lg-pull-8">4, last</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-5 sm-push-7 md-7 md-push-5">7</div>
+  <div class="Grid-col sm-7 sm-pull-5 md-5 md-pull-7">5, last</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-6 md-push-6">6</div>
+  <div class="Grid-col md-6 md-pull-6">6, last</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-10 sm-push-2"</span><span class="nt">&gt;</span>10<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-2 sm-pull-10"</span><span class="nt">&gt;</span>2, last<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-9 lg-push-3"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-3 lg-pull-9"</span><span class="nt">&gt;</span>3, last<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-8 lg-push-4"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-4 lg-pull-8"</span><span class="nt">&gt;</span>4, last<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-5 sm-push-7 md-7 md-push-5"</span><span class="nt">&gt;</span>7<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-7 sm-pull-5 md-5 md-pull-7"</span><span class="nt">&gt;</span>5, last<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-6 md-push-6"</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-6 md-pull-6"</span><span class="nt">&gt;</span>6, last<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="example-of-all-column-widths">Example of all column widths</h2>
+<div class="DocsExample DocsExample--grid">
+
+<div class="DocsExample-render u-floatContainer"><div class="Grid-row">
+  <div class="Grid-col">12 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-6">6 cols</div>
+  <div class="Grid-col sm-6">6 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-4">4 cols</div>
+  <div class="Grid-col sm-4">4 cols</div>
+  <div class="Grid-col sm-4">4 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col"</span><span class="nt">&gt;</span>12 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6"</span><span class="nt">&gt;</span>6 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-6"</span><span class="nt">&gt;</span>6 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-4"</span><span class="nt">&gt;</span>4 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-3"</span><span class="nt">&gt;</span>3 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-3"</span><span class="nt">&gt;</span>3 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-3"</span><span class="nt">&gt;</span>3 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col sm-3"</span><span class="nt">&gt;</span>3 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col md-2"</span><span class="nt">&gt;</span>2 cols<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Grid-col lg-1"</span><span class="nt">&gt;</span>1 col<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

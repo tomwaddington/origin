@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
+
+    <title>
+        Block Grid &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="/origin/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a  href="/origin/guidance/principles">Docs</a>
+              <a  href="/origin/about">About</a>
+              <a  href="/origin/faq">FAQ</a>
+              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+
+    <div class="Grid-row Grid-row--large">
+
+  <div class="Grid-col">
+    <div class="l-limitTextWidth">
+      <h1 class="page-title">
+        Block Grid
+      </h1>
+      <div class="markdown-body">
+        <p>Block grids give us a way to evenly split content within a grid. If we want a row of five images that need to stay evenly spaced no matter the screen size, we use the block grid. Breakpoints are defined in our <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss">utility values</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#how-to-use" id="markdown-toc-how-to-use">How to use</a></li>
+  <li><a href="#basic-examples" id="markdown-toc-basic-examples">Basic examples</a></li>
+  <li><a href="#changing-number-of-items-in-a-row" id="markdown-toc-changing-number-of-items-in-a-row">Changing number of items in a row</a></li>
+</ul>
+
+<h2 id="how-to-use">How to use</h2>
+<ol>
+  <li>
+    <p>Create a <code>&lt;div class="BlockGrid"&gt;</code>, the container required for our block grid (which always clears its floats).</p>
+  </li>
+  <li>
+    <p>Add <code>sm-#</code>, <code>md-#</code>, <code>lg-#</code>, <code>x-lg-#</code>, or <code>xx-lg-#</code> classes to the <code>&lt;div class="BlockGrid"&gt;</code> to specify the number of items to be displayed. Each class maps to <code>min-width</code> a breakpoint, so each class inherits the <code>width</code> value of the class which comes before it.</p>
+  </li>
+  <li>
+    <p>Add a <code>&lt;div class="BlockGrid-item"&gt;</code> for each item in your block grid.</p>
+  </li>
+</ol>
+
+<p>Important: don’t directly modify <code>&lt;div class="BlockGrid"&gt;</code> elements for presentation. If you want to add a <code>background-color</code>, <code>padding</code>, <code>margin</code> or other properties, add new <code>div</code>s inside grid elements to achieve whatever effect you need.</p>
+
+<h2 id="basic-examples">Basic examples</h2>
+<div class="DocsExample">
+
+<div class="DocsExample-render u-floatContainer"><div class="BlockGrid sm-2">
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid sm-2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample">
+
+<div class="DocsExample-render u-floatContainer"><div class="BlockGrid sm-3">
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid sm-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<div class="DocsExample">
+
+<div class="DocsExample-render u-floatContainer"><div class="BlockGrid sm-4">
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid sm-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="changing-number-of-items-in-a-row">Changing number of items in a row</h2>
+<p>Use multiple size classes to specify a different number of items in a row for each <code>min-width</code> breakpoint. This example will stack items vertically by default, display 3 items in a row on medium screens, then 5 in a row on large screens.</p>
+
+<div class="DocsExample">
+
+<div class="DocsExample-render u-floatContainer"><div class="BlockGrid md-3 lg-5">
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div class="BlockGrid-item">
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid md-3 lg-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"BlockGrid-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Bill Murray"</span> <span class="na">src=</span><span class="s">"https://www.fillmurray.com/460/300"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

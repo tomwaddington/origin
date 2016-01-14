@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
 
     <title>
         Table &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="/origin/assets/css/origin.css">
-
-    <!-- Favicons -->
-    <link rel="icon" href="/origin/favicon.ico">
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
 
     <!-- Typekit embed code for Effra and Swister -->
     <script src="https://use.typekit.net/hnj7chl.js"></script>
@@ -25,148 +20,31 @@
   <body>
 
     <header class="masthead">
-      <div class="container">
-        <a href="/origin/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          Origin
-        </a>
-
-        <nav class="masthead-nav">
-          <a  href="/origin/guidance/principles">Docs</a>
-          <a  href="/origin/about">About</a>
-          <a  href="/origin/faq">FAQ</a>
-          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
-          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
-        </nav>
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="/origin/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a  href="/origin/guidance/principles">Docs</a>
+              <a  href="/origin/about">About</a>
+              <a  href="/origin/faq">FAQ</a>
+              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
     
 
-    <div class="container">
-      <div class="columns docs-layout">
-  <div class="one-fourth column">
-    
-      <h4 class="menu-title">
-  Guidance
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item " href="/origin/guidance/principles/">
-    Principles
-  </a>
-  <a class="menu-item " href="/origin/guidance/code-style/">
-    Code style
-  </a>
-  <a class="menu-item " href="/origin/guidance/naming-conventions/">
-    Naming conventions
-  </a>
-  <a class="menu-item " href="/origin/guidance/base-styles/">
-    Base styles
-  </a>
-  <a class="menu-item " href="/origin/guidance/utilities/">
-    Utilities
-  </a>
-  <a class="menu-item " href="/origin/guidance/components/">
-    Components
-  </a>
-</nav>
+    <div class="Grid-row">
 
-<h4 class="menu-title">
-  Utilities
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    border
-  </span>
-  <span class="menu-item">
-    border-radius
-  </span>
-  <a class="menu-item " href="/origin/utilities/background-color/">
-    background-color
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-family/">
-    font-family
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-size/">
-    font-size
-  </a>
-  <a class="menu-item " href="/origin/utilities/font-weight/">
-    font-weight
-  </a>
-  <a class="menu-item " href="/origin/utilities/line-height/">
-    line-height
-  </a>
-  <span class="menu-item">
-    list-item
-  </span>
-  <a class="menu-item " href="/origin/utilities/spacing/">
-    spacing
-  </a>
-  <a class="menu-item " href="/origin/utilities/text-color/">
-    text-color
-  </a>
-</nav>
-
-<h4 class="menu-title">
-  Components
-</h4>
-<nav class="menu docs-menu">
-  <a class="menu-item " href="/origin/components/button/">
-    Button
-  </a>
-  <span class="menu-item">
-    Card
-  </span>
-  <span class="menu-item">
-    Checkbox
-  </span>
-  <a class="menu-item " href="/origin/components/heading/">
-    Heading
-  </a>
-  <span class="menu-item">
-    List
-  </span>
-  <a class="menu-item " href="/origin/components/navbar/">
-    NavBar
-  </a>
-  <span class="menu-item">
-    Notice
-  </span>
-  <span class="menu-item">
-    RadioButton
-  </span>
-  <a class="menu-item " href="/origin/components/segmented-control/">
-    Segmented Control
-  </a>
-  <a class="menu-item selected" href="/origin/components/table/">
-    Table
-  </a>
-  <span class="menu-item">
-    TableView
-  </span>
-  <span class="menu-item">
-    Tabs
-  </span>
-  <span class="menu-item">
-    TextArea
-  </span>
-  <span class="menu-item">
-    TextInput
-  </span>
-</nav>
-
-<h4 class="menu-title">
-  Layout
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    Grid
-  </span>
-</nav>
-
-    
-  </div>
-  <div class="three-fourths column markdown-body">
+  <div class="Grid-col md-9 md-push-3">
     <h1 class="page-title">
       Table
     </h1>
@@ -186,7 +64,7 @@
 
 <h2 id="default-table">Default table</h2>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr>
       <th>Table header</th>
@@ -233,7 +111,7 @@
 
 <p>Primarily used for displaying monetary values.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table Table--text-align--right">
+<div class="DocsExample-render u-floatContainer"><table class="Table Table--text-align--right">
   <thead>
     <tr>
       <th class="Table-cell Table-cell--text-align--left">Table header</th>
@@ -280,7 +158,7 @@
 
 <p>Used to give prominence to unique rows, such as totals in a reporting table.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr>
       <th class="Table-header Table-header--prominent">Table header</th>
@@ -347,7 +225,7 @@
 
 <p>Used when the standard styling doesn’t provide enough clarity for the content. Requires the use of the prominent styling on the table header.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr class="Table-row Table-row--parentHeader Table-row--verticalBorders Table-row--verticalBorders--header">
       <th>Parent header</th>
@@ -422,7 +300,7 @@
 
 <p>Used for creating a divider between columns or to highlight column groups.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr>
       <th>Table header</th>
@@ -476,7 +354,7 @@
 <p>Used for rows (or cells) that contain minor/inessential data, or data that
 otherwise exists as metadata for other data in the table.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr>
       <th>Table header</th>
@@ -533,7 +411,7 @@ otherwise exists as metadata for other data in the table.</p>
 
 <p>Used when regular table headers require grouping.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr class="Table-row Table-row--parentHeader">
       <th colspan="3">Parent table header</th>
@@ -596,7 +474,7 @@ otherwise exists as metadata for other data in the table.</p>
 
 <p>Used to demonstrate hierarchy within dense tables by grouping a number of child rows under a parent row.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table">
+<div class="DocsExample-render u-floatContainer"><table class="Table">
   <thead>
     <tr>
       <th>Table header</th>
@@ -683,7 +561,7 @@ otherwise exists as metadata for other data in the table.</p>
 
 <p>Used for clarity in tables which may not be fully filled and therefore hard to scan.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table Table--zebraStripes">
+<div class="DocsExample-render u-floatContainer"><table class="Table Table--zebraStripes">
   <thead>
     <tr>
       <th>Table header</th>
@@ -750,7 +628,7 @@ otherwise exists as metadata for other data in the table.</p>
 
 <p>Applies the app’s legacy <code>font-family</code>, Helvetica Neue.</p>
 
-<div class="DocsExample-render clearfix"><table class="Table Table--desktop">
+<div class="DocsExample-render u-floatContainer"><table class="Table Table--desktop">
   <thead>
     <tr>
       <th>Table header</th>
@@ -796,9 +674,252 @@ otherwise exists as metadata for other data in the table.</p>
 
     </div>
   </div>
+  <div class="Grid-col md-3 md-pull-9">
+    <h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/base-styles/">
+      Base styles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/code-style/">
+      Code style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/components/">
+      Components
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/naming-conventions/">
+      Naming conventions
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/principles/">
+      Principles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/utilities/">
+      Utilities
+    </a>
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Components
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/block-grid/">
+      Block Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/button/">
+      Button
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/grid/">
+      Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/heading/">
+      Heading
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/navbar/">
+      NavBar
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/segmented-control/">
+      Segmented Control
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/table/">
+      Table
+    </a>
+    
+  
+    
+  
+    
+  
+</nav>
+
+
+<h4 class="menu-title">
+  Utilities
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/background-color/">
+      background-color
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-family/">
+      font-family
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-size/">
+      font-size
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-weight/">
+      font-weight
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/line-height/">
+      line-height
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/spacing/">
+      spacing
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-color/">
+      text-color
+    </a>
+    
+  
+    
+  
+</nav>
+
+  </div>
+
 </div>
 
-    </div>
 
     <script src="/origin/assets/js/anchor.min.js"></script>
     <script>
