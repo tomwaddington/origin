@@ -45,7 +45,7 @@ $Table-border-color: $color--gray-15;
   /* 2 */
   border-spacing: 0;
   /* 3 */
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
   padding: 0;
   text-align: left;
   /* 4 */
@@ -65,7 +65,7 @@ $Table-border-color: $color--gray-15;
 .Table td,
 .Table th {
   margin: 0;
-  padding: 0.5em;
+  padding: .5em;
   /* 1 */
   vertical-align: middle;
 }
@@ -125,7 +125,7 @@ tbody tr:first-child td {
 .Table-header--prominent {
   @include background-color(gray-16);
   /* 1 */
-  border-top: 1px solid white;
+  border-top: 1px solid #fff;
 }
 
 /**
@@ -133,7 +133,7 @@ tbody tr:first-child td {
  * table header.
  *
  * 1. This header is designed to group together the cell columns of the row
- *    underneath it, so we centre align the text as the best way of doing so. 
+ *    underneath it, so we centre align the text as the best way of doing so.
  */
 
 .Table .Table-row--parentHeader th {
@@ -368,7 +368,7 @@ tbody tr:first-child td {
 .Table-row--verticalBorders--white td,
 .Table-row--verticalBorders--white th,
 .Table-cell--verticalBorders--white {
-  border-color: white;
+  border-color: #fff;
 }
 
 /**
@@ -376,7 +376,7 @@ tbody tr:first-child td {
  */
 
 .Table-cell--verticalBorder--white--left {
-  border-left: 1px solid white;
+  border-left: 1px solid #fff;
 }
 
 /**
@@ -384,7 +384,7 @@ tbody tr:first-child td {
  */
 
 .Table-cell--verticalBorder--white--right {
-  border-right: 1px solid white;
+  border-right: 1px solid #fff;
 }
 
 /**
@@ -399,22 +399,6 @@ tbody tr:first-child td {
   border-color: desaturate(lighten($color--fa-blue, 45), 50);
 }
 
-/**
- * Add a left-hand border to a cell inside a <thead>.
- */
-
-.Table-cell--verticalBorder--white--left {
-  border-left: 1px solid white;
-}
-
-/**
- * Add a right-hand border to a cell inside a <thead>.
- */
-
-.Table-cell--verticalBorder--white--right {
-  border-right: 1px solid white;
-}
-
 /* `Table--zebraStripes` variant
    ==========================================================================
    Note that when applied to a whole table, zebra stripes are scoped only to
@@ -423,7 +407,7 @@ tbody tr:first-child td {
 
 .Table--zebraStripes tbody tr:nth-child(even),
 .Table-row--zebraStripes:nth-child(even) {
-  background-color: rgba(200, 200, 200, 0.14);
+  background-color: rgba(200, 200, 200, .14);
 }
 
 /**
@@ -464,7 +448,7 @@ tbody tr:first-child td {
 
 .Table--desktop td,
 .Table--desktop th {
-  padding: 0.75em;
+  padding: .75em;
 }
 
 .Table--desktop th {

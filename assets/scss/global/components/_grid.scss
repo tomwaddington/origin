@@ -34,7 +34,7 @@
 
 @function convert-to-rem($value, $base-value: $rem-base) {
   $value: strip-unit($value) / strip-unit($base-value) * 1rem;
-  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @if ($value == 0) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
 
@@ -115,10 +115,10 @@ $include-xl-html-grid-classes: false !default;
 
 
 @mixin clearRow {
-  &:after {
+  &::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -147,27 +147,21 @@ $include-xl-html-grid-classes: false !default;
 
   // use `@include grid-row(nest);` to include a nested row
   @if $behavior == nest {
-    margin: 0 (-($column-gutter/2));
+    margin: 0 (-($column-gutter / 2));
     max-width: none;
     width: auto;
-  }
-
-  // use `@include grid-row(collapse);` to collapsed a container row margins
-  @else if $behavior == collapse {
+  } @else if $behavior == collapse {
+    // use `@include grid-row(collapse);` to collapsed a container row margins
     margin: 0;
     max-width: $row-width;
     width: 100%;
-  }
-
-  // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
-  @else if $behavior == nest-collapse {
+  } @else if $behavior == nest-collapse {
+    // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
     margin: 0;
     max-width: none;
     width: auto;
-  }
-
-  // use @include grid-row; to use a container row
-  @else {
+  } @else {
+    // use @include grid-row; to use a container row
     margin: 0 auto;
     max-width: $row-width;
     width: 100%;
@@ -211,11 +205,9 @@ $include-xl-html-grid-classes: false !default;
   @if $collapse {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  // Gutter padding whenever a column isn't set to collapse
-  // (use $collapse:null to do nothing)
-  @else if $collapse == false {
+  } @else if $collapse == false {
+    // Gutter padding whenever a column isn't set to collapse
+    // (use $collapse:null to do nothing)
     padding-left: ($column-gutter / 2);
     padding-right: ($column-gutter / 2);
   }
@@ -225,17 +217,30 @@ $include-xl-html-grid-classes: false !default;
     width: grid-calc($columns, $total-columns);
 
     // If last column, float naturally instead of to the right
-    @if $last-column { float: $opposite-direction; }
+    @if $last-column {
+      float: $opposite-direction;
+    }
   }
 
   // Source Ordering, adds left/right depending on which you use.
-  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
-  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
+  @if $push {
+    #{$default-float}: grid-calc($push, $total-columns);
+    #{$opposite-direction}: auto;
+  }
+
+  @if $pull {
+    #{$opposite-direction}: grid-calc($pull, $total-columns);
+    #{$default-float}: auto;
+  }
 
   @if $float {
-    @if $float == left or $float == true { float: $default-float; }
-    @else if $float == right { float: $opposite-direction; }
-    @else { float: none; }
+    @if $float == left or $float == true {
+      float: $default-float;
+    } @else if $float == right {
+      float: $opposite-direction;
+    } @else {
+      float: none;
+    }
   }
 
   // If centered, get rid of float and add appropriate margins
@@ -246,7 +251,9 @@ $include-xl-html-grid-classes: false !default;
   }
 
   // If offset, calculate appropriate margins
-  @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
+  @if $offset {
+    margin-#{$default-float}: grid-calc($offset, $total-columns) !important;
+  }
 
 }
 
@@ -263,6 +270,7 @@ $include-xl-html-grid-classes: false !default;
     .#{$grid-column-class}.#{$size}-push-#{$i} {
       @include grid-column($push:$i, $collapse:null, $float:false);
     }
+
     .#{$grid-column-class}.#{$size}-pull-#{$i} {
       @include grid-column($pull:$i, $collapse:null, $float:false);
     }
@@ -309,39 +317,56 @@ $include-xl-html-grid-classes: false !default;
     float: $opposite-direction;
   }
 
-  .#{$grid-row-class} {
-    &.#{$size}-collapse {
-      > .#{$grid-column-class} { @include grid-column($collapse:true, $float:false); }
-
-      .#{$grid-row-class} {margin-left:0; margin-right:0;}
-    }
-    &.#{$size}-uncollapse {
-      > .#{$grid-column-class} {
-        @include grid-column;
-      }
-    }
+  .#{$grid-row-class}.#{$size}-collapse > .#{$grid-column-class} {
+    @include grid-column($collapse:true, $float:false);
   }
+
+  .#{$grid-row-class}.#{$size}-collapse .#{$grid-row-class} {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .#{$grid-row-class}.#{$size}-uncollapse > .#{$grid-column-class} {
+    @include grid-column;
+  }
+
 }
 
+
 @if $include-html-grid-classes {
+
   .#{$grid-row-class} {
     @include grid-row;
-
-    &.collapse {
-      > .#{$grid-column-class} { @include grid-column($collapse:true, $float:false); }
-
-      .#{$grid-row-class} {margin-left:0; margin-right:0;}
-    }
-
-    .#{$grid-row-class} { @include grid-row($behavior:nest);
-      &.collapse { @include grid-row($behavior:nest-collapse); }
-    }
   }
 
-  .#{$grid-column-class} { @include grid-column($columns:$total-columns); }
+  .#{$grid-row-class}.collapse > .#{$grid-column-class} {
+    @include grid-column($collapse:true, $float:false);
+  }
 
-  .#{$grid-column-class} + .#{$grid-column-class}:last-child { float: $last-child-float; }
-  .#{$grid-column-class} + .#{$grid-column-class}.end { float: $default-float; }
+  .#{$grid-row-class}.collapse .#{$grid-row-class} {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .#{$grid-row-class} .#{$grid-row-class} {
+    @include grid-row($behavior:nest);
+  }
+
+  .#{$grid-row-class} .#{$grid-row-class}.collapse {
+    @include grid-row($behavior:nest-collapse);
+  }
+
+  .#{$grid-column-class} {
+    @include grid-column($columns:$total-columns);
+  }
+
+  .#{$grid-column-class} + .#{$grid-column-class}:last-child {
+    float: $last-child-float;
+  }
+
+  .#{$grid-column-class} + .#{$grid-column-class}.end {
+    float: $default-float;
+  }
 
   @media #{$small-up} {
     @include grid-html-classes($size:sm);
@@ -354,6 +379,7 @@ $include-xl-html-grid-classes: false !default;
       .push-#{$i} {
         @include grid-column($push:$i, $collapse:null, $float:false);
       }
+
       .pull-#{$i} {
         @include grid-column($pull:$i, $collapse:null, $float:false);
       }
@@ -366,6 +392,7 @@ $include-xl-html-grid-classes: false !default;
       .push-#{$i} {
         @include grid-column($push:$i, $collapse:null, $float:false);
       }
+
       .pull-#{$i} {
         @include grid-column($pull:$i, $collapse:null, $float:false);
       }
@@ -378,6 +405,7 @@ $include-xl-html-grid-classes: false !default;
       .push-#{$i} {
         @include grid-column($push:$i, $collapse:null, $float:false);
       }
+
       .pull-#{$i} {
         @include grid-column($pull:$i, $collapse:null, $float:false);
       }
@@ -390,6 +418,7 @@ $include-xl-html-grid-classes: false !default;
       .push-#{$i} {
         @include grid-column($push:$i, $collapse:null, $float:false);
       }
+
       .pull-#{$i} {
         @include grid-column($pull:$i, $collapse:null, $float:false);
       }
@@ -402,6 +431,7 @@ $include-xl-html-grid-classes: false !default;
   @media #{$xlarge-up} {
     @include grid-html-classes($size:xlarge);
   }
+
   @media #{$xxlarge-up} {
     @include grid-html-classes($size:xxlarge);
   }
