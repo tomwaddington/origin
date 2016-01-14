@@ -4,11 +4,6 @@
 
 $margin: 1rem;
 
-.markdown-body {
-  @include font-family(default);
-  @include line-height(default);
-}
-
 .markdown-body .page-title + .markdown-body > p:first-child {
   @include font-weight(light, !important);
   @include font-size(x-large, !important);
