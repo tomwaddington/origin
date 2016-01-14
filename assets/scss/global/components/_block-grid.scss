@@ -1,0 +1,186 @@
+/* Block grid component
+   ========================================================================== */
+
+/**
+ * Originally written as part of Foundation by ZURB; http://foundation.zurb.com
+ * Further adapted by @robbiemanson; http://robbiemanson.com
+ *
+ * Licensed under MIT Open Source
+ */
+
+
+/**
+ * Variables
+ */
+
+$block-grid-class: "BlockGrid";
+$block-grid-element-class: "BlockGrid-item";
+
+
+/**
+ * Import once
+ *
+ * Used to prevent styles from being loaded multiple times for components
+ * that rely on other components.
+ */
+
+$modules: () !default;
+
+$include-html-block-grid-classes: $include-html-classes !default;
+$include-xl-html-block-grid-classes: false !default;
+
+/* We use this to control the maximum number of block grid elements per row */
+$block-grid-elements: 12 !default;
+$block-grid-default-spacing: rem-calc(20) !default;
+
+$align-block-grid-to-grid: false !default;
+@if $align-block-grid-to-grid {
+  $block-grid-default-spacing: $column-gutter;
+}
+
+/* Enables media queries for block grid. Set to false if writing semantic HTML. */
+$block-grid-media-queries: true !default;
+
+
+/**
+ * Mixins
+ */
+
+@mixin exports($name) {
+  /* Import from global scope */
+  $modules: $modules !global;
+  /* Check if a module is already on the list */
+  $module_index: index($modules, $name);
+  @if (($module_index == null) or ($module_index == false)) {
+    $modules: append($modules, $name) !global;
+    @content;
+  }
+}
+
+
+/**
+ * Create a custom block grid
+ *
+ * $per-row - # of items to display per row. Default: false.
+ * $spacing - # of ems to use as padding on each block item. Default: rem-calc(20).
+ * $include-spacing - Adds padding to our list item. Default: true.
+ * $base-style - Apply a base style to block grid. Default: true.
+ */
+
+@mixin block-grid(
+  $per-row:false,
+  $spacing:$block-grid-default-spacing,
+  $include-spacing:true,
+  $base-style:true) {
+
+  @if $base-style {
+    display: block;
+    padding: 0;
+    @if $align-block-grid-to-grid {
+      margin: 0;
+    } @else {
+      margin: 0 (-$spacing/2);
+    }
+    @include floatContainer;
+
+    > .#{$block-grid-element-class} {
+      display: block;
+      float: $default-float;
+      height: auto;
+      width: 100%;
+      @if $include-spacing {
+        padding: 0 ($spacing/2) $spacing;
+      }
+    }
+  }
+
+  @if $per-row {
+    > .#{$block-grid-element-class} {
+      @if $include-spacing {
+        padding: 0 ($spacing/2) $spacing;
+      }
+      width: 100%/$per-row;
+
+      &:nth-of-type(1n) { clear: none; }
+      &:nth-of-type(#{$per-row}n+1) { clear: both; }
+      @if $align-block-grid-to-grid {
+        @include block-grid-aligned($per-row, $spacing);
+      }
+    }
+  }
+}
+
+@mixin block-grid-aligned($per-row, $spacing) {
+  @for $i from 1 through $block-grid-elements {
+    @if $per-row >= $i {
+      $grid-column: '+' + $i;
+      @if $per-row == $i {
+        $grid-column: '';
+      }
+      &:nth-of-type(#{$per-row}n#{unquote($grid-column)}) {
+        padding-left: ($spacing - (($spacing / $per-row) * ($per-row - ($i - 1))));
+        padding-right: ($spacing - (($spacing / $per-row) * $i));
+      }
+    }
+  }
+}
+
+
+/**
+ * Generate presentational markup for block grid
+ *
+ * $size - Name of class to use, i.e. "lg" will generate `.lg-1`, `.lg-2`, etc.
+ */
+
+@mixin block-grid-html-classes($size, $include-spacing) {
+  @for $i from 1 through $block-grid-elements {
+    .#{$block-grid-class}.#{$size}-#{($i)} {
+      @include block-grid($i, $block-grid-default-spacing, $include-spacing, false);
+    }
+  }
+}
+
+@include exports("block-grid") {
+  @if $include-html-block-grid-classes {
+
+    .#{$block-grid-class} {
+      @include block-grid;
+    }
+
+    @if $block-grid-media-queries {
+      @media #{$small-up} {
+        @include block-grid-html-classes($size:sm, $include-spacing:false);
+      }
+
+      @media #{$medium-up} {
+        @include block-grid-html-classes($size:md, $include-spacing:false);
+      }
+
+      @media #{$large-up} {
+        @include block-grid-html-classes($size:lg, $include-spacing:false);
+      }
+
+      @if $include-xl-html-block-grid-classes {
+        @media #{$xlarge-up} {
+          @include block-grid-html-classes($size:x-lg, $include-spacing:false);
+        }
+
+        @media #{$xxlarge-up} {
+          @include block-grid-html-classes($size:xx-lg, $include-spacing:false);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Automatically ensure any images in a  block grid span the full width of their
+ * container and render as block-level elements to make behaviour more
+ * predictable and consistent
+ */
+
+.#{$block-grid-class} img {
+  display: block;
+  height: auto;
+  width: 100%;
+}

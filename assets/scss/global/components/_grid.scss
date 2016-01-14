@@ -1,0 +1,408 @@
+/* Grid component
+   ========================================================================== */
+
+/**
+ * Originally written as part of Foundation by ZURB; http://foundation.zurb.com
+ * Stripped out by mikker; http://github.com/mikker
+ * Further adapted by @robbiemanson; http://robbiemanson.com
+ *
+ * Licensed under MIT Open Source
+ */
+
+
+/**
+ * Functions used within variables
+ */
+
+@function lower-bound($range) {
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+
+/**
+ * Variables
+ */
+
+/* If you change these, remember to update the documentation examples */
+$grid-column-class: "Grid-col";
+$grid-row-class:    "Grid-row";
+$rem-base: $base-unit !default;
+$column-gutter: rem-calc(30) !default;
+$row-width: rem-calc(1000) !default;
+.#{$grid-row-class}--large { max-width: rem-calc(1400) !important; }
+$total-columns: 12 !default;
+$last-child-float: right;
+
+
+/**
+ * Breakpoints
+ *
+ * Global breakpoints are defined in our utility values:
+ * https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss
+ */
+
+$small-range:   (0, $medium-breakpoint) !default;
+$medium-range:  ($medium-breakpoint, $large-breakpoint) !default;
+$large-range:   ($large-breakpoint, $x-large-breakpoint) !default;
+$xlarge-range:  ($x-large-breakpoint, $xx-large-breakpoint) !default;
+$xxlarge-range: ($xx-large-breakpoint, 99999999rem) !default;
+
+$default-float: left !default;
+$opposite-direction: right !default;
+$include-html-classes: true !default;
+$include-print-styles: true !default;
+$include-html-global-classes: true !default;
+
+$screen:       "only screen" !default;
+$landscape:    "#{$screen} and (orientation: landscape)" !default;
+$portrait:     "#{$screen} and (orientation: portrait)" !default;
+$small-up:     $screen !default;
+$small-only:   "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+$medium-min:   "#{$screen} and (min-width:#{$medium-breakpoint})" !default;
+$medium-up:    "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$medium-only:  "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
+$large-min:    "#{$screen} and (min-width:#{$large-breakpoint})" !default;
+$large-up:     "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$large-only:   "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
+$xlarge-min:   "#{$screen} and (min-width:#{$x-large-breakpoint})" !default;
+$xlarge-up:    "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xlarge-only:  "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
+$xxlarge-min:  "#{$screen} and (min-width:#{$xx-large-breakpoint})" !default;
+$xxlarge-up:   "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+$retina: (
+  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+  "#{$screen} and (min-device-pixel-ratio: 2)",
+  "#{$screen} and (min-resolution: 192dpi)",
+  "#{$screen} and (min-resolution: 2dppx)"
+);
+$include-html-grid-classes: $include-html-classes !default;
+$include-xl-html-grid-classes: false !default;
+
+
+@mixin clearRow {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+/**
+ * Functions
+ *
+ * For creating container, nested, and collapsed rows
+ */
+
+@function grid-calc($colNumber, $totalColumns) {
+  $result: percentage(($colNumber / $totalColumns));
+  @if $result == 0% { $result: 0; }
+  @return $result;
+}
+
+
+/**
+ * $behaviour
+ *
+ * Any special behavior for this row? Default: false. Options: nest, collapse,
+ * nest-collapse, false.
+ */
+
+@mixin grid-row($behavior: false) {
+
+  // use `@include grid-row(nest);` to include a nested row
+  @if $behavior == nest {
+    margin: 0 (-($column-gutter/2));
+    max-width: none;
+    width: auto;
+  }
+
+  // use `@include grid-row(collapse);` to collapsed a container row margins
+  @else if $behavior == collapse {
+    margin: 0;
+    max-width: $row-width;
+    width: 100%;
+  }
+
+  // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
+  @else if $behavior == nest-collapse {
+    margin: 0;
+    max-width: none;
+    width: auto;
+  }
+
+  // use @include grid-row; to use a container row
+  @else {
+    margin: 0 auto;
+    max-width: $row-width;
+    width: 100%;
+  }
+
+  // Clearfix for all rows
+  @include clearRow();
+}
+
+
+/**
+ * $Creates a column, should be used inside of a media query to control layouts
+ *
+ * $columns - The number of columns this should be
+ * $last-column - Is this the last column? Default: false.
+ * $center - Center these columns? Default: false.
+ * $offset - # of columns to offset. Default: false.
+ * $push - # of columns to push. Default: false.
+ * $pull - # of columns to pull. Default: false.
+ * $collapse - Get rid of gutter padding on column? Default: false.
+ * $float - Should this float? Default: true. Options: true, false, left, right.
+ */
+
+@mixin grid-column(
+  $columns:false,
+  $last-column:false,
+  $center:false,
+  $offset:false,
+  $push:false,
+  $pull:false,
+  $collapse:false,
+  $float:true,
+  $position:false) {
+
+  // push and pull require position set
+  @if $position or $push or $pull {
+    position: relative;
+  }
+
+  // If collapsed, get rid of gutter padding
+  @if $collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Gutter padding whenever a column isn't set to collapse
+  // (use $collapse:null to do nothing)
+  @else if $collapse == false {
+    padding-left: ($column-gutter / 2);
+    padding-right: ($column-gutter / 2);
+  }
+
+  // If a column number is given, calculate width
+  @if $columns {
+    width: grid-calc($columns, $total-columns);
+
+    // If last column, float naturally instead of to the right
+    @if $last-column { float: $opposite-direction; }
+  }
+
+  // Source Ordering, adds left/right depending on which you use.
+  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
+  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
+
+  @if $float {
+    @if $float == left or $float == true { float: $default-float; }
+    @else if $float == right { float: $opposite-direction; }
+    @else { float: none; }
+  }
+
+  // If centered, get rid of float and add appropriate margins
+  @if $center {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none;
+  }
+
+  // If offset, calculate appropriate margins
+  @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
+
+}
+
+
+/**
+ * Create presentational classes for grid
+ *
+ * $size - Name of class to use, i.e. "lg" will generate `.lg-1`, `.lg-2`, etc.
+ */
+
+@mixin grid-html-classes($size) {
+
+  @for $i from 0 through $total-columns - 1 {
+    .#{$grid-column-class}.#{$size}-push-#{$i} {
+      @include grid-column($push:$i, $collapse:null, $float:false);
+    }
+    .#{$grid-column-class}.#{$size}-pull-#{$i} {
+      @include grid-column($pull:$i, $collapse:null, $float:false);
+    }
+  }
+
+  .#{$grid-column-class} { @include grid-column($columns:false, $position:true); }
+
+
+  @for $i from 1 through $total-columns {
+    .#{$grid-column-class}.#{$size}-#{$i} { @include grid-column($columns:$i, $collapse:null, $float:false); }
+  }
+
+  @for $i from 0 through $total-columns - 1 {
+    .#{$grid-column-class}.#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null, $float:false); }
+  }
+
+  .#{$grid-column-class}.#{$size}-reset-order {
+    float: $default-float;
+    left: auto;
+    margin-#{$default-float}: 0;
+    margin-#{$opposite-direction}: 0;
+    right: auto;
+  }
+
+  .#{$grid-column-class}.#{$size}-centered { @include grid-column($center:true, $collapse:null, $float:false); }
+
+  .#{$grid-column-class}.#{$size}-uncentered {
+    float: $default-float;
+    margin-#{$default-float}: 0;
+    margin-#{$opposite-direction}: 0;
+  }
+
+  // Fighting #{$grid-column-class} + #{$grid-column-class}:last-child
+  .#{$grid-column-class}.#{$size}-centered:last-child {
+    float: none;
+  }
+
+  // Fighting .#{$grid-column-class}.<previous-size>-centered:last-child
+  .#{$grid-column-class}.#{$size}-uncentered:last-child {
+    float: $default-float;
+  }
+
+  .#{$grid-column-class}.#{$size}-uncentered.opposite {
+    float: $opposite-direction;
+  }
+
+  .#{$grid-row-class} {
+    &.#{$size}-collapse {
+      > .#{$grid-column-class} { @include grid-column($collapse:true, $float:false); }
+
+      .#{$grid-row-class} {margin-left:0; margin-right:0;}
+    }
+    &.#{$size}-uncollapse {
+      > .#{$grid-column-class} {
+        @include grid-column;
+      }
+    }
+  }
+}
+
+@if $include-html-grid-classes {
+  .#{$grid-row-class} {
+    @include grid-row;
+
+    &.collapse {
+      > .#{$grid-column-class} { @include grid-column($collapse:true, $float:false); }
+
+      .#{$grid-row-class} {margin-left:0; margin-right:0;}
+    }
+
+    .#{$grid-row-class} { @include grid-row($behavior:nest);
+      &.collapse { @include grid-row($behavior:nest-collapse); }
+    }
+  }
+
+  .#{$grid-column-class} { @include grid-column($columns:$total-columns); }
+
+  .#{$grid-column-class} + .#{$grid-column-class}:last-child { float: $last-child-float; }
+  .#{$grid-column-class} + .#{$grid-column-class}.end { float: $default-float; }
+
+  @media #{$small-up} {
+    @include grid-html-classes($size:sm);
+  }
+
+  @media #{$medium-up} {
+    @include grid-html-classes($size:md);
+    // Old push and pull classes
+    @for $i from 0 through $total-columns - 1 {
+      .push-#{$i} {
+        @include grid-column($push:$i, $collapse:null, $float:false);
+      }
+      .pull-#{$i} {
+        @include grid-column($pull:$i, $collapse:null, $float:false);
+      }
+    }
+  }
+
+  @media #{$large-up} {
+    @include grid-html-classes($size:lg);
+    @for $i from 0 through $total-columns - 1 {
+      .push-#{$i} {
+        @include grid-column($push:$i, $collapse:null, $float:false);
+      }
+      .pull-#{$i} {
+        @include grid-column($pull:$i, $collapse:null, $float:false);
+      }
+    }
+  }
+
+  @media #{$xlarge-up} {
+    @include grid-html-classes($size:x-lg);
+    @for $i from 0 through $total-columns - 1 {
+      .push-#{$i} {
+        @include grid-column($push:$i, $collapse:null, $float:false);
+      }
+      .pull-#{$i} {
+        @include grid-column($pull:$i, $collapse:null, $float:false);
+      }
+    }
+  }
+
+  @media #{$xxlarge-up} {
+    @include grid-html-classes($size:xx-lg);
+    @for $i from 0 through $total-columns - 1 {
+      .push-#{$i} {
+        @include grid-column($push:$i, $collapse:null, $float:false);
+      }
+      .pull-#{$i} {
+        @include grid-column($pull:$i, $collapse:null, $float:false);
+      }
+    }
+  }
+
+}
+
+@if $include-xl-html-grid-classes {
+  @media #{$xlarge-up} {
+    @include grid-html-classes($size:xlarge);
+  }
+  @media #{$xxlarge-up} {
+    @include grid-html-classes($size:xxlarge);
+  }
+}

@@ -2,7 +2,7 @@
 //
 // Clears floats via mixin (avoid using as a class).
 
-@mixin clearfix {
+@mixin floatContainer {
   &:before {
     display: table;
     content: "";
