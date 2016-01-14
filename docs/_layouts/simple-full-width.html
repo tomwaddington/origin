@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="g-row u-max-width--100percent">
+<div class="Grid-row Grid-row--large">
 
-  <div class="g-col medium-11 medium-centered">
-    <div class="docs-layout">
+  <div class="Grid-col">
+    <div class="l-limitTextWidth">
+      <h1 class="page-title">
+        {{ page.title }}
+      </h1>
       <div class="markdown-body">
-        <h1 class="page-title">
-          {{ page.title }}
-        </h1>
         {{ content }}
       </div>
     </div>

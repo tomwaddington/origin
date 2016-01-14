@@ -1,11 +1,7 @@
 ---
-layout: simple
+layout: page
 title: FAQ
 ---
-
-Frequently asked questions about Origin.
-
-{:toc}
 
 ## What’s the difference between CSS utilities and components?
 

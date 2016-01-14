@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
 
     <title>
         {{ page.title }} &middot; Origin
     </title>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/origin.css">
-
-    <!-- Favicons -->
-    <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/origin.css" />
+    <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut" type="image/x-icon" />
 
     <!-- Typekit embed code for Effra and Swister -->
     <script src="https://use.typekit.net/hnj7chl.js"></script>
@@ -25,43 +20,51 @@
   <body>
 
     <header class="masthead">
-      <div class="container">
-        <a href="{{ site.baseurl }}/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          Origin
-        </a>
-
-        <nav class="masthead-nav">
-          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/guidance/principles">Docs</a>
-          <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
-          <a {% if page.title == "FAQ" %}class="active"{% endif %} href="{{ site.baseurl }}/faq">FAQ</a>
-          <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
-          <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a>
-        </nav>
+      <div class="u-padding--large">
+        <div class="Grid-row">
+          <div class="Grid-col md-3">
+            <a href="{{ site.baseurl }}/" class="masthead-logo">
+              Origin
+            </a>
+          </div>
+          <div class="Grid-col md-9">
+            <nav class="masthead-nav">
+              <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/guidance/principles">Docs</a>
+              <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
+              <a {% if page.title == "FAQ" %}class="active"{% endif %} href="{{ site.baseurl }}/faq">FAQ</a>
+              <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
+              <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
     {% if page.title == "Home" %}
       <div class="Hero">
-        <div class="container">
-          <h1 class="Hero-heading">
-            Origin
-          </h1>
-          <div class="Hero-body">
-            <p class="Hero-leader">
-              The CSS that powers FreeAgent.
-            </p>
-            <p>
-              Current build: <a href="https://github.com/fac/origin/releases">{% project_version %}</a>
-            </p>
+        <div class="Grid-row">
+          <div class="Grid-col">
+            <div class="u-padding-bottom--large u-padding-top--large">
+              <h1 class="Hero-heading">
+                Origin
+              </h1>
+              <div class="Hero-body">
+                <p class="Hero-leader">
+                  The CSS that powers FreeAgent.
+                </p>
+                <p>
+                  Current build: <a href="https://github.com/fac/origin/releases">{% project_version %}</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="u-padding-bottom--large u-padding-top--large">
-        <div class="g-row">
+        <div class="Grid-row">
 
-          <div class="g-col medium-4">
+          <div class="Grid-col md-4">
             <h2 class="Heading Heading--space--x-small Heading--x-large">
               Utilities
             </h2>
@@ -81,7 +84,7 @@
             </ol>
           </div>
 
-          <div class="g-col medium-4">
+          <div class="Grid-col md-4">
             <h2 class="Heading Heading--space--x-small Heading--x-large">
               Components
             </h2>
@@ -101,7 +104,7 @@
             </ol>
           </div>
 
-          <div class="g-col medium-4">
+          <div class="Grid-col md-4">
             <h2 class="Heading Heading--space--x-small Heading--x-large">
               Guidance
             </h2>
