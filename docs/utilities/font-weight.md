@@ -7,7 +7,7 @@ title: font-weight
 Our primary typeface is [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro), an open-source face designed specifically for UI work. We serve it up via `@font-face` in a number of formats, as required by different browsers. WOFF2 is preferred due to it’s better compression, followed by WOFF.
 
 Settings for browser support, OpenType vs TrueType, and font directory path
-can all be found in [_font-settings.scss](https://github.com/fac/fa-origin/blob/master/assets/scss/fonts/_font-settings.scss).
+can all be found in [_font-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/fonts/_font-settings.scss).
 
 <div class="DocsExample DocsExample--render--hidden">
   <div class="DocsExample-preview">

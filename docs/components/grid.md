@@ -4,7 +4,7 @@ layout: simple-full-width
 title: Grid
 ---
 
-Our 12-column mobile-first responsive grid system helps us tightly control layouts as viewport widths vary. Breakpoints are defined in our [utility values](https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss).
+Our 12-column mobile-first responsive grid system helps us tightly control layouts as viewport widths vary. Breakpoints are defined in our [utility values](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss).
 
 * Table of contents
 {:toc}

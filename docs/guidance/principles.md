@@ -14,7 +14,7 @@ We derive class names from design patterns and functionality rather than content
 
 The key elements of Origin are [utilities]({{ site.baseurl }}/guidance/utilities/) and [components]({{ site.baseurl }}/guidance/components/), highly-reusable patterns that we can use across different projects in different scenarios.
 
-The only utilities listed in this public-facing documentation are those we have custom values for. However, we have a much large range of utility mixins, listed on the [fa-css-utilities repo](https://github.com/fac/fa-css-utilities/tree/master/utilities).
+The only utilities listed in this public-facing documentation are those we have custom values for. However, we have a much larger range of utility mixins, listed in the [Origin repo](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/utilities).
 
 ### Syntax
 
