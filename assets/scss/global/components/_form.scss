@@ -15,7 +15,7 @@ html {
   border: none;
   display: block;
   text-align: left;
-  @include clearfix();
+  @include floatContainer();
   @include font-weight(default);
   @include line-height(default);
   @include text-color(gray-5);
@@ -51,7 +51,7 @@ html {
 .Form-field {
   clear: both;
   display: block;
-  @include clearfix();
+  @include floatContainer();
   @include margin-bottom(default);
 }
 
