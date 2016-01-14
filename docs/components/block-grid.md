@@ -10,9 +10,11 @@ Block grids give us a way to evenly split content within a grid. If we want a ro
 
 
 ## How to use
-1. Create a `<div class="BlockGrid">`, the only container required for our block grid (which always clears its floats).
+1. Create a `<div class="BlockGrid">`, the container required for our block grid (which always clears its floats).
 
-2. Add `sm-#`, `md-#`, `lg-#`, `x-lg-#`, or `xx-lg-#` classes to each `<div class="BlockGrid">` to specify the number of items to be displayed. Each class maps to `min-width` a breakpoint, so each class inherits the `width` value of the class which comes before it.
+2. Add `sm-#`, `md-#`, `lg-#`, `x-lg-#`, or `xx-lg-#` classes to the `<div class="BlockGrid">` to specify the number of items to be displayed. Each class maps to `min-width` a breakpoint, so each class inherits the `width` value of the class which comes before it.
+
+3. Add a `<div class="BlockGrid-item">` for each item in your block grid.
 
 Important: don't directly modify `<div class="BlockGrid">` elements for presentation. If you want to add a `background-color`, `padding`, `margin` or other properties, add new `div`s inside grid elements to achieve whatever effect you need.
 
@@ -21,10 +23,10 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
 <div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-2">
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
 </div>
@@ -34,13 +36,13 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
 <div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-3">
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
 </div>
@@ -50,16 +52,16 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
 <div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-4">
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
 </div>
@@ -73,28 +75,28 @@ Use multiple size classes to specify a different number of items in a row for ea
 <div class="DocsExample">
 {% example html %}
 <div class="BlockGrid md-3 lg-5">
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-  <div>
+  <div class="BlockGrid-item">
     <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
 </div>

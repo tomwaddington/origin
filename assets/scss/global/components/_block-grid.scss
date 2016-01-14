@@ -14,6 +14,7 @@
  */
 
 $block-grid-class: "BlockGrid";
+$block-grid-element-class: "BlockGrid-item";
 
 
 /**
@@ -82,7 +83,7 @@ $block-grid-media-queries: true !default;
     }
     @include floatContainer;
 
-    > div {
+    > .#{$block-grid-element-class} {
       display: block;
       float: $default-float;
       height: auto;
@@ -94,7 +95,7 @@ $block-grid-media-queries: true !default;
   }
 
   @if $per-row {
-    > div {
+    > .#{$block-grid-element-class} {
       @if $include-spacing {
         padding: 0 ($spacing/2) $spacing;
       }
