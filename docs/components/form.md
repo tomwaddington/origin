@@ -103,9 +103,9 @@ Add a description here
         Were you on a flat rate scheme on your VAT Registration Date?
       </label>
       <div class="Form-field-inputs">
-        <input class="Form-radioInput" id="vat-frs-yes" placeholder="medianode" type="radio" />
+        <input class="Form-radioInput" id="vat-frs-yes" name="radio_example" type="radio" />
         <label class="Form-inlineLabel" for="vat-frs-yes">Yes</label>
-        <input class="Form-radioInput Form-inlineInput" id="vat-frs-no" placeholder="medianode" type="radio" />
+        <input class="Form-radioInput Form-inlineInput" id="vat-frs-no" name="radio_example" type="radio" />
         <label class="Form-inlineLabel" for="vat-frs-no">No</label>
         <span class="Form-inputNote">
           Only affects the automatically-created initial VAT returns
