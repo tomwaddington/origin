@@ -3,120 +3,100 @@ categories: components
 layout: simple-full-width
 title: Block Grid
 ---
-Block Grid...
+Block grids give us a way to evenly split content within a grid. If we want a row of five images that need to stay evenly spaced no matter the screen size, we use the block grid. Breakpoints are defined in our [utility values](https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss).
 
-Never directly modify the grid. Add additional elements to achieve whatever effect you need.
+* Table of contents
+{:toc}
 
+
+## How to use
+1. Create a `<div class="BlockGrid">`, the only container required for our block grid (which always clears its floats).
+
+2. Add `sm-#`, `md-#`, `lg-#`, `x-lg-#`, or `xx-lg-#` classes to each `<div class="BlockGrid">` to specify the number of items to be displayed. Each class maps to `min-width` a breakpoint, so each class inherits the `width` value of the class which comes before it.
+
+Important: don't directly modify `<div class="BlockGrid">` elements for presentation. If you want to add a `background-color`, `padding`, `margin` or other properties, add new `div`s inside grid elements to achieve whatever effect you need.
+
+
+## Basic examples
 <div class="DocsExample">
 {% example html %}
-<section class="g-row">
-  <div class="g-col">
-    <ol class="List--bare small-block-grid-2">
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-    </ol>
+<div class="BlockGrid sm-2">
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-</section>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample">
 {% example html %}
-<section class="g-row">
-  <div class="g-col">
-    <ol class="List--bare small-block-grid-3">
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-    </ol>
+<div class="BlockGrid sm-3">
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-</section>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample">
 {% example html %}
-<section class="g-row">
-  <div class="g-col">
-    <ol class="List--bare small-block-grid-4">
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-    </ol>
+<div class="BlockGrid sm-4">
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-</section>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div>
 {% endexample %}
 </div>
 
+
+## Changing number of items in a row
+Use multiple size classes to specify a different number of items in a row for each `min-width` breakpoint. This example will stack items vertically by default, display 3 items in a row on medium screens, then 5 in a row on large screens.
+
 <div class="DocsExample">
 {% example html %}
-<section class="g-row">
-  <div class="g-col">
-    <ol class="List--bare small-block-grid-5">
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-      <li>
-        <figure class="MediaContainer">
-          <img class="Media Media--image u-width--100percent" src="https://www.fillmurray.com/460/300" />
-        </figure>
-      </li>
-    </ol>
+<div class="BlockGrid md-3 lg-5">
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
   </div>
-</section>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+  <div>
+    <img alt="Bill Murray" src="https://www.fillmurray.com/460/300" />
+  </div>
+</div>
 {% endexample %}
 </div>

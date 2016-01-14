@@ -4,141 +4,85 @@ layout: simple-full-width
 title: Grid
 ---
 
-Grid...
+Our 12-column mobile-first responsive grid system helps us tightly control layouts as viewport widths vary. Breakpoints are defined in our [utility values](https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss).
 
 * Table of contents
 {:toc}
 
-Never directly modify the grid. Add additional surrounding `div`s or other elements to achieve whatever effect you need.
+## How to use
+1. Create a `<div class="Grid-row">`, a horizontal container for our vertical columns (which always clears its floats).
 
-As with all of Origin, our grid system is built for mobile-first. Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.
+2. Create a `<div class="Grid-col">` for each column you want.
 
-## Basic
-Start by adding an element with a class of `g-row`. This will create a horizontal block to contain vertical columns. Then add divs with a `g-col` class within that `g-row`. Specify the widths of each column with the `small-#`, `medium-#`, and `large-#` classes.
+3. Add `sm-#`, `md-#`, `lg-#`, `x-lg-#`, or `xx-lg-#` classes to each `<div class="Grid-col">` for the behaviour you want. Each class maps to `min-width` a breakpoint, so each class inherits the `width` value of the class which comes before it.
+
+Important: don't directly modify `<div class="Grid-row">` or `<div class="Grid-col">` elements for presentation. If you want to add a `background-color`, `padding`, `margin` or other properties, add new `div`s inside grid elements to achieve whatever effect you need.
+
+
+## Basic example
+Resize your browser window to see how column widths change at different breakpoints.
 
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row">
-  <div class="g-col">12 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col medium-6">6 cols</div>
-  <div class="g-col medium-6">6 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col medium-4">4 cols</div>
-  <div class="g-col medium-4">4 cols</div>
-  <div class="g-col medium-4">4 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col medium-3">3 cols</div>
-  <div class="g-col medium-3">3 cols</div>
-  <div class="g-col medium-3">3 cols</div>
-  <div class="g-col medium-3">3 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-2">2 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
-  <div class="g-col medium-1">1 col</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-6 md-4 lg-9">6, 4, and 9 cols</div>
+  <div class="Grid-col sm-6 md-8 lg-3">6, 8, and 3 cols</div>
 </div>
 {% endexample %}
 </div>
 
 
-## Small
-Small grids expand to large screens easier than large grids cram into small screens.
-
+## All breakpoints example
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row">
-  <div class="g-col small-2">2 cols</div>
-  <div class="g-col small-10">10 cols</div>
-</div>
-<div class="g-row">
-  <div class="g-col small-8">8 cols</div>
-  <div class="g-col small-4">4 cols</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-6 md-4 lg-9 x-lg-6 xx-lg-1">6, 4, 9, 6, 1 cols</div>
+  <div class="Grid-col sm-6 md-8 lg-3 x-lg-6 xx-lg-11">6, 8, 3, 6, 11 cols</div>
 </div>
 {% endexample %}
 </div>
 
 
-## Medium
-Medium sized screens will inherit styles from small, unless you specify a different layout, using the medium grid classes.
+## Centered Columns
+Center your columns by adding a class of `sm-centered` to your `Grid-col`. Large will inherit small centering by default, but you can also center solely on large by applying a `lg-centered` class. To uncenter on large screens use `lg-uncentered`.
 
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row">
-  <div class="g-col medium-2">2 cols</div>
-  <div class="g-col medium-10">10 cols</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-3 sm-centered">3 centered</div>
 </div>
-<div class="g-row">
-  <div class="g-col medium-8">8 cols</div>
-  <div class="g-col medium-4">4 cols</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-6 lg-centered">6 centered</div>
 </div>
-{% endexample %}
+<div class="Grid-row">
+  <div class="Grid-col sm-9 sm-centered lg-uncentered">9 uncentered</div>
 </div>
-
-
-## Nested
-You can nest the grids indefinitely, though at a certain point it will get absurd.
-
-<div class="DocsExample DocsExample--grid">
-{% example html %}
-<div class="g-row">
-  <div class="g-col small-8">8
-    <div class="g-row">
-      <div class="g-col small-8">8 Nested
-        <div class="g-row">
-          <div class="g-col small-8">8 Nested Again</div>
-          <div class="g-col small-4">4</div>
-        </div>
-      </div>
-      <div class="g-col small-4">4</div>
-    </div>
-  </div>
-  <div class="g-col small-4">4</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-11 sm-centered">11 centered</div>
 </div>
 {% endexample %}
 </div>
 
 
 ## Offsets
-Move blocks up to 11 columns to the right by using classes like `.large-offset-1` and `.small-offset-3`.
+Move blocks up to 11 columns to the right by using classes like `.lg-offset-1` and `.sm-offset-3`.
 
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row">
-  <div class="g-col large-1">1</div>
-  <div class="g-col large-11">11</div>
+<div class="Grid-row">
+  <div class="Grid-col md-6 md-offset-6">6, offset 6</div>
 </div>
-<div class="g-row">
-  <div class="g-col large-1">1</div>
-  <div class="g-col large-10 large-offset-1">10, offset 1</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">2</div>
+  <div class="Grid-col md-8 md-offset-2">8, offset 2</div>
 </div>
-<div class="g-row">
-  <div class="g-col large-1">1</div>
-  <div class="g-col large-9 large-offset-2">9, offset 2</div>
+<div class="Grid-row">
+  <div class="Grid-col md-1">1</div>
+  <div class="Grid-col md-9 md-offset-2">9, offset 2</div>
 </div>
-<div class="g-row">
-  <div class="g-col large-1">1</div>
-  <div class="g-col large-8 large-offset-3">8, offset 3</div>
+<div class="Grid-row">
+  <div class="Grid-col md-4">1</div>
+  <div class="Grid-col md-4 md-offset-4">4, offset 4</div>
 </div>
 {% endexample %}
 </div>
@@ -149,15 +93,38 @@ In order to work around browsers' different rounding behaviors, Foundation will 
 
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row">
-  <div class="g-col medium-2">3</div>
-  <div class="g-col medium-2">3</div>
-  <div class="g-col medium-2">3</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
 </div>
-<div class="g-row">
-  <div class="g-col medium-2">3</div>
-  <div class="g-col medium-2">3</div>
-  <div class="g-col medium-2 end">3 end</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2">3</div>
+  <div class="Grid-col md-2 end">3 end</div>
+</div>
+{% endexample %}
+</div>
+
+
+## Nested
+You can nest the grids indefinitely, though at a certain point it will get absurd.
+
+<div class="DocsExample DocsExample--grid">
+{% example html %}
+<div class="Grid-row">
+  <div class="Grid-col sm-8">8
+    <div class="Grid-row">
+      <div class="Grid-col sm-8">8 Nested
+        <div class="Grid-row">
+          <div class="Grid-col sm-8">8 Nested Again</div>
+          <div class="Grid-col sm-4">4</div>
+        </div>
+      </div>
+      <div class="Grid-col sm-4">4</div>
+    </div>
+  </div>
+  <div class="Grid-col sm-4">4</div>
 </div>
 {% endexample %}
 </div>
@@ -166,118 +133,93 @@ In order to work around browsers' different rounding behaviors, Foundation will 
 ## Collapse/Uncollapse Rows
 The `collapse` class lets you remove column gutters (padding).
 
-There are times when you won't want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your `g-row` element. Example removes the gutter at the large breakpoint and then adds the gutter to columns at medium and small.
+There are times when you won't want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your `Grid-row` element. Example removes the gutter at the large breakpoint and then adds the gutter to columns at medium and small.
 
 <div class="DocsExample DocsExample--grid">
 {% example html %}
-<div class="g-row medium-uncollapse large-collapse">
-  <div class="g-col small-6">
-    Removes gutter at large media query
+<div class="Grid-row md-collapse lg-uncollapse">
+  <div class="Grid-col sm-6">
+    Removes gutters at medium, adds back at large
   </div>
-  <div class="g-col small-6">
-    Removes gutter at large media query
+  <div class="Grid-col sm-6">
+    Removes gutters at medium, adds back at large
   </div>
-</div>
-{% endexample %}
-</div>
-
-
-## Centered Columns
-Center your columns by adding a class of `small-centered` to your `g-col`. Large will inherit small centering by default, but you can also center solely on large by applying a `large-centered` class. To uncenter on large screens use `large-uncentered`.
-
-<div class="DocsExample DocsExample--grid">
-{% example html %}
-<div class="g-row">
-  <div class="g-col small-3 small-centered">3 centered</div>
-</div>
-<div class="g-row">
-  <div class="g-col small-6 large-centered">6 centered</div>
-</div>
-<div class="g-row">
-  <div class="g-col small-9 small-centered large-uncentered">9 uncentered</div>
-</div>
-<div class="g-row">
-  <div class="g-col small-11 small-centered">11 centered</div>
 </div>
 {% endexample %}
 </div>
 
 
 ## Source Ordering
-Using these source ordering classes, you can shift columns around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. `medium-push-#`, `large-push-#` is the syntax you'll use. Use `large-reset-order` to reset pushed or pulled columns to their original position on large screens.
+Using these source ordering classes, you can shift columns around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. `md-push-#`, `lg-push-#` is the syntax you'll use. Use `lg-reset-order` to reset pushed or pulled columns to their original position on large screens.
 
 <div class="DocsExample DocsExample--grid DocsExample--grid--sourceOrder">
 {% example html %}
-<div class="g-row">
-  <div class="g-col small-10 small-push-2">10</div>
-  <div class="g-col small-2 small-pull-10">2, last</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-10 sm-push-2">10</div>
+  <div class="Grid-col sm-2 sm-pull-10">2, last</div>
 </div>
-<div class="g-row">
-  <div class="g-col large-9 large-push-3">9</div>
-  <div class="g-col large-3 large-pull-9">3, last</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-9 lg-push-3">9</div>
+  <div class="Grid-col lg-3 lg-pull-9">3, last</div>
 </div>
-<div class="g-row">
-  <div class="g-col large-8 large-push-4">8</div>
-  <div class="g-col large-4 large-pull-8">4, last</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-8 lg-push-4">8</div>
+  <div class="Grid-col lg-4 lg-pull-8">4, last</div>
 </div>
-<div class="g-row">
-  <div class="g-col small-5 small-push-7 medium-7 medium-push-5">7</div>
-  <div class="g-col small-7 small-pull-5 medium-5 medium-pull-7">5, last</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-5 sm-push-7 md-7 md-push-5">7</div>
+  <div class="Grid-col sm-7 sm-pull-5 md-5 md-pull-7">5, last</div>
 </div>
-<div class="g-row">
-  <div class="g-col medium-6 medium-push-6">6</div>
-  <div class="g-col medium-6 medium-pull-6">6, last</div>
+<div class="Grid-row">
+  <div class="Grid-col md-6 md-push-6">6</div>
+  <div class="Grid-col md-6 md-pull-6">6, last</div>
 </div>
 {% endexample %}
 </div>
 
 
-## Show or hide based on viewport size
-Available classes:
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example css %}
-.hide-for-small-only
-.show-for-small-only
-
-.hide-for-medium-up
-.show-for-medium-up
-.hide-for-medium-only
-.show-for-medium-only
-
-.hide-for-large-up
-.show-for-large-up
-.hide-for-large-only
-.show-for-large-only
-
-.hide-for-xlarge-up
-.show-for-xlarge-up
-.hide-for-xlarge-only
-.show-for-xlarge-only
-
-.hide-for-xxlarge-up
-.show-for-xxlarge-up
-{% endexample %}
+## Example of all column widths
+<div class="DocsExample DocsExample--grid">
+{% example html %}
+<div class="Grid-row">
+  <div class="Grid-col">12 cols</div>
 </div>
-
-
-## Show or hide based on orientation
-Available classes:
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example css %}
-.show-for-landscape
-.show-for-portrait
-{% endexample %}
+<div class="Grid-row">
+  <div class="Grid-col sm-6">6 cols</div>
+  <div class="Grid-col sm-6">6 cols</div>
 </div>
-
-
-## Show or hide based on touch availability
-Available classes:
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example css %}
-.hide-for-touch
-.show-for-touch
+<div class="Grid-row">
+  <div class="Grid-col sm-4">4 cols</div>
+  <div class="Grid-col sm-4">4 cols</div>
+  <div class="Grid-col sm-4">4 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+  <div class="Grid-col sm-3">3 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+  <div class="Grid-col md-2">2 cols</div>
+</div>
+<div class="Grid-row">
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+  <div class="Grid-col lg-1">1 col</div>
+</div>
 {% endexample %}
 </div>
