@@ -2,61 +2,15 @@
   Guidance
 </h4>
 <nav class="menu docs-menu">
-  <a class="menu-item {% if page.title == "Principles" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/principles/">
-    Principles
-  </a>
-  <a class="menu-item {% if page.title == "Code style" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/code-style/">
-    Code style
-  </a>
-  <a class="menu-item {% if page.title == "Naming conventions" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/naming-conventions/">
-    Naming conventions
-  </a>
-  <a class="menu-item {% if page.title == "Base styles" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/base-styles/">
-    Base styles
-  </a>
-  <a class="menu-item {% if page.title == "Utilities" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/utilities/">
-    Utilities
-  </a>
-  <a class="menu-item {% if page.title == "Components" %}selected{% endif %}" href="{{ site.baseurl }}/guidance/components/">
-    Components
-  </a>
+  {% for page in site.pages %}
+    {% if page.categories contains 'guidance' %}
+    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+      {{ page.title }}
+    </a>
+    {% endif %}
+  {% endfor %}
 </nav>
 
-<h4 class="menu-title">
-  Utilities
-</h4>
-<nav class="menu docs-menu">
-  <span class="menu-item">
-    border
-  </span>
-  <span class="menu-item">
-    border-radius
-  </span>
-  <a class="menu-item {% if page.title == "background-color" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/background-color/">
-    background-color
-  </a>
-  <a class="menu-item {% if page.title == "font-family" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/font-family/">
-    font-family
-  </a>
-  <a class="menu-item {% if page.title == "font-size" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/font-size/">
-    font-size
-  </a>
-  <a class="menu-item {% if page.title == "font-weight" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/font-weight/">
-    font-weight
-  </a>
-  <a class="menu-item {% if page.title == "line-height" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/line-height/">
-    line-height
-  </a>
-  <span class="menu-item">
-    list-item
-  </span>
-  <a class="menu-item {% if page.title == "spacing" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/spacing/">
-    spacing
-  </a>
-  <a class="menu-item {% if page.title == "text-color" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/text-color/">
-    text-color
-  </a>
-</nav>
 
 <h4 class="menu-title">
   Components
@@ -104,13 +58,25 @@
   <span class="menu-item">
     TextInput
   </span>
+  {% for page in site.pages %}
+    {% if page.categories contains 'components' %}
+    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+      {{ page.title }}
+    </a>
+    {% endif %}
+  {% endfor %}
 </nav>
 
+
 <h4 class="menu-title">
-  Layout
+  Utilities
 </h4>
 <nav class="menu docs-menu">
-  <span class="menu-item">
-    Grid
-  </span>
+  {% for page in site.pages %}
+    {% if page.categories contains 'utilities' %}
+    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+      {{ page.title }}
+    </a>
+    {% endif %}
+  {% endfor %}
 </nav>

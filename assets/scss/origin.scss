@@ -33,8 +33,15 @@
 /* Global: import utilities */
 @import "../../node_modules/fa-css-utilities/_utilities";
 
-/* Local: Heading component settings — copy file if implementing Origin into a project */
+/* Settings: required */
+@import "local/fonts/_font-settings";
 @import "local/fonts/_heading-settings";
+
+/* Global: functions to handle fonts correctly based on font settings */
+@import "global/fonts/_font-functions";
+
+/* Global: load fonts for `@font-face` use */
+@import "global/fonts/_source-sans-pro";
 
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";
@@ -42,8 +49,11 @@
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
 @import "global/components/_card";
+@import "global/components/_grid";
+@import "global/components/_block-grid";
 @import "global/components/_heading";
 @import "global/components/_list";
+@import "global/components/_media";
 @import "global/components/_navbar";
 @import "global/components/_notice";
 @import "global/components/_segmented-control";

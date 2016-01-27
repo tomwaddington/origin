@@ -10,7 +10,7 @@ port: 8001
 baseurl: "/origin"
 
 # Because we use pages rather than posts for our content, we have to list those
-# categories here to be able to list pages by category 
+# categories here to be able to list pages by category
 categories: [guidance, utilities, components, layout]
 
 # Markdown processors
@@ -19,7 +19,7 @@ highlighter: rouge
 kramdown:
   auto_ids: true
 
-version: 1.1.2
+version: 1.1.6
 
 sass:
   # Directory points to root allowing `@import` of .scss files from anywhere
