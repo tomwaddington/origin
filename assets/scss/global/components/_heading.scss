@@ -175,6 +175,22 @@ $Heading-spacing: 0;
 }
 
 
+/* Underlines
+  ========================================================================== */
+
+.Heading--underline {
+  @include border-bottom(default, gray-12);
+}
+
+.Heading--underline--dark {
+  @include border-bottom(default, gray-8)
+}
+
+.Heading--underline--light {
+  @include border-bottom(default, gray-14);
+}
+
+
 /* Weights
   ========================================================================== */
 

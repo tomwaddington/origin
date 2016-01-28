@@ -281,6 +281,26 @@ The Heading component doesn't have any margin by default, so it's very flexible.
 {% endexample %}
 
 
+## Underlines
+{% example html %}
+<h2 class="Heading Heading--weight--bold Heading--underline">
+  Heading With Underline
+</h2>
+{% endexample %}
+
+{% example html %}
+<h2 class="Heading Heading-weight--bold Heading--underline--light">
+  Heading With Light Underline
+</h2>
+{% endexample %}
+
+{% example html %}
+<h2 class="Heading Heading--weight--bold Heading--underline--dark">
+  Heading With Dark Underline;
+</h2>
+{% endexample %}
+
+
 ## Weights
 {% example html %}
 <h2 class="Heading Heading--weight--light Heading--x-large">
