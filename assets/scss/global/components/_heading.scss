@@ -178,15 +178,15 @@ $Heading-spacing: 0;
 /* Underlines
   ========================================================================== */
 
-.Heading--underline {
+.Heading--underlined {
   @include border-bottom(default, gray-12);
 }
 
-.Heading--underline--dark {
+.Heading--underlined--dark {
   @include border-bottom(default, gray-8)
 }
 
-.Heading--underline--light {
+.Heading--underlined--light {
   @include border-bottom(default, gray-14);
 }
 

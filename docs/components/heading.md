@@ -282,20 +282,21 @@ The Heading component doesn't have any margin by default, so it's very flexible.
 
 
 ## Underlines
+When further distinction is required between a heading and the content below and underline can be applied. An example of this would be the [glossary index listings](http://www.freeagent.com/glossary).
 {% example html %}
-<h2 class="Heading Heading--weight--bold Heading--underline">
+<h2 class="Heading Heading--weight--bold Heading--underlined">
   Heading With Underline
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading-weight--bold Heading--underline--light">
+<h2 class="Heading Heading-weight--bold Heading--underlined--light">
   Heading With Light Underline
 </h2>
 {% endexample %}
 
 {% example html %}
-<h2 class="Heading Heading--weight--bold Heading--underline--dark">
+<h2 class="Heading Heading--weight--bold Heading--underlined--dark">
   Heading With Dark Underline;
 </h2>
 {% endexample %}
