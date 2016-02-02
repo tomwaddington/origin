@@ -21,7 +21,7 @@ The second is to use utility _classes_ in HTML, like so:
 </p>
 {% endhighlight %}
 
- These classes can be generated in your output CSS file by setting one or more variables in [`_utility-settings.scss`](https://github.com/fac/origin/blob/master/assets/scss/local/utilities/_utility-settings.scss) to `true`. **Setting these to `true` will add weight to your output CSS, so be careful.** Utility classes should only ever generally be used as exceptions; components should always know about their modifiers and states.
+ These classes can be generated in your output CSS file by setting one or more variables in [`_utility-settings.scss`]({{ site.github.repo }}/blob/master/assets/scss/local/utilities/_utility-settings.scss) to `true`. **Setting these to `true` will add weight to your output CSS, so be careful.** Utility classes should only ever generally be used as exceptions; components should always know about their modifiers and states.
 
 
 ## Why the weird syntax?
