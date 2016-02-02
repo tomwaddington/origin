@@ -9,9 +9,27 @@
     right;
 
   @each $float-value in $float-values {
-  
+
+    /**
+     * Generate `float` classes without breakpoints
+     */
+
     .u-float--#{$float-value} {
       float: $float-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate `float` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-float--#{$float-value} {
+          float: $float-value !important;
+        }
+      }
+
     }
   
   }
