@@ -51,11 +51,6 @@
   
     /* Without `!important` */
     .u-position--#{$position-value} {
-      position: $position-value;
-    }
-  
-    /* With `!important` */
-    .u-position--#{$position-value}--important {
       position: $position-value !important;
     }
   
