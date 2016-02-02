@@ -18,11 +18,29 @@
     table-row;
 
   @each $display-value in $display-values {
-  
+
+    /**
+     * Generate `display` classes without breakpoints
+     */
+
     .u-display--#{$display-value} {
       display: $display-value !important;
     }
-  
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate `display` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-display--#{$display-value} {
+          display: $display-value !important;
+        }
+      }
+
+    }
+
   }
 
 }
@@ -40,11 +58,29 @@
     visible;
 
   @each $visibility-value in $visibility-values {
-  
+
+    /**
+     * Generate `visibility` classes without breakpoints
+     */
+
     .u-visibility--#{$visibility-value} {
       visibility: $visibility-value !important;
     }
-  
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate `display` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-visibility--#{$visibility-value} {
+          visibility: $visibility-value !important;
+        }
+      }
+
+    }
+
   }
 
 }
