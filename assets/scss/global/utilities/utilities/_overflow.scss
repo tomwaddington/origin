@@ -6,14 +6,23 @@
   $overflow-values:
     auto
     hidden
+    scroll
     visible;
 
   @each $overflow-value in $overflow-values {
-  
+
     .u-overflow--#{$overflow-value} {
       overflow: $overflow-value !important;
     }
-  
+
+    .u-overflow-x--#{$overflow-value} {
+      overflow-x: $overflow-value !important;
+    }
+
+    .u-overflow-y--#{$overflow-value} {
+      overflow-y: $overflow-value !important;
+    }
+
   }
 
 }
