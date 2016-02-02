@@ -19,7 +19,6 @@
 /**
  * This mixin allows us to use shorthand values for the `margin` property.
  *
- * The mixin runs through our spacing values, given in the first argument, then
  * creates another list of the mappings of those spacing values, which it then
  * feeds to the `margin` property.
  */
@@ -57,22 +56,72 @@
 
 @if $u-classes-margin == true {
 
-  @each $spacing-size, $spacing-value in $spacing-values {
+  @each $spacing-size, $standard-scale-spacing-value in $standard-scale-spacing-values {
+
+    /**
+     * Generate standard scale of spacing classes without breakpoints
+     *
+     * Note that classes will not be generated for the full scale of spacing
+     * values, only the standard `xx-small` > `xx-large` scale, because in
+     * practice the full scale has never been needed.
+     */
 
     .u-margin--#{$spacing-size} {
-      margin: $spacing-value !important;
+      margin: $standard-scale-spacing-value !important;
     }
+
     .u-margin-bottom--#{$spacing-size} {
-      margin-bottom: $spacing-value !important;
+      margin-bottom: $standard-scale-spacing-value !important;
     }
+
     .u-margin-left--#{$spacing-size} {
-      margin-left: $spacing-value !important;
+      margin-left: $standard-scale-spacing-value !important;
     }
+
     .u-margin-right--#{$spacing-size} {
-      margin-right: $spacing-value !important;
+      margin-right: $standard-scale-spacing-value !important;
     }
+
     .u-margin-top--#{$spacing-size} {
-      margin-top: $spacing-value !important;
+      margin-top: $standard-scale-spacing-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate standard scale of spacing classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin--#{$spacing-size} {
+          margin: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-bottom--#{$spacing-size} {
+          margin-bottom: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-left--#{$spacing-size} {
+          margin-left: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-right--#{$spacing-size} {
+          margin-right: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-top--#{$spacing-size} {
+          margin-top: $standard-scale-spacing-value !important;
+        }
+      }
+
     }
 
   }
