@@ -4,21 +4,20 @@ layout: page
 title: Utilities
 ---
 
-Our CSS utilities define all of our global CSS values and provide universal methods of declaring them.
-
+Utilities come in two flavours: Sass mixins and HTML classes.
 
 ## Key files
 
-**[`_utility-values.scss`](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss)**  
+**[`_utility-values.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss)**  
 Where we define all of our raw CSS values and assign them to variables.
 
-**[`_utility-aliases.scss`](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-aliases.scss)**  
+**[`_utility-aliases.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-aliases.scss)**  
 Where we map aliases to our variables. Doing so lets us reference those aliases in mixins, and lets us optionally generate utility classes in the output CSS.
 
-**[`_project-aliases.scss`](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_project-aliases.scss)**  
+**[`_project-aliases.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_project-aliases.scss)**  
 Where project-specific aliases are defined. Doing so means we aren’t continually declaring things like `@include line-height(x-loose)` when `x-loose` is actually the default `line-height` for a particular project. In this file we can just assign `x-loose` to `default` for that project only.
 
-**[`_utility-settings.scss`](https://github.com/fac/origin/blob/master/assets/scss/local/_utility-settings.scss)**  
+**[`_utility-settings.scss`]({{ site.github.repo }}/blob/master/assets/scss/local/_utility-settings.scss)**  
 Where we define whether or not to render utility classes in the output CSS. This file is cloned and customised for each project.
 
 
@@ -92,12 +91,17 @@ This functionality provides a range of benefits:
 
 ## Utility classes
 
+## Classes
+Each utility class applies one value to one property. They're designed to do one thing no matter what. They're predictable, composable, and immutable.  
+
+Our CSS utilities define all of our global CSS values and provide universal methods of declaring them.
+
 Utility classes can be generated in your output CSS so they can be applied directly to HTML elements. They will produce the same effect as using the utility mixins, with one very important difference: **utility classes all have `!important` set**. This is deliberate; utility classes should _do one thing no matter what_.
 
 Utility classes should be used sparingly. They’re useful for quickly prototyping ideas or hacking together a quick modification of a component before deciding whether to actually make that modification _part_ of the component. But always aim to use utility mixins; doing so encourages the idea of building self-contained components. Components should define and control their own states and variations.
 
 ### How to generate utility classes
-Set a utility to `true` in your project’s [`_utility-settings.scss`](https://github.com/fac/origin/blob/master/assets/scss/local/_utility-settings.scss) and the associated utility classes will appear in your output CSS file. Naturally these will add weight to your file, so keep an eye on the file size.
+Set a utility to `true` in your project’s [`_utility-settings.scss`]({{ site.github.repo }}/blob/master/assets/scss/local/_utility-settings.scss) and the associated utility classes will appear in your output CSS file. Naturally these will add weight to your file, so keep an eye on the file size.
 
 ### Example
 
