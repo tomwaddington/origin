@@ -45,7 +45,7 @@ Separating the structure and presentation of headings like is extremely useful. 
 ## Mixin
 The Heading component can be integrated into stylesheets for other components and layouts using the `Heading` mixin.
 
-The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility aliases](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-aliases.scss). Arguments must be declared in alphabetical order to work properly.
+The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility aliases]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-aliases.scss). Arguments must be declared in alphabetical order to work properly.
 
 ### Examples
 <div class="DocsExample DocsExample--render--hidden">
@@ -63,7 +63,7 @@ The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margi
 ## Default settings for projects
 We use different default colors, fonts, and weights for headings in different projects. We could just override our global defaults when required, but continually doing so would be painful.
 
-Instead we can define default settings for projects by editing the contents of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+Instead we can define default settings for projects by editing the contents of [_heading-settings.scss]({{ site.github.repo }}/blob/master/assets/scss/local/fonts/_heading-settings.scss).
 
 This file exists locally for projects, so changing it wont't affect the Origin repo.
 
@@ -167,9 +167,9 @@ These size examples show both HTML and CSS mixin implementations.
 
 
 ## Colors
-If you need a color or shade outside of this selection, you can use a utility class (e.g. `u-text-color--fa-blue`) from our list of [text color values](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-aliases.scss) — only if there are only 1 or 2 instances of the heading color in whatever you're working on.
+If you need a color or shade outside of this selection, you can use a utility class (e.g. `u-text-color--fa-blue`) from our list of [text color values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-aliases.scss) — only if there are only 1 or 2 instances of the heading color in whatever you're working on.
 
-If you want to set an alternative default heading color for your whole project, do so in your local copy of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+If you want to set an alternative default heading color for your whole project, do so in your local copy of [_heading-settings.scss]({{ site.github.repo }}/blob/master/assets/scss/local/fonts/_heading-settings.scss).
 
 {% example html %}
 <h2 class="Heading Heading--color--dark Heading--x-large">
