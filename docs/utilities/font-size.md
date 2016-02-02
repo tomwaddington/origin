@@ -1,10 +1,85 @@
 ---
 categories: utilities
 layout: page
+scss-filename: _font-size.scss
 title: font-size
 ---
+Our `font-size` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `font-size` Sass mixin, or using `u-font-size--#` utility classes in HTML.
 
-## Standard scale
+Using the Sass mixin is preferred, as it forces us to consider all objects as [components]({{ site.baseurl }}/guidance/components). Applying utility classes in HTML enforces `!important`, as they're intended to be immutable — applying one property and value no matter what.
+
+Rules can optionally be triggered only at certain `@media` breakpoints. There's also a larger numerical scale of values available through the mixin, though these should rarely be needed.
+
+
+### Examples
+
+Applies default `font-size`
+
+<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
+{% example scss %}
+@include font-size(default);
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example html %}
+<div class="u-font-size--default"></div>
+{% endexample %}
+</div>
+
+
+Applies extra large `font-size` at large [breakpoint]({{ site.baseurl }}/utilities/breakpoint)
+
+<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
+{% example scss %}
+@include break(lg) {
+  @include font-size(x-large);
+}
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example html %}
+<div class="u-lg-font-size--x-large"></div>
+{% endexample %}
+</div>
+
+
+Applies large `font-size` at medium [breakpoint]({{ site.baseurl }}/utilities/breakpoint)
+
+<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
+{% example scss %}
+@include break(md) {
+  @include font-size(large);
+}
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example html %}
+<div class="u-md-font-size--large"></div>
+{% endexample %}
+</div>
+
+
+Applies small `font-size`, including `!important`
+
+<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
+{% example scss %}
+@include break(md) {
+  @include font-size(small, !important);
+}
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example html %}
+<div class="u-font-size--small"></div>
+{% endexample %}
+</div>
+
+
+## Standard scale visual reference
 
 <div class="DocsExample DocsExample--render--hidden">
   <div class="DocsExample-preview">
@@ -86,7 +161,40 @@ title: font-size
 
 
 
-## Full scale
+## Media queries
+`font-size` values can selectively only be applied when certain `min-width` viewport breakpoints are triggered.
+
+This example uses the large `lg` breakpoint, but other options include small `sm`, medium `md`, x-large `x-lg`, and xx-large `xx-lg`.
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--7-lg">
+      <strong>large; size 7</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+{% example scss %}
+@include break(lg) {
+  @include font-size(large);
+}
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+  <div class="DocsExample-preview">
+    <p class="TextExample TextExample--font-size--7-lg">
+      <strong>large; size 7</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+    </p>
+  </div>
+{% example html %}
+<div class="u-lg-font-size--large">
+  <strong>large; size 7</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
+{% endexample %}
+</div>
+
+
+
+## Full scale visual reference
 
 <div class="DocsExample DocsExample--render--hidden">
   <div class="DocsExample-preview">
