@@ -1,4 +1,4 @@
-/* `flexbox` 
+/* `flexbox`
    ========================================================================== */
 
 /**
@@ -8,7 +8,7 @@
  * container box.
  *
  * The 'inline-flex' value causes an element to generate a inline-level
- * flex container box. 
+ * flex container box.
  *
  * http://w3.org/tr/css3-flexbox/#flex-containers
  *
@@ -20,20 +20,19 @@
  */
 
 @mixin flexbox($value: flexbox, $important: null) {
-    
-  @if $value == flex {
-    display: -webkit-box $important;
-    display: -webkit-flex $important;
-    display: -moz-flex $important;
-    display: -ms-flexbox $important;
-    display: flex $important;
-  }
-  @else if $value == inline-flex {
+
+  @if $value == inline-flex {
     display: -webkit-inline-box $important;
     display: -webkit-inline-flex $important;
     display: -moz-inline-flex $important;
     display: -ms-inline-flexbox $important;
     display: inline-flex $important;
+  } @else {
+    display: -webkit-box $important;
+    display: -webkit-flex $important;
+    display: -moz-flex $important;
+    display: -ms-flexbox $important;
+    display: flex $important;
   }
 
 }
@@ -45,7 +44,7 @@
 @if $u-classes-flexbox == true {
 
   .u-flexbox {
-    @include flexbox(flex, !important);
+    @include flexbox(!important);
   }
 
   .u-inline-flexbox {
