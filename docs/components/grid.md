@@ -1,6 +1,7 @@
 ---
 categories: components
 layout: simple-full-width
+scss-filename: _grid.scss
 title: Grid
 ---
 
