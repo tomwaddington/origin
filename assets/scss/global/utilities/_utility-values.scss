@@ -28,12 +28,26 @@ $border-radius--5: 10px;
 
 /* Breakpoints
    ========================================================================== */
+/* Values */
+$breakpoint--small:    0;
+$breakpoint--medium:   44rem;
+$breakpoint--large:    60rem;
+$breakpoint--x-large:  76rem;
+$breakpoint--xx-large: 92rem;
 
 $small-breakpoint:    0;
 $medium-breakpoint:   44rem;
 $large-breakpoint:    60rem;
 $x-large-breakpoint:  76rem;
 $xx-large-breakpoint: 92rem;
+/* Map */
+$breakpoint-values: (
+ sm:    $breakpoint--small,
+ md:    $breakpoint--medium,
+ lg:    $breakpoint--large,
+ x-lg:  $breakpoint--x-large,
+ xx-lg: $breakpoint--xx-large
+);
 
 
 /* Colors
