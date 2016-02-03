@@ -23,8 +23,8 @@
   }
 
 }
-  
-  
+
+
 /* `font-style`
    ========================================================================== */
 
@@ -36,11 +36,11 @@
     oblique;
 
   @each $font-style-value in $font-style-values {
-  
+
     .u-font-style--#{$font-style-value} {
       font-style: $font-style-value !important;
     }
-  
+
   }
 
 }
@@ -58,11 +58,11 @@
     right;
 
   @each $text-align-value in $text-align-values {
-  
+
     .u-text-align--#{$text-align-value} {
       text-align: $text-align-value !important;
     }
-  
+
   }
 
 }
@@ -90,7 +90,7 @@
 }
 
 @if $u-classes-text-formatting == true {
-  
+
   .u-text-truncate {
     @include text-truncate(!important);
   }
@@ -102,8 +102,8 @@
    ========================================================================== */
 
 /**
- * Forces text onto multiple lines (only required when the text of it's parent
- * element is being truncated) 
+ * Forces text onto multiple lines (only required when the text of its parent
+ * element is being truncated)
  *
  * Example usage:
  * `@include text-multiLine;`
@@ -147,11 +147,11 @@
     normal;
 
   @each $word-wrap-value in $word-wrap-values {
-  
+
     .u-word-wrap--#{$word-wrap-value} {
       word-wrap: $word-wrap-value !important;
     }
-  
+
   }
 
 }

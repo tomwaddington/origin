@@ -9,8 +9,8 @@
  */
 
 @mixin rotate($degree) {
-	-webkit-transform: rotate($degree);
-	transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
 }
 
 /**
