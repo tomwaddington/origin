@@ -311,8 +311,6 @@ ul ul ul {
   @include border-radius-top-left(default);
   @include border-radius-top-right(default);
   @include border(default, gray-14);
-  @include font-size(default, !important);
-  @include line-height(default, !important);
   @include padding(default);
 
   + .highlight {
