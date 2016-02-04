@@ -40,8 +40,8 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 <div class="DocsExample DocsExample--grouped">
 {% example html %}
 <div class="u-floatContainer">
-  <div class="u-background-color--gray-13 u-float--right">
-    This element floats to the right
+  <div class="u-background-color--gray-13 u-md-float--right">
+    This doesn't float until the medium breakpoint, when it floats to the right
   </div>
 </div>
 {% endexample %}
@@ -54,7 +54,9 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 }
 
 .MyComponent-child {
-  float: right;
+  @include break(md) {
+    float: right;
+  }
 }
 {% endexample %}
 </div>
