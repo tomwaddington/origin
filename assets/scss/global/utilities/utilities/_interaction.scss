@@ -31,11 +31,10 @@
 
 @mixin tap-highlight($value, $important: null) {
   @if $value == none {
-    -webkit-tap-highlight-color: rgba(0,0,0,0) $important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) $important;
     -webkit-tap-highlight-color: transparent $important;
     -webkit-touch-callout: none $important;
-  }
-  @else {
+  } @else {
     -webkit-tap-highlight-color: $value $important;
     -webkit-tap-highlight-color: $value $important;
     -webkit-touch-callout: $value $important;
@@ -45,7 +44,6 @@
 @if $u-classes-interaction == true {
 
   .u-tap-highlight--none {
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
   }
@@ -58,13 +56,12 @@
 
 @mixin user-select($values...) {
   -webkit-user-select: $values;
-  -moz-user-select:    $values;
-  -ms-user-select:     $values;
-  user-select:         $values;
+  -moz-user-select: $values;
+  -ms-user-select: $values;
+  user-select: $values;
 }
 
 @if $u-classes-interaction == true {
-
 
   @each $user-select-value in $user-select-values {
 
