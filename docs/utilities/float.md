@@ -4,7 +4,7 @@ layout: page
 scss-filename: _float.scss
 title: float
 ---
-Use to apply `float` values with utility classes, and ‘clearfix’ hack with a mixin or utility classes.
+Use to apply `float` values with utility classes, and ‘clearfix’ hack with a mixin or utility classes. Values can optionally be applied only at specific [breakpoints]({{ site.baseurl }}/utilities/breakpoint).
 
 Related: [clear]({{ site.baseurl }}/utilities/clear)
 
