@@ -10,7 +10,7 @@ title: background
 
 ## background-color
 
-These are the background colors we’re using in production — no more. All colors are defined in [_utility-values.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss) and given aliases in [_utility-aliases.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-aliases.scss). New colors should be added only when they’re actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.
+These are the background colors we’re using in production — no more. All colors are defined in [_utility-values.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss). New colors should be added only when they’re actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.
 
 
 ### Primary palette
