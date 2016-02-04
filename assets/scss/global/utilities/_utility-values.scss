@@ -366,11 +366,11 @@ $flex-basis-values:
   (0, 0),
   (20percent,  20%),
   (25percent,  25%),
-  (third,      100/3*1%),
+  (third,      100 / 3 * 1%),
   (40percent,  40%),
   (50percent,  50%),
   (60percent,  60%),
-  (two-thirds, 100/3*2%),
+  (two-thirds, 100 / 3 * 2%),
   (75percent,  75%),
   (80percent,  80%),
   (100percent, 100%);
@@ -600,11 +600,11 @@ $min-height-values:
 
 $width-values:
   (0, 0)
-  (half, 100/2*1%)
-  (quarter, 100/4*1%)
-  (third, 100/3*1%)
-  (three-quarters, 100/4*3%)
-  (two-thirds, 100/3*2%)
+  (half, 100 / 2 * 1%)
+  (quarter, 100 / 4 * 1%)
+  (third, 100 / 3 * 1%)
+  (three-quarters, 100 / 4 * 3%)
+  (two-thirds, 100 / 3 * 2%)
   (100percent, 100%)
   (100viewport, 100vw);
 
@@ -714,15 +714,15 @@ $list-style-values:
 
 $opacity-values:
   (0, 0)
-  (10, 0.1)
-  (20, 0.2)
-  (30, 0.3)
-  (40, 0.4)
-  (50, 0.5)
-  (60, 0.6)
-  (70, 0.7)
-  (80, 0.8)
-  (90, 0.9)
+  (10, .1)
+  (20, .2)
+  (30, .3)
+  (40, .4)
+  (50, .5)
+  (60, .6)
+  (70, .7)
+  (80, .8)
+  (90, .9)
   (100, 1);
 
 
