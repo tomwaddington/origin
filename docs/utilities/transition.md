@@ -8,16 +8,24 @@ Apply `transition` values with a mixin.
 
 Related: [animation]({{ site.baseurl }}/utilities/animation)
 
-Arguments for `transition` are optional. When none are defined, values fall back to our global defaults as defined in [`_animation.scss`]({{ site.github.repo }}/tree/master/assets/scss/global/utilities/utilities/_animation.scss)
+Arguments for `transition` are optional. `property`, `duration`, and `timing-function` come from our global defaults defined in [`_utility-values.scss`]({{ site.github.repo }}/tree/master/assets/scss/global/utilities/_utility-values.scss).
 
+### Format
 <div class="DocsExample DocsExample--render--hidden">
 {% example scss %}
-  @include transition([transition-property], [transition-duration], [transition-timing-function], [transition-delay]);
+  @include transition(
+    [property],
+    [duration],
+    [timing-function],
+    [delay]
+  );
 {% endexample %}
 </div>
 
-### Examples
+Related: [transition]({{ site.baseurl }}/utilities/transition)
 
+
+### Examples
 
 <div class="DocsExample DocsExample--render--hidden">
   <div class="DocsExample-preview DocsExample-preview--transition DocsExample-preview--transition1">
@@ -33,7 +41,9 @@ Arguments for `transition` are optional. When none are defined, values fall back
 }
 
 .MyComponentParent:hover {
-  @include transform(scale(1.5) translate3d(200%, 0, 0));
+  @include transform(
+    scale(1.5) translate3d(200%, 0, 0)
+  );
 }
 {% endexample %}
 </div>
@@ -49,11 +59,17 @@ Arguments for `transition` are optional. When none are defined, values fall back
   </div>
 {% example scss %}
 .MyComponent {
-  @include transition(all, 1s, ease);
+  @include transition(
+    all,
+    1s,
+    ease
+  );
 }
 
 .MyComponentParent:hover {
-  @include transform(scale(1.5) translate3d(200%, 0, 0));
+  @include transform(
+    scale(1.5) translate3d(200%, 0, 0)
+  );
 }
 {% endexample %}
 </div>
