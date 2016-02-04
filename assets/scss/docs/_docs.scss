@@ -530,7 +530,7 @@ ul ul ul {
  * areas of content
  */
 
-@include break(md) {
+@include break(lg) {
   .SplitView {
     display: table;
     height: 100%;
@@ -545,7 +545,7 @@ ul ul ul {
   color: rgba(255, 255, 255, .8);
   padding: 0;
 
-  @include break(md) {
+  @include break(lg) {
     display: table-cell;
     left: 25%;
     position: relative;
@@ -555,8 +555,21 @@ ul ul ul {
   }
 }
 
+.SplitView-primary-content {
+  color: rgba(255, 255, 255, .6);
+
+  @include break(md) {
+    @include padding-left(large);
+    @include padding-right(large);
+  }
+}
+
 .SplitView-primary-content a {
   color: #fff;
+  text-decoration: underline;
+}
+
+.SplitView-primary-content a:hover {
   text-decoration: underline;
 }
 
@@ -564,19 +577,11 @@ ul ul ul {
   color: #fff;
 }
 
-.SplitView-primary-content a:hover {
-  text-decoration: underline;
-}
-
-.SplitView-primary-content {
-  color: rgba(255, 255, 255, .6);
-}
-
 .SplitView-secondary {
   @include floatContainer;
   background: #fff;
 
-  @include break(md) {
+  @include break(lg) {
     display: table-cell;
     position: relative;
     right: 75%;
@@ -588,7 +593,7 @@ ul ul ul {
 .SplitView-secondary-content {
   @include padding(large);
 
-  @include break(md) {
+  @include break(lg) {
     float: right;
     max-width: 18em;
     width: 100%;
