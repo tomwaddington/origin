@@ -6,111 +6,113 @@ title: padding
 ---
 Our `padding` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `padding` Sass mixin, or using `u-padding--#` utility classes in HTML.
 
+Values can optionally be applied only at specific [breakpoints]({{ site.baseurl }}/utilities/breakpoint).
+
 Using the Sass mixin is preferred, as it forces us to consider all objects as [components]({{ site.baseurl }}/guidance/components). Applying utility classes in HTML enforces `!important`, as they're intended to be immutable — applying one property and value no matter what.
 
-Rules can optionally be triggered only at certain `@media` breakpoints. There's also a larger numerical scale of values available through the mixin, though these should rarely be needed.
+There's also a larger numerical scale of values available through the mixin, though these should rarely be needed.
+
+* Table of contents
+{:toc}
 
 
 ### Examples
 
 Applies default padding to all four sides of an element
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include padding(default);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--default"></div>
+{% example scss %}
+.MyComponent {
+  @include padding(default);
+}
 {% endexample %}
 </div>
 
 
 Applies large padding to left side only
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include padding-left(large);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding-left--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding-left--large"></div>
-{% endexample %}
-</div>
-
-
-Shorthand; applies default padding to top and bottom, and large padding to left and right
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
 {% example scss %}
-@include padding(default large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding-top--default u-padding-right--large u-padding-bottom--default u-padding-left--large"></div>
-{% endexample %}
-</div>
-
-
-Applies small padding to bottom side at our medium breakpoint
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include break(md) {
-  @include padding-bottom(small);
+.MyComponent {
+  @include padding-left(large);
 }
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+
+Shorthand; applies small `padding-bottom` and `padding-top`, and large `padding-left` to `padding-right`
+
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-md-padding-bottom--small"></div>
+<div class="u-background-color--gray-12 u-padding-top--small u-padding-right--large u-padding-bottom--small u-padding-left--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(small large);
+}
+{% endexample %}
+</div>
+
+
+Turning a small `padding-bottom` into extra large at the medium breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding-bottom--small u-md-padding-bottom--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding-bottom(small);
+
+  @include break(md) {
+    @include padding-bottom(x-large);
+  }
+}
 {% endexample %}
 </div>
 
 
 Shorthand; applies different paddings to all four sides
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include padding(default large x-large xx-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-padding-top--default u-padding-right--large u-padding-bottom--x-large u-padding-left--xx-small"></div>
-{% endexample %}
+<div class="u-background-color--gray-12 u-padding-bottom--x-large u-padding-left--xx-small u-padding-right--large u-padding-top--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
 </div>
-
-
-Shorthand; applies `!important`
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include padding(x-large, !important);
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--x-large"></div>
-{% endexample %}
-</div>
-
-
-Applies very large padding from full numeric scale.  
-There are no utility classes generated for the full numeric scale because in practice they've never been required.
-
-<div class="DocsExample DocsExample--render--hidden">
 {% example scss %}
-@include padding(14);
+.MyComponent {
+  @include padding(default large x-large xx-small);
+}
 {% endexample %}
 </div>
 
@@ -118,163 +120,180 @@ There are no utility classes generated for the full numeric scale because in pra
 ## Standard scale visual reference
 
 ### Default
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--5">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(default);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--default"></div>
-{% endexample %}
-</div>
-
-
-### XX-Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--1">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
 {% example scss %}
-@include padding(xx-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--xx-small"></div>
-{% endexample %}
-</div>
-
-
-### X-Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--2">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(x-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--x-small"></div>
-{% endexample %}
-</div>
-
-
-### Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--3">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--small"></div>
-{% endexample %}
-</div>
-
-
-### Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--7">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--large"></div>
-{% endexample %}
-</div>
-
-
-### X-Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--9">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(x-large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--x-large"></div>
-{% endexample %}
-</div>
-
-
-### XX-Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--13">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include padding(xx-large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-padding--xx-large"></div>
-{% endexample %}
-</div>
-
-
-
-## Media queries
-`padding` values can selectively only be applied when certain `min-width` viewport breakpoints are triggered.
-
-This example uses the large `lg` breakpoint, but other options include small `sm`, medium `md`, x-large `x-lg`, and xx-large `xx-lg`.
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--5-lg">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include break(lg) {
+.MyComponent {
   @include padding(default);
 }
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+
+### XX-Small
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-lg-padding--default"></div>
+<div class="u-background-color--gray-12 u-padding--xx-small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(xx-small);
+}
+{% endexample %}
+</div>
+
+
+### X-Small
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--x-small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(x-small);
+}
+{% endexample %}
+</div>
+
+
+### Small
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(small);
+}
+{% endexample %}
+</div>
+
+
+### Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(large);
+}
+{% endexample %}
+</div>
+
+
+### X-Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(x-large);
+}
+{% endexample %}
+</div>
+
+
+### XX-Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--xx-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(xx-large);
+}
+{% endexample %}
+</div>
+
+
+
+## Breakpoints
+
+`padding` values can selectively be applied when certain [breakpoints]({{ site.baseurl }}/utilities/breakpoint) are triggered.
+
+### Examples
+
+Apply default amount of `padding` only at large breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-lg-padding--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include break(lg) {
+    @include padding(default);
+  }
+}
+{% endexample %}
+</div>
+
+
+Overwrite small amount of `padding` with extra large amount at medium breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-padding--small u-md-padding--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include padding(small);
+
+  @include break(md) {
+    @include padding(x-large);    
+  }
+}
+{% endexample %}
+</div>
 
 
 ## Full scale visual reference
