@@ -6,111 +6,113 @@ title: margin
 ---
 Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
 
+Values can optionally be applied only at specific [breakpoints]({{ site.baseurl }}/utilities/breakpoint).
+
 Using the Sass mixin is preferred, as it forces us to consider all objects as [components]({{ site.baseurl }}/guidance/components). Applying utility classes in HTML enforces `!important`, as they're intended to be immutable — applying one property and value no matter what.
 
-Rules can optionally be triggered only at certain `@media` breakpoints. There's also a larger numerical scale of values available through the mixin, though these should rarely be needed.
+There's also a larger numerical scale of values available through the mixin, though these should rarely be needed.
+
+* Table of contents
+{:toc}
 
 
 ### Examples
 
 Applies default margin to all four sides of an element
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include margin(default);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--default"></div>
+{% example scss %}
+.MyComponent {
+  @include margin(default);
+}
 {% endexample %}
 </div>
 
 
 Applies large margin to left side only
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include margin-left(large);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin-left--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin-left--large"></div>
-{% endexample %}
-</div>
-
-
-Shorthand; applies default margin to top and bottom, and large margin to left and right
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
 {% example scss %}
-@include margin(default large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin-top--default u-margin-right--large u-margin-bottom--default u-margin-left--large"></div>
-{% endexample %}
-</div>
-
-
-Applies small margin to bottom side at our medium breakpoint
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include break(md) {
-  @include margin-bottom(small);
+.MyComponent {
+  @include margin-left(large);
 }
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+
+Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-left` to `margin-right`
+
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-md-margin-bottom--small"></div>
+<div class="u-background-color--gray-12 u-margin-top--small u-margin-right--large u-margin-bottom--small u-margin-left--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(small large);
+}
+{% endexample %}
+</div>
+
+
+Turning a small `margin-bottom` into extra large at the medium breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin-bottom--small u-md-margin-bottom--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin-bottom(small);
+
+  @include break(md) {
+    @include margin-bottom(x-large);
+  }
+}
 {% endexample %}
 </div>
 
 
 Shorthand; applies different margins to all four sides
 
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include margin(default large x-large xx-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-margin-top--default u-margin-right--large u-margin-bottom--x-large u-margin-left--xx-small"></div>
-{% endexample %}
+<div class="u-background-color--gray-12 u-margin-bottom--x-large u-margin-left--xx-small u-margin-right--large u-margin-top--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
 </div>
-
-
-Shorthand; applies `!important`
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-{% example scss %}
-@include margin(x-large, !important);
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--x-large"></div>
-{% endexample %}
-</div>
-
-
-Applies very large margin from full numeric scale.  
-There are no utility classes generated for the full numeric scale because in practice they've never been required.
-
-<div class="DocsExample DocsExample--render--hidden">
 {% example scss %}
-@include margin(14);
+.MyComponent {
+  @include margin(default large x-large xx-small);
+}
 {% endexample %}
 </div>
 
@@ -118,163 +120,180 @@ There are no utility classes generated for the full numeric scale because in pra
 ## Standard scale visual reference
 
 ### Default
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--5">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(default);
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
 <div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--default"></div>
-{% endexample %}
-</div>
-
-
-### XX-Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--1">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
 {% example scss %}
-@include margin(xx-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--xx-small"></div>
-{% endexample %}
-</div>
-
-
-### X-Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--2">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(x-small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--x-small"></div>
-{% endexample %}
-</div>
-
-
-### Small
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--3">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(small);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--small"></div>
-{% endexample %}
-</div>
-
-
-### Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--7">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--large"></div>
-{% endexample %}
-</div>
-
-
-### X-Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--9">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(x-large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--x-large"></div>
-{% endexample %}
-</div>
-
-
-### XX-Large
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--13">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include margin(xx-large);
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--render--hidden">
-{% example html %}
-<div class="u-margin--xx-large"></div>
-{% endexample %}
-</div>
-
-
-
-## Media queries
-`margin` values can selectively only be applied when certain `min-width` viewport breakpoints are triggered.
-
-This example uses the large `lg` breakpoint, but other options include small `sm`, medium `md`, x-large `x-lg`, and xx-large `xx-lg`.
-
-<div class="DocsExample DocsExample--render--hidden DocsExample--render--hidden--grouped">
-  <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--5-lg">
-    <div class="DocsExample-preview-child">
-      &nbsp;
-    </div>
-  </div>
-{% example scss %}
-@include break(lg) {
+.MyComponent {
   @include margin(default);
 }
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+
+### XX-Small
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-lg-margin--default"></div>
+<div class="u-background-color--gray-12 u-margin--xx-small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
 {% endexample %}
 </div>
 
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(xx-small);
+}
+{% endexample %}
+</div>
+
+
+### X-Small
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--x-small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(x-small);
+}
+{% endexample %}
+</div>
+
+
+### Small
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--small">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(small);
+}
+{% endexample %}
+</div>
+
+
+### Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(large);
+}
+{% endexample %}
+</div>
+
+
+### X-Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(x-large);
+}
+{% endexample %}
+</div>
+
+
+### XX-Large
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--xx-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(xx-large);
+}
+{% endexample %}
+</div>
+
+
+
+## Breakpoints
+
+`margin` values can selectively be applied when certain [breakpoints]({{ site.baseurl }}/utilities/breakpoint) are triggered.
+
+### Examples
+
+Apply default amount of `margin` only at large breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-lg-margin--default">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include break(lg) {
+    @include margin(default);
+  }
+}
+{% endexample %}
+</div>
+
+
+Overwrite small amount of `margin` with extra large amount at medium breakpoint
+
+<div class="DocsExample DocsExample--grouped">
+{% example html %}
+<div class="u-background-color--gray-12 u-margin--small u-md-margin--x-large">
+  <div class="u-background-color--gray-15">&nbsp;</div>
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  @include margin(small);
+
+  @include break(md) {
+    @include margin(x-large);    
+  }
+}
+{% endexample %}
+</div>
 
 
 ## Full scale visual reference
