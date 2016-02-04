@@ -33,5 +33,5 @@
 
 @mixin translate3d($xAxis: 0, $yAxis: 0, $zAxis: 0, $important: null) {
   -webkit-transform: translate3d($xAxis, $yAxis, $zAxis $important);
-          transform: translate3d($xAxis, $yAxis, $zAxis $important);
+  transform: translate3d($xAxis, $yAxis, $zAxis $important);
 }
