@@ -4,7 +4,7 @@ layout: page
 scss-filename: _display.scss
 title: display
 ---
-Apply `display` values with utility classes.
+Apply `display` values with utility classes. Values can optionally be applied only at specific [breakpoints]({{ site.baseurl }}/utilities/breakpoint).
 
 ### Values
 * `block`
@@ -22,17 +22,27 @@ Apply `display` values with utility classes.
 </div>
 {% endexample %}
 
-{% example html %}
-<div class="u-background-color--gray-13 u-display--inline">
-This is displayed as an inline element
-</div>
-{% endexample %}
 
+<div class="DocsExample DocsExample--grouped">
 {% example html %}
-<div class="u-background-color--gray-13 u-display--inline-block">
-  This is displayed as a inline block-level element
+<div class="u-background-color--gray-13 u-display--inline-block u-md-display--block">
+  This is an inline-block element until the medium breakpoint, when it becomes block-level
 </div>
 {% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--render--hidden">
+{% example scss %}
+.MyComponent {
+  display: inline-block;
+
+  @include break(md) {
+    display: block;
+  }
+}
+{% endexample %}
+</div>
+
 
 {% example html %}
 <div class="u-background-color--gray-13 u-display--none">
