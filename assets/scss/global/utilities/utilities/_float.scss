@@ -59,24 +59,24 @@
  */
 
 @mixin floatContainer {
-  &:after {
+  &::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
 @if $u-classes-float == true {
 
-  .u-floatContainer:before,
-  .u-floatContainer:after {
+  .u-floatContainer::before,
+  .u-floatContainer::after {
     /* 1 */
     content: " ";
     /* 2 */
     display: table;
   }
 
-  .u-floatContainer:after {
+  .u-floatContainer::after {
     clear: both;
   }
 
