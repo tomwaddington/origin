@@ -20,7 +20,7 @@
 
 /* Utility classes
    ========================================================================== */
-  
+
 @if $u-classes-text-color == true {
 
   @each $text-color, $text-color-value in $text-color-values {
