@@ -3,22 +3,23 @@
 @import "_normalize";
 
 
-/* Global values
+/* Utility values, aliases, and maps
    ========================================================================== */
 
 @import "_utility-values";
-
-
-/* Global aliases
-   ========================================================================== */
-
-@import "_utility-aliases";
 
 
 /* Project-specific aliases
    ========================================================================== */
 
 @import "_project-aliases";
+
+
+/* Media query utility
+   ========================================================================== */
+
+/* Imported prior to all other utilities because they make use of it */
+@import "utilities/_breakpoint";
 
 
 /* Utilities
@@ -57,7 +58,6 @@
 @import "utilities/_list-item-spacing";
 @import "utilities/_list-style";
 @import "utilities/_margin";
-@import "utilities/_media-query";
 @import "utilities/_opacity";
 @import "utilities/_overflow";
 @import "utilities/_padding";
@@ -68,4 +68,5 @@
 @import "utilities/_transform";
 @import "utilities/_transition";
 @import "utilities/_vertical-align";
+@import "utilities/_visibility";
 @import "utilities/_z-index";
