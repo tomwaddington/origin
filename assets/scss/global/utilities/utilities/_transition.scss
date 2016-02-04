@@ -2,33 +2,18 @@
    ========================================================================== */
 
 /**
- * Values for the mixin are optional. This would use the default values:
- *
- * `@include transition;`
- *
- * Whereas this would only animate the padding-top property of an element:
- *
- * `@include transition(padding-top);`
- * `@include transition(margin-bottom, !important);`
- *
- * Note: `$transition-length-default` is declared in `_animation.scss`
+ * http://fac.github.io/origin/utilities/transition/
  */
 
-@mixin transition($property: $transition-property-default, $length: $transition-length-default, $type: $transition-type-default, $transition-delay-default: null, $important: null) {
-  -webkit-transition: $property $length $type $important;
-  transition: $property $length $type $important;
-  -webkit-transition-timing-function: $type $important;
-  transition-timing-function: $type $important;
-}
-
-/**
- * Mixin for adding delays to transitions
- *
- * `@include transition-delay(2s);`
- * `@include transition-delay(0.5s, !important);`
- */
-
-@mixin transition-delay($value: 0, $important: null) {
-  -webkit-transition-delay: $value $important;
-  transition-delay: $value $important;
+@mixin transition(
+  $property: $transition-property-default,
+  $duration: $transition-length-default,
+  $timing-function: $transition-type-default,
+  $transition-delay-default: null,
+  $important: null
+  ) {
+  -webkit-transition: $property $duration $timing-function $important;
+  transition: $property $duration $timing-function $important;
+  -webkit-transition-timing-function: $timing-function $important;
+  transition-timing-function: $timing-function $important;
 }

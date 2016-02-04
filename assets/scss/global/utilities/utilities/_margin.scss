@@ -1,26 +1,12 @@
-/**
- * Note: scales, aliases and maps live in _utility-values.scss
- */
-
-
-/* Mixins
+/* `margin`
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include margin(default);`
- * `@include margin(default large);`
- * `@include padding(default large x-large xx-small);`
- * `@include margin(x-large small, !important);`
- * `@include margin-left(large);`
- * `@include margin-bottom(xx-large, !important);`
- */
-
-/**
- * This mixin allows us to use shorthand values for the `margin` property.
+ * Docs:
+ * http://fac.github.io/origin/utilities/margin/
  *
- * creates another list of the mappings of those spacing values, which it then
- * feeds to the `margin` property.
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin margin($values, $important: null) {

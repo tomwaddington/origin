@@ -1,24 +1,12 @@
-/**
- * Note: scales, aliases and maps live in _utility-values.scss
- */
-
-
-/* Mixins
-   ========================================================================== */
-
-/**
- * Example usage:
- * `@include padding(default);`
- * `@include padding(default large);`
- * `@include padding(default large x-large xx-small);`
- * `@include padding(x-large small, !important);`
- * `@include padding-left(large);`
- * `@include padding-bottom(xx-large, !important);`
- */
+/* `padding` utility
+   ==========================================================================
+   http://fac.github.io/origin/utilities/padding/
+*/
 
 /**
  * This mixin allows us to use shorthand values for the `padding` property.
  *
+ * The mixin runs through our spacing values, given the first argument, then
  * creates another list of the mappings of those spacing values, which it then
  * feeds to the `padding` property.
  */

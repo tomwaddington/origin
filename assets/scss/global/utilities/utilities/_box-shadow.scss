@@ -2,9 +2,11 @@
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.12));`
- * `@include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.12), !important);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/box-shadow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin box-shadow($top, $left, $blur, $color, $inset:"", $important: null) {

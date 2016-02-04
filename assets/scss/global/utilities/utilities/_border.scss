@@ -1,26 +1,12 @@
-/**
- * Note: scales and aliases live in _utility-values.scss
- */
-
 /* `border`
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include border(default, gray-13);`
- * `@include border-bottom(thick, fa-blue, !important);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/border/
  *
- * Retina (0.5px) border:
- *
- * ```
- * .MyComponent {
- *   @include border(default, gray-12);
- * }
- *
- * .retina .MyComponent {
- *   @include border(thin, gray-12);
- * }
- * ```
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 

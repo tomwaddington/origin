@@ -1,17 +1,17 @@
+/* `text-color`
+   ========================================================================== */
+
 /**
- * Note: aliases and maps live in _utility-values.scss 
+ * Docs:
+ * http://fac.github.io/origin/utilities/text-color/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 
 /* Mixin
-   ========================================================================== */
-
-/**
- * Example usage:
- * `@include text-color(default);`
- * `@include text-color(light);`
- * `@include text-color(fa-blue, !important);`
- */
+  ========================================================================== */
 
 @mixin text-color($value, $important: null) {
   color: map-get($text-color-values, $value) $important;
@@ -22,13 +22,13 @@
    ========================================================================== */
   
 @if $u-classes-text-color == true {
-    
+
   @each $text-color, $text-color-value in $text-color-values {
-  
+
     .u-text-color--#{$text-color} {
       color: $text-color-value !important;
     }
-  
+
   }
 
 }

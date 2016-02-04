@@ -2,19 +2,11 @@
    ========================================================================== */
 
 /**
- * Note: work is derived from https://github.com/mastastealth/sass-flex-mixin
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-grow/
  *
- * The 'flex-grow' property sets the flex grow factor. Negative numbers
- * are invalid.
- *
- * http://w3.org/tr/css3-flexbox/#flex-grow-property
- *
- * Values: <number>
- * Default: 0
- *
- * Example usage:
- * `@include flex-grow(1);`
- * `@include flex-grow(2, !important);`
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin flex-grow($value: 0, $important: null) {
@@ -32,11 +24,11 @@
 @if $u-classes-flex-grow == true {
 
   @for $i from 0 through 10 {
-  
+
     .u-flex-grow--#{$i} {
       @include flex-grow($i, !important);
     }
-  
+
   }
 
 }

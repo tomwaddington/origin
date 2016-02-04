@@ -1,17 +1,14 @@
-/**
- * Note: scales, aliases and maps live in _utility-values.scss
- */
-
-
-/* Mixin
+/* `font-size`
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include font-size(small);`
- * `@include font-size(x-large);`
- * `@include font-size(17, !important);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/font-size/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
+
 
 @mixin font-size($value, $important: null) {
   font-size: map-get($font-size-values, $value) $important;

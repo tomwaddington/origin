@@ -1,16 +1,12 @@
-/**
- * Note: scales, aliases and maps live in _utility-values.scss 
- */
-
-
-/* Mixin
+/* List item spacing
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include list-item-spacing(tight);`
- * `@include list-item-spacing(default);`
- * `@include list-item-spacing(x-loose, !important);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/list-item-spacing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin list-item-spacing($value, $important: null) {
@@ -20,15 +16,15 @@
 
 /* Utility classes
    ========================================================================== */
-    
+
 @if $u-classes-list-item-spacing == true {
-  
+
   @each $list-item-spacing, $list-item-spacing-value in $list-item-spacing-values {
-  
+
     .u-list-item-spacing--#{$list-item-spacing} li {
       margin-bottom: $list-item-spacing-value !important;
     }
-  
+
   }
-  
+
 }

@@ -2,20 +2,11 @@
    ========================================================================== */
 
 /**
- * Note: work is derived from https://github.com/mastastealth/sass-flex-mixin
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-flow/
  *
- * The 'flex-flow' property is a shorthand for setting the 'flex-direction'
- * and 'flex-wrap' properties, which together define the flex container's
- * main and cross axes.
- *
- * http://w3.org/tr/css3-flexbox/#flex-flow-property
- *
- * Values: <flex-direction> || <flex-wrap>
- * Default: row nowrap
- *
- * Example usage:
- * `@include flex-flow(row nowrap);`
- * `@include flex-flow(row nowrap, !important);`
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin flex-flow($value: (row nowrap), $important: null) {

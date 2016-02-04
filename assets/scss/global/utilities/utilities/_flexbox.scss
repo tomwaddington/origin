@@ -2,21 +2,11 @@
    ========================================================================== */
 
 /**
- * Note: work is derived from https://github.com/mastastealth/sass-flex-mixin
+ * Docs:
+ * http://fac.github.io/origin/utilities/flexbox/
  *
- * The 'flex' value causes an element to generate a block-level flex
- * container box.
- *
- * The 'inline-flex' value causes an element to generate a inline-level
- * flex container box.
- *
- * http://w3.org/tr/css3-flexbox/#flex-containers
- *
- * Values: flex | inline-flex
- *
- * Example usage:
- * `@include flexbox;`
- * `@include flexbox(inline-flex, !important);`
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin flexbox($value: flexbox, $important: null) {
