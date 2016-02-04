@@ -4,9 +4,9 @@ layout: page
 scss-filename: _breakpoint.scss
 title: breakpoint
 ---
-The `breakpoint` utility uses a media query to apply CSS rules only when particular `min-width` values are met. Values range from `sm` to `xx-lg`.
+The `breakpoint` utility uses a `@media` query to apply CSS rules only when particular `min-width` values are met.
 
-While the `break` mixin is available everywhere, the breakpoint HTML classes are only available for certain properties; those we've actually needed them for in practice:
+Break points should normally be reserved for when content ‘breaks’ (the clue is in the name). But we want some sensible defaults to use for making broad stroke changes to some of our utilities:  
 
 * [`display`]({{ site.baseurl }}/utilities/display)
 * [`float`]({{ site.baseurl }}/utilities/float)
