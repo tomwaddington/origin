@@ -1,11 +1,15 @@
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/height-and-width/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
 /* `height`
    ========================================================================== */
 
 @if $u-classes-height-width == true {
-
-  $height-values:
-    (100percent, 100%)
-    (100viewport, 100vh);
 
   @each $height, $height-value in $height-values {
 
@@ -21,12 +25,6 @@
    ========================================================================== */
 
 @if $u-classes-height-width == true {
-
-  $max-width-values:
-    (0, 0)
-    (none, none)
-    (100percent, 100%)
-    (100viewport, 100vw);
 
   @each $max-width, $max-width-value in $max-width-values {
 
@@ -44,10 +42,6 @@
 
 @if $u-classes-height-width == true {
 
-  $min-height-values:
-    (0, 0)
-    (100percent, 100%);
-
   @each $min-height, $min-height-value in $min-height-values {
 
     .u-min-height--#{$min-height} {
@@ -63,16 +57,6 @@
    ========================================================================== */
 
 @if $u-classes-height-width == true {
-
-  $width-values:
-    (0, 0)
-    (half, 100/2*1%)
-    (quarter, 100/4*1%)
-    (third, 100/3*1%)
-    (three-quarters, 100/4*3%)
-    (two-thirds, 100/3*2%)
-    (100percent, 100%)
-    (100viewport, 100vw);
 
   @each $width-size, $width-value in $width-values {
 

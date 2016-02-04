@@ -1,10 +1,17 @@
-/* `font-kerning`
+/* Text formatting
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include font-kerning(normal);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/text-formatting/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
+
+
+/* `font-kerning`
+   ========================================================================== */
 
 @mixin font-kerning($value...) {
   text-rendering: optimizeLegibility;
@@ -30,11 +37,6 @@
 
 @if $u-classes-text-formatting == true {
 
-  $font-style-values:
-    italic
-    normal
-    oblique;
-
   @each $font-style-value in $font-style-values {
 
     .u-font-style--#{$font-style-value} {
@@ -51,12 +53,6 @@
 
 @if $u-classes-text-formatting == true {
 
-  $text-align-values:
-    center
-    justify
-    left
-    right;
-
   @each $text-align-value in $text-align-values {
 
     .u-text-align--#{$text-align-value} {
@@ -70,15 +66,6 @@
 
 /* Truncate text
    ========================================================================== */
-
-/**
- * Prevent text from wrapping onto multiple lines, and truncate with an
- * ellipsis.
- *
- * Example usage:
- * `@include text-truncate;`
- * `@include text-truncate(!important);`
- */
 
 @mixin text-truncate($important: null) {
   max-width: 100% $important;
@@ -100,16 +87,6 @@
 
 /* Text on multiple lines
    ========================================================================== */
-
-/**
- * Forces text onto multiple lines (only required when the text of its parent
- * element is being truncated)
- *
- * Example usage:
- * `@include text-multiLine;`
- * `@include text-multiLine(!important);`
- */
-
 
 @mixin text-multiLine($important: null) {
   overflow: visible $important;
@@ -141,10 +118,6 @@
    ========================================================================== */
 
 @if $u-classes-text-formatting == true {
-
-  $word-wrap-values:
-    break-word
-    normal;
 
   @each $word-wrap-value in $word-wrap-values {
 

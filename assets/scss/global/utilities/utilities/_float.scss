@@ -1,12 +1,15 @@
 /* `float`
    ========================================================================== */
 
-@if $u-classes-float == true {
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/float/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
 
-  $float-values:
-    left
-    none
-    right;
+@if $u-classes-float == true {
 
   @each $float-value in $float-values {
 
@@ -31,7 +34,7 @@
       }
 
     }
-  
+
   }
 
 }

@@ -1,11 +1,16 @@
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/background/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
 /* `background`
    ========================================================================== */
 
 @if $u-classes-background == true {
-
-  $background-values:
-    inherit,
-    none;
 
   @each $background-value in $background-values {
 
@@ -21,17 +26,9 @@
 /* `background-color`
    ========================================================================== */
 
-/**
- * Example usage:
- * `@include background-color(gray-12);`
- * `@include background-color(fa-blue);`
- * `@include background-color(gray-16, !important);`
- */
-
 @mixin background-color($value, $important: null) {
   background-color: map-get($color-values, $value) $important;
 }
-
 
 @if $u-classes-background == true {
 
@@ -42,10 +39,6 @@
     }
 
   }
-
-  $background-color-values:
-    inherit
-    transparent;
 
   @each $background-color-value in $background-color-values {
 
@@ -70,9 +63,6 @@
 
 @if $u-classes-background == true {
 
-  $background-image-values:
-    none;
-
   @each $background-image-value in $background-image-values {
 
     .u-background-image--#{$background-image-value} {
@@ -89,17 +79,6 @@
 
 @if $u-classes-background == true {
 
-  $background-position-values:
-    (center-bottom, center bottom)
-    (center-center, center center)
-    (center-top, center top)
-    (left-bottom, left bottom)
-    (left-center, left center)
-    (left-top, left top)
-    (right-bottom, right bottom)
-    (right-center, right center)
-    (right-top, right top);
-
   @each $background-position, $background-position-value in $background-position-values {
 
     .u-background-position--#{$background-position} {
@@ -115,10 +94,6 @@
    ========================================================================== */
 
 @if $u-classes-background == true {
-
-  $background-size-values:
-    cover
-    contain;
 
   @each $background-size-value in $background-size-values {
 

@@ -1,20 +1,15 @@
 /* `opacity`
    ========================================================================== */
 
-@if $u-classes-opacity == true {
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/opacity/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
 
-  $opacity-values:
-    (0, 0)
-    (10, 0.1)
-    (20, 0.2)
-    (30, 0.3)
-    (40, 0.4)
-    (50, 0.5)
-    (60, 0.6)
-    (70, 0.7)
-    (80, 0.8)
-    (90, 0.9)
-    (100, 1);
+@if $u-classes-opacity == true {
 
   @each $opacity, $opacity-value in $opacity-values {
 

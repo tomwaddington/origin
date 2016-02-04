@@ -2,27 +2,15 @@
    ========================================================================== */
 
 /**
- * Note: work is derived from https://github.com/mastastealth/sass-flex-mixin
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-justify-content/
  *
- * The 'justify-content' property aligns flex items along the main axis
- * of the current line of the flex container. This is done after any flexible
- * lengths and any auto margins have been resolved. Typically it helps distribute
- * extra free space leftover when either all the flex items on a line are
- * inflexible, or are flexible but have reached their maximum size. It also
- * exerts some control over the alignment of items when they overflow the line.
- *
- * http://w3.org/tr/css3-flexbox/#justify-content-property
- *
- * Values: flex-start | flex-end | center | space-between | space-around
- * Default: flex-start
- *
- * Example usage:
- * `@include flex-justify-content(flex-start);`
- * `@include flex-justify-content(flex-start, !important);`
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
 
 @mixin flex-justify-content($value: flex-start, $important: null) {
-  
+
   @if $value == flex-start {
     -webkit-box-pack: start $important;
     -ms-flex-pack: start $important;
@@ -57,7 +45,7 @@
     -moz-justify-content: $value $important;
     justify-content: $value $important;
   }
-    
+
 }
 
 
@@ -66,19 +54,12 @@
 
 @if $u-classes-flex-justify-content == true {
 
-  $flex-justify-content-values:
-    center
-    flex-end
-    flex-start
-    space-around
-    space-between;
-
   @each $flex-justify-content-value in $flex-justify-content-values {
-  
+
     .u-flex-justify-content--#{$flex-justify-content-value} {
       @include flex-justify-content(#{$flex-justify-content-value}, !important);
     }
-  
+
   }
 
 }

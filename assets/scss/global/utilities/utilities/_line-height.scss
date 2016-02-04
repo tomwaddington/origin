@@ -1,41 +1,14 @@
-/**
- * Note: scales and aliases live in _utility-values.scss
- */
-
-/* Map
-   ========================================================================== */
-
-$line-height-values: (
-  1:        $line-height--1,
-  2:        $line-height--2,
-  3:        $line-height--3,
-  4:        $line-height--4,
-  5:        $line-height--5,
-  6:        $line-height--6,
-  7:        $line-height--7,
-  8:        $line-height--8,
-  9:        $line-height--9,
-  10:       $line-height--10,
-  11:       $line-height--11,
-  xx-tight: $line-height--xx-tight,
-  x-tight:  $line-height--x-tight,
-  tight:    $line-height--tight,
-  default:  $line-height--default,
-  loose:    $line-height--loose,
-  x-loose:  $line-height--x-loose,
-  xx-loose: $line-height--xx-loose
-);
-
-
-/* Mixin
+/* `line-height`
    ========================================================================== */
 
 /**
- * Example usage:
- * `@include line-height(tight);`
- * `@include line-height(x-loose);`
- * `@include line-height(9, !important);`
+ * Docs:
+ * http://fac.github.io/origin/utilities/line-height/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
  */
+
 
 @mixin line-height($value, $important: null) {
   line-height: map-get($line-height-values, $value) $important;
@@ -47,10 +20,28 @@ $line-height-values: (
 
 @if $u-classes-line-height == true {
 
-  @each $line-height, $line-height-value in $line-height-values {
+  @each $line-height, $standard-scale-line-height-value in $standard-scale-line-height-values {
+
+    /**
+     * Generate `line-height` classes without breakpoints
+     */
 
     .u-line-height--#{$line-height} {
-      line-height: $line-height-value !important;
+      line-height: $standard-scale-line-height-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate `line-height` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-line-height--#{$line-height} {
+          line-height: $standard-scale-line-height-value !important;
+        }
+      }
+
     }
 
   }

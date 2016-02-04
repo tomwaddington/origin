@@ -1,23 +1,22 @@
 /* `list-style`
    ========================================================================== */
 
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/list-style/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
 @if $u-classes-list-style == true {
 
-  $list-style-values:
-    (decimal, decimal)
-    (decimal-inside, decimal inside)
-    (decimal-outside, decimal outside)
-    (disc, disc)
-    (disc-inside, disc inside)
-    (disc-outside, disc outside)
-    (none, none);
-
   @each $list-style, $list-style-value in $list-style-values {
-  
+
     .u-list-style--#{$list-style} {
       list-style: $list-style-value !important;
     }
-  
+
   }
 
 }

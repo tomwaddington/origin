@@ -1,10 +1,19 @@
+/* Positioning
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/positioning/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
 /* `bottom`
    ========================================================================== */
 
 @if $u-classes-positioning == true {
-
-  $bottom-values:
-    0;
 
   @each $bottom-value in $bottom-values {
 
@@ -22,9 +31,6 @@
 
 @if $u-classes-positioning == true {
 
-  $left-values:
-    0;
-
   @each $left-value in $left-values {
 
     .u-left--#{$left-value} {
@@ -40,12 +46,6 @@
    ========================================================================== */
 
 @if $u-classes-positioning == true {
-
-  $position-values:
-    absolute
-    fixed
-    relative
-    static;
 
   @each $position-value in $position-values {
 
@@ -64,9 +64,6 @@
 
 @if $u-classes-positioning == true {
 
-  $right-values:
-    0;
-
   @each $right-value in $right-values {
 
     .u-right--#{$right-value} {
@@ -82,9 +79,6 @@
    ========================================================================== */
 
 @if $u-classes-positioning == true {
-
-  $top-values:
-    0;
 
   @each $top-value in $top-values {
 
