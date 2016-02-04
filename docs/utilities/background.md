@@ -628,6 +628,3 @@ No mixins, only utility classes.
 <div class="u-background-size--cover"></div>
 {% endexample %}
 </div>
-
-
-Related: [`text-color`]({{ site.baseurl }}/utilities/text-color/)
