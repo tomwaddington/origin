@@ -55,6 +55,7 @@ $margin: 1rem;
 
 .markdown-body .highlight {
   margin-bottom: $margin;
+  position: relative;
 }
 
 .markdown-body code,
