@@ -12,8 +12,9 @@
  * These alias variables are what the mixins for each utility use to generate
  * the `u-property--#` utility classes.
  *
- * Finally, Sass maps of our alias variables are defined. These map values are
- * the arguments that can be passed to the utility mixins.
+ * Finally, Sass lists and maps of our alias variables are defined. These lists
+ * and maps are what allow our alias variables to be passed as arguments to our
+ * utility mixins.
  */
 
 
