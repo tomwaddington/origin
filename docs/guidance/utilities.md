@@ -3,6 +3,7 @@ categories: guidance
 layout: page
 title: Utilities
 ---
+Utilities underpin everything in Origin. There are two methods of using Origin: Sass utility mixins, or HTML utility classes.
 
 Utilities come in two flavours: Sass mixins and HTML classes.
 
@@ -10,9 +11,6 @@ Utilities come in two flavours: Sass mixins and HTML classes.
 
 **[`_utility-values.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss)**  
 Where we define all of our raw CSS values and assign them to variables.
-
-**[`_utility-aliases.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-aliases.scss)**  
-Where we map aliases to our variables. Doing so lets us reference those aliases in mixins, and lets us optionally generate utility classes in the output CSS.
 
 **[`_project-aliases.scss`]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_project-aliases.scss)**  
 Where project-specific aliases are defined. Doing so means we aren’t continually declaring things like `@include line-height(x-loose)` when `x-loose` is actually the default `line-height` for a particular project. In this file we can just assign `x-loose` to `default` for that project only.
@@ -91,6 +89,10 @@ This functionality provides a range of benefits:
 
 ## Utility classes
 
+Isn't the syntax a bit long? Maybe. Or just clear and predictable. Writing HTML and CSS with Origin is supposed to be approachable for people who aren't admitted experts in CSS. By matching CSS syntax, we reduce the gap between what we've written and the CSS spec.
+
+One nice side effect of this is that our HTML starts to get busy when lots of classes are being applied. This is a good thing, because we should be thinking about our whole design system in terms of whole reusable [components]({{ site.baseurl }}/guidance/components), not just utilities.  
+
 ## Classes
 Each utility class applies one value to one property. They're designed to do one thing no matter what. They're predictable, composable, and immutable.  
 
@@ -122,3 +124,23 @@ But you should end up with:
   <button class="SegmentedControl-segment">Refund</button>
 </div>
 {% endhighlight %}
+
+
+
+Utilities do one thing and one thing only. One property, one value. Components comprise of multiple properties and perform a specific interactive function for the user.
+
+Note that utilities can do one thing and one thing only, _no matter what_. There are two ways to do so. The first is to use `!important` within a mixin, like so:
+
+{% highlight scss %}
+@include font-family(default, !important);
+{% endhighlight %}
+
+The second is to use utility _classes_ in HTML, like so:
+
+{% highlight html %}
+<p class="u-font-family--default">
+  Charlie Murphy
+</p>
+{% endhighlight %}
+
+ These classes can be generated in your output CSS file by setting one or more variables in [`_utility-settings.scss`]({{ site.github.repo }}/blob/master/assets/scss/local/utilities/_utility-settings.scss) to `true`. **Setting these to `true` will add weight to your output CSS, so be careful.** Utility classes should only ever generally be used as exceptions; components should always know about their modifiers and states.

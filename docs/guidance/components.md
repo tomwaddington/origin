@@ -150,3 +150,10 @@ The appearance of dependencies must be configured using the interface they provi
 Controlling dimensions, margins, position, and inheritable styles of a
 component can be done _indirectly_. Add a class to its root element, or wrap
 it in another element.
+
+
+## When should I create components?
+
+Generally: as soon as possible. It’s never too early to think about creating a component, as doing so is the best way to check whether there’s already an existing component that does some (or all) of what’s needed.
+
+Part of the point of the differing syntax (see above) is to help you decide what kind of component you’re building.
