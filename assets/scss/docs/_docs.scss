@@ -318,7 +318,6 @@ ul ul ul {
     @include border-radius-bottom-right(default);
     border: 1px solid #e5e5e5;
     margin-top: -1px;
-    position: relative;
   }
 
   > p:last-child,
@@ -395,6 +394,14 @@ ul ul ul {
 
 .highlight .language-css::before {
   content: "With CSS";
+}
+
+/**
+ * Optionally remove lanaguage labels
+ */
+
+.DocsExample--noLanguageLabel .highlight [class^="language-"]::before {
+  display: none;
 }
 
 
