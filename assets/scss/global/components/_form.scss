@@ -1,7 +1,18 @@
 /* Form
    ==========================================================================
-   The Form component is used to display interactive form elements.
+   Form components are the building blocks of forms in the app.
 */
+
+/**
+ * Global Label Width Value
+ *
+ * Our standard form style has fixed width field labels floated to the left of
+ * the field inputs. We use a variable to set the width of the labels so that
+ * should we need to change the value, we only need to update it in one place.
+ */
+
+$form-label-width: 16rem;
+
 
 /**
  * Base styles for the Form
@@ -44,6 +55,20 @@
   display: block;
 }
 
+/**
+ * A `Form-field` is used to wrap any set of label + input(s) + field note
+ *
+ * 1. Form fields often contain floated elements, so they are float containers
+      by default
+ * 2. Add some vertical space between fields
+ * 3. Ignore padding and borders when calculating height and width
+ * 4. A form field is always a block element, as it may contain a mixture of
+      other inline and block elements
+
+      NB: Do not use `<p>` or `<span>` for a form field as these elements may
+      never conatin block elements.
+ */
+
 .Form-field {
   @include floatContainer();
   @include margin-bottom(default);
@@ -51,26 +76,46 @@
   display: block;
 }
 
-.Form-fieldLabel {
+/**
+ * A `Form-field-label` is the label for a whole field
+ *
+ * 1. Form fields often contain floated elements, so they are float containers
+      by default
+ * 2. Add some vertical space between fields
+ * 3. Ignore padding and borders when calculating height and width
+ */
+
+.Form-field-label {
   @include padding-top(x-small);
   float: left;
   text-align: right;
-  width: 16rem;
+  width: $form-label-width;
 }
 
-.Form-fieldset--block .Form-fieldLabel {
-  width: 15rem;
+.Form-fieldset--block .Form-field-label {
+  width: calc(#{$form-label-width} - #{$spacing--default});
 }
 
-.Form-fieldLabel--required:after {
+.Form-field--isRequired .Form-field-label:after {
   @include text-color(fa-red);
   content: " *";
   display: inline;
 }
 
-.Form-inlineLabel {
-  @include margin-left(x-small);
+.Form-field--isOptional .Form-field-label:after {
+  @include text-color(gray-8);
+  content: " (optional)";
   display: inline;
+}
+
+.Form-inlineLabel {
+  display: inline;
+  max-width: 45rem;
+}
+
+.Form-checkbox + .Form-inlineLabel,
+.Form-radioInput + .Form-inlineLabel {
+  @include margin-left(x-small);
 }
 
 .Form-field-inputs {
@@ -79,11 +124,11 @@
 }
 
 .Form-field-inputs:first-child {
-  margin-left: 16rem;
+  margin-left: $form-label-width;
 }
 
 .Form-fieldset--block .Form-field-inputs:first-child {
-  margin-left: 15rem;
+  margin-left: calc(#{$form-label-width} - #{$spacing--default});
 }
 
 .Form-textInput {
@@ -108,16 +153,57 @@
   border-color: $color--fa-blue;
 }
 
-.Form-textInput--short {
+.Form-textInput--small {
   width: 10rem;
 }
 
-.Form-checkbox {
+.Form-textInput--x-small {
+  width: 5rem;
+}
+
+.Form-checkbox,
+.Form-radioInput {
   @include margin-top(small);
 }
 
-.Form-radioInput {
-  @include margin-top(small);
+/**
+ * Select Dropdown
+ */
+
+.Form-selectInput {
+  @include font-family(default);
+  @include font-size(default);
+  vertical-align: sub;
+  max-width: 45rem;
+}
+
+/**
+ * Diabled textInput
+ */
+
+.Form-textInput[disabled] {
+  @include background-color(gray-14, !important);
+  @include text-color(gray-7, !important);
+  border-color: $color--gray-12 !important;
+  box-shadow: none;
+}
+
+/**
+ * Diabled checkbox & radioInput
+ */
+
+.Form-checkbox[disabled],
+.Form-radioInput[disabled] {
+  opacity: 0.75 !important;
+}
+
+/**
+ * Labels for diabled checkboxes & radioInputs
+ */
+
+.Form-checkbox[disabled] + .Form-inlineLabel,
+.Form-radioInput[disabled] + .Form-inlineLabel {
+  @include text-color(gray-10, !important);
 }
 
 .Form-inlineInput {
@@ -135,11 +221,83 @@
 
 .Form-actions {
   @include padding-left(small);
-  margin-left: 16rem;
+  margin-left: $form-label-width;
 }
 
 .Form-cancel {
   @include margin-left(default);
+}
+
+
+/**
+ * Errors
+   ==========================================================================
+   Highlight a form field with errors by adding the `.Form-field--hasErrors`
+   class to `.Form-field`.
+   */
+
+/**
+ * Highlight field labels when there is an error with the field
+ */
+
+.Form-field--hasErrors .Form-field-label {
+  @include text-color(negative);
+}
+
+/**
+ * Highlight text inputs when there is an error with the field
+ */
+
+.Form-field--hasErrors .Form-textInput {
+  @include background-color(fa-red--x-light);
+  border-color: $text-color--negative;
+}
+
+.Form-field-error {
+  @include background-color(fa-red--xx-light);
+  @include border-radius(small);
+  @include border(default, negative);
+  @include margin-top(x-small);
+  @include padding-bottom(x-small);
+  @include padding-left(small);
+  @include padding-right(small);
+  @include padding-top(xx-small);
+  @include text-color(negative);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+
+/* Vertically Stacked Variant
+   ==========================================================================
+   A variant of the form with the labels stacked on top of the inputs
+   */
+
+.Form--stacked .Form-field-label {
+  @include margin-bottom(x-small);
+  display: block;
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+.Form--stacked .Form-field-inputs {
+  float: none;
+  padding-left: 0;
+}
+
+.Form--stacked .Form-field-inputs:first-child {
+  margin-left: 0;
+}
+
+.Form--stacked .Form-inlineLabel:only-of-type {
+  @include font-weight(semi-bold);
+}
+
+.Form--stacked .Form-actions {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 
@@ -148,10 +306,13 @@
    A variant that uses the legacy desktop font
    */
 
-.Form--legacy {
-  @include font-family(legacy);
-  }
-
+.Form--legacy,
 .Form--legacy .Form-textInput {
   @include font-family(legacy);
+  @include font-size(small);
+}
+
+.Form--legacy .Form-checkbox,
+.Form--legacy .Form-radioInput {
+  @include margin-top(x-small);
 }
