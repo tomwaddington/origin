@@ -21,7 +21,6 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
 
 
 ## Basic examples
-<div class="DocsExample DocsExample--noLanguageLabel">
 {% example html %}
 <div class="BlockGrid sm-2">
   <div class="BlockGrid-item">
@@ -32,9 +31,7 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
-<div class="DocsExample DocsExample--noLanguageLabel">
 {% example html %}
 <div class="BlockGrid sm-3">
   <div class="BlockGrid-item">
@@ -48,9 +45,7 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
-<div class="DocsExample DocsExample--noLanguageLabel">
 {% example html %}
 <div class="BlockGrid sm-4">
   <div class="BlockGrid-item">
@@ -67,13 +62,11 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
 
 ## Changing number of items in a row
 Use multiple size classes to specify a different number of items in a row for each `min-width` breakpoint. This example will stack items vertically by default, display 3 items in a row on medium screens, then 5 in a row on large screens.
 
-<div class="DocsExample DocsExample--noLanguageLabel">
 {% example html %}
 <div class="BlockGrid md-3 lg-5">
   <div class="BlockGrid-item">
@@ -102,4 +95,3 @@ Use multiple size classes to specify a different number of items in a row for ea
   </div>
 </div>
 {% endexample %}
-</div>

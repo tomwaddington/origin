@@ -15,7 +15,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 * `xx-large` (`10px`)
 
 ### Examples
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--default">
   <br /><br />
@@ -23,14 +23,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(default);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--small">
   <br /><br />
@@ -38,14 +38,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(small);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--large">
   <br /><br />
@@ -53,14 +53,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(large);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--x-large">
   <br /><br />
@@ -68,14 +68,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(x-large);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--xx-large">
   <br /><br />
@@ -83,14 +83,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(xx-large);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius--0">
   <br /><br />
@@ -98,14 +98,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(0);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius-bottom-right--large">
   <br /><br />
@@ -113,14 +113,14 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius-bottom-right(large);
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--fa-green u-border-radius-top-right--xx-large">
   <br /><br />
@@ -128,7 +128,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 @include border-radius-top-right(xx-large);
 {% endexample %}

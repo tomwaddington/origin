@@ -384,26 +384,18 @@ ul ul ul {
   top: 0.2rem;
 }
 
-.highlight .language-html::before {
+.DocsExample--labelUtilityClasses .highlight .language-html::before {
   content: "With utility classes";
 }
 
-.highlight .language-scss::before {
+.DocsExample--labelMixins .highlight .language-scss::before {
   content: "With Sass mixins";
 }
 
-.highlight .language-css::before {
+.DocsExample--labelCSS .highlight .language-css::before,
+.DocsExample--labelCSS .highlight .language-scss::before {
   content: "With CSS";
 }
-
-/**
- * Optionally remove lanaguage labels
- */
-
-.DocsExample--noLanguageLabel .highlight [class^="language-"]::before {
-  display: none;
-}
-
 
 .DocsExample--renderHidden .DocsExample-render + .highlight {
   @include border-radius(default);

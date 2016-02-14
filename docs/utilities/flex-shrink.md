@@ -18,7 +18,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `0` to `10` for use in utility classes
 
 ### Examples
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-12 u-flex-shrink--0">Item will not shrink.</div>
@@ -27,7 +27,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -40,7 +40,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-15">While flex items shrink to accommodate other items that more content by default, we can use `flex-grow` to shrink those flex items to a smaller relative size than the default.</div>
@@ -49,7 +49,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;

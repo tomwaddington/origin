@@ -21,7 +21,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `stretch`
 
 ### Examples
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -31,7 +31,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -44,7 +44,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -54,7 +54,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -67,7 +67,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -77,7 +77,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -90,7 +90,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -100,7 +100,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -113,7 +113,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -123,7 +123,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -136,7 +136,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-14">Flex item</div>
@@ -146,7 +146,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;

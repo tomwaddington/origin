@@ -9,7 +9,7 @@ We use several typefaces in different contexts. Our primary typeface is [Source 
 
 All of our font stacks include sensible backup options if the primary font can't be used.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-family--default">
   Source Sans Pro is our default typeface
@@ -17,16 +17,18 @@ All of our font stacks include sensible backup options if the primary font can't
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-family(default);
+.MyComponent {
+  @include font-family(default);
+}
 {% endexample %}
 </div>
 
 
 Before using Source Sans Pro, we used Helvetica Neue exclusively. While this still exists in a number of applications, it will eventually be phased out, hence it being referred to as our 'legacy' typeface.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-family--legacy">
   Helvetica Neue is our legacy typeface
@@ -34,16 +36,18 @@ Before using Source Sans Pro, we used Helvetica Neue exclusively. While this sti
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-family(legacy);
+.MyComponent {
+  @include font-family(legacy);
+}
 {% endexample %}
 </div>
 
 
 We often use Effra for headings in editorial design work, primarily on the communications side. It is served up via Typekit.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-family--editorial">
   Effra is our editorial typeface
@@ -51,16 +55,18 @@ We often use Effra for headings in editorial design work, primarily on the commu
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-family(editorial);
+.MyComponent {
+  @include font-family(editorial);
+}
 {% endexample %}
 </div>
 
 
 We often use Swister for handwritten 'notes' in our product and comms work. It is served up via Typekit.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-family--handwritten">
   Swister is our handwritten typeface
@@ -68,16 +74,18 @@ We often use Swister for handwritten 'notes' in our product and comms work. It i
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-family(handwritten);
+.MyComponent {
+  @include font-family(handwritten);
+}
 {% endexample %}
 </div>
 
 
 Whenever we show code examples, we use Monaco. Its font stack includes a number of other monospaced fonts which will be used if Monaco isn't present.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-family--monospace">
   Monaco is our monospace typeface
@@ -85,8 +93,10 @@ Whenever we show code examples, we use Monaco. Its font stack includes a number 
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-family(monospace);
+.MyComponent {
+  @include font-family(monospace);
+}
 {% endexample %}
 </div>

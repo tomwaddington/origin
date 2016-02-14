@@ -14,7 +14,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 * `right`
 
 ### Examples
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-floatContainer">
   <div class="u-background-color--gray-13 u-float--left">
@@ -24,7 +24,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelCSS DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;
@@ -37,7 +37,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-floatContainer">
   <div class="u-background-color--gray-13 u-md-float--right">
@@ -47,7 +47,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelCSS DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;
@@ -62,7 +62,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-floatContainer">
   <div class="u-background-color--gray-13 u-float--none">
@@ -72,7 +72,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelCSS DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;

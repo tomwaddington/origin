@@ -17,7 +17,7 @@ These are the background colors we’re using in production — no more. All col
 
 <section class="SwatchGroup">
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-yellow">
       &nbsp;
     </div>
@@ -26,14 +26,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-yellow"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-amber">
       &nbsp;
     </div>
@@ -42,14 +42,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-amber"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-red">
       &nbsp;
     </div>
@@ -58,14 +58,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-red"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-purple">
       &nbsp;
     </div>
@@ -74,14 +74,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-purple"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-blue">
       &nbsp;
     </div>
@@ -90,14 +90,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-blue"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-green">
       &nbsp;
     </div>
@@ -106,7 +106,7 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-green"></div>
 {% endexample %}
@@ -119,7 +119,7 @@ These are the background colors we’re using in production — no more. All col
 
 <section class="SwatchGroup">
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-amber--dark">
       &nbsp;
     </div>
@@ -128,14 +128,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-amber--dark"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-red--dark">
       &nbsp;
     </div>
@@ -144,14 +144,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-red--dark"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-blue--dark">
       &nbsp;
     </div>
@@ -160,14 +160,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-blue--dark"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-blue--x-dark">
       &nbsp;
     </div>
@@ -176,14 +176,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-blue--x-dark"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-blue--xx-dark">
       &nbsp;
     </div>
@@ -192,14 +192,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-blue--xx-dark"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-green--dark">
       &nbsp;
     </div>
@@ -208,7 +208,7 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-green--dark"></div>
 {% endexample %}
@@ -222,7 +222,7 @@ These are the background colors we’re using in production — no more. All col
 
 <section class="SwatchGroup">
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-yellow--x-light">
       &nbsp;
     </div>
@@ -231,14 +231,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-yellow--x-light"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-red--x-light">
       &nbsp;
     </div>
@@ -247,14 +247,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-red--x-light"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-purple--x-light">
       &nbsp;
     </div>
@@ -263,14 +263,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-purple--x-light"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-blue--x-light">
       &nbsp;
     </div>
@@ -279,14 +279,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-blue--x-light"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-green--x-light">
       &nbsp;
     </div>
@@ -295,7 +295,7 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--fa-green--x-light"></div>
 {% endexample %}
@@ -309,7 +309,7 @@ These are the background colors we’re using in production — no more. All col
 
 <section class="SwatchGroup">
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-1">
       &nbsp;
     </div>
@@ -318,14 +318,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-1"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-2">
       &nbsp;
     </div>
@@ -334,14 +334,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-2"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-3">
       &nbsp;
     </div>
@@ -350,14 +350,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-3"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-4">
       &nbsp;
     </div>
@@ -366,14 +366,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-4"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-5">
       &nbsp;
     </div>
@@ -382,14 +382,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-5"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-6">
       &nbsp;
     </div>
@@ -398,14 +398,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-6"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-7">
       &nbsp;
     </div>
@@ -414,14 +414,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-7"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-8">
       &nbsp;
     </div>
@@ -430,14 +430,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-8"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-9">
       &nbsp;
     </div>
@@ -446,14 +446,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-9"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-10">
       &nbsp;
     </div>
@@ -462,14 +462,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-10"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-11">
       &nbsp;
     </div>
@@ -478,14 +478,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-11"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-12">
       &nbsp;
     </div>
@@ -494,14 +494,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-12"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-13">
       &nbsp;
     </div>
@@ -510,14 +510,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-13"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-14">
       &nbsp;
     </div>
@@ -526,14 +526,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-14"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-15">
       &nbsp;
     </div>
@@ -542,14 +542,14 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-15"></div>
 {% endexample %}
   </div>
 
 
-  <div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--gray-16">
       &nbsp;
     </div>
@@ -558,7 +558,7 @@ These are the background colors we’re using in production — no more. All col
 {% endexample %}
   </div>
 
-  <div class="DocsExample DocsExample--renderHidden">
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--gray-16"></div>
 {% endexample %}
@@ -569,7 +569,7 @@ These are the background colors we’re using in production — no more. All col
 
 ### Other utility classes
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-color--inherit"></div>
 <div class="u-background-color--inherit--active"></div>
@@ -584,7 +584,7 @@ These are the background colors we’re using in production — no more. All col
 ## background
 No mixins, only utility classes.
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background--none"></div>
 <div class="u-background--inherit"></div>
@@ -595,7 +595,7 @@ No mixins, only utility classes.
 ## background-image
 No mixins, only utility classes.
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-image--none"></div>
 {% endexample %}
@@ -605,7 +605,7 @@ No mixins, only utility classes.
 ## background-position
 No mixins, only utility classes.
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-position--center-center"></div>
 <div class="u-background-position--center-top"></div>
@@ -622,7 +622,7 @@ No mixins, only utility classes.
 ## background-size
 No mixins, only utility classes.
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
 {% example html %}
 <div class="u-background-size--contain"></div>
 <div class="u-background-size--cover"></div>

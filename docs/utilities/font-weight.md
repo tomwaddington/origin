@@ -13,7 +13,7 @@ can all be found in [_font-settings.scss]({{ site.github.repo }}/blob/master/ass
 Font files for additional weights to those shown below do exist, but we don't use them.
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-weight--light">
   The light weight (`300`) for text
@@ -21,14 +21,16 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-weight(light);
+.MyComponent {
+  @include font-weight(light);
+}
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-weight--normal">
   The normal weight (`400`) for text
@@ -36,14 +38,16 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-weight(normal);
+.MyComponent {
+  @include font-weight(normal);
+}
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-weight--semi-bold">
   The semi-bold weight (`600`) for text
@@ -51,14 +55,16 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-weight(semi-bold);
+.MyComponent {
+  @include font-weight(semi-bold);
+}
 {% endexample %}
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-weight--bold">
   The bold weight (`700`) for text
@@ -66,8 +72,10 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-weight(bold);
+.MyComponent {
+  @include font-weight(bold);
+}
 {% endexample %}
 </div>

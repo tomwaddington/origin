@@ -12,7 +12,7 @@ Truncate text, force text onto multiple lines, and apply values for common prope
 ## Truncate text
 Prevent text from wrapping onto multiple lines, and instead truncates it with an ellipsis.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-13" style="width: 50%;">
   <div class="u-text-truncate">
@@ -22,7 +22,7 @@ Prevent text from wrapping onto multiple lines, and instead truncates it with an
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include text-truncate;
@@ -34,7 +34,7 @@ Prevent text from wrapping onto multiple lines, and instead truncates it with an
 ## Text on multiple lines
 Force text onto multiple lines. Only required when the text of its parent element is being truncated.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-text-truncate" style="width: 50%;">
   <div class="u-background-color--gray-15 u-text-truncate">
@@ -47,7 +47,7 @@ Force text onto multiple lines. Only required when the text of its parent elemen
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include text-multiLine;
@@ -122,7 +122,7 @@ Italic forms are generally cursive in nature while oblique faces are typically s
 ## font-kerning
 Controls the usage of kerning information in a font file. If the font is well-kerned, using `font-kerning` will allow for optimum spacing between characters.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-kerning--normal">
   If the font is well-kerned, using `font-kerning` will allow for optimum spacing between characters.
@@ -130,7 +130,7 @@ Controls the usage of kerning information in a font file. If the font is well-ke
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-kerning(normal);

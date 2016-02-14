@@ -18,7 +18,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `0` to `10` for use in utility classes
 
 ### Examples
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-15 u-flex-grow--2">Flex item one</div>
@@ -27,7 +27,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -44,7 +44,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-flexbox">
   <div class="u-background-color--gray-15">Flex item one</div>
@@ -55,7 +55,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 <div class="DocsExample DocsExample--renderHidden">
-{% example scss %}
+DocsExample--labelMixins {% example scss %}
 .MyComponent {
   @include flexbox;
 }

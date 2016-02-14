@@ -14,7 +14,7 @@ The base class name (e.g., `MyComponent`) reserves a namespace that can only be 
 
 All selectors in a component file must start with the component namespace. For example, a component called `MyComponent` could have the following CSS, where every selector starts with the string `MyComponent`.
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 .MyComponent
 .MyComponent--someVariant
@@ -25,7 +25,7 @@ All selectors in a component file must start with the component namespace. For e
 
 Each class provides a hook to style specific elements within the HTML definition.
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight html %}
 <article class="MyComponent">
   <h1 class="MyComponent-title"></h1>
@@ -66,7 +66,7 @@ Component names should be in upper camel case. In addition to no other elements 
 
 #### Base class name
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 .MyComponent
 .TableView
@@ -76,7 +76,7 @@ Component names should be in upper camel case. In addition to no other elements 
 {% endhighlight %}
 </div>
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight html %}
 <div class="MyComponent">
   …
@@ -92,7 +92,7 @@ A component modifier is a class that modifies the presentation of the base compo
 * Separate modifiers from the component name by two hyphens
 * Include modifiers _in addition_ to the base component class
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 /* Core `SegmentedControl` styles */
 .SegmentedControl {}
@@ -102,7 +102,7 @@ A component modifier is a class that modifies the presentation of the base compo
 {% endhighlight %}
 </div>
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight html %}
 <div class="SegmentedControl SegmentedControl--contrastHigh">…</div>
 {% endhighlight %}
@@ -113,7 +113,7 @@ A component modifier is a class that modifies the presentation of the base compo
 
 A component child is a class that is attached to a child node of a component. It's responsible for applying presentation directly to the child on behalf of a particular component. Write child names in lower camel case.
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight html %}
 <ol class="TableView">
   <li class="TableView-cell">
@@ -132,14 +132,14 @@ This means that the same state names can be used in multiple contexts, but every
 
 Don't use `is-stateName` classes when you should be using a `ComponentName--modifierName` class. `is-stateName` classes should only be used for **temporary** states (e.g. don't use `is-flash` to create a flash notice when it should actually be `Notice--flash`).
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 .DropdownMenu {}
 .DropdownMenu.is-expanded {}
 {% endhighlight %}
 </div>
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight html %}
 <div class="DropdownMenu is-expanded">
   …

@@ -20,7 +20,7 @@ There's also a larger numerical scale of values available through the mixin, tho
 
 Applies default margin to all four sides of an element
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--default">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -28,7 +28,7 @@ Applies default margin to all four sides of an element
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default);
@@ -39,7 +39,7 @@ Applies default margin to all four sides of an element
 
 Applies large margin to left side only
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin-left--large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -47,7 +47,7 @@ Applies large margin to left side only
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin-left(large);
@@ -58,7 +58,7 @@ Applies large margin to left side only
 
 Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-left` to `margin-right`
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin-top--small u-margin-right--large u-margin-bottom--small u-margin-left--large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -66,7 +66,7 @@ Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-lef
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small large);
@@ -77,7 +77,7 @@ Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-lef
 
 Turning a small `margin-bottom` into extra large at the medium breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin-bottom--small u-md-margin-bottom--x-large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -85,7 +85,7 @@ Turning a small `margin-bottom` into extra large at the medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin-bottom(small);
@@ -100,7 +100,7 @@ Turning a small `margin-bottom` into extra large at the medium breakpoint
 
 Shorthand; applies different margins to all four sides
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin-bottom--x-large u-margin-left--xx-small u-margin-right--large u-margin-top--default">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -108,7 +108,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default large x-large xx-small);
@@ -120,7 +120,7 @@ Shorthand; applies different margins to all four sides
 ## Standard scale visual reference
 
 ### Default
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--default">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -128,7 +128,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default);
@@ -138,7 +138,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### XX-Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--xx-small">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -146,7 +146,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(xx-small);
@@ -156,7 +156,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### X-Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--x-small">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -164,7 +164,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(x-small);
@@ -174,7 +174,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--small">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -182,7 +182,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small);
@@ -192,7 +192,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -200,7 +200,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(large);
@@ -210,7 +210,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### X-Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--x-large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -218,7 +218,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(x-large);
@@ -228,7 +228,7 @@ Shorthand; applies different margins to all four sides
 
 
 ### XX-Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--xx-large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -236,7 +236,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(xx-large);
@@ -254,7 +254,7 @@ Shorthand; applies different margins to all four sides
 
 Apply default amount of `margin` only at large breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-lg-margin--default">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -262,7 +262,7 @@ Apply default amount of `margin` only at large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include break(lg) {
@@ -275,7 +275,7 @@ Apply default amount of `margin` only at large breakpoint
 
 Overwrite small amount of `margin` with extra large amount at medium breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-margin--small u-md-margin--x-large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -283,7 +283,7 @@ Overwrite small amount of `margin` with extra large amount at medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small);
@@ -306,7 +306,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(1);
+.MyComponent {
+  @include margin(1);
+}
 {% endexample %}
 </div>
 
@@ -317,7 +319,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(2);
+.MyComponent {
+  @include margin(2);
+}
 {% endexample %}
 </div>
 
@@ -328,7 +332,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(3);
+.MyComponent {
+  @include margin(3);
+}
 {% endexample %}
 </div>
 
@@ -339,7 +345,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(4);
+.MyComponent {
+  @include margin(4);
+}
 {% endexample %}
 </div>
 
@@ -350,7 +358,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(5);
+.MyComponent {
+  @include margin(5);
+}
 {% endexample %}
 </div>
 
@@ -361,7 +371,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(6);
+.MyComponent {
+  @include margin(6);
+}
 {% endexample %}
 </div>
 
@@ -372,7 +384,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(7);
+.MyComponent {
+  @include margin(7);
+}
 {% endexample %}
 </div>
 
@@ -383,7 +397,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(8);
+.MyComponent {
+  @include margin(8);
+}
 {% endexample %}
 </div>
 
@@ -394,7 +410,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(9);
+.MyComponent {
+  @include margin(9);
+}
 {% endexample %}
 </div>
 
@@ -405,7 +423,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(10);
+.MyComponent {
+  @include margin(10);
+}
 {% endexample %}
 </div>
 
@@ -416,7 +436,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(11);
+.MyComponent {
+  @include margin(11);
+}
 {% endexample %}
 </div>
 
@@ -427,7 +449,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(12);
+.MyComponent {
+  @include margin(12);
+}
 {% endexample %}
 </div>
 
@@ -438,7 +462,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(13);
+.MyComponent {
+  @include margin(13);
+}
 {% endexample %}
 </div>
 
@@ -449,7 +475,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(14);
+.MyComponent {
+  @include margin(14);
+}
 {% endexample %}
 </div>
 
@@ -460,7 +488,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(15);
+.MyComponent {
+  @include margin(15);
+}
 {% endexample %}
 </div>
 
@@ -471,7 +501,9 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(16);
+.MyComponent {
+  @include margin(16);
+}
 {% endexample %}
 </div>
 
@@ -482,6 +514,8 @@ Our full scale of `margin` values is numerical. They can only be applied using t
     </div>
   </div>
 {% example scss %}
-@include margin(17);
+.MyComponent {
+  @include margin(17);
+}
 {% endexample %}
 </div>

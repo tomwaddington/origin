@@ -22,7 +22,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 ## Standard scale
 
 ### Default
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--default u-line-height--default">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -30,7 +30,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(default);
@@ -40,7 +40,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 </div>
 
 ### XX-Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--xx-small u-line-height--default">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -48,7 +48,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(xx-small);
@@ -59,7 +59,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 
 
 ### X-Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--x-small u-line-height--default">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -67,7 +67,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(x-small);
@@ -77,7 +77,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 </div>
 
 ### Small
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--small u-line-height--default">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -85,7 +85,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(small);
@@ -95,7 +95,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 </div>
 
 ### Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--large u-line-height--default">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -103,7 +103,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(large);
@@ -114,7 +114,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 
 
 ### X-Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--x-large u-line-height--tight">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
@@ -122,7 +122,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(x-large);
@@ -132,7 +132,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 </div>
 
 ### XX-Large
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--xx-large u-line-height--x-tight">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -140,7 +140,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(xx-large);
@@ -154,7 +154,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 
 `font-size` values can selectively only be applied when certain [breakpoints]({{ site.baseurl }}/utilities/breakpoint) are triggered.
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-lg-font-size--x-large u-lg-line-height--tight">
   FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -162,7 +162,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include break(lg) {
@@ -184,8 +184,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(1);
-@include line-height(default);
+.MyComponent {
+  @include font-size(1);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -196,8 +198,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(2);
-@include line-height(default);
+.MyComponent {
+  @include font-size(2);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -208,8 +212,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(3);
-@include line-height(default);
+.MyComponent {
+  @include font-size(3);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -220,8 +226,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(4);
-@include line-height(default);
+.MyComponent {
+  @include font-size(4);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -232,8 +240,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(5);
-@include line-height(default);
+.MyComponent {
+  @include font-size(5);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -244,8 +254,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(6);
-@include line-height(default);
+.MyComponent {
+  @include font-size(6);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -256,8 +268,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(7);
-@include line-height(default);
+.MyComponent {
+  @include font-size(7);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
@@ -268,8 +282,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(8);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(8);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
@@ -280,8 +296,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(9);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(9);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
@@ -292,8 +310,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(10);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(10);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
@@ -304,8 +324,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(11);
-@include line-height(x-tight);
+.MyComponent {
+  @include font-size(11);
+  @include line-height(x-tight);
+}
 {% endexample %}
 </div>
 
@@ -316,8 +338,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(12);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(12);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
@@ -328,8 +352,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(13);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(13);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
@@ -340,8 +366,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(14);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(14);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
@@ -352,8 +380,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(15);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(15);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
@@ -364,8 +394,10 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(16);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(16);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
@@ -376,7 +408,9 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
     </p>
   </div>
 {% example scss %}
-@include font-size(17);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(17);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>

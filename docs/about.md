@@ -12,7 +12,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 ## Quick examples
 
 ### Before
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 .pricing-panel {
   border: 1px solid #ddd;
@@ -26,7 +26,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 </div>
 
 ### After
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 .Card {
   @include border(default, gray-13);
@@ -41,7 +41,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 
 
 ### Before
-<div class="DocsExample DocsExample--noLanguageLabel DocsExample--grouped DocsExample--renderHidden">
+<div class="DocsExample  DocsExample--grouped DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="AboutExample AboutExample--1">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -54,7 +54,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--noLanguageLabel DocsExample--renderHidden">
+<div class="DocsExample  DocsExample--renderHidden">
 {% example scss %}
 .tour-section-intro {
   color: #777;
@@ -79,7 +79,7 @@ We define all of our global CSS values in [`_utility-values.scss`]({{ site.githu
 
 Here's what our scale of `border-radius` values looks like:
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 $border-radius--0: 0;
 $border-radius--1: 2px;
@@ -93,7 +93,7 @@ $border-radius--5: 10px;
 
 Many of the variables in these scales are then assigned to new variables with more human meaning. We call these ‘aliases’:
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 $border-width--0:        $border-width--0;
 $border-width--thin:     $border-width--1;
@@ -107,7 +107,7 @@ $border-width--xx-thick: $border-width--5;
 
 We define Sass lists or maps of our alias variables to make them available as Sass mixin arguments:
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 $border-width-values: (
   0:        $border-width--0,
@@ -123,7 +123,7 @@ $border-width-values: (
 
 We then use mixins to generate HTML utility classes for the values in our lists and maps:
 
-<div class="DocsExample DocsExample--noLanguageLabel">
+<div class="DocsExample ">
 {% highlight scss %}
 @mixin border-radius($value, $important: null) {
   border-radius: map-get($border-radius-values, $value) $important;

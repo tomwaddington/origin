@@ -19,7 +19,7 @@ Break points should normally be reserved for when content ‘breaks’ (the clue
 
 Turning a small `padding` into extra large at the medium breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-background-color--gray-12 u-padding--small u-md-padding--x-large">
   <div class="u-background-color--gray-15">&nbsp;</div>
@@ -27,7 +27,7 @@ Turning a small `padding` into extra large at the medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include padding(small);
@@ -42,7 +42,7 @@ Turning a small `padding` into extra large at the medium breakpoint
 
 Increase font size at the large breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-font-size--small u-lg-font-size--large">
   I will magically get large at the large breakpoint
@@ -50,7 +50,7 @@ Increase font size at the large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(small);
@@ -65,7 +65,7 @@ Increase font size at the large breakpoint
 
 Hide an element until the large breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-display--none u-lg-display--block">
   I will magically appear at the large breakpoint
@@ -73,7 +73,7 @@ Hide an element until the large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   display: none;
@@ -88,7 +88,7 @@ Hide an element until the large breakpoint
 
 Float an element to the right at the extra large breakpoint
 
-<div class="DocsExample DocsExample--grouped">
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
 <div class="u-floatContainer">
   <div class="u-x-lg-float--right">
@@ -98,7 +98,7 @@ Float an element to the right at the extra large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
 .MyComponentParent {
   @include floatContainer;
