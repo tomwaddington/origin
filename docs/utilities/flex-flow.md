@@ -28,7 +28,9 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
     </div>
   </div>
 {% example scss %}
-@include flex-flow(row nowrap);
+.MyComponent {
+  @include flex-flow(row nowrap);
+}
 {% endexample %}
 </div>
 
@@ -43,7 +45,9 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
     </div>
   </div>
 {% example scss %}
-@include flex-flow(row wrap);
+.MyComponent {
+  @include flex-flow(row wrap);
+}
 {% endexample %}
 </div>
 
@@ -58,7 +62,9 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
     </div>
   </div>
 {% example scss %}
-@include flex-flow(column nowrap);
+.MyComponent {
+  @include flex-flow(column nowrap);
+}
 {% endexample %}
 </div>
 
@@ -73,6 +79,8 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
     </div>
   </div>
 {% example scss %}
-@include flex-flow(column-reverse wrap);
+.MyComponent {
+  @include flex-flow(column-reverse wrap);
+}
 {% endexample %}
 </div>

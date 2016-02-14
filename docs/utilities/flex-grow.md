@@ -54,8 +54,8 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--renderHidden">
-DocsExample--labelMixins {% example scss %}
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
+{% example scss %}
 .MyComponent {
   @include flexbox;
 }
