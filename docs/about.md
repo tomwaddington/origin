@@ -2,9 +2,11 @@
 layout: page
 title: About Origin
 ---
-Multiple teams working on multiple web products need a rigorous design system. CSS is one of the main materials, but it lacks the inherent structure we want. Origin provides that structure.
+Multiple teams working on multiple web products require a rigorous design system. CSS is one of the main materials, but it lacks the inherent structure we need. Origin provides that structure.
 
-We want predictable results, written in a consistent way, according to agreed global values. We also want to keep CSS approachable for those less experienced and make it harder to incur technical debt, while ensuring it's easy to evolve our system as we learn (and make) more.   
+We want predictable results, written in a consistent way, according to agreed global values. We also want to keep CSS approachable for those less experienced and make it harder to incur technical debt, while ensuring it's easy to evolve our system as we learn (and make) more.
+
+See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 
 
 ## Quick examples
@@ -139,6 +141,21 @@ We then use mixins to generate HTML utility classes for the values in our lists 
 
 
 Those same mixins can be used in any `.scss` file to invoke the same styles.
+
+
+## Key files
+
+#### [origin.scss]({{ site.github.repo }}/blob/master/assets/scss/origin.scss)  
+Master file where all required `.scss` partials are `@import`ed.
+
+#### [_utility-values.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss)  
+Where all of our CSS values, their variables, lists, and maps are defined.
+
+#### [_utility-settings.scss]({{ site.github.repo }}/blob/master/assets/scss/local/_utility-settings.scss)  
+Where the `true`/`false` flags are set, defining which `u-property--#` utility classes will render in the output CSS. This is one of a set of 'local' files copied and customised for each project that implements Origin.
+
+#### [_project-aliases.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_project-aliases.scss)  
+This file can be used to override the values in [_utility-values.scss]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss) for particular projects. Why? If an applications default `font-size` is actually Origins `small` value, we can shift the whole scale here so the mixins and utility classes are always relative to project. So we can say `@include font-size(default)` when we want the default size, instead of `@include font-size(small)`, even though `default` outputs a different size to the default Origin one.
 
 
 ## Utility mixins and classes

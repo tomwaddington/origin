@@ -82,7 +82,7 @@ Use the included Grunt task to generate and publish Origin’s docs to http://fa
 $ grunt publish
 ```
 
-This takes the `_site` directory, generates it's own Git repository there, and publishes the contents to the `gh-pages` branch here on GitHub. Changes are reflected in the hosted docs within a minute or so.
+This takes the `_site` directory, generates its own Git repository there, and publishes the contents to the `gh-pages` branch here on GitHub. Changes are reflected in the hosted docs within a minute or so.
 
 
 ## Implementing Origin into a project
