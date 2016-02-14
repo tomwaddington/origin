@@ -22,8 +22,10 @@ Applies default margin to all four sides of an element
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--default">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--default">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -41,8 +43,10 @@ Applies large margin to left side only
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin-left--large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin-left--large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -60,8 +64,10 @@ Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-lef
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin-top--small u-margin-right--large u-margin-bottom--small u-margin-left--large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin-top--small u-margin-right--large u-margin-bottom--small u-margin-left--large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -79,8 +85,10 @@ Turning a small `margin-bottom` into extra large at the medium breakpoint
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin-bottom--small u-md-margin-bottom--x-large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin-bottom--small u-md-margin-bottom--x-large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -102,8 +110,10 @@ Shorthand; applies different margins to all four sides
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin-bottom--x-large u-margin-left--xx-small u-margin-right--large u-margin-top--default">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin-bottom--x-large u-margin-left--xx-small u-margin-right--large u-margin-top--default">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -122,8 +132,10 @@ Shorthand; applies different margins to all four sides
 ### Default
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--default">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--default">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -140,8 +152,10 @@ Shorthand; applies different margins to all four sides
 ### XX-Small
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--xx-small">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--xx-small">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -158,8 +172,10 @@ Shorthand; applies different margins to all four sides
 ### X-Small
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--x-small">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--x-small">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -176,8 +192,10 @@ Shorthand; applies different margins to all four sides
 ### Small
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--small">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--small">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -194,8 +212,10 @@ Shorthand; applies different margins to all four sides
 ### Large
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -212,8 +232,10 @@ Shorthand; applies different margins to all four sides
 ### X-Large
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--x-large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--x-large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -230,8 +252,10 @@ Shorthand; applies different margins to all four sides
 ### XX-Large
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--xx-large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--xx-large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -256,8 +280,10 @@ Apply default amount of `margin` only at large breakpoint
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-lg-margin--default">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-lg-margin--default">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
@@ -277,8 +303,10 @@ Overwrite small amount of `margin` with extra large amount at medium breakpoint
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-background-color--gray-12 u-margin--small u-md-margin--x-large">
-  <div class="u-background-color--gray-15">&nbsp;</div>
+<div class="u-background-color--gray-12 u-display--inline-block">
+  <div class="u-background-color--gray-15 u-margin--small u-md-margin--x-large">
+    Our `margin` utility has a standard scale of values ranging from `xx-small` to `xx-large`. These can be applied using our `margin` Sass mixin, or using `u-margin--#` utility classes in HTML.
+  </div>
 </div>
 {% endexample %}
 </div>
