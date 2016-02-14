@@ -21,7 +21,7 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-weight(light);
 {% endexample %}
@@ -36,7 +36,7 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-weight(normal);
 {% endexample %}
@@ -51,7 +51,7 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-weight(semi-bold);
 {% endexample %}
@@ -66,7 +66,7 @@ Font files for additional weights to those shown below do exist, but we don't us
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-weight(bold);
 {% endexample %}

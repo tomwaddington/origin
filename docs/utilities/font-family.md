@@ -17,7 +17,7 @@ All of our font stacks include sensible backup options if the primary font can't
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-family(default);
 {% endexample %}
@@ -34,7 +34,7 @@ Before using Source Sans Pro, we used Helvetica Neue exclusively. While this sti
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-family(legacy);
 {% endexample %}
@@ -51,7 +51,7 @@ We often use Effra for headings in editorial design work, primarily on the commu
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-family(editorial);
 {% endexample %}
@@ -68,7 +68,7 @@ We often use Swister for handwritten 'notes' in our product and comms work. It i
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-family(handwritten);
 {% endexample %}
@@ -85,7 +85,7 @@ Whenever we show code examples, we use Monaco. Its font stack includes a number 
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include font-family(monospace);
 {% endexample %}

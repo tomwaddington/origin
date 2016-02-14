@@ -14,19 +14,19 @@ Related: [float]({{ site.baseurl }}/utilities/float)
 * `right`
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example html %}
 <div class="u-clear--both"></div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example html %}
 <div class="u-clear--left"></div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example html %}
 <div class="u-clear--right"></div>
 {% endexample %}

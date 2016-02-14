@@ -22,7 +22,7 @@ Prevent text from wrapping onto multiple lines, and instead truncates it with an
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include text-truncate;
@@ -47,7 +47,7 @@ Force text onto multiple lines. Only required when the text of its parent elemen
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include text-multiLine;
@@ -130,7 +130,7 @@ Controls the usage of kerning information in a font file. If the font is well-ke
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-kerning(normal);

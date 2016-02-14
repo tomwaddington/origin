@@ -11,7 +11,7 @@ Related: [animation]({{ site.baseurl }}/utilities/animation)
 Arguments for `transition` are optional. `property`, `duration`, and `timing-function` come from our global defaults defined in [`_utility-values.scss`]({{ site.github.repo }}/tree/master/assets/scss/global/utilities/_utility-values.scss).
 
 ### Format
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
   @include transition(
     [property],
@@ -27,7 +27,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 
 ### Examples
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transition DocsExample-preview--transition1">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleTransitionElement">
@@ -49,7 +49,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 </div>
 
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transition DocsExample-preview--transition2">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleTransitionElement">

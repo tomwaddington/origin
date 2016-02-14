@@ -11,13 +11,13 @@ Use to apply `box-sizing` values with utility classes.
 * `content-box`
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example html %}
 <div class="u-box-sizing--border-box"></div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example html %}
 <div class="u-box-sizing--content-box"></div>
 {% endexample %}

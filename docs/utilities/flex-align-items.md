@@ -30,7 +30,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -50,7 +50,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -70,7 +70,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -90,7 +90,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -110,7 +110,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;

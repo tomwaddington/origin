@@ -28,7 +28,7 @@ Applies default margin to all four sides of an element
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default);
@@ -47,7 +47,7 @@ Applies large margin to left side only
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin-left(large);
@@ -66,7 +66,7 @@ Shorthand; applies small `margin-bottom` and `margin-top`, and large `margin-lef
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small large);
@@ -85,7 +85,7 @@ Turning a small `margin-bottom` into extra large at the medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin-bottom(small);
@@ -108,7 +108,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default large x-large xx-small);
@@ -128,7 +128,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(default);
@@ -146,7 +146,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(xx-small);
@@ -164,7 +164,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(x-small);
@@ -182,7 +182,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small);
@@ -200,7 +200,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(large);
@@ -218,7 +218,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(x-large);
@@ -236,7 +236,7 @@ Shorthand; applies different margins to all four sides
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(xx-large);
@@ -262,7 +262,7 @@ Apply default amount of `margin` only at large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include break(lg) {
@@ -283,7 +283,7 @@ Overwrite small amount of `margin` with extra large amount at medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include margin(small);
@@ -299,7 +299,7 @@ Overwrite small amount of `margin` with extra large amount at medium breakpoint
 ## Full scale visual reference
 Our full scale of `margin` values is numerical. They can only be applied using the `margin` Sass mixin, because in practice we've never needed HTML classes for them. Generating the classes would only add unnecessary weight to our stylesheets.
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--1">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -310,7 +310,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--2">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -321,7 +321,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--3">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -332,7 +332,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--4">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -343,7 +343,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--5">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -354,7 +354,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--6">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -365,7 +365,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--7">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -376,7 +376,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--8">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -387,7 +387,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--9">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -398,7 +398,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--10">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -409,7 +409,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--11">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -420,7 +420,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--12">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -431,7 +431,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--13">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -442,7 +442,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--14">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -453,7 +453,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--15">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -464,7 +464,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--16">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -475,7 +475,7 @@ Our full scale of `margin` values is numerical. They can only be applied using t
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--spacing DocsExample-preview--spacing--17">
     <div class="DocsExample-preview-child">
       &nbsp;

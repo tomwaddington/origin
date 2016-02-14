@@ -28,7 +28,7 @@ Apply `visibility` values with utility classes. Values can optionally be applied
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   visibility: hidden;

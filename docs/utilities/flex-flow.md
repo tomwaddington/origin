@@ -17,7 +17,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `row nowrap` (default)
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex-flow DocsExample-preview--flex-flow1">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">
@@ -32,7 +32,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex-flow DocsExample-preview--flex-flow2">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">
@@ -47,7 +47,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex-flow DocsExample-preview--flex-flow3">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">
@@ -62,7 +62,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex-flow DocsExample-preview--flex-flow4">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">

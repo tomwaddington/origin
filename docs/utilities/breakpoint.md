@@ -27,7 +27,7 @@ Turning a small `padding` into extra large at the medium breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include padding(small);
@@ -50,7 +50,7 @@ Increase font size at the large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(small);
@@ -73,7 +73,7 @@ Hide an element until the large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   display: none;
@@ -98,7 +98,7 @@ Float an element to the right at the extra large breakpoint
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponentParent {
   @include floatContainer;

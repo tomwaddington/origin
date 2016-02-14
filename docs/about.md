@@ -41,7 +41,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 
 
 ### Before
-<div class="DocsExample DocsExample--noLanguageLabel DocsExample--render--hidden DocsExample--render--hidden--grouped">
+<div class="DocsExample DocsExample--noLanguageLabel DocsExample--grouped DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="AboutExample AboutExample--1">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -54,7 +54,7 @@ See [principles]({{ site.baseurl }}/guidance/principles) for more details.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--noLanguageLabel DocsExample--render--hidden">
+<div class="DocsExample DocsExample--noLanguageLabel DocsExample--renderHidden">
 {% example scss %}
 .tour-section-intro {
   color: #777;

@@ -30,7 +30,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(default);
@@ -48,7 +48,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(xx-small);
@@ -67,7 +67,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(x-small);
@@ -85,7 +85,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(small);
@@ -103,7 +103,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(large);
@@ -122,7 +122,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(x-large);
@@ -140,7 +140,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include font-size(xx-large);
@@ -162,7 +162,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include break(lg) {
@@ -177,7 +177,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 
 ## Full scale
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--1">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -189,7 +189,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--2">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -201,7 +201,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--3">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -213,7 +213,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--4">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -225,7 +225,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--5">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -237,7 +237,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--6">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -249,7 +249,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--7">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
@@ -261,7 +261,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--8">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
@@ -273,7 +273,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--9">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier.
@@ -285,7 +285,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--10">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -297,7 +297,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--11">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
@@ -309,7 +309,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--12">
       FreeAgent is a company born out of the frustration that business finances are just too damn hard.
@@ -321,7 +321,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--13">
       Business finances are just too damn hard.
@@ -333,7 +333,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--14">
       Business finances are just too damn hard.
@@ -345,7 +345,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--15">
       Business finances.
@@ -357,7 +357,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--16">
       Business finances.
@@ -369,7 +369,7 @@ Using the Sass mixin is preferred, as it forces us to consider all objects as [c
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--17">
       Business.

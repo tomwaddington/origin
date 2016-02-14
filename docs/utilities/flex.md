@@ -18,7 +18,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `none`
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex DocsExample-preview--flex1">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">
@@ -41,7 +41,7 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--flex DocsExample-preview--flex2">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleFlexContainer">

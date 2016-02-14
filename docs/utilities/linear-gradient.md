@@ -11,7 +11,7 @@ Lifted directly from [Bourbon](http://bourbon.io/docs/#linear-gradient). Gradien
 This mixin will output a fallback `background-color: #first-color;` declaration. A `$fallback` argument can be passed to change the fallback color.
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--linear-gradient DocsExample-preview--linear-gradient1">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -25,7 +25,7 @@ This mixin will output a fallback `background-color: #first-color;` declaration.
 </div>
 
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--linear-gradient DocsExample-preview--linear-gradient2">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -39,7 +39,7 @@ This mixin will output a fallback `background-color: #first-color;` declaration.
 </div>
 
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--linear-gradient DocsExample-preview--linear-gradient3">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -53,7 +53,7 @@ This mixin will output a fallback `background-color: #first-color;` declaration.
 </div>
 
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--linear-gradient DocsExample-preview--linear-gradient4">
     <div class="DocsExample-preview-child">
       &nbsp;

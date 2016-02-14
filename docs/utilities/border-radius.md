@@ -23,7 +23,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(default);
 {% endexample %}
@@ -38,7 +38,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(small);
 {% endexample %}
@@ -53,7 +53,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(large);
 {% endexample %}
@@ -68,7 +68,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(x-large);
 {% endexample %}
@@ -83,7 +83,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(xx-large);
 {% endexample %}
@@ -98,7 +98,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius(0);
 {% endexample %}
@@ -113,7 +113,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius-bottom-right(large);
 {% endexample %}
@@ -128,7 +128,7 @@ Use to apply or remove `border-radius` using our scale of values. Can be used on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include border-radius-top-right(xx-large);
 {% endexample %}

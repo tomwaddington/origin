@@ -9,7 +9,7 @@ Use to define CSS keyframe animations.
 Only `name` argument is required. `iteration-count` defaults to `1` and `fill-mode` to `forwards`. `duration` and `timing-function` come from our global defaults defined in [`_utility-values.scss`]({{ site.github.repo }}/tree/master/assets/scss/global/utilities/_utility-values.scss).
 
 ### Format
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
   @include animation(
     [name],
@@ -29,7 +29,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 
 Basic example; only `name` argument is defined
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--keyframe-animation DocsExample-preview--keyframe-animation1">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleKeyframeElement">
@@ -57,7 +57,7 @@ Basic example; only `name` argument is defined
 
 Make the animation repeat infinitely
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--keyframe-animation DocsExample-preview--keyframe-animation2">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleKeyframeElement">
@@ -85,7 +85,7 @@ Make the animation repeat infinitely
 
 Make the animation last for 2s and repeat infinitely
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--keyframe-animation DocsExample-preview--keyframe-animation3">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleKeyframeElement">
@@ -113,7 +113,7 @@ Make the animation last for 2s and repeat infinitely
 
 Make the animation last for 1s and only occur once
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--keyframe-animation DocsExample-preview--keyframe-animation4">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleKeyframeElement">
@@ -141,7 +141,7 @@ Make the animation last for 1s and only occur once
 
 Make the animation last for 0.5s and follow a bespoke cubic bezier `timing-function`
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--keyframe-animation DocsExample-preview--keyframe-animation5">
     <div class="DocsExample-preview-child">
       <div class="DocsExampleKeyframeElement">

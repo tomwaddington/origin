@@ -17,13 +17,13 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 * `inline-flex`
 
 ### Examples
-<div class="DocsExample DocsExample--grouped DocsExample--render--hidden">
+<div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
 {% example html %}
 <div class="u-flexbox"></div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox;
@@ -32,13 +32,13 @@ This work is derived from [sass-flex-mixin](https://github.com/mastastealth/sass
 </div>
 
 
-<div class="DocsExample DocsExample--grouped DocsExample--render--hidden">
+<div class="DocsExample DocsExample--grouped DocsExample--renderHidden">
 {% example html %}
 <div class="u-inline-flexbox"></div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include flexbox(inline-flex);

@@ -31,7 +31,7 @@ Apply `display` values with utility classes. Values can optionally be applied on
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   display: inline-block;

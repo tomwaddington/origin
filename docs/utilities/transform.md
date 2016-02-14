@@ -11,7 +11,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 ## rotate
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transform DocsExample-preview--transform1">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -28,7 +28,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 ## transform
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transform DocsExample-preview--transform2">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -41,7 +41,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transform DocsExample-preview--transform3">
     <div class="DocsExample-preview-child">
       &nbsp;
@@ -54,7 +54,7 @@ Related: [transition]({{ site.baseurl }}/utilities/transition)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--transform DocsExample-preview--transform4">
     <div class="DocsExample-preview-child">
       &nbsp;

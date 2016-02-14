@@ -25,7 +25,7 @@ The `list-item-spacing` utility lets us control the space between list items.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyList li {
   @include list-item-spacing(default);
@@ -44,7 +44,7 @@ The `list-item-spacing` utility lets us control the space between list items.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyList li {
   @include list-item-spacing(tight);
@@ -63,7 +63,7 @@ The `list-item-spacing` utility lets us control the space between list items.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyList li {
   @include list-item-spacing(loose);
@@ -82,7 +82,7 @@ The `list-item-spacing` utility lets us control the space between list items.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyList li {
   @include list-item-spacing(x-loose);
@@ -101,7 +101,7 @@ The `list-item-spacing` utility lets us control the space between list items.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyList li {
   @include list-item-spacing(xx-loose);

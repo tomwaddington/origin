@@ -48,7 +48,7 @@ The Heading component can be integrated into stylesheets for other components an
 The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss). Arguments must be declared in alphabetical order to work properly.
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include Heading(small);
 @include Heading(xx-large);
@@ -77,7 +77,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(xx-large);
@@ -93,7 +93,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(x-large);
@@ -109,7 +109,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(large);
@@ -125,7 +125,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(small);
@@ -141,7 +141,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(x-small);
@@ -157,7 +157,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(xx-small);

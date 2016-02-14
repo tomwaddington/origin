@@ -19,7 +19,7 @@ Utility classes don't get fully work for `border`. See the assigned [GitHub Issu
 * `xx-thick` (`4px`)
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--border DocsExample-preview--border1">
     <div class="DocsExample-preview-child">
       Default weight blue border on every side
@@ -30,7 +30,7 @@ Utility classes don't get fully work for `border`. See the assigned [GitHub Issu
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--border DocsExample-preview--border2">
     <div class="DocsExample-preview-child">
       Thick gray border on the bottom
@@ -41,7 +41,7 @@ Utility classes don't get fully work for `border`. See the assigned [GitHub Issu
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--border DocsExample-preview--border3">
     <div class="DocsExample-preview-child">
       XX-thick green border on the left applied with extra `!important`
@@ -52,7 +52,7 @@ Utility classes don't get fully work for `border`. See the assigned [GitHub Issu
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview DocsExample-preview--border DocsExample-preview--border4">
     <div class="DocsExample-preview-child">
       XX-thick green border on the left

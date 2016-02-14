@@ -405,26 +405,24 @@ ul ul ul {
 }
 
 
-.DocsExample--render--hidden .DocsExample-render + .highlight {
+.DocsExample--renderHidden .DocsExample-render + .highlight {
   @include border-radius(default);
 }
 
 /* Hide the example preview block is we're only showing a CSS example */
-.DocsExample--render--hidden .DocsExample-render {
+.DocsExample--renderHidden .DocsExample-render {
   display: none;
 }
 
 /* Visually connect two adjacent code example blocks */
 .DocsExample--grouped,
-.DocsExample--grouped .DocsExample-render + .highlight,
-.DocsExample--render--hidden--grouped,
-.DocsExample--render--hidden--grouped .DocsExample-render + .highlight {
+.DocsExample--grouped .DocsExample-render + .highlight {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   margin-bottom: 0;
 }
 
-.DocsExample--render--hidden--grouped + .DocsExample--render--hidden .DocsExample-render + .highlight {
+.DocsExample--grouped + .DocsExample--renderHidden .DocsExample-render + .highlight {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

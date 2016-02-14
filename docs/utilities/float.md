@@ -24,7 +24,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;
@@ -47,7 +47,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;
@@ -72,7 +72,7 @@ Related: [clear]({{ site.baseurl }}/utilities/clear)
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyComponent {
   @include floatContainer;
