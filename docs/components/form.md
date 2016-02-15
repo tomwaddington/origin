@@ -80,6 +80,22 @@ These are the different field types that we use. Typically they'd always be wrap
     </label>
   </div>
 </div>
+<div class="Form-field">
+<label class="Form-field-label" for="inactive_checkbox_example">
+  Inactive Checkbox Field
+</label>
+  <div class="Form-field-inputs">
+    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
+  </div>
+</div>
+<div class="Form-field">
+  <div class="Form-field-inputs">
+    <input class="Form-checkbox" id="inactive_checkbox_example" type="checkbox" disabled />
+    <label class="Form-inlineLabel" for="inactive_checkbox_example">
+      Inactive Checkbox Field with Label Inline
+    </label>
+  </div>
+</div>
 {% endexample %}
 
 
@@ -178,11 +194,11 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
   </div>
 </div>
 <div class="Form-field">
-  <label class="Form-field-label Form-field-label--required" for="subdomain">
+  <label class="Form-field-label Form-field-label--required" for="inactive_select_example">
     Inactive Select
   </label>
   <div class="Form-field-inputs">
-    <select class="Form-selectInput" id="select_example" name="select_example" disabled>
+    <select class="Form-selectInput" id="inactive_select_example" name="inactive_select_example" disabled>
       <option value="option_one">Option 1</option>
       <option value="option_two">Option 2</option>
     </select>
@@ -194,8 +210,6 @@ Avoid using placeholders on inactive fields as they may appear to be a saved inp
 ## Full Form Examples
 
 ### Desktop Form
-
-Add a description here
 
 {% example html %}
 <form class="Form">
@@ -325,8 +339,6 @@ Add a description here
 
 ### Desktop with Block Fieldsets
 
-Add a description here
-
 {% example html %}
 <form class="Form">
   <fieldset class="Form-fieldset Form-fieldset--block">
@@ -398,7 +410,7 @@ Add a description here
 
 ### Stacked Variant
 
-A variant of the desktop form with the field labels stacked on top of the inputs.
+A variant of the desktop form with the field labels stacked on top of the inputs. Useful when horizontal space is at a premium.
 
 {% example html %}
 <form class="Form Form--stacked">

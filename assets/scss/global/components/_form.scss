@@ -98,6 +98,7 @@ $form-label-width: 16rem;
 
 .Form-field--isRequired .Form-field-label:after {
   @include text-color(fa-red);
+  @include font-weight(bold);
   content: " *";
   display: inline;
 }
@@ -134,7 +135,7 @@ $form-label-width: 16rem;
 .Form-textInput {
   @include border-radius(small);
   @include font-family(default);
-  @include line-height(x-tight);
+  @include line-height(tight);
   @include padding-bottom(x-small);
   @include padding-left(small);
   @include padding-right(small);
@@ -150,7 +151,7 @@ $form-label-width: 16rem;
 }
 
 .Form-textInput:focus {
-  border-color: $color--fa-blue;
+  @include border(default, fa-blue, !important);
 }
 
 .Form-textInput--small {
@@ -250,13 +251,13 @@ $form-label-width: 16rem;
 
 .Form-field--hasErrors .Form-textInput {
   @include background-color(fa-red--x-light);
-  border-color: $text-color--negative;
+  @include border(default, fa-red);
 }
 
 .Form-field-error {
   @include background-color(fa-red--xx-light);
   @include border-radius(small);
-  @include border(default, negative);
+  @include border(default, fa-red);
   @include margin-top(x-small);
   @include padding-bottom(x-small);
   @include padding-left(small);
