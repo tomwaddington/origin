@@ -287,6 +287,22 @@ These are the background colors we’re using in production — no more. All col
 
 
   <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
+    <div class="DocsExample-preview DocsExample-preview--fa-blue--xx-light">
+      &nbsp;
+    </div>
+{% example scss %}
+@include background-color(fa-blue--xx-light);
+{% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
+{% example html %}
+<div class="u-background-color--fa-blue--xx-light"></div>
+{% endexample %}
+  </div>
+
+
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
     <div class="DocsExample-preview DocsExample-preview--fa-green--x-light">
       &nbsp;
     </div>

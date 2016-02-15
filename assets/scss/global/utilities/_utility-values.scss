@@ -190,7 +190,8 @@ $color--fa-amber--dark:     adjust_hue(lighten($color--fa-amber, .5), 354);
 $color--fa-blue--dark:      adjust_hue(darken($color--fa-blue, 3.5), 2);
 $color--fa-blue--x-dark:    adjust_hue(darken($color--fa-blue, 8.5), 2);
 $color--fa-blue--xx-dark:   adjust_hue(darken($color--fa-blue, 15), 2);
-$color--fa-blue--x-light:   desaturate(lighten($color--fa-blue, 59), 50);
+$color--fa-blue--x-light:   desaturate(lighten($color--fa-blue, 55), 50);
+$color--fa-blue--xx-light:  desaturate(lighten($color--fa-blue, 59), 50);
 $color--fa-green--dark:     adjust_hue(saturate(darken($color--fa-green, 7), 1), 0);
 $color--fa-green--text:     adjust_hue(saturate(darken($color--fa-green, 10), 0), 0);
 $color--fa-green--x-light:  desaturate(lighten($color--fa-green, 36), 10);
@@ -249,6 +250,7 @@ $color-values: (
  fa-blue--x-dark:    $color--fa-blue--x-dark,
  fa-blue--xx-dark:   $color--fa-blue--xx-dark,
  fa-blue--x-light:   $color--fa-blue--x-light,
+ fa-blue--xx-light:  $color--fa-blue--xx-light,
  fa-green:           $color--fa-green,
  fa-green--dark:     $color--fa-green--dark,
  fa-green--text:     $color--fa-green--text,

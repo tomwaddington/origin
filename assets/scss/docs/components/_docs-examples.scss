@@ -124,6 +124,10 @@
   @include background-color(fa-blue--x-light);
 }
 
+.DocsExample-preview--fa-blue--xx-light {
+  @include background-color(fa-blue--xx-light);
+}
+
 .DocsExample-preview--fa-red--x-light {
   @include background-color(fa-red--x-light);
 }
