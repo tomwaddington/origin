@@ -4,66 +4,65 @@ layout: page
 title: text-color
 ---
 
-These are the text colors we’re using in production. All colors are defined in [_utility-values.scss](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss) and given aliases in [_utility-aliases.scss](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-aliases.scss).
+These are the text colors we're using in production. All colors are defined in [_utility-values.scss](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss) and given aliases in [_utility-aliases.scss](https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-aliases.scss).
 
-New colors should be added only when they’re actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you’re using it in your PR. Then the team can approve the addition.
+New colors should be added only when they're actually being used in a component or other element in production. When adding a new color, justify it by linking to the Sass file where you're using it in your PR. Then the team can approve the addition.
 
-## Standard palette
-
+# Standard palette
 <div class="SwatchGroup">
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--default">
       The default color for text
     </div>
-{% example scss %}
-@include text-color(default);
-{% endexample %}
+    {% example scss %}
+    @include text-color(default);
+    {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--dark">
       The dark color for text
     </div>
-{% example scss %}
-@include text-color(dark);
-{% endexample %}
+    {% example scss %}
+    @include text-color(dark);
+    {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--light">
       The light color for text
     </div>
-{% example scss %}
-@include text-color(light);
-{% endexample %}
+    {% example scss %}
+    @include text-color(light);
+    {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--x-light">
       The x-light color for text
     </div>
-{% example scss %}
-@include text-color(x-light);
-{% endexample %}
+    {% example scss %}
+    @include text-color(x-light);
+    {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--xx-light">
       The xx-light color for text
     </div>
-{% example scss %}
-@include text-color(xx-light);
-{% endexample %}
+    {% example scss %}
+    @include text-color(xx-light);
+    {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
     <div class="DocsExample-preview DocsExample-preview--text-color--positive">
       The positive color for text
     </div>
-{% example scss %}
-@include text-color(positive);
-{% endexample %}
+    {% example scss %}
+    @include text-color(positive);
+    {% endexample %}
     <div class="DocsExample-comment">
       The `positive` value maps to `fa-green--text`.
     </div>
@@ -73,9 +72,9 @@ New colors should be added only when they’re actually being used in a componen
     <div class="DocsExample-preview DocsExample-preview--text-color--warning">
       The warning color for text
     </div>
-{% example scss %}
-@include text-color(warning);
-{% endexample %}
+    {% example scss %}
+    @include text-color(warning);
+    {% endexample %}
     <div class="DocsExample-comment">
       The `warning` value maps to `fa-amber`.
     </div>
@@ -85,9 +84,9 @@ New colors should be added only when they’re actually being used in a componen
     <div class="DocsExample-preview DocsExample-preview--text-color--negative">
       The negative color for text
     </div>
-{% example scss %}
-@include text-color(negative);
-{% endexample %}
+    {% example scss %}
+    @include text-color(negative);
+    {% endexample %}
     <div class="DocsExample-comment">
       The `negative` value maps to `fa-red--text`.
     </div>
@@ -95,9 +94,7 @@ New colors should be added only when they’re actually being used in a componen
 
 </div>
 
-
-## Full palette
-
+# Full palette
 <div class="SwatchGroup">
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -105,8 +102,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-blue color for text
     </div>
   {% example scss %}
-@include text-color(fa-blue);
-{% endexample %}
+  @include text-color(fa-blue);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -114,8 +111,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-blue--dark color for text
     </div>
   {% example scss %}
-@include text-color(fa-blue--dark);
-{% endexample %}
+  @include text-color(fa-blue--dark);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -123,8 +120,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-blue--x-dark color for text
     </div>
   {% example scss %}
-@include text-color(fa-blue--x-dark);
-{% endexample %}
+  @include text-color(fa-blue--x-dark);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -132,8 +129,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-blue--xx-dark color for text
     </div>
   {% example scss %}
-@include text-color(fa-blue--xx-dark);
-{% endexample %}
+  @include text-color(fa-blue--xx-dark);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -141,7 +138,7 @@ New colors should be added only when they’re actually being used in a componen
       The fa-green--text color for text
     </div>
     {% example scss %}
-@include text-color(fa-green--text);
+    @include text-color(fa-green--text);
     {% endexample %}
     <div class="DocsExample-comment">
       `fa-green--text` is the text equivalent of `fa-green`. It’s slightly darker to compensate for the reduced contrast of letterforms compared to block colors, noticeable when sat side-by-side.
@@ -153,8 +150,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-purple color for text
     </div>
   {% example scss %}
-@include text-color(fa-purple);
-{% endexample %}
+  @include text-color(fa-purple);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -162,7 +159,7 @@ New colors should be added only when they’re actually being used in a componen
       The fa-red--text color for text
     </div>
     {% example scss %}
-@include text-color(fa-red--text);
+    @include text-color(fa-red--text);
     {% endexample %}
     <div class="DocsExample-comment">
       `fa-red--text` is the text equivalent of `fa-red`. It’s slightly darker to compensate for the reduced contrast of letterforms compared to block colors, noticeable when sat side-by-side.
@@ -174,8 +171,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-red--dark color for text
     </div>
   {% example scss %}
-@include text-color(fa-red--dark);
-{% endexample %}
+  @include text-color(fa-red--dark);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -183,8 +180,8 @@ New colors should be added only when they’re actually being used in a componen
       The fa-amber color for text
     </div>
   {% example scss %}
-@include text-color(fa-amber);
-{% endexample %}
+  @include text-color(fa-amber);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -192,8 +189,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-1 color for text
     </div>
   {% example scss %}
-@include text-color(gray-1);
-{% endexample %}
+  @include text-color(gray-1);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -201,8 +198,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-2 color for text
     </div>
   {% example scss %}
-@include text-color(gray-2);
-{% endexample %}
+  @include text-color(gray-2);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -210,8 +207,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-3 color for text
     </div>
   {% example scss %}
-@include text-color(gray-3);
-{% endexample %}
+  @include text-color(gray-3);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -219,8 +216,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-4 color for text
     </div>
   {% example scss %}
-@include text-color(gray-4);
-{% endexample %}
+  @include text-color(gray-4);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -228,8 +225,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-5 color for text
     </div>
   {% example scss %}
-@include text-color(gray-5);
-{% endexample %}
+  @include text-color(gray-5);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -237,8 +234,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-6 color for text
     </div>
   {% example scss %}
-@include text-color(gray-6);
-{% endexample %}
+  @include text-color(gray-6);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -246,8 +243,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-7 color for text
     </div>
   {% example scss %}
-@include text-color(gray-7);
-{% endexample %}
+  @include text-color(gray-7);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -255,8 +252,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-8 color for text
     </div>
   {% example scss %}
-@include text-color(gray-8);
-{% endexample %}
+  @include text-color(gray-8);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -264,8 +261,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-9 color for text
     </div>
   {% example scss %}
-@include text-color(gray-9);
-{% endexample %}
+  @include text-color(gray-9);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -273,8 +270,8 @@ New colors should be added only when they’re actually being used in a componen
       The gray-10 color for text
     </div>
   {% example scss %}
-@include text-color(gray-10);
-{% endexample %}
+  @include text-color(gray-10);
+  {% endexample %}
   </div>
 
   <div class="DocsExample DocsExample--render--hidden">
@@ -282,8 +279,17 @@ New colors should be added only when they’re actually being used in a componen
       The gray-11 color for text
     </div>
   {% example scss %}
-@include text-color(gray-11);
-{% endexample %}
+  @include text-color(gray-11);
+  {% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--render--hidden">
+    <div class="DocsExample-preview DocsExample-preview--text-color--white u-background-color--gray-1">
+      The white color for text
+    </div>
+  {% example scss %}
+  @include text-color(white);
+  {% endexample %}
   </div>
 
 </div>

@@ -110,3 +110,7 @@
 .DocsExample-preview--text-color--gray-11 {
   @include text-color(gray-11);
 }
+
+.DocsExample-preview--text-color--white {
+  @include text-color(white);
+}

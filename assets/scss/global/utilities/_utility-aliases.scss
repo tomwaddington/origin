@@ -62,6 +62,7 @@ $text-color--xx-light: $color--gray-10;
 $text-color--negative: $color--fa-red--text;
 $text-color--warning:  $color--fa-amber;
 $text-color--positive: $color--fa-green--text;
+$text-color--white:    $color--white;
 
 /* Color map */
 $color-values: (
@@ -101,7 +102,8 @@ $color-values: (
   gray-13:            $color--gray-13,
   gray-14:            $color--gray-14,
   gray-15:            $color--gray-15,
-  gray-16:            $color--gray-16
+  gray-16:            $color--gray-16,
+  white:              $color--white
 );
 
 /* Text color map */
@@ -145,7 +147,8 @@ $text-color-values: (
   positive:           $text-color--positive,
   warning:            $text-color--warning,
   x-light:            $text-color--x-light,
-  xx-light:           $text-color--xx-light
+  xx-light:           $text-color--xx-light,
+  white:              $text-color--white
 );
 
 
