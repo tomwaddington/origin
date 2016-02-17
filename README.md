@@ -105,13 +105,13 @@ $ cd <your-project-directory>
 $ npm install origin-css --save
 ```
 
-This will add the Origin files to a new `origin-css` directory inside the `node_modules` directory at the root of your project, and save `origin-css` as a dependency in your `package.json` file.
+This will add the Origin files to a new `origin-css` directory inside the `node_modules` directory at the root of your project, and save `origin-css` as a dependency in your `package.json` file. If npm isn’t yet being used in your project, running the above command will create the `node_modules` directory too.
 
-If npm isn’t yet being used in your project, running the above command will create the `node_modules` directory too. You’ll want to [create a package](https://docs.npmjs.com/cli/init) to manage your npm dependencies, and most likely add a new rule to `.gitignore` to ignore the `node_modules` directory unless your project explicitly dictates that you shouldn't.
+You’ll want to [create a package](https://docs.npmjs.com/cli/init) to manage your npm dependencies, and most likely add a new rule to `.gitignore` to ignore the `node_modules` directory unless your project explicitly dictates that you shouldn't.
 
 After installing, do the following:
 
-1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself.
+1. Copy the contents of [/origin-css/assets/scss/local](https://github.com/fac/origin/tree/master/assets/scss/local) to your project’s stylesheet directory. Just the contents, not the directory itself. _To update the FreeAgent app, drag the `origin-css` folder out of the `node_modules` directory and drop it inside `vendor/assets/components`, overwriting the previous version._
 
 2. Open [_utility-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/utilities/_utility-settings.scss) and set all utility variables to `false`. These are `true` by default because the Origin docs use them, but each one left as `true` will add weight to your output CSS, so only do so when you need them.
 
