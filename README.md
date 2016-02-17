@@ -115,7 +115,7 @@ After installing, do the following:
 
 2. Open [_utility-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/utilities/_utility-settings.scss) and set all utility variables to `false`. These are `true` by default because the Origin docs use them, but each one left as `true` will add weight to your output CSS, so only do so when you need them.
 
-3. Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to suit your project.
+3. Starting a new project? Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to suit your project.
 
 If your project already includes [normalize.css](https://github.com/necolas/normalize.css/), delete it, as Origin already uses it.
 
