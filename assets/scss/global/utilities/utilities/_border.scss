@@ -1,0 +1,66 @@
+/* `border`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/border/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+/* Mixin
+   ========================================================================== */
+
+@mixin border($border-width-value, $border-color-value, $important: null) {
+  border: map-get($border-width-values, $border-width-value) solid map-get($color-values, $border-color-value) $important;
+}
+
+@mixin border-bottom($border-width-value, $border-color-value, $important: null) {
+  border-bottom: map-get($border-width-values, $border-width-value) solid map-get($color-values, $border-color-value) $important;
+}
+
+@mixin border-left($border-width-value, $border-color-value, $important: null) {
+  border-left: map-get($border-width-values, $border-width-value) solid map-get($color-values, $border-color-value) $important;
+}
+
+@mixin border-right($border-width-value, $border-color-value, $important: null) {
+  border-right: map-get($border-width-values, $border-width-value) solid map-get($color-values, $border-color-value) $important;
+}
+
+@mixin border-top($border-width-value, $border-color-value, $important: null) {
+  border-top: map-get($border-width-values, $border-width-value) solid map-get($color-values, $border-color-value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-border == true {
+
+  @each $border-width, $border-width-value in $border-width-values {
+
+    .u-border--#{$border-width} {
+      border: $border-width-value !important;
+    }
+
+    .u-border-bottom--#{$border-width} {
+      border-bottom: $border-width-value !important;
+    }
+
+    .u-border-left--#{$border-width} {
+      border-left: $border-width-value !important;
+    }
+
+    .u-border-right--#{$border-width} {
+      border-right: $border-width-value !important;
+    }
+
+    .u-border-top--#{$border-width} {
+      border-top: $border-width-value !important;
+    }
+
+  }
+
+}

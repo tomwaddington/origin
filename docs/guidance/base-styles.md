@@ -25,4 +25,4 @@ We reset `box-sizing` to `border-box` for every element in Origin. This allows u
 
 For improved cross-browser rendering, we use [Normalize.css](http://necolas.github.io/normalize.css/) to correct small inconsistencies across browsers and devices.
 
-[**View the source `_base.scss` for more information**](https://github.com/fac/origin/blob/master/assets/scss/local/base/_base.scss)
+[**View the source `_base.scss` for more information**]({{ site.github.repo }}/blob/master/assets/scss/local/base/_base.scss)

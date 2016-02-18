@@ -1,21 +1,25 @@
 # Origin
 
-Origin is FreeAgent’s internal CSS framework. We’re a growing team working across a range of different projects and codebases, and making CSS work at scale is hard. Agreed principles, approaches, and patterns mean we can do better work faster. That’s what Origin gives us.
+Origin is FreeAgent’s internal CSS framework. These global principles, patterns, and properties mean we can do better work faster.
 
-Origin consumes our [CSS utilities](https://github.com/fac/fa-css-utilities) and provides some global UI components. It also documents our [principles](http://fac.github.io/origin/principles/), HTML & CSS [naming conventions](http://fac.github.io/origin/guidance/naming-conventions/) and [code style](http://fac.github.io/origin/guidance/code-style/). We use it in our desktop app, mobile apps, website, and a bunch of other projects.
+[View the docs](http://fac.github.io/origin/)
 
-[**Read the Origin documentation**](http://fac.github.io/origin/) to learn more.
+Origin is comprised of these main bits:
+
+* Utilities: our global design properties and CSS for using them
+* Components: building blocks of our interfaces. Self-contained units serving specific functions.
+* Guidance: a layer of documentation covering broad principles, specifics of code style, naming conventions, and more.
+
+We use Origin across our desktop app, mobile apps, website, and other projects. This not only helps create a familiar experience for customers, but makes improves our development process.
 
 
 ## Contents
 
 - [Install](#install)
-- [Structure](#structure)
-  - [Documentation](#documentation)
-  - [Publishing](#publishing)
+- [Documentation](#documentation)
+- [Distribution](#distribution)
+- [Publishing](#publishing)
 - [Implementing Origin into a project](#implementing-origin-into-a-project)
-- [Development](#development)
-  - [Developing ideas locally](#developing-ideas-locally)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -37,7 +41,10 @@ $ npm install
 $ npm install -g grunt-cli (if you don’t already have Grunt installed)
 ```
 
-Then build and serve the documentation locally using Grunt:
+
+## Documentation
+
+Origin’s documentation is built with Jekyll and Grunt. How to run it locally:
 
 ```bash
 $ grunt
@@ -51,47 +58,31 @@ $ grunt sync
 
 A new browser tab should open automatically to `http://localhost:9001/origin/`.
 
-The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
-
-
-## Structure
-
-Very little of this repository is actually part of the [`origin-css`](https://www.npmjs.com/package/origin-css) npm package. Only:
-
-```
-.
-├── assets
-|   ├── fonts
-|   └── scss
-|       ├── global
-|       ├── local
-|       └── origin.scss
-├── LICENSE.md
-├── package.json
-└── README.md
-```
-
-These are the only files needed to implement Origin in a project, so that’s all npm needs to know about. [`.npmignore`](https://github.com/fac/origin/blob/master/.npmignore) defines what’s hidden from npm in the same way a `.gitignore` file does.
-
-If you want to make changes to Origin, it’s these files you want to change. The rest of the repository is dedicated to the documentation.
-
-### Documentation
-
-Origin’s documentation is built with Jekyll and Grunt. It can be run locally, and is published to [http://fac.github.io/origin/](http://fac.github.io/origin/) via the [`gh-pages`](https://github.com/fac/origin/tree/gh-pages) branch.
-
-The local documentation give us a sandbox for trying new ideas and approaches before considering them for deployment. It’s our “kitchen sink” view of utilities and components.
+Running the docs locally gives us our sandbox for trying new ideas and approaches before considering them for deployment. It’s our “kitchen sink” view of our utilities and components.
 
 Aside from Jekyll’s [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and Grunt’s [`Gruntfile.js`](https://github.com/fac/origin/blob/master/Gruntfile.js), all files related to documentation live in [`/docs`](https://github.com/fac/origin/tree/master/docs).
 
+The docs don't run at root because when published to GitHub Pages they lives at `/origin`. There is an established workaround for this, but it’s not applicable to sites where the Jekyll source is anywhere other than the root directory, and ours lives in `/docs`.
+
+
+## Distribution
+
+Origin is distributed via [npm](https://www.npmjs.com/package/origin-css). Only a small number of files in the repo are actually published to npm. Only those required to implement Origin into other projects — it doesn't include the documentation layer.
+
+[`.npmignore`](https://github.com/fac/origin/blob/master/.npmignore) defines what’s hidden from npm in the same way a `.gitignore` file does.
+
+Changes are published to npm using `npm publish`, and can only be done by [owners](https://www.npmjs.com/package/origin-css/access).
+
+
 ### Publishing
 
-Use the included Grunt task to generate and publish Origin’s docs to the `gh-pages` branch.
+Use the included Grunt task to generate and publish Origin’s docs to http://fac.github.io/origin/:
 
 ```bash
 $ grunt publish
 ```
 
-This takes the `_site` directory, generates it's own Git repository there, and publishes the contents to the `gh-pages` branch here on GitHub. Changes are reflected in the hosted docs within a minute or so.
+This takes the `_site` directory, generates its own Git repository there, and publishes the contents to the `gh-pages` branch here on GitHub. Changes are reflected in the hosted docs within a minute or so.
 
 
 ## Implementing Origin into a project
@@ -117,32 +108,24 @@ After installing, do the following:
 
 3. Use `origin.scss` as your master stylesheet, or copy it’s contents into your existing master stylesheet. You’ll need to change the paths to suit your project.
 
-If your project already includes [normalize.css](https://github.com/necolas/normalize.css/), delete it, as Origin already uses it.
-
-## Development
-
-Development of Origin happens in our primary branch, `master`. For stable versions, see the [releases page](https://github.com/fac/origin/releases). `master` will always be up to date with the latest changes, including those which have yet to be released.
-
-### Developing ideas locally
-
-As mentioned above, Origin’s documentation is the place to experiment with new ideas prior to submitting a pull request.
-
-It’s also possible to try out new ideas for Origin in any other projects where it’s implemented. npm provides a way to point to your _local version of Origin_ instead of referencing the one installed by npm. This means you could, for example, trial changing the `background-color` of a button in Origin and see the effect it has in your app without actually having to push a new version of the Origin package to npm.
-
-[How to symlink a package folder](https://docs.npmjs.com/cli/link)
+If your project already includes [normalize.css](https://github.com/necolas/normalize.css/), delete it, as Origin already includes it.
 
 
 ## Contributing
 
+Development of Origin happens in our primary branch, `master`. For stable versions, see the [releases page](https://github.com/fac/origin/releases). `master` will always be up to date with the latest changes, including those which have yet to be released.
+
 All team members should be contributing back to this repo in order to improve it. All HTML and CSS should conform to the [style guidelines](http://fac.github.io/origin/code-style/).
 
 Editor preferences are available in the [editor config](https://github.com/fac/origin/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+
 
 ### SCSS Linter
 
 We use [SCSS-Lint](https://github.com/brigade/scss-lint) to catch any formatting or syntax issues with SCSS during development. It’s integrated into our [Gruntfile](https://github.com/fac/origin/blob/master/Gruntfile.js), and will automatically lint `.scss` as soon as they’re saved.
 
 The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/blob/master/.scss-lint.yml).  
+
 
 ### Creating a new component
 
@@ -154,6 +137,7 @@ The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/bl
 6. Test that the component renders as expected in all use cases
 7. Bump the version numbers in [`_config.yml`](https://github.com/fac/origin/blob/master/_config.yml) and [`package.json`] (it'll be a patch: 1.0.x)
 8. Create a new pull request and provide a helpful description of what the component does and why its been created
+
 
 ### Creating a new release
 
@@ -176,6 +160,7 @@ The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/bl
 
 If this a major or minor release, let people in the #design and/or #dev Slack channels know by linking to the release. Consider bringing other projects up to date with your new release, especially [Origin](https://github.com/fac/origin).
 
+
 ## License
 
-Origin is based on a fork of [Primer](https://github.com/primer/primer), created by and copyright of GitHub, Inc. Released under the [MIT license](LICENSE.md).
+Created by and copyright FreeAgent Central Limited. Origin is released under the [MIT license](LICENSE.md). The original documentation format and deployment mechanism of Origin was based on a forked version of [Primer](https://github.com/primer/primer), created by and copyright of GitHub, Inc.

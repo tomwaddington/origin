@@ -1,9 +1,10 @@
 ---
 categories: components
 layout: simple-full-width
+scss-filename: _block-grid.scss
 title: Block Grid
 ---
-Block grids give us a way to evenly split content within a grid. If we want a row of five images that need to stay evenly spaced no matter the screen size, we use the block grid. Breakpoints are defined in our [utility values](https://github.com/fac/fa-css-utilities/blob/master/_utility-values.scss).
+Block grids give us a way to evenly split content within a grid. If we want a row of five images that need to stay evenly spaced no matter the screen size, we use the block grid. Breakpoints are defined in our [utility values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss).
 
 * Table of contents
 {:toc}
@@ -20,7 +21,6 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
 
 
 ## Basic examples
-<div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-2">
   <div class="BlockGrid-item">
@@ -31,9 +31,7 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
-<div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-3">
   <div class="BlockGrid-item">
@@ -47,9 +45,7 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
-<div class="DocsExample">
 {% example html %}
 <div class="BlockGrid sm-4">
   <div class="BlockGrid-item">
@@ -66,13 +62,11 @@ Important: don't directly modify `<div class="BlockGrid">` elements for presenta
   </div>
 </div>
 {% endexample %}
-</div>
 
 
 ## Changing number of items in a row
 Use multiple size classes to specify a different number of items in a row for each `min-width` breakpoint. This example will stack items vertically by default, display 3 items in a row on medium screens, then 5 in a row on large screens.
 
-<div class="DocsExample">
 {% example html %}
 <div class="BlockGrid md-3 lg-5">
   <div class="BlockGrid-item">
@@ -101,4 +95,3 @@ Use multiple size classes to specify a different number of items in a row for ea
   </div>
 </div>
 {% endexample %}
-</div>

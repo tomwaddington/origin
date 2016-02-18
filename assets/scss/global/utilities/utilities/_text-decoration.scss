@@ -1,0 +1,34 @@
+/* `text-decoration`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/text-decoration/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@if $u-classes-text-decoration == true {
+
+  @each $text-decoration-value in $text-decoration-values {
+
+    .u-text-decoration--#{$text-decoration-value} {
+      text-decoration: $text-decoration-value !important;
+    }
+
+    .u-text-decoration--#{$text-decoration-value}--active:active {
+      text-decoration: $text-decoration-value !important;
+    }
+
+    .u-text-decoration--#{$text-decoration-value}--focus:focus {
+      text-decoration: $text-decoration-value !important;
+    }
+
+    .u-text-decoration--#{$text-decoration-value}--hover:hover {
+      text-decoration: $text-decoration-value !important;
+    }
+
+  }
+
+}

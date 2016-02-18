@@ -1,0 +1,53 @@
+/* `font-size`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/font-size/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+@mixin font-size($value, $important: null) {
+  font-size: map-get($font-size-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-font-size == true {
+
+  @each $font-size, $standard-scale-font-size-value in $standard-scale-font-size-values {
+
+    /**
+     * Generate standard scale of `font-size` classes without breakpoints
+     *
+     * Note that classes will not be generated for the full scale of `font-size`
+     * values, only the standard `xx-small` > `xx-large` scale, because in
+     * practice the full scale has never been needed.
+     */
+
+    .u-font-size--#{$font-size} {
+      font-size: $standard-scale-font-size-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate standard scale of `font-size` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-font-size--#{$font-size} {
+          font-size: $standard-scale-font-size-value !important;
+        }
+      }
+
+    }
+
+  }
+
+}

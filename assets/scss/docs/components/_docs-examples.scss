@@ -1,0 +1,746 @@
+/**
+ * The plugin used to render code examples (example.rb) in the Origin docs was
+ * designed to render resulting HTML from code examples wrapped in
+ * `{% example html %}` in Markdown files. But sometimes we want to render HTML
+ * based on `{% example scss %}` snippets instead.
+ *
+ * We ‘fake’ this by creating the classes below, applying the desired CSS to
+ * them, then applying those classes to the relevant examples in our Markdown
+ * files.
+ *
+ * We also add a couple of extra HTML elements around the `{% example scss %}`
+ * examples. Doing so hides the original HTML render and instead shows our faked
+ * version.
+ */
+
+
+/*
+ * 'About' page examples
+ */
+
+.AboutExample--1 {
+  color: #777;
+  font-size: 1.3125rem;
+  line-height: 130%;
+}
+
+/*
+ * `background-color` examples
+ */
+
+.DocsExample-preview--fa-yellow {
+  @include background-color(fa-yellow);
+}
+
+.DocsExample-preview--fa-amber {
+  @include background-color(fa-amber);
+}
+
+.DocsExample-preview--fa-amber .Swatch-detail {
+  @include text-color(fa-amber);
+}
+
+.DocsExample-preview--fa-amber--dark {
+  @include background-color(fa-amber--dark);
+}
+
+.DocsExample-preview--fa-amber--dark .Swatch-detail {
+  @include text-color(fa-amber--dark);
+}
+
+.DocsExample-preview--fa-red {
+  @include background-color(fa-red);
+}
+
+.DocsExample-preview--fa-red .Swatch-detail {
+  @include text-color(fa-red--text);
+}
+
+.DocsExample-preview--fa-red--dark {
+  @include background-color(fa-red--dark);
+}
+
+.DocsExample-preview--fa-red--dark .Swatch-detail {
+  @include text-color(fa-red--dark);
+}
+
+.DocsExample-preview--fa-green {
+  @include background-color(fa-green);
+}
+
+.DocsExample-preview--fa-green .Swatch-detail {
+  @include text-color(fa-green--text);
+}
+
+.DocsExample-preview--fa-green--dark {
+  @include background-color(fa-green--dark);
+}
+
+.DocsExample-preview--fa-green--dark .Swatch-detail {
+  @include text-color(fa-green--dark);
+}
+
+.DocsExample-preview--fa-blue {
+  @include background-color(fa-blue);
+}
+
+.DocsExample-preview--fa-blue .Swatch-detail {
+  @include text-color(fa-blue);
+}
+
+.DocsExample-preview--fa-blue--dark {
+  @include background-color(fa-blue--dark);
+}
+
+.DocsExample-preview--fa-blue--dark .Swatch-detail {
+  @include text-color(fa-blue--dark);
+}
+
+.DocsExample-preview--fa-blue--x-dark {
+  @include background-color(fa-blue--x-dark);
+}
+
+.DocsExample-preview--fa-blue--x-dark .Swatch-detail {
+  @include text-color(fa-blue--x-dark);
+}
+
+.DocsExample-preview--fa-blue--xx-dark {
+  @include background-color(fa-blue--xx-dark);
+}
+
+.DocsExample-preview--fa-blue--xx-dark .Swatch-detail {
+  @include text-color(fa-blue--xx-dark);
+}
+
+.DocsExample-preview--fa-purple {
+  @include background-color(fa-purple);
+}
+
+.DocsExample-preview--fa-purple .Swatch-detail {
+  @include text-color(fa-purple);
+}
+
+.DocsExample-preview--fa-blue--x-light {
+  @include background-color(fa-blue--x-light);
+}
+
+.DocsExample-preview--fa-blue--xx-light {
+  @include background-color(fa-blue--xx-light);
+}
+
+.DocsExample-preview--fa-red--x-light {
+  @include background-color(fa-red--x-light);
+}
+
+.DocsExample-preview--fa-green--x-light {
+  @include background-color(fa-green--x-light);
+}
+
+.DocsExample-preview--fa-yellow--x-light  {
+  @include background-color(fa-yellow--x-light);
+}
+
+.DocsExample-preview--fa-purple--x-light {
+  @include background-color(fa-purple--x-light);
+}
+
+.DocsExample-preview--gray-1 {
+  @include background-color(gray-1);
+}
+
+.DocsExample-preview--gray-2 {
+  @include background-color(gray-2);
+}
+
+.DocsExample-preview--gray-3 {
+  @include background-color(gray-3);
+}
+
+.DocsExample-preview--gray-4 {
+  @include background-color(gray-4);
+}
+
+.DocsExample-preview--gray-5 {
+  @include background-color(gray-5);
+}
+
+.DocsExample-preview--gray-6 {
+  @include background-color(gray-6);
+}
+
+.DocsExample-preview--gray-7 {
+  @include background-color(gray-7);
+}
+
+.DocsExample-preview--gray-8 {
+  @include background-color(gray-8);
+}
+
+.DocsExample-preview--gray-9 {
+  @include background-color(gray-9);
+}
+
+.DocsExample-preview--gray-10 {
+  @include background-color(gray-10);
+}
+
+.DocsExample-preview--gray-11 {
+  @include background-color(gray-11);
+}
+
+.DocsExample-preview--gray-12 {
+  @include background-color(gray-12);
+}
+
+.DocsExample-preview--gray-13 {
+  @include background-color(gray-13);
+}
+
+.DocsExample-preview--gray-14 {
+  @include background-color(gray-14);
+}
+
+.DocsExample-preview--gray-15 {
+  @include background-color(gray-15);
+}
+
+.DocsExample-preview--gray-16 {
+  @include background-color(gray-16);
+}
+
+
+/*
+ * `border` examples
+ */
+
+.DocsExample-preview--border .DocsExample-preview-child {
+  @include padding(default);
+}
+
+.DocsExample-preview--border1 .DocsExample-preview-child {
+  @include border(default, fa-blue);
+}
+
+.DocsExample-preview--border2 .DocsExample-preview-child {
+  @include border-bottom(thick, gray-12);
+}
+
+.DocsExample-preview--border3 .DocsExample-preview-child {
+  @include border-left(xx-thick, fa-green, !important);
+}
+
+.DocsExample-preview--border4 .DocsExample-preview-child {
+  @include border-bottom(thin, fa-green);
+  @include border-top(thin, fa-green);
+}
+
+
+/*
+ * `box-shadow` examples
+ */
+
+.DocsExample-preview--box-shadow .DocsExample-preview-child {
+  @include padding(default);
+  background-color: #fff;
+}
+
+.DocsExample-preview--box-shadow1 .DocsExample-preview-child {
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, .22));
+}
+
+.DocsExample-preview--box-shadow2 .DocsExample-preview-child {
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, .22), inset);
+}
+
+.DocsExample-preview--box-shadow3 .DocsExample-preview-child {
+  @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, .5), !important);
+}
+
+
+/*
+ * `flexbox` examples
+ */
+
+.DocsExample-preview--flexbox .DocsExample-preview-child {
+  @include background-color(gray-14);
+}
+
+.DocsExampleFlexContainer {
+  @include flexbox;
+}
+
+
+/*
+ * `flex` shorthand examples
+ */
+
+.DocsExample-preview--flex1 .DocsExampleFlexContainer div {
+  @include flex(0 1 25%);
+}
+
+.DocsExample-preview--flex2 .DocsExampleFlexContainer div:nth-child(1) {
+  @include flex(0 0 40%);
+}
+
+.DocsExample-preview--flex2 .DocsExampleFlexContainer div:nth-child(2) {
+  @include flex(0 1 60%);
+}
+
+
+/*
+ * `flex-flow` examples
+ */
+
+.DocsExample-preview--flex-flow1 .DocsExampleFlexContainer {
+  @include flex-flow(row nowrap);
+}
+
+.DocsExample-preview--flex-flow2 .DocsExampleFlexContainer {
+  @include flex-flow(row wrap);
+}
+
+.DocsExample-preview--flex-flow3 .DocsExampleFlexContainer {
+  @include flex-flow(column nowrap);
+}
+
+.DocsExample-preview--flex-flow4 .DocsExampleFlexContainer {
+  @include flex-flow(column-reverse wrap);
+}
+
+
+/*
+ * `flex-grow` examples
+ */
+
+.DocsExample-preview--flex-grow1 .DocsExampleFlexContainer-child {
+  @include flex-grow(2);
+}
+
+
+/*
+ * `flex-order` examples
+ */
+
+.DocsExample-preview--flex-order1 .DocsExampleFlexContainer div:nth-child(2) {
+  @include flex-order(4);
+}
+
+.DocsExample-preview--flex-order2 .DocsExampleFlexContainer div:nth-child(1) {
+  @include flex-order(5);
+}
+
+.DocsExample-preview--flex-order2 .DocsExampleFlexContainer div:nth-child(2) {
+  @include flex-order(6);
+}
+
+
+/*
+ * `font-size` examples
+ */
+
+.TextExample--small {
+  @include font-size(large);
+}
+
+.TextExample--font-size--1 {
+  @include font-size(1);
+  @include line-height(default);
+}
+
+.TextExample--font-size--2 {
+  @include font-size(2);
+  @include line-height(default);
+}
+
+.TextExample--font-size--3 {
+  @include font-size(3);
+  @include line-height(default);
+}
+
+.TextExample--font-size--4 {
+  @include font-size(4);
+  @include line-height(default);
+}
+
+.TextExample--font-size--5 {
+  @include font-size(5);
+  @include line-height(default);
+}
+
+.TextExample--font-size--6 {
+  @include font-size(6);
+  @include line-height(default);
+}
+
+.TextExample--font-size--7 {
+  @include font-size(7);
+  @include line-height(default);
+}
+
+.TextExample--font-size--8 {
+  @include font-size(8);
+  @include line-height(tight);
+}
+
+.TextExample--font-size--9 {
+  @include font-size(9);
+  @include line-height(tight);
+}
+
+.TextExample--font-size--10 {
+  @include font-size(10);
+  @include line-height(x-tight);
+}
+
+.TextExample--font-size--11 {
+  @include font-size(11);
+  @include line-height(x-tight);
+}
+
+.TextExample--font-size--12 {
+  @include font-size(12);
+  @include line-height(xx-tight);
+}
+
+.TextExample--font-size--13 {
+  @include font-size(13);
+  @include line-height(xx-tight);
+}
+
+.TextExample--font-size--14 {
+  @include font-size(14);
+  @include line-height(xx-tight);
+}
+
+.TextExample--font-size--15 {
+  @include font-size(15);
+  @include line-height(xx-tight);
+}
+
+.TextExample--font-size--16 {
+  @include font-size(16);
+  @include line-height(xx-tight);
+}
+
+.TextExample--font-size--17 {
+  @include font-size(17);
+  @include line-height(xx-tight);
+}
+
+
+/*
+ * Keyframe animation examples
+ */
+
+.DocsExample-preview--keyframe-animation .DocsExampleKeyframeElement {
+  @include background-color(fa-green);
+  height: 50px;
+  width: 50px;
+}
+
+@include keyframes(exampleAnimation1) {
+  0% {
+    @include translate3d(0, 0, 0);
+  }
+  100% {
+    @include translate3d(300% ,0 ,0);
+  }
+}
+
+.DocsExample-preview--keyframe-animation1:hover .DocsExampleKeyframeElement {
+  @include animation(exampleAnimation1);
+}
+
+
+@include keyframes(exampleAnimation2) {
+  0% {
+    @include translate3d(0, 0, 0);
+  }
+  100% {
+    @include translate3d(300% ,0 ,0);
+  }
+}
+
+.DocsExample-preview--keyframe-animation2:hover .DocsExampleKeyframeElement {
+  @include animation(exampleAnimation2, $iteration-count: infinite);
+}
+
+
+@include keyframes(exampleAnimation3) {
+  0% {
+    @include translate3d(0, 0, 0);
+  }
+  100% {
+    @include translate3d(300% ,0 ,0);
+  }
+}
+
+.DocsExample-preview--keyframe-animation3:hover .DocsExampleKeyframeElement {
+  @include animation(exampleAnimation3, 2s, $iteration-count: infinite);
+}
+
+
+@include keyframes(exampleAnimation4) {
+  0% {
+    @include translate3d(0, 0, 0);
+  }
+  100% {
+    @include translate3d(300% ,0 ,0);
+  }
+}
+
+.DocsExample-preview--keyframe-animation4:hover .DocsExampleKeyframeElement {
+  @include animation(exampleAnimation4, 1s, $fill-mode: none);
+}
+
+
+@include keyframes(exampleAnimation5) {
+  0% {
+    @include translate3d(0, 0, 0);
+  }
+  100% {
+    @include translate3d(300% ,0 ,0);
+  }
+}
+
+.DocsExample-preview--keyframe-animation5:hover .DocsExampleKeyframeElement {
+  @include animation(exampleAnimation5, 0.5s, $timing-function: cubic-bezier(.17, .67, .83, .67));
+}
+
+
+/*
+ * `linear-gradient` examples
+ */
+
+.DocsExample-preview--linear-gradient .DocsExample-preview-child {
+  height: 3em;
+}
+
+.DocsExample-preview--linear-gradient1 .DocsExample-preview-child {
+  @include linear-gradient($color--fa-blue, $color--fa-blue--x-dark);
+}
+
+.DocsExample-preview--linear-gradient2 .DocsExample-preview-child {
+  @include linear-gradient(to top, $color--fa-blue, $color--fa-blue--x-dark);
+}
+
+.DocsExample-preview--linear-gradient3 .DocsExample-preview-child {
+  @include linear-gradient(45deg, $color--fa-yellow, $color--fa-amber, $fallback: $color--fa-amber);
+}
+
+.DocsExample-preview--linear-gradient4 .DocsExample-preview-child {
+  @include linear-gradient($color--fa-blue 0%, $color--fa-blue--dark 50%, $color--fa-blue--xx-dark 51%, $color--fa-blue--dark 100%);
+}
+
+
+/*
+ * `line-height` examples
+ */
+
+.TextExample--line-height--1 {
+  @include font-size(default);
+  @include line-height(1);
+}
+
+.TextExample--line-height--2 {
+  @include font-size(default);
+  @include line-height(2);
+}
+
+.TextExample--line-height--3 {
+  @include font-size(default);
+  @include line-height(3);
+}
+
+.TextExample--line-height--4 {
+  @include font-size(default);
+  @include line-height(4);
+}
+
+.TextExample--line-height--5 {
+  @include font-size(default);
+  @include line-height(5);
+}
+
+.TextExample--line-height--6 {
+  @include font-size(default);
+  @include line-height(6);
+}
+
+.TextExample--line-height--7 {
+  @include font-size(default);
+  @include line-height(7);
+}
+
+.TextExample--line-height--8 {
+  @include font-size(default);
+  @include line-height(8);
+}
+
+.TextExample--line-height--9 {
+  @include font-size(default);
+  @include line-height(9);
+}
+
+.TextExample--line-height--10 {
+  @include font-size(default);
+  @include line-height(10);
+}
+
+.TextExample--line-height--11 {
+  @include font-size(default);
+  @include line-height(11);
+}
+
+
+/*
+ * `margin` and `padding` examples
+ */
+
+.DocsExample-preview--spacing {
+  border-color: $color--gray-12 !important;
+  @include background-color(gray-12);
+}
+
+.DocsExample-preview--spacing--1 {
+  @include padding(1, !important);
+}
+
+.DocsExample-preview--spacing--2 {
+  @include padding(2, !important);
+}
+
+.DocsExample-preview--spacing--3 {
+  @include padding(3, !important);
+}
+
+.DocsExample-preview--spacing--4 {
+  @include padding(4, !important);
+}
+
+.DocsExample-preview--spacing--5 {
+  @include padding(5, !important);
+}
+
+.DocsExample-preview--spacing--5-lg {
+  padding: 0 !important;
+}
+
+@include break(lg) {
+  .DocsExample-preview--spacing--5-lg {
+    @include padding(5, !important);
+  }
+}
+
+.DocsExample-preview--spacing--6 {
+  @include padding(6, !important);
+}
+
+.DocsExample-preview--spacing--7 {
+  @include padding(7, !important);
+}
+
+.DocsExample-preview--spacing--8 {
+  @include padding(8, !important);
+}
+
+.DocsExample-preview--spacing--9 {
+  @include padding(9, !important);
+}
+
+.DocsExample-preview--spacing--10 {
+  @include padding(10, !important);
+}
+
+.DocsExample-preview--spacing--11 {
+  @include padding(11, !important);
+}
+
+.DocsExample-preview--spacing--12 {
+  @include padding(12, !important);
+}
+
+.DocsExample-preview--spacing--13 {
+  @include padding(13, !important);
+}
+
+.DocsExample-preview--spacing--14 {
+  @include padding(14, !important);
+}
+
+.DocsExample-preview--spacing--15 {
+  @include padding(15, !important);
+}
+
+.DocsExample-preview--spacing--16 {
+  @include padding(16, !important);
+}
+
+.DocsExample-preview--spacing--17 {
+  @include padding(17, !important);
+}
+
+
+/*
+ * Text-based examples
+ */
+
+.TextExample {
+  margin-top: 0;
+  max-width: 40em;
+  @include margin-bottom(default);
+}
+
+
+/*
+ * `transform` examples
+ */
+
+.DocsExample-preview--transform .DocsExample-preview-child {
+  @include background-color(fa-green);
+  height: 50px;
+  width: 50px;
+}
+
+.DocsExample-preview--transform1 .DocsExample-preview-child {
+  @include rotate(15deg);
+}
+
+.DocsExample-preview--transform2 .DocsExample-preview-child {
+  @include transform(translateX(100px) translateY(10px));
+}
+
+.DocsExample-preview--transform3 .DocsExample-preview-child {
+  @include transform(skewX(-20deg));
+}
+
+.DocsExample-preview--transform4 .DocsExample-preview-child {
+  @include transform(scale(1.5) translate3d(200%, 0, 0));
+}
+
+
+/*
+ * `transition` examples
+ */
+
+.DocsExample-preview--transition .DocsExampleTransitionElement {
+  @include background-color(fa-green);
+  height: 50px;
+  width: 50px;
+}
+
+.DocsExample-preview--transition1 .DocsExampleTransitionElement {
+  @include transition;
+}
+
+.DocsExample-preview--transition1:hover .DocsExampleTransitionElement {
+  @include transform(scale(1.5) translate3d(200%, 0, 0));
+}
+
+.DocsExample-preview--transition2 .DocsExampleTransitionElement {
+  @include transition(all, 1s, ease);
+}
+
+.DocsExample-preview--transition2:hover .DocsExampleTransitionElement {
+  @include transform(scale(1.5) translate3d(200%, 0, 0));
+}

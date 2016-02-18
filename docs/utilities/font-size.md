@@ -1,86 +1,175 @@
 ---
 categories: utilities
 layout: page
+scss-filename: _font-size.scss
 title: font-size
 ---
+Use `font-size` to apply values using our mixin or utility classes. Values can optionally be applied only at specific [breakpoints]({{ site.baseurl }}/utilities/breakpoint).
+
+Using the Sass mixin is preferred, as it forces us to consider all objects as [components]({{ site.baseurl }}/guidance/components). Applying utility classes in HTML enforces `!important`, as they're intended to be immutable — applying one property and value no matter what.
+
+### Values
+* `default`
+* `xx-small`
+* `x-small`
+* `small`
+* `large`
+* `x-large`
+* `xx-large`
+* `1` to `17` (only available in mixin)
+
 
 ## Standard scale
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--3">
-      <strong>xx-small; size 3</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
-    </p>
-  </div>
-{% example scss %}
-@include font-size(xx-small);
+### Default
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--default u-line-height--default">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--4">
-      <strong>x-small; size 4</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
-    </p>
-  </div>
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-size(x-small);
+.MyComponent {
+  @include font-size(default);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--5">
-      <strong>small; size 5</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
-    </p>
-  </div>
-{% example scss %}
-@include font-size(small);
+### XX-Small
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--xx-small u-line-height--default">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--6">
-      <strong>default; size 6</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
-    </p>
-  </div>
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-size(default);
+.MyComponent {
+  @include font-size(xx-small);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--7">
-      <strong>large; size 7</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
-    </p>
-  </div>
-{% example scss %}
-@include font-size(large);
+
+### X-Small
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--x-small u-line-height--default">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--8">
-      <strong>x-large; size 8</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
-    </p>
-  </div>
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-size(x-large);
+.MyComponent {
+  @include font-size(x-small);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
-  <div class="DocsExample-preview">
-    <p class="TextExample TextExample--font-size--10">
-      <strong>xx-large; size 10</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
-    </p>
-  </div>
+### Small
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--small u-line-height--default">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
 {% example scss %}
-@include font-size(xx-large);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(small);
+  @include line-height(default);
+}
+{% endexample %}
+</div>
+
+### Large
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--large u-line-height--default">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
+{% example scss %}
+.MyComponent {
+  @include font-size(large);
+  @include line-height(default);
+}
+{% endexample %}
+</div>
+
+
+### X-Large
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--x-large u-line-height--tight">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
+{% example scss %}
+.MyComponent {
+  @include font-size(x-large);
+  @include line-height(tight);
+}
+{% endexample %}
+</div>
+
+### XX-Large
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-font-size--xx-large u-line-height--x-tight">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
+{% example scss %}
+.MyComponent {
+  @include font-size(xx-large);
+  @include line-height(x-tight);
+}
+{% endexample %}
+</div>
+
+
+## Breakpoints
+
+`font-size` values can selectively only be applied when certain [breakpoints]({{ site.baseurl }}/utilities/breakpoint) are triggered.
+
+<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
+{% example html %}
+<div class="u-lg-font-size--x-large u-lg-line-height--tight">
+  FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+</div>
+{% endexample %}
+</div>
+
+<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
+{% example scss %}
+.MyComponent {
+  @include break(lg) {
+    @include font-size(x-large);
+    @include line-height(tight);
+  }
+}
 {% endexample %}
 </div>
 
@@ -88,198 +177,240 @@ title: font-size
 
 ## Full scale
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--1">
-      <strong>Size 1</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
-  {% example scss %}
+{% example scss %}
+.MyComponent {
   @include font-size(1);
-  {% endexample %}
+  @include line-height(default);
+}
+{% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--2">
-      <strong>Size 2</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(2);
+.MyComponent {
+  @include font-size(2);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--3">
-      <strong>Size 3; xx-small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(3);
+.MyComponent {
+  @include font-size(3);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--4">
-      <strong>Size 4; x-small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(4);
+.MyComponent {
+  @include font-size(4);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--5">
-      <strong>Size 5; small</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(5);
+.MyComponent {
+  @include font-size(5);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--6">
-      <strong>Size 6; default</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(6);
+.MyComponent {
+  @include font-size(6);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--7">
-      <strong>Size 7; large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way. But whatever we make is only as good as the people making it.
     </p>
   </div>
 {% example scss %}
-@include font-size(7);
+.MyComponent {
+  @include font-size(7);
+  @include line-height(default);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--8">
-      <strong>Size 8; x-large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier, and let them do things their way.
     </p>
   </div>
 {% example scss %}
-@include font-size(8);
+.MyComponent {
+  @include font-size(8);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--9">
-      <strong>Size 9</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses. We make products to empower people with the knowledge and means to make it easier.
     </p>
   </div>
 {% example scss %}
-@include font-size(9);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(9);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--10">
-      <strong>Size 10; xx-large</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
     </p>
   </div>
 {% example scss %}
-@include font-size(10);
-@include line-height(tight);
+.MyComponent {
+  @include font-size(10);
+  @include line-height(tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--11">
-      <strong>Size 11</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard for freelancers and small businesses.
     </p>
   </div>
 {% example scss %}
-@include font-size(11);
-@include line-height(x-tight);
+.MyComponent {
+  @include font-size(11);
+  @include line-height(x-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--12">
-      <strong>Size 12</strong>. FreeAgent is a company born out of the frustration that business finances are just too damn hard.
+      FreeAgent is a company born out of the frustration that business finances are just too damn hard.
     </p>
   </div>
 {% example scss %}
-@include font-size(12);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(12);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--13">
-      <strong>Size 13</strong>. Business finances are just too damn hard.
+      Business finances are just too damn hard.
     </p>
   </div>
 {% example scss %}
-@include font-size(13);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(13);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--14">
-      <strong>Size 14</strong>. Business finances are just too damn hard.
+      Business finances are just too damn hard.
     </p>
   </div>
 {% example scss %}
-@include font-size(14);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(14);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--15">
-      <strong>Size 15</strong>. Business finances.
+      Business finances.
     </p>
   </div>
 {% example scss %}
-@include font-size(15);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(15);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--16">
-      <strong>Size 16</strong>. Business finances.
+      Business finances.
     </p>
   </div>
 {% example scss %}
-@include font-size(16);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(16);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
   <div class="DocsExample-preview">
     <p class="TextExample TextExample--font-size--17">
-      <strong>Size 17</strong>. Business.
+      Business.
     </p>
   </div>
 {% example scss %}
-@include font-size(17);
-@include line-height(xx-tight);
+.MyComponent {
+  @include font-size(17);
+  @include line-height(xx-tight);
+}
 {% endexample %}
 </div>

@@ -1,0 +1,22 @@
+/* `box-sizing`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/box-sizing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@if $u-classes-box-sizing == true {
+
+  @each $box-sizing-value in $box-sizing-values {
+
+    .u-box-sizing--#{$box-sizing-value} {
+      box-sizing: $box-sizing-value !important;
+    }
+
+  }
+
+}

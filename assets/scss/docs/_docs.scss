@@ -13,12 +13,9 @@
 
 @import "components/_anchor";
 @import "components/_buttons";
-@import "components/_docs-example";
+@import "components/_docs-examples";
 @import "components/_menu";
-@import "components/_spacing";
 @import "components/_swatches";
-@import "components/_text-example";
-@import "components/_text-color";
 
 $masthead-margin: 1.5rem;
 
@@ -89,7 +86,6 @@ dl {
   padding: 0 0 0 1.5em;
 }
 
-ul,
 ul ul,
 ul ul ul {
   list-style-type: disc;
@@ -99,15 +95,6 @@ ul ul ul {
 ul ul,
 ul ul ul {
   margin: 0;
-}
-
-/**
- * Markdown body styles used for code examples
- */
-
-.highlight .cm {
-  font-style: normal;
-  @include text-color(gray-9);
 }
 
 /**
@@ -126,15 +113,20 @@ ul ul ul {
   @include text-color(gray-8);
 }
 
+.menu-title a {
+  @include text-color(fa-blue);
+  text-decoration: none;
+}
+
+.menu-title a:active,
+.menu-title a:focus,
+.menu-title a:hover {
+  text-decoration: underline;
+}
+
 .menu-item:active,
 .menu-item:focus,
 .menu-item:hover {
-  background-color: transparent;
-}
-
-a.menu-item:active,
-a.menu-item:focus,
-a.menu-item:hover {
   @include background-color(gray-16);
 }
 
@@ -162,7 +154,7 @@ a.menu-item:hover {
 
 .masthead {
   @include background-color(fa-blue);
-  margin-bottom: $masthead-margin;
+  @include margin-bottom(large);
   text-align: center;
 
   @include break(md) {
@@ -171,7 +163,7 @@ a.menu-item:hover {
 }
 
 .masthead a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .6);
 }
 
 .masthead a:hover {
@@ -223,9 +215,7 @@ a.menu-item:hover {
 
 .Hero {
   @include background-color(fa-blue);
-  @include border-bottom(xx-thick, fa-green);
-  @include padding(x-large 0);
-  text-color: #fff;
+  padding: 5rem 0;
 }
 
 .masthead + .Hero {
@@ -247,9 +237,9 @@ a.menu-item:hover {
 }
 
 .Hero-leader {
-  @include font-size(xx-large);
   @include line-height(xx-tight);
   @include margin-bottom(default);
+  font-size: 2.5em;
 }
 
 .Hero a {
@@ -301,6 +291,14 @@ a.menu-item:hover {
   @include margin-bottom(large);
 }
 
+/**
+ * Markdown body styles used for code examples
+ */
+
+.highlight .cm {
+  font-style: normal;
+  @include text-color(gray-9);
+}
 
 /**
  * `-preview` is for showing manually typed previews when only showing CSS
@@ -310,16 +308,16 @@ a.menu-item:hover {
 .DocsExample-preview,
 .DocsExample-render {
   position: relative;
-  border-radius: .25rem .25rem 0 0;
+  @include border-radius-top-left(default);
+  @include border-radius-top-right(default);
   @include border(default, gray-14);
-  @include font-size(default, !important);
-  @include line-height(default, !important);
   @include padding(default);
 
   + .highlight {
-    margin-top: -1px;
+    @include border-radius-bottom-left(default);
+    @include border-radius-bottom-right(default);
     border: 1px solid #e5e5e5;
-    border-radius: 0 0 .25rem .25rem;
+    margin-top: -1px;
   }
 
   > p:last-child,
@@ -338,7 +336,6 @@ a.menu-item:hover {
   /* Override Markdown styles to restore values from `_type.scss` */
   ul,
   ol {
-    padding: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -371,9 +368,55 @@ a.menu-item:hover {
   }
 }
 
+/**
+ * Add labels to HTML, SCSS, and CSS code examples to highlight their usage
+ */
+
+.highlight [class^="language-"]::before {
+  @include font-family(default);
+  @include font-size(small);
+  @include line-height(default);
+  @include text-color(gray-11);
+  display: inline-block;
+  letter-spacing: 0 !important;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.2rem;
+}
+
+.DocsExample--labelUtilityClasses .highlight .language-html::before {
+  content: "With utility classes";
+}
+
+.DocsExample--labelMixins .highlight .language-scss::before {
+  content: "With Sass mixins";
+}
+
+.DocsExample--labelCSS .highlight .language-css::before,
+.DocsExample--labelCSS .highlight .language-scss::before {
+  content: "With CSS";
+}
+
+.DocsExample--renderHidden .DocsExample-render + .highlight {
+  @include border-radius(default);
+}
+
 /* Hide the example preview block is we're only showing a CSS example */
-.DocsExample--render--hidden .DocsExample-render {
+.DocsExample--renderHidden .DocsExample-render {
   display: none;
+}
+
+/* Visually connect two adjacent code example blocks */
+.DocsExample--grouped,
+.DocsExample--grouped .DocsExample-render + .highlight {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.DocsExample--grouped + .DocsExample--renderHidden .DocsExample-render + .highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* Used to show spacing examples */
@@ -476,4 +519,80 @@ a.menu-item:hover {
 .l-limitTextWidth ul,
 .l-limitTextWidth dl {
   max-width: 40em;
+}
+
+
+/**
+ * A ‘split view’ component allow views/pages to be split into two side-by-side
+ * areas of content
+ */
+
+@include break(lg) {
+  .SplitView {
+    display: table;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+.SplitView-primary {
+  @include background-color(fa-blue);
+  @include floatContainer;
+  color: rgba(255, 255, 255, .8);
+  padding: 0;
+
+  @include break(lg) {
+    display: table-cell;
+    left: 25%;
+    position: relative;
+    right: auto;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
+.SplitView-primary-content {
+  color: rgba(255, 255, 255, .6);
+
+  @include break(md) {
+    @include padding-left(large);
+    @include padding-right(large);
+  }
+}
+
+.SplitView-primary-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.SplitView-primary-content a:hover {
+  text-decoration: underline;
+}
+
+.SplitView-primary-content .Heading {
+  color: #fff;
+}
+
+.SplitView-secondary {
+  @include floatContainer;
+  background: #fff;
+
+  @include break(lg) {
+    display: table-cell;
+    position: relative;
+    right: 75%;
+    vertical-align: top;
+    width: 25%;
+  }
+}
+
+.SplitView-secondary-content {
+  @include padding(large);
+
+  @include break(lg) {
+    float: right;
+    max-width: 18em;
+    width: 100%;
+  }
 }

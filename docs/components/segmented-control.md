@@ -1,6 +1,7 @@
 ---
 categories: components
 layout: page
+scss-filename: _segmented-control.scss
 title: Segmented Control
 ---
 

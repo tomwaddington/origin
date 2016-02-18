@@ -1,0 +1,19 @@
+/* `transition`
+   ========================================================================== */
+
+/**
+ * http://fac.github.io/origin/utilities/transition/
+ */
+
+@mixin transition(
+  $property: $transition-property-default,
+  $duration: $transition-length-default,
+  $timing-function: $transition-type-default,
+  $transition-delay-default: null,
+  $important: null
+  ) {
+  -webkit-transition: $property $duration $timing-function $important;
+  transition: $property $duration $timing-function $important;
+  -webkit-transition-timing-function: $timing-function $important;
+  transition-timing-function: $timing-function $important;
+}

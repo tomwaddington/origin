@@ -1,0 +1,37 @@
+/* Transform
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/transform/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+/* `rotate`
+  ========================================================================== */
+
+@mixin rotate($degree) {
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+
+/* `transform`
+  ========================================================================== */
+
+@mixin transform($transforms...) {
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+
+/* `translate3d`
+  ========================================================================== */
+
+@mixin translate3d($xAxis: 0, $yAxis: 0, $zAxis: 0, $important: null) {
+  -webkit-transform: translate3d($xAxis, $yAxis, $zAxis $important);
+  transform: translate3d($xAxis, $yAxis, $zAxis $important);
+}

@@ -63,7 +63,7 @@ h3 > p {
 {% endhighlight %}
 
 #### CSS declaration order
-`@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from [fa-css-utilities](https://github.com/fac/fa-css-utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
+`@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from our [utilities]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
 
 Example:
 

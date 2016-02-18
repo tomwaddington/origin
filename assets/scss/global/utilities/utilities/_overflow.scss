@@ -1,0 +1,30 @@
+/* `overflow`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/overflow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@if $u-classes-overflow == true {
+
+  @each $overflow-value in $overflow-values {
+
+    .u-overflow--#{$overflow-value} {
+      overflow: $overflow-value !important;
+    }
+
+    .u-overflow-x--#{$overflow-value} {
+      overflow-x: $overflow-value !important;
+    }
+
+    .u-overflow-y--#{$overflow-value} {
+      overflow-y: $overflow-value !important;
+    }
+
+  }
+
+}

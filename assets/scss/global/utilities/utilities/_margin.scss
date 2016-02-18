@@ -1,0 +1,115 @@
+/* `margin`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/margin/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin margin($values, $important: null) {
+  $valueList: ();
+
+  @for $i from 1 through length($values) {
+    $value: map-get($spacing-values, nth($values, $i));
+    $valueList: append($valueList, $value, space);
+  }
+
+  margin: $valueList $important;
+}
+
+@mixin margin-bottom($value, $important: null) {
+  margin-bottom: map-get($spacing-values, $value) $important;
+}
+
+@mixin margin-left($value, $important: null) {
+  margin-left: map-get($spacing-values, $value) $important;
+}
+
+@mixin margin-right($value, $important: null) {
+  margin-right: map-get($spacing-values, $value) $important;
+}
+
+@mixin margin-top($value, $important: null) {
+  margin-top: map-get($spacing-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-margin == true {
+
+  @each $spacing-size, $standard-scale-spacing-value in $standard-scale-spacing-values {
+
+    /**
+     * Generate standard scale of spacing classes without breakpoints
+     *
+     * Note that classes will not be generated for the full scale of spacing
+     * values, only the standard `xx-small` > `xx-large` scale, because in
+     * practice the full scale has never been needed.
+     */
+
+    .u-margin--#{$spacing-size} {
+      margin: $standard-scale-spacing-value !important;
+    }
+
+    .u-margin-bottom--#{$spacing-size} {
+      margin-bottom: $standard-scale-spacing-value !important;
+    }
+
+    .u-margin-left--#{$spacing-size} {
+      margin-left: $standard-scale-spacing-value !important;
+    }
+
+    .u-margin-right--#{$spacing-size} {
+      margin-right: $standard-scale-spacing-value !important;
+    }
+
+    .u-margin-top--#{$spacing-size} {
+      margin-top: $standard-scale-spacing-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate standard scale of spacing classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin--#{$spacing-size} {
+          margin: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-bottom--#{$spacing-size} {
+          margin-bottom: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-left--#{$spacing-size} {
+          margin-left: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-right--#{$spacing-size} {
+          margin-right: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-margin-top--#{$spacing-size} {
+          margin-top: $standard-scale-spacing-value !important;
+        }
+      }
+
+    }
+
+  }
+
+}
