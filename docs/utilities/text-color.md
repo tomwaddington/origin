@@ -274,23 +274,6 @@ New colors should be added only when they’re actually being used in a componen
 
 <div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
 {% example html %}
-<div class="u-text-color--fa-red--dark">
-  The fa-red--dark color for text
-</div>
-{% endexample %}
-</div>
-
-<div class="DocsExample DocsExample--labelMixins DocsExample--renderHidden">
-{% example scss %}
-.MyComponent {
-  @include text-color(fa-red--dark);
-}
-{% endexample %}
-</div>
-
-
-<div class="DocsExample DocsExample--grouped DocsExample--labelUtilityClasses">
-{% example html %}
 <div class="u-text-color--fa-amber">
   The fa-amber color for text
 </div>
