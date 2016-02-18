@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
+
+    <title>
+        overflow &middot; Origin
+    </title>
+
+    <link rel="stylesheet" href="/origin/assets/css/origin.css" />
+    <link href="/origin/favicon.ico" rel="shortcut" type="image/x-icon" />
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+
+<header class="masthead">
+  <div class="u-padding--large">
+    <div class="Grid-row">
+      <div class="Grid-col md-3">
+        <a href="/origin/" class="masthead-logo">
+          Origin
+        </a>
+      </div>
+      <div class="Grid-col md-9">
+        <nav class="masthead-nav">
+          <a  href="/origin/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <div class="Grid-row">
+
+  <div class="Grid-col md-9 md-push-3">
+    <h1 class="page-title">
+      overflow
+    </h1>
+
+    
+
+
+<p>
+  <a class="Button Button--outline" href="https://github.com/fac/origin/tree/master/assets/scss/global/utilities/utilities/_overflow.scss">
+    View SCSS source
+  </a>
+</p>
+
+
+
+    <div class="markdown-body">
+      <p>Apply <code class="highlighter-rouge">overflow</code>, <code class="highlighter-rouge">overflow-x</code>, and <code class="highlighter-rouge">overflow-y</code> values with utility classes.</p>
+
+<h3 id="values">Values</h3>
+<ul>
+  <li><code class="highlighter-rouge">auto</code></li>
+  <li><code class="highlighter-rouge">hidden</code></li>
+  <li><code class="highlighter-rouge">scroll</code></li>
+  <li><code class="highlighter-rouge">visible</code></li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow--auto" style="height: 8em; width: 60%;">
+  This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow--auto"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them. This element only gets scrollbars if it needs them.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow--hidden" style="height: 8em; width: 60%;">
+  Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow--hidden"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden. Any content that extends beyond this element is hidden.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow--scroll" style="height: 8em; width: 60%;">
+  This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow--scroll"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them. This element will get both x and y axis scrollbars, even if it doesn't need them.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow--visible" style="height: 8em; width: 60%;">
+  Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow--visible"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be. Any content extending beyond this element will be visible, and render outside the box if need be.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow-x--scroll" style="height: 8em; width: 60%;">
+  This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow-x--scroll"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them. This element will get y axis scrollbars, even if it doesn't need them.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="DocsExample-render u-floatContainer"><div class="u-background-color--gray-13 u-overflow-x--hidden" style="height: 8em; width: 60%;">
+  Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-background-color--gray-13 u-overflow-x--hidden"</span> <span class="na">style=</span><span class="s">"height: 8em; width: 60%;"</span><span class="nt">&gt;</span>
+  Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden. Any content that extends beyond the set width of the element is hidden.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+  <div class="Grid-col md-3 md-pull-9">
+    <h4 class="menu-title">
+  <a href="/origin/guidance/components/">
+    Components
+  </a>
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/block-grid/">
+      Block Grid
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/button/">
+      Button
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/grid/">
+      Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/heading/">
+      Heading
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/navbar/">
+      NavBar
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/segmented-control/">
+      Segmented Control
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/table/">
+      Table
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+
+<h4 class="menu-title">
+  <a href="/origin/guidance/utilities/">
+    Utilities
+  </a>
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/background/">
+      background
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/border-radius/">
+      border-radius
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/border/">
+      border
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/box-shadow/">
+      box-shadow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/box-sizing/">
+      box-sizing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/breakpoint/">
+      breakpoint
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/clear/">
+      clear
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/display/">
+      display
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-content/">
+      flex-align-content
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-items/">
+      flex-align-items
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-self/">
+      flex-align-self
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-basis/">
+      flex-basis
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-direction/">
+      flex-direction
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-flow/">
+      flex-flow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-grow/">
+      flex-grow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-justify-content/">
+      flex-justify-content
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-order/">
+      flex-order
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-shrink/">
+      flex-shrink
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-wrap/">
+      flex-wrap
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex/">
+      flex
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flexbox/">
+      flexbox
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/float/">
+      float
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-family/">
+      font-family
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-size/">
+      font-size
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-weight/">
+      font-weight
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/height-and-width/">
+      height and width
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/interaction/">
+      interaction
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/keyframe-animation/">
+      keyframe animation
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/letter-spacing/">
+      letter-spacing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/line-height/">
+      line-height
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/linear-gradient/">
+      linear-gradient
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/list-item-spacing/">
+      list-item-spacing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/list-style/">
+      list-style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/margin/">
+      margin
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/opacity/">
+      opacity
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/overflow/">
+      overflow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/padding/">
+      padding
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/positioning/">
+      positioning
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-color/">
+      text-color
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-decoration/">
+      text-decoration
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-formatting/">
+      text-formatting
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/transform/">
+      transform
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/transition/">
+      transition
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/vertical-align/">
+      vertical-align
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/visibility/">
+      visibility
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/z-index/">
+      z-index
+    </a>
+    
+  
+</nav>
+
+<h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/base-styles/">
+      Base styles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/code-style/">
+      Code style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/components/">
+      Components
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/naming-conventions/">
+      Naming conventions
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/principles/">
+      Principles
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/guidance/utilities/">
+      Utilities
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+
+  </div>
+
+</div>
+
+
+    <footer class="u-padding-bottom--large u-padding-top--large u-md-padding-bottom--xx-large u-md-padding-top--xx-large u-text-color--gray-9" role="contentinfo">
+      <div class="Grid-row">
+        <div class="Grid-col">
+          &copy; FreeAgent 2016 &middot; Released under the <a href="https://github.com/fac/origin//blob/master/LICENSE.md">MIT</a> license
+        </div>
+      </div>
+    </footer>
+
+    <script src="/origin/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>
+

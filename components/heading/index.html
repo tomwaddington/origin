@@ -19,39 +19,49 @@
   </head>
   <body>
 
-    <header class="masthead">
-      <div class="u-padding--large">
-        <div class="Grid-row">
-          <div class="Grid-col md-3">
-            <a href="/origin/" class="masthead-logo">
-              Origin
-            </a>
-          </div>
-          <div class="Grid-col md-9">
-            <nav class="masthead-nav">
-              <a  href="/origin/guidance/principles">Docs</a>
-              <a  href="/origin/about">About</a>
-              <a  href="/origin/faq">FAQ</a>
-              <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
-              <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    
-
+<header class="masthead">
+  <div class="u-padding--large">
     <div class="Grid-row">
+      <div class="Grid-col md-3">
+        <a href="/origin/" class="masthead-logo">
+          Origin
+        </a>
+      </div>
+      <div class="Grid-col md-9">
+        <nav class="masthead-nav">
+          <a  href="/origin/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <div class="Grid-row">
 
   <div class="Grid-col md-9 md-push-3">
     <h1 class="page-title">
       Heading
     </h1>
+
+    
+<p>
+  <a class="Button Button--outline" href="https://github.com/fac/origin/tree/master/assets/scss/global/components/_heading.scss">
+    View SCSS source
+  </a>
+</p>
+
+
+
+
+
     <div class="markdown-body">
       <p>The Heading component provides a scale of headings that can be applied to any element, creating consistency and avoiding inheritance issues that come with targeting bare HTML elements.</p>
 
-<p>Separating the structure and presentation of headings like is extremely useful. For example, if a heading should structurally be an <code>h2</code> but we want it to appear small, we can simply use the <code>Heading--small</code> class. We get the desired presentation, but retain the correct semantic structure.</p>
+<p>Separating the structure and presentation of headings like is extremely useful. For example, if a heading should structurally be an <code class="highlighter-rouge">h2</code> but we want it to appear small, we can simply use the <code class="highlighter-rouge">Heading--small</code> class. We get the desired presentation, but retain the correct semantic structure.</p>
 
 <ul id="markdown-toc">
   <li><a href="#how-to-use" id="markdown-toc-how-to-use">How to use</a>    <ul>
@@ -74,7 +84,7 @@
 
 <h2 id="how-to-use">How to use</h2>
 <ol>
-  <li>Apply a base <code>Heading</code> class and a <code>Heading--size</code> modifier class to any HTML element, where <code>size</code> equals any of <code>xx-large</code>, <code>x-large</code>, <code>large</code>, <code>default</code>, <code>small</code>, <code>x-small</code>, or <code>xx-small</code>, as <a href="#sizes">listed below</a>.</li>
+  <li>Apply a base <code class="highlighter-rouge">Heading</code> class and a <code class="highlighter-rouge">Heading--size</code> modifier class to any HTML element, where <code class="highlighter-rouge">size</code> equals any of <code class="highlighter-rouge">xx-large</code>, <code class="highlighter-rouge">x-large</code>, <code class="highlighter-rouge">large</code>, <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">small</code>, <code class="highlighter-rouge">x-small</code>, or <code class="highlighter-rouge">xx-small</code>, as <a href="#sizes">listed below</a>.</li>
   <li>Optionally apply any other <a href="#colors">color</a>, <a href="#fonts">font</a>, <a href="#spacing">spacing</a>, or <a href="#weights">weight</a> modifier classes to achieve whatever effect you need. List classes in alphabetical order.</li>
 </ol>
 
@@ -109,12 +119,12 @@
 <span class="nt">&lt;/h3&gt;</span></code></pre></div>
 
 <h2 id="mixin">Mixin</h2>
-<p>The Heading component can be integrated into stylesheets for other components and layouts using the <code>Heading</code> mixin.</p>
+<p>The Heading component can be integrated into stylesheets for other components and layouts using the <code class="highlighter-rouge">Heading</code> mixin.</p>
 
-<p>The mixin accepts <code>color</code>, <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, and <code>margin-bottom</code> arguments with values sourced from our <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss">utility aliases</a>. Arguments must be declared in alphabetical order to work properly.</p>
+<p>The mixin accepts <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">font-family</code>, <code class="highlighter-rouge">font-size</code>, <code class="highlighter-rouge">font-weight</code>, and <code class="highlighter-rouge">margin-bottom</code> arguments with values sourced from our <a href="https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss">utility values</a>. Arguments must be declared in alphabetical order to work properly.</p>
 
 <h3 id="examples-1">Examples</h3>
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">@include Heading(small);
 @include Heading(xx-large);
@@ -149,7 +159,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(xx-large);
@@ -167,7 +177,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(x-large);
@@ -185,7 +195,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(large);
@@ -203,7 +213,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(small);
@@ -221,7 +231,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(x-small);
@@ -239,7 +249,7 @@
 
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 
 <div class="DocsExample-render u-floatContainer">.MyElement {
   @include Heading(xx-small);
@@ -250,7 +260,7 @@
 </div>
 
 <h2 id="colors">Colors</h2>
-<p>If you need a color or shade outside of this selection, you can use a utility class (e.g. <code>u-text-color--fa-blue</code>) from our list of <a href="https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss">text color values</a> — only if there are only 1 or 2 instances of the heading color in whatever you’re working on.</p>
+<p>If you need a color or shade outside of this selection, you can use a utility class (e.g. <code class="highlighter-rouge">u-text-color--fa-blue</code>) from our list of <a href="https://github.com/fac/origin/blob/master/assets/scss/global/utilities/_utility-values.scss">text color values</a> — only if there are only 1 or 2 instances of the heading color in whatever you’re working on.</p>
 
 <p>If you want to set an alternative default heading color for your whole project, do so in your local copy of <a href="https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss">_heading-settings.scss</a>.</p>
 
@@ -311,7 +321,7 @@
 <span class="nt">&lt;/h2&gt;</span></code></pre></div>
 
 <h2 id="fonts">Fonts</h2>
-<p>The <code>Heading--font--default</code> class isn’t required if you’re already using the default font for headings. Only if you’re using an alternate font and want to override it.</p>
+<p>The <code class="highlighter-rouge">Heading--font--default</code> class isn’t required if you’re already using the default font for headings. Only if you’re using an alternate font and want to override it.</p>
 
 <div class="DocsExample-render u-floatContainer"><h2 class="Heading Heading--font--default Heading--x-large">
   Default Font Heading
@@ -320,7 +330,7 @@
   Default Font Heading
 <span class="nt">&lt;/h2&gt;</span></code></pre></div>
 
-<p>We automatically include <code>@include font-weight(normal)</code> as part of the <code>Heading--font--editorial</code> class as we don’t use the bold weight of our editorial typeface.</p>
+<p>We automatically include <code class="highlighter-rouge">@include font-weight(normal)</code> as part of the <code class="highlighter-rouge">Heading--font--editorial</code> class as we don’t use the bold weight of our editorial typeface.</p>
 
 <div class="DocsExample-render u-floatContainer"><h2 class="Heading Heading--font--editorial Heading--x-large">
   Editorial Font Heading
@@ -441,9 +451,9 @@
 <span class="nt">&lt;/h2&gt;</span></code></pre></div>
 
 <h2 id="editorial-spacing">Editorial spacing</h2>
-<p>By default, the <code>Heading</code> component has no margins other than a small <code>margin-bottom</code>. Being so unopinionated means it can be used in a multitude of contexts without alteration.</p>
+<p>By default, the <code class="highlighter-rouge">Heading</code> component has no margins other than a small <code class="highlighter-rouge">margin-bottom</code>. Being so unopinionated means it can be used in a multitude of contexts without alteration.</p>
 
-<p>But when we’re writing editorial content like articles and blog posts, we want headings to be spaced sympathetically. Spacing that improves the reading experience, but also doesn’t require us to add classes to every single heading. By wrapping editorial content in a <code>l-editorial</code> container, that’s what we get.</p>
+<p>But when we’re writing editorial content like articles and blog posts, we want headings to be spaced sympathetically. Spacing that improves the reading experience, but also doesn’t require us to add classes to every single heading. By wrapping editorial content in a <code class="highlighter-rouge">l-editorial</code> container, that’s what we get.</p>
 
 <div class="DocsExample-render u-floatContainer"><div class="l-editorial">
   <h1>Heading one</h1>
@@ -489,6 +499,480 @@
   </div>
   <div class="Grid-col md-3 md-pull-9">
     <h4 class="menu-title">
+  <a href="/origin/guidance/components/">
+    Components
+  </a>
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/block-grid/">
+      Block Grid
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/button/">
+      Button
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/grid/">
+      Grid
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/heading/">
+      Heading
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/navbar/">
+      NavBar
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/components/segmented-control/">
+      Segmented Control
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/components/table/">
+      Table
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+
+<h4 class="menu-title">
+  <a href="/origin/guidance/utilities/">
+    Utilities
+  </a>
+</h4>
+<nav class="menu docs-menu">
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/background/">
+      background
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/border-radius/">
+      border-radius
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/border/">
+      border
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/box-shadow/">
+      box-shadow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/box-sizing/">
+      box-sizing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/breakpoint/">
+      breakpoint
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/clear/">
+      clear
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/display/">
+      display
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-content/">
+      flex-align-content
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-items/">
+      flex-align-items
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-align-self/">
+      flex-align-self
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-basis/">
+      flex-basis
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-direction/">
+      flex-direction
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-flow/">
+      flex-flow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-grow/">
+      flex-grow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-justify-content/">
+      flex-justify-content
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-order/">
+      flex-order
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-shrink/">
+      flex-shrink
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex-wrap/">
+      flex-wrap
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flex/">
+      flex
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/flexbox/">
+      flexbox
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/float/">
+      float
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-family/">
+      font-family
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-size/">
+      font-size
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/font-weight/">
+      font-weight
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/height-and-width/">
+      height and width
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/interaction/">
+      interaction
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/keyframe-animation/">
+      keyframe animation
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/letter-spacing/">
+      letter-spacing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/line-height/">
+      line-height
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/linear-gradient/">
+      linear-gradient
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/list-item-spacing/">
+      list-item-spacing
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/list-style/">
+      list-style
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/margin/">
+      margin
+    </a>
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/opacity/">
+      opacity
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/overflow/">
+      overflow
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/padding/">
+      padding
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/positioning/">
+      positioning
+    </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-color/">
+      text-color
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-decoration/">
+      text-decoration
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/text-formatting/">
+      text-formatting
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/transform/">
+      transform
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/transition/">
+      transition
+    </a>
+    
+  
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/vertical-align/">
+      vertical-align
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/visibility/">
+      visibility
+    </a>
+    
+  
+    
+    <a class="menu-item" href="/origin/utilities/z-index/">
+      z-index
+    </a>
+    
+  
+</nav>
+
+<h4 class="menu-title">
   Guidance
 </h4>
 <nav class="menu docs-menu">
@@ -501,6 +985,18 @@
     <a class="menu-item" href="/origin/guidance/base-styles/">
       Base styles
     </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
     
   
     
@@ -536,9 +1032,61 @@
     
   
     
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
     <a class="menu-item" href="/origin/guidance/naming-conventions/">
       Naming conventions
     </a>
+    
+  
+    
+  
+    
+  
+    
+  
     
   
     
@@ -558,171 +1106,19 @@
     
   
     
+  
+    
+  
+    
+  
+    
     <a class="menu-item" href="/origin/guidance/utilities/">
       Utilities
     </a>
     
   
-</nav>
-
-
-<h4 class="menu-title">
-  Components
-</h4>
-<nav class="menu docs-menu">
-  
     
   
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/components/block-grid/">
-      Block Grid
-    </a>
-    
-  
-    
-    <a class="menu-item" href="/origin/components/button/">
-      Button
-    </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/components/grid/">
-      Grid
-    </a>
-    
-  
-    
-    <a class="menu-item" href="/origin/components/heading/">
-      Heading
-    </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/components/navbar/">
-      NavBar
-    </a>
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/components/segmented-control/">
-      Segmented Control
-    </a>
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/components/table/">
-      Table
-    </a>
-    
-  
-    
-  
-    
-  
-</nav>
-
-
-<h4 class="menu-title">
-  Utilities
-</h4>
-<nav class="menu docs-menu">
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/background-color/">
-      background-color
-    </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/font-family/">
-      font-family
-    </a>
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/font-size/">
-      font-size
-    </a>
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/font-weight/">
-      font-weight
-    </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/line-height/">
-      line-height
-    </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/spacing/">
-      spacing
-    </a>
-    
-  
-    
-  
-    
-    <a class="menu-item" href="/origin/utilities/text-color/">
-      text-color
-    </a>
     
   
     
@@ -733,6 +1129,14 @@
 
 </div>
 
+
+    <footer class="u-padding-bottom--large u-padding-top--large u-md-padding-bottom--xx-large u-md-padding-top--xx-large u-text-color--gray-9" role="contentinfo">
+      <div class="Grid-row">
+        <div class="Grid-col">
+          &copy; FreeAgent 2016 &middot; Released under the <a href="https://github.com/fac/origin//blob/master/LICENSE.md">MIT</a> license
+        </div>
+      </div>
+    </footer>
 
     <script src="/origin/assets/js/anchor.min.js"></script>
     <script>
@@ -745,3 +1149,4 @@
     </script>
   </body>
 </html>
+
