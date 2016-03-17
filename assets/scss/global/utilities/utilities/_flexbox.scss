@@ -1,0 +1,44 @@
+/* `flexbox`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flexbox/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flexbox($value: flexbox, $important: null) {
+
+  @if $value == inline-flex {
+    display: -webkit-inline-box $important;
+    display: -webkit-inline-flex $important;
+    display: -moz-inline-flex $important;
+    display: -ms-inline-flexbox $important;
+    display: inline-flex $important;
+  } @else {
+    display: -webkit-box $important;
+    display: -webkit-flex $important;
+    display: -moz-flex $important;
+    display: -ms-flexbox $important;
+    display: flex $important;
+  }
+
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flexbox == true {
+
+  .u-flexbox {
+    @include flexbox(!important);
+  }
+
+  .u-inline-flexbox {
+    @include flexbox(inline-flex, !important);
+  }
+
+}

@@ -155,23 +155,39 @@ $Heading-spacing: 0;
  */
 
 .Heading--space--xx-small {
-  margin-bottom: 0.15em;
+  margin-bottom: .15em;
 }
 
 .Heading--space--x-small {
-  margin-bottom: 0.25em;
+  margin-bottom: .25em;
 }
 
 .Heading--space--small {
-  margin-bottom: 0.35em;
+  margin-bottom: .35em;
 }
 
 .Heading--space--default {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
 .Heading--space--large {
-  margin-bottom: 0.75em;
+  margin-bottom: .75em;
+}
+
+
+/* Underlines
+  ========================================================================== */
+
+.Heading--underlined {
+  @include border-bottom(default, gray-12);
+}
+
+.Heading--underlined--dark {
+  @include border-bottom(default, gray-8)
+}
+
+.Heading--underlined--light {
+  @include border-bottom(default, gray-14);
 }
 
 
@@ -206,14 +222,6 @@ $Heading-spacing: 0;
   @include font-weight(bold);
 }
 
-.Heading--weight--x-bold {
-  @include font-weight(x-bold);
-}
-
-.Heading--weight--black {
-  @include font-weight(black);
-}
-
 
 /* Editorial modifications
   ========================================================================== */
@@ -224,7 +232,7 @@ $Heading-spacing: 0;
 .l-editorial h4,
 .l-editorial h5,
 .l-editorial h6 {
-  margin-bottom: 0.25em;
+  margin-bottom: .25em;
 }
 
 .l-editorial h2 {
@@ -236,13 +244,13 @@ $Heading-spacing: 0;
 }
 
 .l-editorial h4 {
-  margin-top: 0.5em;
+  margin-top: .5em;
 }
 
 .l-editorial h5 {
-  margin-top: 0.5em;
+  margin-top: .5em;
 }
 
 .l-editorial h6 {
-  margin-top: 0.5em;
+  margin-top: .5em;
 }

@@ -148,8 +148,6 @@ linters:
 
   SelectorFormat:
     enabled: true
-    #class_convention: '^[A-Z][a-z]+([A-Z][a-z]+)*(-{1,2}|\s|\.)*([a-z]+[A-Z]?-{0,2})*$|^(is|has)\-([a-z]+[A-Z]?-{0,2})*$'
-    #class_convention: ''
     class_convention_explanation: 'should either be written in UpperCamelCase, or begin with `is-`, `has-`, `u-`, or `l-`'
     ignored_types: element
     class_convention: |
@@ -159,7 +157,7 @@ linters:
       (-{1,2}|\.|\s){0,1}                       # followed by one or two dashes, or a dot, or a single space
       ([a-z]+[A-Z]?-{0,2})*                     # then any number of camelCase strings separated by one or two dashes.
       $|
-      ^(is|has|u|l)\-([a-zA-Z]+-{0,2})*$          # Alternatively, we start with state classes like `is`, `has`, `u`, or `l`,
+      ^(is|has|u|l)\-([a-zA-Z]+-{0,2})*$        # Alternatively, we start with state classes like `is`, `has`, `u`, or `l`,
                                                 # followed by any number of camelCase strings separated by one or two dashes.
 
   Shorthand:
@@ -233,7 +231,7 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []

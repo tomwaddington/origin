@@ -1,0 +1,130 @@
+/* Text formatting
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/text-formatting/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+/* `font-kerning`
+   ========================================================================== */
+
+@mixin font-kerning($value...) {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
+}
+
+@if $u-classes-text-formatting == true {
+
+  .u-font-kerning--normal {
+    @include font-kerning(!important);
+  }
+
+}
+
+
+/* `font-style`
+   ========================================================================== */
+
+@if $u-classes-text-formatting == true {
+
+  @each $font-style-value in $font-style-values {
+
+    .u-font-style--#{$font-style-value} {
+      font-style: $font-style-value !important;
+    }
+
+  }
+
+}
+
+
+/* `text-align`
+   ========================================================================== */
+
+@if $u-classes-text-formatting == true {
+
+  @each $text-align-value in $text-align-values {
+
+    .u-text-align--#{$text-align-value} {
+      text-align: $text-align-value !important;
+    }
+
+  }
+
+}
+
+
+/* Truncate text
+   ========================================================================== */
+
+@mixin text-truncate($important: null) {
+  max-width: 100% $important;
+  min-width: 0 $important;
+  overflow: hidden $important;
+  text-overflow: ellipsis $important;
+  white-space: nowrap $important;
+  word-wrap: normal $important;
+}
+
+@if $u-classes-text-formatting == true {
+
+  .u-text-truncate {
+    @include text-truncate(!important);
+  }
+
+}
+
+
+/* Text on multiple lines
+   ========================================================================== */
+
+@mixin text-multiLine($important: null) {
+  overflow: visible $important;
+  white-space: normal $important;
+}
+
+@if $u-classes-text-formatting == true {
+
+  .u-text-multiLine {
+    @include text-multiLine(!important);
+  }
+
+}
+
+
+/* `white-space`
+   ========================================================================== */
+
+@if $u-classes-text-formatting == true {
+
+  .u-white-space--nowrap {
+    white-space: nowrap !important;
+  }
+
+}
+
+
+/* `word-wrap`
+   ========================================================================== */
+
+@if $u-classes-text-formatting == true {
+
+  @each $word-wrap-value in $word-wrap-values {
+
+    .u-word-wrap--#{$word-wrap-value} {
+      word-wrap: $word-wrap-value !important;
+    }
+
+  }
+
+}

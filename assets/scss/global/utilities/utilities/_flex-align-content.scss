@@ -1,0 +1,54 @@
+/* `align-content`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-align-content/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-align-content($value: stretch, $important: null) {
+
+  @if $value == center {
+    -moz-align-content: $value $important;
+    -webkit-align-content: $value $important;
+    align-content: $value $important;
+    -ms-flex-line-pack: center $important;
+  } @else
+  if $value == flex-start {
+    -moz-align-content: $value $important;
+    -webkit-align-content: $value $important;
+    align-content: $value $important;
+    -ms-flex-line-pack: start $important;
+  } @else
+  if $value == flex-end {
+    -moz-align-content: $value $important;
+    -webkit-align-content: $value $important;
+    align-content: $value $important;
+    -ms-flex-line-pack: end $important;
+  } @else {
+    -moz-align-content: $value $important;
+    -webkit-align-content: $value $important;
+    align-content: $value $important;
+    -ms-flex-line-pack: $value $important;
+  }
+
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-align-content == true {
+
+  @each $flex-align-content-value in $flex-align-content-values {
+
+    .u-flex-align-content--#{$flex-align-content-value} {
+      @include flex-align-content(#{$flex-align-content-value}, !important);
+    }
+
+  }
+
+}

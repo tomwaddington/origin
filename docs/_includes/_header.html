@@ -1,0 +1,18 @@
+<header class="masthead">
+  <div class="u-padding--large">
+    <div class="Grid-row">
+      <div class="Grid-col md-3">
+        <a href="{{ site.baseurl }}/" class="masthead-logo">
+          Origin
+        </a>
+      </div>
+      <div class="Grid-col md-9">
+        <nav class="masthead-nav">
+          <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
+          <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
+          <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

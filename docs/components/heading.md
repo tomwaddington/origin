@@ -1,5 +1,7 @@
 ---
+categories: components
 layout: page
+scss-filename: _heading.scss
 title: Heading
 ---
 
@@ -43,10 +45,10 @@ Separating the structure and presentation of headings like is extremely useful. 
 ## Mixin
 The Heading component can be integrated into stylesheets for other components and layouts using the `Heading` mixin.
 
-The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility aliases](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss). Arguments must be declared in alphabetical order to work properly.
+The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margin-bottom` arguments with values sourced from our [utility values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss). Arguments must be declared in alphabetical order to work properly.
 
 ### Examples
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 @include Heading(small);
 @include Heading(xx-large);
@@ -61,7 +63,7 @@ The mixin accepts `color`, `font-family`, `font-size`, `font-weight`, and `margi
 ## Default settings for projects
 We use different default colors, fonts, and weights for headings in different projects. We could just override our global defaults when required, but continually doing so would be painful.
 
-Instead we can define default settings for projects by editing the contents of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+Instead we can define default settings for projects by editing the contents of [_heading-settings.scss]({{ site.github.repo }}/blob/master/assets/scss/local/fonts/_heading-settings.scss).
 
 This file exists locally for projects, so changing it wont't affect the Origin repo.
 
@@ -75,7 +77,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(xx-large);
@@ -91,7 +93,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(x-large);
@@ -107,7 +109,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(large);
@@ -123,7 +125,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(small);
@@ -139,7 +141,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(x-small);
@@ -155,7 +157,7 @@ These size examples show both HTML and CSS mixin implementations.
 {% endexample %}
 </div>
 
-<div class="DocsExample DocsExample--render--hidden">
+<div class="DocsExample DocsExample--renderHidden">
 {% example scss %}
 .MyElement {
   @include Heading(xx-small);
@@ -165,9 +167,9 @@ These size examples show both HTML and CSS mixin implementations.
 
 
 ## Colors
-If you need a color or shade outside of this selection, you can use a utility class (e.g. `u-text-color--fa-blue`) from our list of [text color values](https://github.com/fac/fa-css-utilities/blob/master/_utility-aliases.scss) — only if there are only 1 or 2 instances of the heading color in whatever you're working on.
+If you need a color or shade outside of this selection, you can use a utility class (e.g. `u-text-color--fa-blue`) from our list of [text color values]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/_utility-values.scss) — only if there are only 1 or 2 instances of the heading color in whatever you're working on.
 
-If you want to set an alternative default heading color for your whole project, do so in your local copy of [_heading-settings.scss](https://github.com/fac/origin/blob/master/assets/scss/local/fonts/_heading-settings.scss).
+If you want to set an alternative default heading color for your whole project, do so in your local copy of [_heading-settings.scss]({{ site.github.repo }}/blob/master/assets/scss/local/fonts/_heading-settings.scss).
 
 {% example html %}
 <h2 class="Heading Heading--color--dark Heading--x-large">
@@ -277,6 +279,27 @@ The Heading component doesn't have any margin by default, so it's very flexible.
   Heading With Large Spacing
 </h3>
 <p>The Heading component doesn't have any margin by default, so it's very flexible. But we'll often want to add space between it and an adjacent element. We can use a set of spacing classes to do so.</p>
+{% endexample %}
+
+
+## Underlines
+When further distinction is required between a heading and the content below and underline can be applied. An example of this would be the [glossary index listings](http://www.freeagent.com/glossary).
+{% example html %}
+<h2 class="Heading Heading--weight--bold Heading--underlined">
+  Heading With Underline
+</h2>
+{% endexample %}
+
+{% example html %}
+<h2 class="Heading Heading-weight--bold Heading--underlined--light">
+  Heading With Light Underline
+</h2>
+{% endexample %}
+
+{% example html %}
+<h2 class="Heading Heading--weight--bold Heading--underlined--dark">
+  Heading With Dark Underline;
+</h2>
 {% endexample %}
 
 

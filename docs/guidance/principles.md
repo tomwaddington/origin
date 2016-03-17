@@ -1,4 +1,5 @@
 ---
+categories: guidance
 layout: page
 title: Principles
 ---
@@ -13,9 +14,11 @@ We derive class names from design patterns and functionality rather than content
 
 The key elements of Origin are [utilities]({{ site.baseurl }}/guidance/utilities/) and [components]({{ site.baseurl }}/guidance/components/), highly-reusable patterns that we can use across different projects in different scenarios.
 
+The only utilities listed in this public-facing documentation are those we have custom values for. However, we have a much larger range of utility mixins, listed in the [Origin repo]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/utilities).
+
 ### Syntax
 
-The syntax of Origin is based on [SUIT CSS](https://suitcss.github.io/), which is a flavour of [BEM](http://bem.info/). The [naming conventions]({{ site.baseurl }}/guidance/naming-conventions/) section should contain everything you need to know. If not, [raise an issue](https://github.com/fac/origin/issues) so we can update the docs!
+The syntax of Origin is based on [SUIT CSS](https://suitcss.github.io/), which is a flavour of [BEM](http://bem.info/). The [naming conventions]({{ site.baseurl }}/guidance/naming-conventions/) section should contain everything you need to know. If not, [raise an issue]({{ site.github.repo }}/issues) so we can update the docs!
 
 ## Principles
 

@@ -1,0 +1,91 @@
+/* Positioning
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/positioning/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+/* `bottom`
+   ========================================================================== */
+
+@if $u-classes-positioning == true {
+
+  @each $bottom-value in $bottom-values {
+
+    .u-bottom--#{$bottom-value} {
+      bottom: $bottom-value !important;
+    }
+
+  }
+
+}
+
+
+/* `left`
+   ========================================================================== */
+
+@if $u-classes-positioning == true {
+
+  @each $left-value in $left-values {
+
+    .u-left--#{$left-value} {
+      left: $left-value !important;
+    }
+
+  }
+
+}
+
+
+/* `position`
+   ========================================================================== */
+
+@if $u-classes-positioning == true {
+
+  @each $position-value in $position-values {
+
+    /* Without `!important` */
+    .u-position--#{$position-value} {
+      position: $position-value !important;
+    }
+
+  }
+
+}
+
+
+/* `right`
+   ========================================================================== */
+
+@if $u-classes-positioning == true {
+
+  @each $right-value in $right-values {
+
+    .u-right--#{$right-value} {
+      right: $right-value !important;
+    }
+
+  }
+
+}
+
+
+/* `top`
+   ========================================================================== */
+
+@if $u-classes-positioning == true {
+
+  @each $top-value in $top-values {
+
+    .u-top--#{$top-value} {
+      top: $top-value !important;
+    }
+
+  }
+
+}

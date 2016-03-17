@@ -1,0 +1,959 @@
+/* Utility values, aliases, and maps
+   ========================================================================== */
+
+/**
+ * This is all of the utility CSS values, aliases, lists, and maps for Origin.
+ *
+ * Each raw value is assigned to a variable. Groups of these variables make up
+ * straightforward, predictable scales. Many of these variables are then
+ * assigned to new variables with more human meaning. We call these ‘aliases’.
+ * A `border-width` of `3` becomes `thick`, a `gray-6` color becomes `light`.
+ *
+ * These alias variables are what the mixins for each utility use to generate
+ * the `u-property--#` utility classes.
+ *
+ * Finally, Sass lists and maps of our alias variables are defined. These lists
+ * and maps are what allow our alias variables to be passed as arguments to our
+ * utility mixins.
+ */
+
+
+/* `background`
+   ========================================================================== */
+
+$background-values:
+  inherit,
+  none;
+
+
+/* `background-color`
+   ========================================================================== */
+
+$background-color-values:
+  inherit
+  transparent;
+
+
+/* `background-image`
+   ========================================================================== */
+
+$background-image-values:
+  none;
+
+
+/* `background-position`
+   ========================================================================== */
+
+$background-position-values:
+  (center-bottom, center bottom)
+  (center-center, center center)
+  (center-top, center top)
+  (left-bottom, left bottom)
+  (left-center, left center)
+  (left-top, left top)
+  (right-bottom, right bottom)
+  (right-center, right center)
+  (right-top, right top);
+
+
+/* `background-size`
+   ========================================================================== */
+
+$background-size-values:
+  contain,
+  cover;
+
+
+/* `border`
+   ========================================================================== */
+
+/* Values */
+$border-width--0: 0;
+$border-width--1: .5px;
+$border-width--2: 1px;
+$border-width--3: 2px;
+$border-width--4: 3px;
+$border-width--5: 4px;
+
+/* Aliases */
+$border-width--0:        $border-width--0;
+$border-width--thin:     $border-width--1;
+$border-width--default:  $border-width--2;
+$border-width--thick:    $border-width--3;
+$border-width--x-thick:  $border-width--4;
+$border-width--xx-thick: $border-width--5;
+
+/* Map */
+$border-width-values: (
+ 0:        $border-width--0,
+ thin:     $border-width--thin,
+ default:  $border-width--default,
+ thick:    $border-width--thick,
+ x-thick:  $border-width--x-thick,
+ xx-thick: $border-width--xx-thick
+);
+
+
+/* `border-radius`
+   ========================================================================== */
+
+/* Values */
+$border-radius--0: 0;
+$border-radius--1: 2px;
+$border-radius--2: 4px;
+$border-radius--3: 6px;
+$border-radius--4: 8px;
+$border-radius--5: 10px;
+
+/* Aliases */
+$border-radius--0:        $border-radius--0;
+$border-radius--small:    $border-radius--1;
+$border-radius--default:  $border-radius--2;
+$border-radius--large:    $border-radius--3;
+$border-radius--x-large:  $border-radius--4;
+$border-radius--xx-large: $border-radius--5;
+
+/* Map */
+$border-radius-values: (
+ 0:        0,
+ small:    $border-radius--small,
+ default:  $border-radius--default,
+ large:    $border-radius--large,
+ x-large:  $border-radius--x-large,
+ xx-large: $border-radius--xx-large
+);
+
+
+/* `box-sizing`
+   ========================================================================== */
+
+$box-sizing-values:
+  border-box
+  content-box;
+
+
+/* Breakpoints
+   ========================================================================== */
+
+/* Values */
+$breakpoint--small:    0;
+$breakpoint--medium:   44rem;
+$breakpoint--large:    60rem;
+$breakpoint--x-large:  76rem;
+$breakpoint--xx-large: 92rem;
+
+/* Map */
+$breakpoint-values: (
+ sm:    $breakpoint--small,
+ md:    $breakpoint--medium,
+ lg:    $breakpoint--large,
+ x-lg:  $breakpoint--x-large,
+ xx-lg: $breakpoint--xx-large
+);
+
+
+/* `clear`
+   ========================================================================== */
+
+$clear-values:
+  both
+  left
+  right;
+
+
+/* `display`
+   ========================================================================== */
+
+$display-values:
+  block
+  inline
+  inline-block
+  none
+  table
+  table-cell
+  table-row;
+
+
+/* Colors
+   ========================================================================== */
+
+/* Primary palette values */
+$color--fa-amber:  rgb(255, 147, 2);
+$color--fa-blue:   rgb(0, 122, 191);
+$color--fa-green:  rgb(124, 192, 74);
+$color--fa-purple: rgb(118, 54, 142);
+$color--fa-red:    rgb(253, 51, 29);
+$color--fa-yellow: rgb(255, 182, 8);
+
+/* Dark and light variant values */
+$color--fa-amber--dark:     adjust_hue(lighten($color--fa-amber, .5), 354);
+$color--fa-blue--dark:      adjust_hue(darken($color--fa-blue, 3.5), 2);
+$color--fa-blue--x-dark:    adjust_hue(darken($color--fa-blue, 8.5), 2);
+$color--fa-blue--xx-dark:   adjust_hue(darken($color--fa-blue, 15), 2);
+$color--fa-blue--x-light:   desaturate(lighten($color--fa-blue, 55), 50);
+$color--fa-blue--xx-light:  desaturate(lighten($color--fa-blue, 59), 50);
+$color--fa-green--dark:     saturate(darken(adjust_hue($color--fa-green, 0), 7), 1);
+$color--fa-green--text:     saturate(darken(adjust_hue($color--fa-green, 355), 14), 15);
+$color--fa-green--x-light:  desaturate(lighten($color--fa-green, 36), 10);
+$color--fa-purple--x-light: desaturate(lighten($color--fa-purple, 53), 20);
+$color--fa-red--dark:       desaturate(darken(adjust_hue($color--fa-red, 350), 10), 6);
+$color--fa-red--text:       desaturate(darken(adjust_hue($color--fa-red, 340), 5), 6);
+$color--fa-red--x-light:    desaturate(lighten($color--fa-red, 38), 2);
+$color--fa-yellow--x-light: lighten($color--fa-yellow, 39);
+
+/* Gray values */
+$color--gray-1:  #111;
+$color--gray-2:  #222;
+$color--gray-3:  #333;
+$color--gray-4:  #444;
+$color--gray-5:  #555;
+$color--gray-6:  #666;
+$color--gray-7:  #777;
+$color--gray-8:  #888;
+$color--gray-9:  #999;
+$color--gray-10: #aaa;
+$color--gray-11: #bbb;
+$color--gray-12: #ccc;
+$color--gray-13: #ddd;
+$color--gray-14: #e4e4e4;
+$color--gray-15: #eee;
+$color--gray-16: #f5f5f5;
+
+/* Global 'base' and 'alt' aliases */
+$color--base: $color--fa-blue;
+$color--alt:  $color--fa-green;
+
+/* Background color aliases */
+$background-color--dark:     $color--gray-12;
+$background-color--default:  $color--gray-13;
+$background-color--light:    $color--gray-14;
+$background-color--x-light:  $color--gray-15;
+
+/* Text color aliases */
+$text-color--dark:     $color--gray-2;
+$text-color--default:  $color--gray-3;
+$text-color--light:    $color--gray-6;
+$text-color--x-light:  $color--gray-9;
+$text-color--xx-light: $color--gray-10;
+$text-color--negative: $color--fa-red--text;
+$text-color--warning:  $color--fa-amber;
+$text-color--positive: $color--fa-green--text;
+
+/* Color map */
+$color-values: (
+ alt:                $color--alt,
+ base:               $color--base,
+ fa-amber:           $color--fa-amber,
+ fa-amber--dark:     $color--fa-amber--dark,
+ fa-blue:            $color--fa-blue,
+ fa-blue--dark:      $color--fa-blue--dark,
+ fa-blue--x-dark:    $color--fa-blue--x-dark,
+ fa-blue--xx-dark:   $color--fa-blue--xx-dark,
+ fa-blue--x-light:   $color--fa-blue--x-light,
+ fa-blue--xx-light:  $color--fa-blue--xx-light,
+ fa-green:           $color--fa-green,
+ fa-green--dark:     $color--fa-green--dark,
+ fa-green--text:     $color--fa-green--text,
+ fa-green--x-light:  $color--fa-green--x-light,
+ fa-purple:          $color--fa-purple,
+ fa-purple--x-light: $color--fa-purple--x-light,
+ fa-red:             $color--fa-red,
+ fa-red--dark:       $color--fa-red--dark,
+ fa-red--text:       $color--fa-red--text,
+ fa-red--x-light:    $color--fa-red--x-light,
+ fa-yellow:          $color--fa-yellow,
+ fa-yellow--x-light: $color--fa-yellow--x-light,
+ gray-1:             $color--gray-1,
+ gray-2:             $color--gray-2,
+ gray-3:             $color--gray-3,
+ gray-4:             $color--gray-4,
+ gray-5:             $color--gray-5,
+ gray-6:             $color--gray-6,
+ gray-7:             $color--gray-7,
+ gray-8:             $color--gray-8,
+ gray-9:             $color--gray-9,
+ gray-10:            $color--gray-10,
+ gray-11:            $color--gray-11,
+ gray-12:            $color--gray-12,
+ gray-13:            $color--gray-13,
+ gray-14:            $color--gray-14,
+ gray-15:            $color--gray-15,
+ gray-16:            $color--gray-16
+);
+
+/* Text color map */
+$text-color-values: (
+ alt:                $color--alt,
+ base:               $color--base,
+ dark:               $text-color--dark,
+ default:            $text-color--default,
+ fa-amber:           $color--fa-amber,
+ fa-amber--dark:     $color--fa-amber--dark,
+ fa-blue:            $color--fa-blue,
+ fa-blue--dark:      $color--fa-blue--dark,
+ fa-blue--x-dark:    $color--fa-blue--x-dark,
+ fa-blue--xx-dark:   $color--fa-blue--xx-dark,
+ fa-blue--x-light:   $color--fa-blue--x-light,
+ fa-green:           $color--fa-green,
+ fa-green--dark:     $color--fa-green--dark,
+ fa-green--text:     $color--fa-green--text,
+ fa-green--x-light:  $color--fa-green--x-light,
+ fa-purple:          $color--fa-purple,
+ fa-purple--x-light: $color--fa-purple--x-light,
+ fa-red:             $color--fa-red,
+ fa-red--dark:       $color--fa-red--dark,
+ fa-red--text:       $color--fa-red--text,
+ fa-red--x-light:    $color--fa-red--x-light,
+ fa-yellow:          $color--fa-yellow,
+ fa-yellow--x-light: $color--fa-yellow--x-light,
+ gray-1:             $color--gray-1,
+ gray-2:             $color--gray-2,
+ gray-3:             $color--gray-3,
+ gray-4:             $color--gray-4,
+ gray-5:             $color--gray-5,
+ gray-6:             $color--gray-6,
+ gray-7:             $color--gray-7,
+ gray-8:             $color--gray-8,
+ gray-9:             $color--gray-9,
+ gray-10:            $color--gray-10,
+ gray-11:            $color--gray-11,
+ light:              $text-color--light,
+ negative:           $text-color--negative,
+ positive:           $text-color--positive,
+ warning:            $text-color--warning,
+ x-light:            $text-color--x-light,
+ xx-light:           $text-color--xx-light
+);
+
+
+/* `flex-align-content`
+   ========================================================================== */
+
+$flex-align-content-values:
+  center
+  flex-end
+  flex-start
+  space-around
+  space-between
+  stretch;
+
+
+/* `flex-align-items`
+   ========================================================================== */
+
+$flex-align-items-values:
+  baseline
+  center
+  flex-end
+  flex-start
+  stretch;
+
+
+/* `flex-align-self`
+   ========================================================================== */
+
+$flex-align-self-values:
+  auto
+  baseline
+  center
+  flex-end
+  flex-start
+  stretch;
+
+
+/* `flex-basis`
+   ========================================================================== */
+
+$flex-basis-values:
+  (auto, auto),
+  (0, 0),
+  (20percent,  20%),
+  (25percent,  25%),
+  (third,      100 / 3 * 1%),
+  (40percent,  40%),
+  (50percent,  50%),
+  (60percent,  60%),
+  (two-thirds, 100 / 3 * 2%),
+  (75percent,  75%),
+  (80percent,  80%),
+  (100percent, 100%);
+
+
+/* `flex-direction`
+   ========================================================================== */
+
+$flex-direction-values:
+  column
+  column-reverse
+  row
+  row-reverse;
+
+
+/* `flex-justify-content`
+   ========================================================================== */
+
+$flex-justify-content-values:
+  center
+  flex-end
+  flex-start
+  space-around
+  space-between;
+
+
+/* `flex-wrap`
+   ========================================================================== */
+
+$flex-wrap-values:
+  nowrap
+  wrap
+  wrap-reverse;
+
+
+/* `float`
+   ========================================================================== */
+
+$float-values:
+  left
+  none
+  right;
+
+
+/* `font-family`
+   ========================================================================== */
+
+/* Values */
+$font-family--1: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family--2: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family--3: "effra", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family--4: "swister", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family--5: "Monaco", "Courier New", Courier, monospace;
+
+/* Aliases */
+$font-family--default:     $font-family--1;
+$font-family--legacy:      $font-family--2;
+$font-family--editorial:   $font-family--3;
+$font-family--handwritten: $font-family--4;
+$font-family--monospace:   $font-family--5;
+
+/* Map */
+$font-family-values: (
+ default:     $font-family--default,
+ editorial:   $font-family--editorial,
+ handwritten: $font-family--handwritten,
+ monospace:   $font-family--monospace,
+ legacy:      $font-family--legacy
+);
+
+
+/* `font-size`
+   ========================================================================== */
+
+/* Base typographic unit, equal to web browser default */
+$base-unit: 16;
+
+/* Function to convert `px` to `rem` */
+@function rem($pixels, $context: $base-unit) {
+  @return #{$pixels / $context}rem;
+}
+
+/* Values */
+$font-size--1:  rem(9);
+$font-size--2:  rem(10);
+$font-size--3:  rem(11);
+$font-size--4:  rem(12);
+$font-size--5:  rem(14);
+$font-size--6:  rem(16);
+$font-size--7:  rem(18);
+$font-size--8:  rem(21);
+$font-size--9:  rem(24);
+$font-size--10: rem(28);
+$font-size--11: rem(32);
+$font-size--12: rem(36);
+$font-size--13: rem(42);
+$font-size--14: rem(48);
+$font-size--15: rem(54);
+$font-size--16: rem(60);
+$font-size--17: rem(72);
+
+/* Aliases */
+$font-size--xx-small: $font-size--3;
+$font-size--x-small:  $font-size--4;
+$font-size--small:    $font-size--5;
+$font-size--default:  $font-size--6;
+$font-size--large:    $font-size--7;
+$font-size--x-large:  $font-size--8;
+$font-size--xx-large: $font-size--10;
+
+/**
+ * Standard scale map
+ *
+ * A smaller map used to generate the `u-font-size--#` utility classes, as we've
+ * never needed the full map of values to be available as classes. Doing so
+ * would just add unnecessary weight to our output CSS.
+ */
+
+$standard-scale-font-size-values: (
+ xx-small: $font-size--xx-small,
+ x-small:  $font-size--x-small,
+ small:    $font-size--small,
+ default:  $font-size--default,
+ large:    $font-size--large,
+ x-large:  $font-size--x-large,
+ xx-large: $font-size--xx-large
+);
+
+/* Full map */
+$font-size-values: (
+ 1:        $font-size--1,
+ 2:        $font-size--2,
+ 3:        $font-size--3,
+ 4:        $font-size--4,
+ 5:        $font-size--5,
+ 6:        $font-size--6,
+ 7:        $font-size--7,
+ 8:        $font-size--8,
+ 9:        $font-size--9,
+ 10:       $font-size--10,
+ 11:       $font-size--11,
+ 12:       $font-size--12,
+ 13:       $font-size--13,
+ 14:       $font-size--14,
+ 15:       $font-size--15,
+ 16:       $font-size--16,
+ 17:       $font-size--17,
+ xx-small: $font-size--xx-small,
+ x-small:  $font-size--x-small,
+ small:    $font-size--small,
+ default:  $font-size--default,
+ large:    $font-size--large,
+ x-large:  $font-size--x-large,
+ xx-large: $font-size--xx-large
+);
+
+
+/* `font-weight`
+   ========================================================================== */
+
+/* Values */
+$font-weight--1: 100;
+$font-weight--2: 200;
+$font-weight--3: 300;
+$font-weight--4: 400;
+$font-weight--5: 500;
+$font-weight--6: 600;
+$font-weight--7: 700;
+$font-weight--8: 800;
+$font-weight--9: 900;
+
+/* Aliases */
+$font-weight--thin:      $font-weight--1;
+$font-weight--x-light:   $font-weight--2;
+$font-weight--light:     $font-weight--3;
+$font-weight--normal:    $font-weight--4;
+$font-weight--medium:    $font-weight--5;
+$font-weight--semi-bold: $font-weight--6;
+$font-weight--bold:      $font-weight--7;
+$font-weight--x-bold:    $font-weight--8;
+$font-weight--black:     $font-weight--9;
+
+/* Map */
+$font-weight-values: (
+ thin:      $font-weight--thin,
+ x-light:   $font-weight--x-light,
+ light:     $font-weight--light,
+ normal:    $font-weight--normal,
+ medium:    $font-weight--medium,
+ semi-bold: $font-weight--semi-bold,
+ bold:      $font-weight--bold,
+ x-bold:    $font-weight--x-bold,
+ black:     $font-weight--black
+);
+
+
+/* `height`, `max-width`, `min-height`, and `width`
+   ========================================================================== */
+
+$height-values:
+  (100percent, 100%)
+  (100viewport, 100vh);
+
+$max-width-values:
+  (0, 0)
+  (none, none)
+  (100percent, 100%)
+  (100viewport, 100vw);
+
+$min-height-values:
+  (0, 0)
+  (100percent, 100%);
+
+$width-values:
+  (0, 0)
+  (half, 100 / 2 * 1%)
+  (quarter, 100 / 4 * 1%)
+  (third, 100 / 3 * 1%)
+  (three-quarters, 100 / 4 * 3%)
+  (two-thirds, 100 / 3 * 2%)
+  (100percent, 100%)
+  (100viewport, 100vw);
+
+
+/* Interaction
+   ========================================================================== */
+
+$pointer-events-values:
+  auto
+  none;
+
+$user-select-values:
+  none
+  text;
+
+
+/* `letter-spacing`
+   ========================================================================== */
+
+$letter-spacing-values:
+  0
+  normal
+  inherit;
+
+
+/* `line-height`
+   ========================================================================== */
+
+/* Values */
+$line-height--1:  90%;
+$line-height--2:  100%;
+$line-height--3:  110%;
+$line-height--4:  120%;
+$line-height--5:  125%;
+$line-height--6:  130%;
+$line-height--7:  135%;
+$line-height--8:  140%;
+$line-height--9:  145%;
+$line-height--10: 150%;
+$line-height--11: 155%;
+
+/* Aliases */
+$line-height--xx-tight: $line-height--3;
+$line-height--x-tight:  $line-height--4;
+$line-height--tight:    $line-height--6;
+$line-height--default:  $line-height--8;
+$line-height--loose:    $line-height--9;
+$line-height--x-loose:  $line-height--10;
+$line-height--xx-loose: $line-height--11;
+
+/**
+ * Standard scale map
+ *
+ * A smaller map used to generate the `u-line-height--#` utility classes, as
+ * we've never needed the full map of values to be available as classes. Doing
+ * so would just add unnecessary weight to our output CSS.
+ */
+
+$standard-scale-line-height-values: (
+  xx-tight: $line-height--xx-tight,
+  x-tight:  $line-height--x-tight,
+  tight:    $line-height--tight,
+  default:  $line-height--default,
+  loose:    $line-height--loose,
+  x-loose:  $line-height--x-loose,
+  xx-loose: $line-height--xx-loose
+);
+
+/* Full map */
+$line-height-values: (
+ 1:        $line-height--1,
+ 2:        $line-height--2,
+ 3:        $line-height--3,
+ 4:        $line-height--4,
+ 5:        $line-height--5,
+ 6:        $line-height--6,
+ 7:        $line-height--7,
+ 8:        $line-height--8,
+ 9:        $line-height--9,
+ 10:       $line-height--10,
+ 11:       $line-height--11,
+ xx-tight: $line-height--xx-tight,
+ x-tight:  $line-height--x-tight,
+ tight:    $line-height--tight,
+ default:  $line-height--default,
+ loose:    $line-height--loose,
+ x-loose:  $line-height--x-loose,
+ xx-loose: $line-height--xx-loose
+);
+
+
+/* `list-style`
+   ========================================================================== */
+
+$list-style-values:
+  (decimal, decimal)
+  (decimal-inside, decimal inside)
+  (decimal-outside, decimal outside)
+  (disc, disc)
+  (disc-inside, disc inside)
+  (disc-outside, disc outside)
+  (none, none);
+
+
+/* `opacity`
+   ========================================================================== */
+
+$opacity-values:
+  (0, 0)
+  (10, .1)
+  (20, .2)
+  (30, .3)
+  (40, .4)
+  (50, .5)
+  (60, .6)
+  (70, .7)
+  (80, .8)
+  (90, .9)
+  (100, 1);
+
+
+/* `overflow`
+   ========================================================================== */
+
+$overflow-values:
+  auto
+  hidden
+  scroll
+  visible;
+
+
+/* Positioning
+   ========================================================================== */
+
+$bottom-values:
+  0;
+
+$left-values:
+  0;
+
+$position-values:
+  absolute
+  fixed
+  relative
+  static;
+
+$right-values:
+  0;
+
+$top-values:
+  0;
+
+
+/* Spacing
+   ========================================================================== */
+
+/**
+ * Used for univeral `margin`, `padding`, and list item spacing
+ */
+
+/* Values */
+$spacing--0:  0;
+$spacing--1:  .15rem;
+$spacing--2:  .25rem;
+$spacing--3:  .5rem;
+$spacing--4:  .75rem;
+$spacing--5:  1rem;
+$spacing--6:  1.25rem;
+$spacing--7:  1.5rem;
+$spacing--8:  1.75rem;
+$spacing--9:  2rem;
+$spacing--10: 2.25rem;
+$spacing--11: 2.5rem;
+$spacing--12: 2.75rem;
+$spacing--13: 3rem;
+$spacing--14: 3.5rem;
+$spacing--15: 4rem;
+$spacing--16: 4.5rem;
+$spacing--17: 5rem;
+
+/* Aliases */
+$spacing--xx-small: $spacing--1;
+$spacing--x-small:  $spacing--2;
+$spacing--small:    $spacing--3;
+$spacing--default:  $spacing--5;
+$spacing--large:    $spacing--7;
+$spacing--x-large:  $spacing--9;
+$spacing--xx-large: $spacing--13;
+
+/* List item spacing aliases */
+$list-item-spacing--tight:    $spacing--0;
+$list-item-spacing--default:  $spacing--1;
+$list-item-spacing--loose:    $spacing--2;
+$list-item-spacing--x-loose:  $spacing--3;
+$list-item-spacing--xx-loose: $spacing--4;
+
+/**
+ * Standard scale map
+ *
+ * A smaller map used to generate the `u-margin--#` and `u-padding--#` utility
+ * classes, as we've never needed the full map of values to be available as
+ * classes. Doing so would just add unnecessary weight to our output CSS.
+ */
+
+$standard-scale-spacing-values: (
+ xx-small: $spacing--xx-small,
+ x-small:  $spacing--x-small,
+ small:    $spacing--small,
+ default:  $spacing--default,
+ large:    $spacing--large,
+ x-large:  $spacing--x-large,
+ xx-large: $spacing--xx-large
+);
+
+/* Full spacing map */
+$spacing-values: (
+ 0:        $spacing--0,
+ 1:        $spacing--1,
+ 2:        $spacing--2,
+ 3:        $spacing--3,
+ 4:        $spacing--4,
+ 5:        $spacing--5,
+ 6:        $spacing--6,
+ 7:        $spacing--7,
+ 8:        $spacing--8,
+ 9:        $spacing--9,
+ 10:       $spacing--10,
+ 11:       $spacing--11,
+ 12:       $spacing--12,
+ 13:       $spacing--13,
+ 14:       $spacing--14,
+ 15:       $spacing--15,
+ 16:       $spacing--16,
+ 17:       $spacing--17,
+ xx-small: $spacing--xx-small,
+ x-small:  $spacing--x-small,
+ small:    $spacing--small,
+ default:  $spacing--default,
+ large:    $spacing--large,
+ x-large:  $spacing--x-large,
+ xx-large: $spacing--xx-large
+);
+
+/* List item spacing map */
+$list-item-spacing-values: (
+ 0:        $spacing--0,
+ 1:        $spacing--1,
+ 2:        $spacing--2,
+ 3:        $spacing--3,
+ 4:        $spacing--4,
+ 5:        $spacing--5,
+ tight:    $list-item-spacing--tight,
+ default:  $list-item-spacing--default,
+ loose:    $list-item-spacing--loose,
+ x-loose:  $list-item-spacing--x-loose,
+ xx-loose: $list-item-spacing--xx-loose
+);
+
+
+/* `text-decoration`
+   ========================================================================== */
+
+$text-decoration-values:
+  inherit
+  initial
+  line-through
+  none
+  overline
+  underline;
+
+
+/* Text formatting
+   ========================================================================== */
+
+$font-style-values:
+  italic
+  normal
+  oblique;
+
+$text-align-values:
+  center
+  justify
+  left
+  right;
+
+$word-wrap-values:
+  break-word
+  normal;
+
+
+/* Transition values
+   ========================================================================== */
+
+/**
+ * Global default `transition-property`, as used in `transition` and `animation`
+ * utilities
+ */
+
+$transition-property-default: all;
+
+/**
+ * Global default `transition-type` property
+ */
+
+$transition-type-default: cubic-bezier(.2, .7, .1, 1);
+
+/**
+ * Global default `transition-length` property
+ */
+
+$transition-length-default: 450ms;
+
+
+/* `vertical-align`
+   ========================================================================== */
+
+$vertical-align-values:
+  baseline
+  bottom
+  middle
+  top;
+
+
+/* `visibility`
+   ========================================================================== */
+
+$visibility-values:
+  collapse
+  hidden
+  inherit
+  visible;
+
+
+/* `z-index`
+   ========================================================================== */
+
+/* Values */
+$z-index--0:  0;
+$z-index--1:  1;
+$z-index--2:  2;
+$z-index--3:  3;
+$z-index--4:  4;
+$z-index--5:  5;
+$z-index--6:  6;
+$z-index--7:  7;
+$z-index--8:  8;
+$z-index--9:  9;
+$z-index--10: 10;
+
+/* Map */
+$z-index-values: (
+  0:  $z-index--0,
+  1:  $z-index--1,
+  2:  $z-index--2,
+  3:  $z-index--3,
+  4:  $z-index--4,
+  5:  $z-index--5,
+  6:  $z-index--6,
+  7:  $z-index--7,
+  8:  $z-index--8,
+  9:  $z-index--9,
+  10: $z-index--10
+);

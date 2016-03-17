@@ -1,0 +1,19 @@
+    <footer class="u-padding-bottom--large u-padding-top--large u-md-padding-bottom--xx-large u-md-padding-top--xx-large u-text-color--gray-9" role="contentinfo">
+      <div class="Grid-row">
+        <div class="Grid-col">
+          &copy; FreeAgent {{ site.time | date: '%Y' }} &middot; Released under the <a href="{{ site.github.repo }}//blob/master/LICENSE.md">MIT</a> license
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ site.baseurl }}/assets/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 ---
+categories: guidance
 layout: page
 title: Naming conventions
 ---

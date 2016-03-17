@@ -1,0 +1,30 @@
+/* List item spacing
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/list-item-spacing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin list-item-spacing($value, $important: null) {
+  margin-bottom: map-get($list-item-spacing-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-list-item-spacing == true {
+
+  @each $list-item-spacing, $list-item-spacing-value in $list-item-spacing-values {
+
+    .u-list-item-spacing--#{$list-item-spacing} li {
+      margin-bottom: $list-item-spacing-value !important;
+    }
+
+  }
+
+}

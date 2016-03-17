@@ -1,76 +1,66 @@
+/* Utility classes
+   ========================================================================== */
+
 /**
- * FA CSS utilities are our ‘one true source’ of design properties at FreeAgent.
- * They give our development team a universal method of writing CSS at scale.
+ * Setting these variables to `true` will render utility classes in your output
+ * CSS file, allowing you to use them directly in your markup. Use with care:
+ * enabling these will naturally add (significant) weight to that CSS file.
  *
- * They comprise universal scales and aliases for properties like `font-size`,
- * `font-family`, `line-height`, `color`, `margin`, and `padding`. They also
- * provide a library of colours for text and block-level elements, and a library
- * of mixins and utility classes for 40+ CSS properties.
- *
- * Guidance and examples can be found in the repo:
- * https://github.com/fac/fa-css-utilities
+ * Utility classes apply a single value to a single property, no matter what
+ * (using `!important`). They should be used sparingly — in most cases a
+ * component should define its own variants and stay completely self-contained.
+ * Try to only use utility classes to quickly test out ideas or for early stage
+ * ‘sketching’ in the browser.
  */
 
-
-/* Utility classes
-  ==========================================================================
-  Utility classes apply a single value to a single property, no matter what
-  (using `!important`). They should be used sparingly — in most cases a
-  component should define it's own variants and stay completely self-contained.
-  Try to only use utility classes to quickly test out ideas or for early stage
-  ‘sketching’ in the browser.
-
-  Setting these variables to `true` will render utility classes in your output
-  CSS file, allowing you to use them directly in your markup. Use with care:
-  enabling these will naturally add (significant) weight to that CSS file.
-*/
-
-$u-classes-background:           false;
-$u-classes-border-radius:        false;
-$u-classes-border:               false;
-$u-classes-box-sizing:           false;
-$u-classes-clear:                false;
-$u-classes-display:              false;
-$u-classes-flex-align-content:   false;
-$u-classes-flex-align-items:     false;
-$u-classes-flex-align-self:      false;
-$u-classes-flex-basis:           false;
-$u-classes-flex-direction:       false;
-$u-classes-flex-grow:            false;
-$u-classes-flex-justify-content: false;
-$u-classes-flex-shrink:          false;
-$u-classes-flex-wrap:            false;
-$u-classes-flexbox:              false;
-$u-classes-float:                false;
-$u-classes-font-family:          false;
-$u-classes-font-size:            false;
-$u-classes-font-weight:          false;
-$u-classes-height-width:         false;
-$u-classes-interaction:          false;
-$u-classes-letter-spacing:       false;
-$u-classes-line-height:          false;
-$u-classes-list-item-spacing:    false;
-$u-classes-list-style:           false;
-$u-classes-margin:               false;
-$u-classes-opacity:              false;
-$u-classes-overflow:             false;
-$u-classes-padding:              false;
-$u-classes-positioning:          false;
-$u-classes-text-color:           false;
-$u-classes-text-decoration:      false;
-$u-classes-text-formatting:      false;
-$u-classes-vertical-align:       false;
-$u-classes-z-index:              false;
+$u-classes-background:           true;
+$u-classes-border-radius:        true;
+$u-classes-border:               true;
+$u-classes-box-sizing:           true;
+$u-classes-clear:                true;
+$u-classes-display:              true;
+$u-classes-flex-align-content:   true;
+$u-classes-flex-align-items:     true;
+$u-classes-flex-align-self:      true;
+$u-classes-flex-basis:           true;
+$u-classes-flex-direction:       true;
+$u-classes-flex-grow:            true;
+$u-classes-flex-justify-content: true;
+$u-classes-flex-shrink:          true;
+$u-classes-flex-wrap:            true;
+$u-classes-flexbox:              true;
+$u-classes-float:                true;
+$u-classes-font-family:          true;
+$u-classes-font-size:            true;
+$u-classes-font-weight:          true;
+$u-classes-height-width:         true;
+$u-classes-interaction:          true;
+$u-classes-letter-spacing:       true;
+$u-classes-line-height:          true;
+$u-classes-list-item-spacing:    true;
+$u-classes-list-style:           true;
+$u-classes-margin:               true;
+$u-classes-opacity:              true;
+$u-classes-overflow:             true;
+$u-classes-padding:              true;
+$u-classes-positioning:          true;
+$u-classes-text-color:           true;
+$u-classes-text-decoration:      true;
+$u-classes-text-formatting:      true;
+$u-classes-vertical-align:       true;
+$u-classes-z-index:              true;
 
 
 /* Project-specific aliases
-  ==========================================================================
-  We create friendly global aliases for our CSS values to improve the authoring
-  experience. But it's also possible to define local aliases for a particular
-  project. This is useful for defining a different default `font-size` or
-  `line-height` and being able to refer to them throughout your codebase as
-  `default` rather than `large` or `x-small`.
-*/
+   ========================================================================== */
+
+/**
+ * We create friendly global aliases for our CSS values to improve the authoring
+ * experience. But it's also possible to define local aliases for a particular
+ * project. This is useful for defining a different default `font-size` or
+ * `line-height` and being able to refer to them throughout your codebase as
+ * `default` rather than `large` or `x-small`.
+ */
 
 /* Leave quotes empty if this project doesn't have custom aliases */
 $project: "";

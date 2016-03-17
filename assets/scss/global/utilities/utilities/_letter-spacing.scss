@@ -1,0 +1,22 @@
+/* `letter-spacing`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/letter-spacing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@if $u-classes-letter-spacing == true {
+
+  @each $letter-spacing-value in $letter-spacing-values {
+
+    .u-letter-spacing--#{$letter-spacing-value} {
+      letter-spacing: $letter-spacing-value !important;
+    }
+
+  }
+
+}
