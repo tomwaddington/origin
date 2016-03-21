@@ -19,9 +19,9 @@ Dev note: does this represent a new class of Origin item, a _real_ component? Ar
     </h3>
   </header>
   <div class="Card-body">
-    <div class="Card-body-widthLimit">
+    <div class="Card-body--max-width">
       <p>
-        The `Card-body` is where the bulk of the written content for the card lives. It has a white background to ensure it's always displayed consistently. The `Card-body-widthLimit` child element ensures content can always be limited to a sensible width for reading.
+        The `Card-body` is where the bulk of the written content for the card lives. It has a white background to ensure it's always displayed consistently. The `Card-body--max-width` child element ensures content can always be limited to a sensible width for reading.
       </p>
       <a class="Button Button--primary" href="#" role="button">
         Link button
@@ -80,7 +80,7 @@ Dev note: does this represent a new class of Origin item, a _real_ component? Ar
     <img class="Card-media-item" src="http://www.fillmurray.com/460/300" alt="Bill Murray with daisies" />
   </figure>
   <div class="Card-body">
-    <div class="Card-body-widthLimit">
+    <div class="Card-body--max-width">
       <p>
         When you sign up, our UK-based and super-friendly Support Accountants are on hand
         to guide you through the set-up process. And once you’re using FreeAgent, they’re right
