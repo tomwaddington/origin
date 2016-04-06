@@ -193,11 +193,11 @@ $color--fa-blue--xx-dark:   adjust_hue(darken($color--fa-blue, 15), 2);
 $color--fa-blue--x-light:   desaturate(lighten($color--fa-blue, 55), 50);
 $color--fa-blue--xx-light:  desaturate(lighten($color--fa-blue, 59), 50);
 $color--fa-green--dark:     saturate(darken(adjust_hue($color--fa-green, 0), 7), 1);
-$color--fa-green--text:     saturate(darken(adjust_hue($color--fa-green, 355), 14), 15);
+$color--fa-green--text:     darken(saturate(adjust-hue($color--fa-green, 8.3), 15.3), 9);
 $color--fa-green--x-light:  desaturate(lighten($color--fa-green, 36), 10);
 $color--fa-purple--x-light: desaturate(lighten($color--fa-purple, 53), 20);
 $color--fa-red--dark:       desaturate(darken(adjust_hue($color--fa-red, 350), 10), 6);
-$color--fa-red--text:       desaturate(darken(adjust_hue($color--fa-red, 340), 5), 6);
+$color--fa-red--text:       darken(desaturate(adjust-hue($color--fa-red, 349.9), 7.6), 9);
 $color--fa-red--x-light:    desaturate(lighten($color--fa-red, 38), 2);
 $color--fa-yellow--x-light: lighten($color--fa-yellow, 39);
 
