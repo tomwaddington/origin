@@ -331,7 +331,7 @@ When further distinction is required between a heading and the content below and
 
 
 ## Editorial spacing
-By default, the `Heading` component has no margins other than a small `margin-bottom`. Being so unopinionated means it can be used in a multitude of contexts without alteration.
+By default, the `Heading` component has no margins. Being so unopinionated means it can be used in a multitude of contexts without alteration.
 
 But when we're writing editorial content like articles and blog posts, we want headings to be spaced sympathetically. Spacing that improves the reading experience, but also doesn't require us to add classes to every single heading. By wrapping editorial content in a `l-editorial` container, that's what we get.
 
