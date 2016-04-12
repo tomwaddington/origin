@@ -84,7 +84,7 @@ $Table-border-color: $color--gray-15;
  * coloured light blue.
  */
 
-tbody tr:first-child td {
+.Table tbody tr:first-child td {
   border-top: 0;
 }
 
@@ -224,7 +224,7 @@ tbody tr:first-child td {
  * applying a class to a table row or the cell/header itself.
  *
  * Syntax follows the convention set forth in our text formatting utilities:
- * https://github.com/fac/css-utilities/blob/master/utilities/_text-formatting.scss
+ * https://github.com/fac/origin/blob/master/assets/scss/global/utilities/utilities/_text-formatting.scss
  */
 
 .Table--text-align--center td,
@@ -240,7 +240,7 @@ tbody tr:first-child td {
  * applying a class to a table row or the cell/header itself.
  *
  * Syntax follows the convention set forth in our text formatting utilities:
- * https://github.com/fac/css-utilities/blob/master/utilities/_text-formatting.scss
+ * https://github.com/fac/origin/blob/master/assets/scss/global/utilities/utilities/_text-formatting.scss
  */
 
 .Table--text-align--left td,
@@ -256,7 +256,7 @@ tbody tr:first-child td {
  * applying a class to a table row or the cell/header itself.
  *
  * Syntax follows the convention set forth in our text formatting utilities:
- * https://github.com/fac/css-utilities/blob/master/utilities/_text-formatting.scss
+ * https://github.com/fac/origin/blob/master/assets/scss/global/utilities/utilities/_text-formatting.scss
  */
 
 .Table--text-align--right td,
@@ -423,7 +423,7 @@ tbody tr:first-child td {
 
 /* `Table-cell--reportCategory` variant
    ==========================================================================
-   Content-specific variant of a `Table-cell` where it's used to represent
+   Content-specific variant of a `Table-cell` where its used to represent
    reporting categories in the P&L tables within Accounting > Reports.
 */
 

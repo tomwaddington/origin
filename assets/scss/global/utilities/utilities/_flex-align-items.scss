@@ -1,0 +1,34 @@
+/* `align-items`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-align-items/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-align-items($value: stretch, $important: null) {
+  -webkit-box-align: $value $important;
+  -ms-flex-align: $value $important;
+  -webkit-align-items: $value $important;
+  -moz-align-items: $value $important;
+  align-items: $value $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-align-items == true {
+
+  @each $flex-align-items-value in $flex-align-items-values {
+
+    .u-flex-align-items--#{$flex-align-items-value} {
+      @include flex-align-items(#{$flex-align-items-value}, !important);
+    }
+
+  }
+
+}

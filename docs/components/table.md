@@ -1,6 +1,7 @@
 ---
 categories: components
 layout: page
+scss-filename: _table.scss
 title: Table
 ---
 
@@ -209,7 +210,7 @@ otherwise exists as metadata for other data in the table.
 
 ## Parent headers
 
-Used when regular table headers require grouping. 
+Used when regular table headers require grouping.
 
 {% example html %}
 <table class="Table">

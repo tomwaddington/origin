@@ -1,0 +1,30 @@
+/* `font-family`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/font-family/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin font-family($value, $important: null) {
+  font-family: map-get($font-family-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-font-family == true {
+
+  @each $font-family, $font-family-value in $font-family-values {
+
+    .u-font-family--#{$font-family} {
+      font-family: $font-family-value !important;
+    }
+
+  }
+
+}

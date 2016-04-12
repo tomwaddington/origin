@@ -1,0 +1,22 @@
+/* `vertical-align`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/vertical-align/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@if $u-classes-vertical-align == true {
+
+  @each $vertical-align-value in $vertical-align-values {
+
+    .u-vertical-align--#{$vertical-align-value} {
+      vertical-align: $vertical-align-value !important;
+    }
+
+  }
+
+}

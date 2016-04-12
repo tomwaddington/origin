@@ -1,19 +1,7 @@
 <h4 class="menu-title">
-  Guidance
-</h4>
-<nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'guidance' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
-</nav>
-
-
-<h4 class="menu-title">
-  Components
+  <a href="{{ site.baseurl }}/guidance/components/">
+    Components
+  </a>
 </h4>
 <nav class="menu docs-menu">
   {% for page in site.pages %}
@@ -25,13 +13,27 @@
   {% endfor %}
 </nav>
 
-
 <h4 class="menu-title">
-  Utilities
+  <a href="{{ site.baseurl }}/guidance/utilities/">
+    Utilities
+  </a>
 </h4>
 <nav class="menu docs-menu">
   {% for page in site.pages %}
     {% if page.categories contains 'utilities' %}
+    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
+      {{ page.title }}
+    </a>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+  {% for page in site.pages %}
+    {% if page.categories contains 'guidance' %}
     <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
       {{ page.title }}
     </a>

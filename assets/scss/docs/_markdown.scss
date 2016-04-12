@@ -4,11 +4,21 @@
 
 $margin: 1rem;
 
-.markdown-body .page-title + .markdown-body > p:first-child {
+.markdown-body > p:first-child {
   @include font-weight(light, !important);
-  @include font-size(x-large, !important);
+  @include font-size(large, !important);
   @include line-height(tight, !important);
   @include text-color(gray-6, !important);
+
+  @include break(md) {
+    @include font-size(x-large, !important);
+  }
+}
+
+.markdown-body > p:first-child code,
+.markdown-body > p:first-child pre > code {
+  @include font-size(small);
+  @include text-color(gray-6);
 }
 
 // Inline code snippets
@@ -45,6 +55,7 @@ $margin: 1rem;
 
 .markdown-body .highlight {
   margin-bottom: $margin;
+  position: relative;
 }
 
 .markdown-body code,

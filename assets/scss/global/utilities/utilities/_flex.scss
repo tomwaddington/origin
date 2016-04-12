@@ -1,0 +1,33 @@
+/* `flex`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex($fg: 1, $fs: null, $fb: null, $important: null) {
+
+  /* Set a variable to be used by box-flex properties */
+
+  $fg-boxflex: $fg;
+
+  /*
+  Box-Flex only supports a flex-grow value so let's grab the
+  first item in the list and just return that.
+  */
+
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+
+  -webkit-box-flex: $fg-boxflex $important;
+  -webkit-flex: $fg $fs $fb $important;
+  -moz-box-flex: $fg-boxflex $important;
+  -moz-flex: $fg $fs $fb $important;
+  -ms-flex: $fg $fs $fb $important;
+  flex: $fg $fs $fb $important;
+}

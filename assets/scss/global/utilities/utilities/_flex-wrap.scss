@@ -1,0 +1,32 @@
+/* `flex-wrap`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-wrap/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-wrap($value: nowrap, $important: null) {
+  -webkit-flex-wrap: $value $important;
+  -moz-flex-wrap: $value $important;
+  flex-wrap: $value $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-wrap == true {
+
+  @each $flex-wrap-value in $flex-wrap-values {
+
+    .u-flex-wrap--#{$flex-wrap-value} {
+      @include flex-wrap(#{$flex-wrap-value}, !important);
+    }
+
+  }
+
+}

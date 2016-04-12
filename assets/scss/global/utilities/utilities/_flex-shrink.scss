@@ -1,0 +1,33 @@
+/* `flex-shrink`
+   ========================================================================== */
+
+/**
+  * Docs:
+  * http://fac.github.io/origin/utilities/flex-shrink/
+  *
+  * Values:
+  * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+  */
+
+@mixin flex-shrink($value: 1, $important: null) {
+  -webkit-flex-shrink: $value $important;
+  -moz-flex-shrink: $value $important;
+  -ms-flex-negative: $value $important;
+  flex-shrink: $value $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-shrink == true {
+
+  @for $i from 0 through 10 {
+
+    .u-flex-shrink--#{$i} {
+      @include flex-shrink($i, !important);
+    }
+
+  }
+
+}

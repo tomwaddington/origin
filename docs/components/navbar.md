@@ -1,6 +1,7 @@
 ---
 categories: components
 layout: page
+scss-filename: _navbar.scss
 title: NavBar
 ---
 

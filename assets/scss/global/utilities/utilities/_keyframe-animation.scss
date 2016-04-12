@@ -1,0 +1,52 @@
+/* Keyframe animation
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/keyframe-animation/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+/* `keyframes`
+   ========================================================================== */
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  };
+  @keyframes #{$name} {
+    @content
+  };
+}
+
+
+/* `animation`
+   ========================================================================== */
+
+@mixin animation(
+  $name,
+  $duration: $transition-length-default,
+  $iteration-count: 1,
+  $direction: null,
+  $timing-function: $transition-type-default,
+  $fill-mode: forwards,
+  $delay: null
+  ) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-fill-mode: $fill-mode;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-name: $name;
+  -webkit-animation-timing-function: $timing-function;
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-fill-mode: $fill-mode;
+  animation-iteration-count: $iteration-count;
+  animation-name: $name;
+  animation-timing-function: $timing-function;
+}

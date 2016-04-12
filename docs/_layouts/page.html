@@ -8,12 +8,15 @@ layout: default
     <h1 class="page-title">
       {{ page.title }}
     </h1>
+
+    {% include _scss-file-link.html %}
+
     <div class="markdown-body">
       {{ content }}
     </div>
   </div>
   <div class="Grid-col md-3 md-pull-9">
-    {% include sidenav.html %}
+    {% include _sidenav.html %}
   </div>
 
 </div>

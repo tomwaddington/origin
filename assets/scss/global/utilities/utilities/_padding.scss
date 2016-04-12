@@ -1,0 +1,183 @@
+/* `padding` utility
+   ==========================================================================
+   http://fac.github.io/origin/utilities/padding/
+*/
+
+/**
+ * This mixin allows us to use shorthand values for the `padding` property.
+ *
+ * The mixin runs through our spacing values, given the first argument, then
+ * creates another list of the mappings of those spacing values, which it then
+ * feeds to the `padding` property.
+ */
+
+@mixin padding($values, $important: null) {
+  $valueList: ();
+
+  @for $i from 1 through length($values) {
+    $value: map-get($spacing-values, nth($values, $i));
+    $valueList: append($valueList, $value, space);
+  }
+
+  padding: $valueList $important;
+}
+
+@mixin padding-bottom($value, $important: null) {
+  padding-bottom: map-get($spacing-values, $value) $important;
+}
+
+@mixin padding-left($value, $important: null) {
+  padding-left: map-get($spacing-values, $value) $important;
+}
+
+@mixin padding-right($value, $important: null) {
+  padding-right: map-get($spacing-values, $value) $important;
+}
+
+@mixin padding-top($value, $important: null) {
+  padding-top: map-get($spacing-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-padding == true {
+
+  /**
+   * Generate default spacing classes
+   */
+
+   .u-padding {
+     padding: $spacing--default !important;
+   }
+
+   .u-padding-bottom {
+     padding-bottom: $spacing--default !important;
+   }
+
+   .u-padding-left {
+     padding-left: $spacing--default !important;
+   }
+
+   .u-padding-right {
+     padding-right: $spacing--default !important;
+   }
+
+   .u-padding-top {
+     padding-top: $spacing--default !important;
+   }
+
+   @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+     /**
+      * Generate scale spacing classes with breakpoints
+      *
+      * Note that classes will not be generated for the full scale of spacing
+      * values, only the standard `xx-small` > `xx-large` scale, because in
+      * practice the full scale has never been needed.
+      */
+
+     @include break($breakpoint-size) {
+       .u-#{$breakpoint-size}-padding {
+         padding: $spacing--default !important;
+       }
+     }
+
+     @include break($breakpoint-size) {
+       .u-#{$breakpoint-size}-padding-bottom {
+         padding-bottom: $spacing--default !important;
+       }
+     }
+
+     @include break($breakpoint-size) {
+       .u-#{$breakpoint-size}-padding-left {
+         padding-left: $spacing--default !important;
+       }
+     }
+
+     @include break($breakpoint-size) {
+       .u-#{$breakpoint-size}-padding-right {
+         padding-right: $spacing--default !important;
+       }
+     }
+
+     @include break($breakpoint-size) {
+       .u-#{$breakpoint-size}-padding-top {
+         padding-top: $spacing--default !important;
+       }
+     }
+
+   }
+
+  @each $spacing-size, $standard-scale-spacing-value in $standard-scale-spacing-values {
+
+    /**
+     * Generate standard scale of spacing classes without breakpoints
+     *
+     * Note that classes will not be generated for the full scale of spacing
+     * values, only the standard `xx-small` > `xx-large` scale, because in
+     * practice the full scale has never been needed.
+     */
+
+    .u-padding--#{$spacing-size} {
+      padding: $standard-scale-spacing-value !important;
+    }
+
+    .u-padding-bottom--#{$spacing-size} {
+      padding-bottom: $standard-scale-spacing-value !important;
+    }
+
+    .u-padding-left--#{$spacing-size} {
+      padding-left: $standard-scale-spacing-value !important;
+    }
+
+    .u-padding-right--#{$spacing-size} {
+      padding-right: $standard-scale-spacing-value !important;
+    }
+
+    .u-padding-top--#{$spacing-size} {
+      padding-top: $standard-scale-spacing-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate standard scale of spacing classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-padding--#{$spacing-size} {
+          padding: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-padding-bottom--#{$spacing-size} {
+          padding-bottom: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-padding-left--#{$spacing-size} {
+          padding-left: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-padding-right--#{$spacing-size} {
+          padding-right: $standard-scale-spacing-value !important;
+        }
+      }
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-padding-top--#{$spacing-size} {
+          padding-top: $standard-scale-spacing-value !important;
+        }
+      }
+
+    }
+
+  }
+
+}

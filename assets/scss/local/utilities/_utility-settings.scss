@@ -1,29 +1,17 @@
-/**
- * FA CSS utilities are our ‘one true source’ of design properties at FreeAgent.
- * They give our development team a universal method of writing CSS at scale.
- *
- * They comprise universal scales and aliases for properties like `font-size`,
- * `font-family`, `line-height`, `color`, `margin`, and `padding`. They also
- * provide a library of colours for text and block-level elements, and a library
- * of mixins and utility classes for 40+ CSS properties.
- *
- * Guidance and examples can be found in the repo:
- * https://github.com/fac/fa-css-utilities
- */
-
-
 /* Utility classes
-  ==========================================================================
-  Utility classes apply a single value to a single property, no matter what
-  (using `!important`). They should be used sparingly — in most cases a
-  component should define it's own variants and stay completely self-contained.
-  Try to only use utility classes to quickly test out ideas or for early stage
-  ‘sketching’ in the browser.
+   ========================================================================== */
 
-  Setting these variables to `true` will render utility classes in your output
-  CSS file, allowing you to use them directly in your markup. Use with care:
-  enabling these will naturally add (significant) weight to that CSS file.
-*/
+/**
+ * Setting these variables to `true` will render utility classes in your output
+ * CSS file, allowing you to use them directly in your markup. Use with care:
+ * enabling these will naturally add (significant) weight to that CSS file.
+ *
+ * Utility classes apply a single value to a single property, no matter what
+ * (using `!important`). They should be used sparingly — in most cases a
+ * component should define its own variants and stay completely self-contained.
+ * Try to only use utility classes to quickly test out ideas or for early stage
+ * ‘sketching’ in the browser.
+ */
 
 $u-classes-background:           true;
 $u-classes-border-radius:        true;
@@ -64,13 +52,15 @@ $u-classes-z-index:              true;
 
 
 /* Project-specific aliases
-  ==========================================================================
-  We create friendly global aliases for our CSS values to improve the authoring
-  experience. But it's also possible to define local aliases for a particular
-  project. This is useful for defining a different default `font-size` or
-  `line-height` and being able to refer to them throughout your codebase as
-  `default` rather than `large` or `x-small`.
-*/
+   ========================================================================== */
+
+/**
+ * We create friendly global aliases for our CSS values to improve the authoring
+ * experience. But it's also possible to define local aliases for a particular
+ * project. This is useful for defining a different default `font-size` or
+ * `line-height` and being able to refer to them throughout your codebase as
+ * `default` rather than `large` or `x-small`.
+ */
 
 /* Leave quotes empty if this project doesn't have custom aliases */
 $project: "";

@@ -1,0 +1,18 @@
+{% include _head.html %}
+
+<div class="SplitView">
+
+  <div class="SplitView-primary">
+    {% include _header.html %}
+    <div class="SplitView-primary-content">
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="SplitView-secondary">
+    <div class="SplitView-secondary-content">
+      {% include _sidenav.html %}
+    </div>
+  </div>
+
+</div>
