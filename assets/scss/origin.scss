@@ -15,8 +15,15 @@
  * https://github.com/fac/origin/blob/master/README.md
  */
 
-/* Local: font settings — copy file if implementing Origin into a project */
+/* Local: utility settings — copy file if implementing Origin into a project */
+@import "local/utilities/_utility-settings";
+
+/* Global: import utilities */
+@import "global/utilities/_utilities";
+
+/* Settings: required */
 @import "local/fonts/_font-settings";
+@import "local/fonts/_heading-settings";
 
 /* Global: functions to handle fonts correctly based on font settings */
 @import "global/fonts/_font-functions";
@@ -24,25 +31,24 @@
 /* Global: load fonts for `@font-face` use */
 @import "global/fonts/_source-sans-pro";
 
-/* Local: utility settings — copy file if implementing Origin into a project */
-@import "local/utilities/_utility-settings";
-
-/* Global: import utilities */
-@import "../../node_modules/fa-css-utilities/_utilities";
-
 /* Local: base styles — copy file if implementing Origin into a project */
 @import "local/base/_base";
 
-/* Docs styles — remove file reference if documentation styles aren’t needed */
-@import "docs/_docs";
-
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
+@import "global/components/_grid";
+@import "global/components/_block-grid";
+@import "global/components/_heading";
+@import "global/components/_list";
+@import "global/components/_media";
 @import "global/components/_navbar";
 @import "global/components/_notice";
 @import "global/components/_segmented-control";
 @import "global/components/_table";
 @import "global/components/_tabs";
+
+/* Docs styles — remove file reference if documentation styles aren’t needed */
+@import "docs/_docs";
 
 /**
  * You’re safe to include your project styles below here...

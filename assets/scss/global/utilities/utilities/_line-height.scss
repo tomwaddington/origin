@@ -1,0 +1,49 @@
+/* `line-height`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/line-height/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+
+@mixin line-height($value, $important: null) {
+  line-height: map-get($line-height-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-line-height == true {
+
+  @each $line-height, $standard-scale-line-height-value in $standard-scale-line-height-values {
+
+    /**
+     * Generate `line-height` classes without breakpoints
+     */
+
+    .u-line-height--#{$line-height} {
+      line-height: $standard-scale-line-height-value !important;
+    }
+
+    @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+
+      /**
+       * Generate `line-height` classes with breakpoints
+       */
+
+      @include break($breakpoint-size) {
+        .u-#{$breakpoint-size}-line-height--#{$line-height} {
+          line-height: $standard-scale-line-height-value !important;
+        }
+      }
+
+    }
+
+  }
+
+}

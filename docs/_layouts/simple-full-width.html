@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="Grid-row Grid-row--large">
+
+  <div class="Grid-col">
+    <div class="l-limitTextWidth">
+      <h1 class="page-title">
+        {{ page.title }}
+      </h1>
+
+      {% include _scss-file-link.html %}
+
+      <div class="markdown-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+</div>

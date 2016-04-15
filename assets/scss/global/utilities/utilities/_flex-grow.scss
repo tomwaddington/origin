@@ -1,0 +1,34 @@
+/* `flex-grow`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-grow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-grow($value: 0, $important: null) {
+  -webkit-box-flex: $value $important;
+  -webkit-flex-grow: $value $important;
+  -moz-flex-grow: $value $important;
+  -ms-flex-positive: $value $important;
+  flex-grow: $value $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-grow == true {
+
+  @for $i from 0 through 10 {
+
+    .u-flex-grow--#{$i} {
+      @include flex-grow($i, !important);
+    }
+
+  }
+
+}

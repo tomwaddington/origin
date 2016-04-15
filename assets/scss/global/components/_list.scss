@@ -1,0 +1,99 @@
+/* List component
+   ========================================================================== */
+
+/**
+ * Mixins
+ */
+
+@mixin List--dashed--list-item-before {
+  @include text-color(gray-11);
+  content: "—";
+  margin-left: -1.15em;
+  margin-right: .15em;
+}
+
+.List {
+  @include padding(0 0 0 small);
+  margin: 0;
+}
+
+.List--bare {
+  list-style: none;
+  padding-left: 0;
+}
+
+.List--dashed {
+  margin-left: 0;
+  padding-left: 1.5rem;
+}
+
+.List--dashed--indented {
+  @include padding-left(x-large);
+}
+
+.List--dashed--negativeIndent {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.List li {
+  margin-bottom: .25em;
+}
+
+.List--dashed li {
+  @include list-item-spacing(loose);
+  list-style: none;
+}
+
+.List--dashed li::before {
+  @include List--dashed--list-item-before;
+}
+
+.List--dashed--loose li {
+  @include list-item-spacing(x-loose);
+}
+
+.List--dashed--x-loose li {
+  @include list-item-spacing(xx-loose);
+}
+
+.List--loose li {
+  margin-bottom: .5em;
+}
+
+.List--tight li {
+  margin-bottom: .15em;
+}
+
+.List--x-loose li {
+  margin-bottom: .75em;
+}
+
+.List--xx-loose li {
+  margin-bottom: 1em;
+}
+
+.List--x-tight li {
+  margin-bottom: 0;
+}
+
+.List--orderedCounter {
+  counter-reset: List--orderedCounter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.List--orderedCounter-count::before {
+  @include text-color(x-light);
+  content: counter(List--orderedCounter);
+  counter-increment: List--orderedCounter;
+  display: inline-block;
+  margin-left: -1.75em;
+  margin-right: .25em;
+  text-align: right;
+  width: 1.25em;
+}
+
+.List--weight--semi-bold {
+  @include font-weight(semi-bold);
+}

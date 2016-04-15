@@ -1,0 +1,47 @@
+/* `align-self`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-align-self/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-align-self($value: auto, $important: null) {
+
+  @if $value == flex-start {
+    -moz-align-self: $value $important;
+    -webkit-align-self: $value $important;
+    align-self: $value $important;
+    -ms-flex-item-align: start $important;
+  } @else if $value == flex-end {
+    -moz-align-self: $value $important;
+    -webkit-align-self: $value $important;
+    align-self: $value $important;
+    -ms-flex-item-align: end $important;
+  } @else {
+    -moz-align-self: $value $important;
+    -webkit-align-self: $value $important;
+    align-self: $value $important;
+    -ms-flex-item-align: $value $important;
+  }
+
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-align-self == true {
+
+  @each $flex-align-self-value in $flex-align-self-values {
+
+    .u-flex-align-self--#{$flex-align-self-value} {
+      @include flex-align-self(#{$flex-align-self-value}, !important);
+    }
+
+  }
+
+}

@@ -55,9 +55,13 @@ module.exports = function(grunt) {
         'assets/scss/local/**/*.scss'
       ],
       options: {
+        colorizeOutput: true,
         config: '.scss-lint.yml',
-        reporterOutput: 'scss-lint-report.xml',
-        colorizeOutput: true
+        exclude: [
+          'assets/scss/global/utilities/_normalize.scss',
+          'assets/scss/global/utilities/_utility-values.scss'
+        ],
+        reporterOutput: 'scss-lint-report.xml'
       }
     },
 
@@ -134,6 +138,7 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/*.scss',
           'assets/scss/**/*.scss',
+          'assets/scss/**/**/*.scss'
         ],
         tasks: ['sass']
       }

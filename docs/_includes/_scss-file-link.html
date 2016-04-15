@@ -1,0 +1,15 @@
+{% if page.categories contains 'components' %}
+<p>
+  <a class="Button Button--outline" href="{{ site.github.repo }}/tree/master/assets/scss/global/components/{{ page.scss-filename }}">
+    View SCSS source
+  </a>
+</p>
+{% endif %}
+
+{% if page.categories contains 'utilities' %}
+<p>
+  <a class="Button Button--outline" href="{{ site.github.repo }}/tree/master/assets/scss/global/utilities/utilities/{{ page.scss-filename }}">
+    View SCSS source
+  </a>
+</p>
+{% endif %}

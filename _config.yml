@@ -9,17 +9,23 @@ port: 8001
 # at fac.github.io/origin
 baseurl: "/origin"
 
+# Because we use pages rather than posts for our content, we have to list those
+# categories here to be able to list pages by category
+categories: [guidance, utilities, components, layout]
+
 # Markdown processors
 markdown: kramdown
 highlighter: rouge
 kramdown:
   auto_ids: true
 
-version: 1.1.0
+version: 1.2.4
 
 sass:
   # Directory points to root allowing `@import` of .scss files from anywhere
   sass_dir: assets/scss
+  # Note this doesn't affect anything because we use Grunt; instead set the
+  # output style in Gruntfile.js
   style: compressed
 
 github:

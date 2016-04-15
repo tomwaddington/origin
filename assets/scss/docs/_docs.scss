@@ -6,17 +6,66 @@
 @import "_mixins";
 @import "_markdown";
 @import "_syntax";
-@import "_layout";
 
-/* Documentation components */
+/**
+ * Documentation components
+ */
+
 @import "components/_anchor";
 @import "components/_buttons";
-@import "components/_docs-example";
+@import "components/_docs-examples";
 @import "components/_menu";
-@import "components/_spacing";
 @import "components/_swatches";
-@import "components/_text-example";
-@import "components/_text-color";
+
+$masthead-margin: 1.5rem;
+
+/**
+ * Base styles
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-weight(semi-bold);
+  @include line-height(x-tight);
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  @include font-size(12);
+}
+
+h2 {
+  @include font-size(11);
+  margin-top: 1.5em;
+}
+
+h3 {
+  @include font-weight(normal);
+  @include font-size(9);
+  @include text-color(x-light);
+  margin-top: 1em;
+}
+
+h4 {
+  @include font-weight(normal);
+  @include font-size(8);
+  @include text-color(x-light);
+  margin-top: 0.5em;
+}
+
+h5 {
+  @include font-size(6);
+  margin-top: 0.5em;
+}
+
+h6 {
+  @include font-size(5);
+  margin-top: 0.5em;
+}
 
 a {
   text-decoration: none;
@@ -29,31 +78,28 @@ a:hover {
   @include text-color(fa-blue--x-dark);
 }
 
-.highlight .cm {
-  font-style: normal;
-  @include text-color(gray-9);
+ul,
+ol,
+dl {
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding: 0 0 0 1.5em;
 }
 
-// Add spacing between documentation code examples and subsequent headings
-.markdown-body .highlight {
-  @include margin-bottom(xx-large);
+ul ul,
+ul ul ul {
+  list-style-type: disc;
+  margin: 0;
 }
 
-// Make containers responsive
-.container {
-  width: auto;
-  max-width: 1020px;
-  padding-left: 20px;
-  padding-right: 20px;
+ul ul,
+ul ul ul {
+  margin: 0;
 }
 
-.markdown-body {
-  overflow: visible;
-}
-
-//
-// Menu customisations
-//
+/**
+ * From Primer: menu customisations
+ */
 
 .menu {
   @include text-color(gray-9);
@@ -67,25 +113,26 @@ a:hover {
   @include text-color(gray-8);
 }
 
-//
-// Only apply :active/:focus/:hover states to menu items that are actually links
-//
+.menu-title a {
+  @include text-color(fa-blue);
+  text-decoration: none;
+}
+
+.menu-title a:active,
+.menu-title a:focus,
+.menu-title a:hover {
+  text-decoration: underline;
+}
 
 .menu-item:active,
 .menu-item:focus,
 .menu-item:hover {
-  background-color: transparent;
-}
-
-a.menu-item:active,
-a.menu-item:focus,
-a.menu-item:hover {
   @include background-color(gray-16);
 }
 
-//
-// Custom button
-//
+/**
+ * From Primer: button
+ */
 
 .btn-reverse {
   color: #fff;
@@ -101,151 +148,114 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Site header
-//
+/**
+ * From Primer: masthead
+ */
 
 .masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
   @include background-color(fa-blue);
+  @include margin-bottom(large);
+  text-align: center;
 
-  a {
-    color: rgba(255,255,255,.5);
-
-    &:hover {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
-  .masthead-logo {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-
-    .mega-octicon {
-      float: left;
-      line-height: 120%;
-      margin-right: .5rem;
-    }
-  }
-
-  @media (min-width: 34em) {
+  @include break(md) {
     text-align: left;
-
-    .masthead-logo {
-      float: left;
-    }
   }
 }
+
+.masthead a {
+  color: rgba(255, 255, 255, .6);
+}
+
+.masthead a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.masthead .masthead-logo {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+/**
+ * From Primer: masthead nav
+ */
 
 .masthead-nav {
   margin-top: 1rem;
   font-size: 1rem;
+  padding-top: 1rem;
+  border-top: .075rem solid rgba(255, 255, 255, 0.25);
 
-  a {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1.25rem;
-    }
-  }
-
-  .active {
-    color: #fff;
-    font-weight: 500;
-  }
-
-  @media (max-width: 34em) {
-    padding-top: 1rem;
-    border-top: .075rem solid rgba(255, 255, 255, 0.25);
-  }
-
-  @media (min-width: 34em) {
+  @include break(md) {
+    border-top: 0;
     float: right;
     line-height: 120%;
     margin-top: 0;
+    padding-top: 0;
   }
 }
 
+.masthead-nav a {
+  display: inline-block;
+}
 
-//
-// Homepage jumbotron
-//
+.masthead-nav a:not(:last-child) {
+  margin-right: 1.25rem;
+}
 
-.jumbotron {
-  margin-top: -2rem;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  font-size: 1.25rem;
+.masthead-nav .active {
   color: #fff;
-  text-align: center;
+  font-weight: 500;
+}
+
+/**
+ * From Primer: homepage jumbotron
+ */
+
+.Hero {
   @include background-color(fa-blue);
-  @include border-bottom(xx-thick, fa-green);
-
-  h1 {
-    font-size: 2.5em;
-    font-weight: normal;
-  }
-
-  .btn {
-    padding: .75em 1.15em;
-    font-size: inherit;
-    font-weight: normal;
-    line-height: 1;
-  }
-
-  @media (min-width: 34em) {
-    padding-top: 6rem;
-    padding-bottom: 8rem;
-    font-size: 1.5rem;
-    text-align: left;
-  }
+  padding: 5rem 0;
 }
 
-.about-that {
-
-  @media (max-width: 760px) {
-    .column {
-      float: none;
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
-
-  p {
-    padding-right: .5rem;
-    @include text-color(gray-6);
-  }
-
-  h2 {
-    font-weight: normal;
-  }
+.masthead + .Hero {
+  margin-top: -($masthead-margin);
 }
 
-
-//
-// Layout
-//
-
-// Override the default layout to make it stack
-.docs-layout {
-  @media (max-width: 34em) {
-    > .column {
-      float: none;
-      width: 100%;
-    }
-  }
+.Hero-heading {
+  @include font-weight(normal);
+  @include margin-bottom(default);
+  color: #fff;
+  font-size: 4em;
+  letter-spacing: -0.02em;
 }
 
-//
-// Footer
-//
+.Hero-body {
+  @include font-size(large);
+  @include line-height(x-tight);
+  color: #fff;
+}
+
+.Hero-leader {
+  @include line-height(xx-tight);
+  @include margin-bottom(default);
+  font-size: 2.5em;
+}
+
+.Hero a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.Hero a:active,
+.Hero a:focus,
+.Hero a:hover {
+  text-decoration: none;
+}
+
+/**
+ * From Primer: footer
+ */
 
 .footer {
   padding-top: 3rem;
@@ -260,10 +270,9 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Side menu
-//
+/**
+ * From Primer: sidebar menu
+ */
 
 .docs-menu {
   margin-bottom: 1.5rem;
@@ -274,30 +283,41 @@ a.menu-item:hover {
   }
 }
 
-
-//
-// Examples
-//
+/**
+ * Documentation examples
+ */
 
 .DocsExample {
   @include margin-bottom(large);
 }
 
-// `-preview` is for showing manually typed previews when only showing CSS
-// examples; `-render` is forHTML actually rendered by _plugins/example.rb.
+/**
+ * Markdown body styles used for code examples
+ */
+
+.highlight .cm {
+  font-style: normal;
+  @include text-color(gray-9);
+}
+
+/**
+ * `-preview` is for showing manually typed previews when only showing CSS
+ * examples; `-render` is forHTML actually rendered by _plugins/example.rb.
+ */
+
 .DocsExample-preview,
 .DocsExample-render {
   position: relative;
-  border-radius: .25rem .25rem 0 0;
+  @include border-radius-top-left(default);
+  @include border-radius-top-right(default);
   @include border(default, gray-14);
-  @include font-size(default, !important);
-  @include line-height(default, !important);
   @include padding(default);
 
   + .highlight {
-    margin-top: -1px;
+    @include border-radius-bottom-left(default);
+    @include border-radius-bottom-right(default);
     border: 1px solid #e5e5e5;
-    border-radius: 0 0 .25rem .25rem;
+    margin-top: -1px;
   }
 
   > p:last-child,
@@ -313,25 +333,9 @@ a.menu-item:hover {
     max-width: 200px;
   }
 
-  // Grid
-  .container {
-    width: 100%;
-    @include padding-left(default);
-    @include padding-right(default);
-  }
-  .columns + .columns {
-    margin-top: 10px;
-  }
-  .column {
-    @include background-color(fa-green--x-light);
-    @include font-family(monospace);
-    @include padding(default);
-  }
-
-  // Override Markdown styles to restore values from `_type.scss`
+  /* Override Markdown styles to restore values from `_type.scss` */
   ul,
   ol {
-    padding: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -358,47 +362,237 @@ a.menu-item:hover {
     }
   }
 
-  // Flex table
+  /* Flex table */
   .flex-table-item > .btn {
     margin-left: 10px;
   }
 }
 
-// Hide the example preview block is we're only showing a CSS example
-.DocsExample--render--hidden .DocsExample-render {
+/**
+ * Add labels to HTML, SCSS, and CSS code examples to highlight their usage
+ */
+
+.highlight [class^="language-"]::before {
+  @include font-family(default);
+  @include font-size(small);
+  @include line-height(default);
+  @include text-color(gray-11);
+  display: inline-block;
+  letter-spacing: 0 !important;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.2rem;
+}
+
+.DocsExample--labelUtilityClasses .highlight .language-html::before {
+  content: "With utility classes";
+}
+
+.DocsExample--labelMixins .highlight .language-scss::before {
+  content: "With Sass mixins";
+}
+
+.DocsExample--labelCSS .highlight .language-css::before,
+.DocsExample--labelCSS .highlight .language-scss::before {
+  content: "With CSS";
+}
+
+.DocsExample--renderHidden .DocsExample-render + .highlight {
+  @include border-radius(default);
+}
+
+/* Hide the example preview block is we're only showing a CSS example */
+.DocsExample--renderHidden .DocsExample-render {
   display: none;
 }
 
-// Used to show spacing examples
+/* Visually connect two adjacent code example blocks */
+.DocsExample--grouped,
+.DocsExample--grouped .DocsExample-render + .highlight {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.DocsExample--grouped + .DocsExample--renderHidden .DocsExample-render + .highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Used to show spacing examples */
 .DocsExample-preview-child {
   @include background-color(gray-16);
 }
 
+.DocsExample--adjacentExample,
+.DocsExample--adjacentExample .highlight {
+  margin-bottom: 0;
+}
+
+/* Grid examples */
+.DocsExample--grid .DocsExample-render {
+  @include padding-left(x-large);
+  @include padding-right(x-large);
+}
+
+.DocsExample--grid .Grid-row {
+  @include background-color(gray-15);
+}
+
+.DocsExample--grid .Grid-row .#{$grid-column-class} {
+  @include background-color(fa-blue);
+  @include text-truncate;
+  border-color: $color--gray-15;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  color: #fff;
+  line-height: 60px;
+}
+
+.DocsExample--grid .Grid-row .#{$grid-column-class}:last-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+.DocsExample--grid--sourceOrder .Grid-row .#{$grid-column-class}:first-child {
+  border-left-width: 1px;
+}
+
+.DocsExample--grid .Grid-row + .Grid-row .#{$grid-column-class} {
+  border-top: 0;
+}
+
+.DocsExample--grid .Grid-row .Grid-row:last-child .#{$grid-column-class} {
+  border-bottom-width: 0;
+}
+
+.markdown-body .DocsExample--adjacentExample .highlight pre,
+.DocsExample--adjacentExample .DocsExample-render + .highlight {
+  border-radius: 0;
+}
+
 .page-title + .markdown-body > p:first-child {
-  margin-bottom: 30px;
-  font-size: 20px;
-  font-weight: 300;
-  color: #555;
+  @include font-size(large);
+  @include font-weight(light);
+  @include text-color(gray-5);
 }
 
-
-//
-// Markdown generated ToC
-//
-
-// Hide the first child li because it's always going to be "Contents".
-#markdown-toc > li:first-child {
-  display: none;
+.page-title + .markdown-body > p:first-child + p {
+  margin-top: -0.5rem;
 }
 
-
-//
-// Branding colors
-//
+/**
+ * Branding colours
+ */
 
 .swatch {
   display: inline-block;
   width: 6rem;
   height: 6rem;
   border-radius: .25rem;
+}
+
+/**
+ * From Primer: table of contents
+ */
+
+#markdown-toc {
+  margin-bottom: 1em;
+}
+
+/**
+ * Limit width of common text elements when they're wrapped in a
+ * `<div class="l-limitTextWidth">`. Extremely useful for maintaining readable
+ * line-lengths on documentation pages that demand very wide examples.
+ *
+ * Example: http://fac.github.io/origin/components/grid/
+ */
+
+.l-limitTextWidth p,
+.l-limitTextWidth h1,
+.l-limitTextWidth h2,
+.l-limitTextWidth h3,
+.l-limitTextWidth h4,
+.l-limitTextWidth h5,
+.l-limitTextWidth h6,
+.l-limitTextWidth ol,
+.l-limitTextWidth ul,
+.l-limitTextWidth dl {
+  max-width: 40em;
+}
+
+
+/**
+ * A ‘split view’ component allow views/pages to be split into two side-by-side
+ * areas of content
+ */
+
+@include break(lg) {
+  .SplitView {
+    display: table;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+.SplitView-primary {
+  @include background-color(fa-blue);
+  @include floatContainer;
+  color: rgba(255, 255, 255, .8);
+  padding: 0;
+
+  @include break(lg) {
+    display: table-cell;
+    left: 25%;
+    position: relative;
+    right: auto;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
+.SplitView-primary-content {
+  color: rgba(255, 255, 255, .6);
+
+  @include break(md) {
+    @include padding-left(large);
+    @include padding-right(large);
+  }
+}
+
+.SplitView-primary-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.SplitView-primary-content a:hover {
+  text-decoration: underline;
+}
+
+.SplitView-primary-content .Heading {
+  color: #fff;
+}
+
+.SplitView-secondary {
+  @include floatContainer;
+  background: #fff;
+
+  @include break(lg) {
+    display: table-cell;
+    position: relative;
+    right: 75%;
+    vertical-align: top;
+    width: 25%;
+  }
+}
+
+.SplitView-secondary-content {
+  @include padding(large);
+
+  @include break(lg) {
+    float: right;
+    max-width: 18em;
+    width: 100%;
+  }
 }

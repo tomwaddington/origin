@@ -1,0 +1,33 @@
+/* `flex-basis`
+   ========================================================================== */
+
+/**
+ * Docs:
+ * http://fac.github.io/origin/utilities/flex-basis/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+
+@mixin flex-basis($value: auto, $important: null) {
+  -webkit-flex-basis: $value $important;
+  -moz-flex-basis: $value $important;
+  -ms-flex-preferred-size: $value $important;
+  flex-basis: $value $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-flex-basis == true {
+
+  @each $flex-basis, $flex-basis-value in $flex-basis-values {
+
+    .u-flex-basis--#{$flex-basis} {
+      @include flex-basis(#{$flex-basis-value}, !important);
+    }
+
+  }
+
+}
