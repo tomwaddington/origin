@@ -5,8 +5,6 @@ scss-filename: _button.scss
 title: Button
 ---
 
-Note: this is candidate component and is not currently being used in production
-
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
@@ -37,6 +35,17 @@ Primary buttons are used to indicate the **one** primary action on a view/page. 
 <button class="Button Button--primary" type="button">Primary button</button>
 <button class="Button Button--primary Button--large" type="button">Large primary button</button>
 <button class="Button Button--primary Button--small" type="button">Small primary button</button>
+{% endexample %}
+
+
+## Primary (white text)
+
+Currently used across the website for primary actions.
+
+{% example html %}
+<button class="Button Button--primary Button--primary--white" type="button">Primary button</button>
+<button class="Button Button--primary Button--primary--white Button--large" type="button">Large primary button</button>
+<button class="Button Button--primary Button--primary--white Button--small" type="button">Small primary button</button>
 {% endexample %}
 
 
