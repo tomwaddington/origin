@@ -5,6 +5,8 @@ scss-filename: _button.scss
 title: Button
 ---
 
+Note: this is candidate component and is not currently being used in production
+
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
