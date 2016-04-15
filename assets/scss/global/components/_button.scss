@@ -109,14 +109,14 @@ button:focus {
   @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, .12));
   @include linear-gradient($color--fa-green, darken($color--fa-green, 5%));
   border-color: darken($color--fa-green, 3%) darken($color--fa-green, 6%) darken($color--fa-green, 12%);
-  color: darken($color--fa-green, 33%);
-  text-shadow: 0 1px 0 lighten($color--fa-green, 10%);
+  color: #fff;
+  text-shadow: 0 1px 0 darken($color--fa-green, 14%);
 }
 
 .Button--primary:hover {
   background: darken($color--fa-green, 6%);
   border-top-color: darken($color--fa-green, 3%);
-  color: darken($color--fa-green, 32%);
+  color: #fff;
 }
 
 .Button--primary:active,
@@ -124,26 +124,6 @@ button:focus {
   @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
   background: darken($color--fa-green, 8%);
   border-color: darken($color--fa-green, 8%);
-  text-shadow: 0 1px 0 lighten($color--fa-green, 2%);
-}
-
-/**
- * Positive button variant with white text
- *
- * Used on freeagent.com
- */
-
-.Button--primary--white {
-  color: #fff;
-  text-shadow: 0 1px 0 darken($color--fa-green, 14%);
-}
-
-.Button--primary--white:hover {
-  color: #fff;
-}
-
-.Button--primary--white:active,
-.Button--primary--white:focus {
   text-shadow: 0 1px 0 darken($color--fa-green, 20%);
 }
 
