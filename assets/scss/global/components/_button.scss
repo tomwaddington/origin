@@ -280,11 +280,6 @@ button:focus {
   display: block;
 }
 
-.Button--primary .Button-label--primary {
-  color: #fff;
-  text-shadow: 0 1px 0 darken($color--fa-green, 14%);
-}
-
 .Button-label--secondary {
   @include font-size(small);
   @include font-weight(normal);
