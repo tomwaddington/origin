@@ -23,7 +23,7 @@ button:focus {
   @include font-size(default);
   @include font-weight(semi-bold);
   @include linear-gradient(#fff, darken(#fff, 6%));
-  @include padding(3 6);
+  @include padding(3 4);
   @include tap-highlight(none);
   @include text-color(base);
   @include user-select(none);
@@ -87,7 +87,7 @@ button:focus {
 
 .Button--large {
   @include font-size(large);
-  @include padding(4 7);
+  @include padding(4 5);
 }
 
 /**
@@ -96,7 +96,7 @@ button:focus {
 
 .Button--small {
   @include font-size(small);
-  @include padding(2 4);
+  @include padding(2 3);
 }
 
 /**
@@ -124,7 +124,7 @@ button:focus {
   @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
   background: darken($color--fa-green, 8%);
   border-color: darken($color--fa-green, 8%);
-  text-shadow: none;
+  text-shadow: 0 1px 0 darken($color--fa-green, 20%);
 }
 
 /**
@@ -278,10 +278,6 @@ button:focus {
 
 .Button-label {
   display: block;
-}
-
-.Button-label--primary {
-  @include font-size(large);
 }
 
 .Button-label--secondary {

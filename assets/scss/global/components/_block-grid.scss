@@ -96,7 +96,7 @@ $block-grid-media-queries: true !default;
 
   @if $per-row {
     > .#{$block-grid-element-class} {
-        width: 100% / $per-row;
+      width: 100% / $per-row;
 
       @if $include-spacing {
         padding: 0 ($spacing / 2) $spacing;
@@ -104,12 +104,12 @@ $block-grid-media-queries: true !default;
     }
 
     > .#{$block-grid-element-class}:nth-of-type(1n) {
-        clear: none;
-      }
+      clear: none;
+    }
 
     > .#{$block-grid-element-class}:nth-of-type(#{$per-row}n+1) {
-        clear: both;
-      }
+      clear: both;
+    }
 
     @if $align-block-grid-to-grid {
       @include block-grid-aligned($per-row, $spacing);

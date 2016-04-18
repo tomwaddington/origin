@@ -48,27 +48,27 @@
    * Generate default spacing classes
    */
 
-   .u-padding {
-     padding: $spacing--default !important;
-   }
+  .u-padding {
+    padding: $spacing--default !important;
+  }
 
-   .u-padding-bottom {
-     padding-bottom: $spacing--default !important;
-   }
+  .u-padding-bottom {
+    padding-bottom: $spacing--default !important;
+  }
 
-   .u-padding-left {
-     padding-left: $spacing--default !important;
-   }
+  .u-padding-left {
+    padding-left: $spacing--default !important;
+  }
 
-   .u-padding-right {
-     padding-right: $spacing--default !important;
-   }
+  .u-padding-right {
+    padding-right: $spacing--default !important;
+  }
 
-   .u-padding-top {
-     padding-top: $spacing--default !important;
-   }
+  .u-padding-top {
+    padding-top: $spacing--default !important;
+  }
 
-   @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
+  @each $breakpoint-size, $breakpoint-value in $breakpoint-values {
 
      /**
       * Generate scale spacing classes with breakpoints
@@ -78,37 +78,37 @@
       * practice the full scale has never been needed.
       */
 
-     @include break($breakpoint-size) {
-       .u-#{$breakpoint-size}-padding {
-         padding: $spacing--default !important;
-       }
-     }
+    @include break($breakpoint-size) {
+      .u-#{$breakpoint-size}-padding {
+        padding: $spacing--default !important;
+      }
+    }
 
-     @include break($breakpoint-size) {
-       .u-#{$breakpoint-size}-padding-bottom {
-         padding-bottom: $spacing--default !important;
-       }
-     }
+    @include break($breakpoint-size) {
+      .u-#{$breakpoint-size}-padding-bottom {
+        padding-bottom: $spacing--default !important;
+      }
+    }
 
-     @include break($breakpoint-size) {
-       .u-#{$breakpoint-size}-padding-left {
-         padding-left: $spacing--default !important;
-       }
-     }
+    @include break($breakpoint-size) {
+      .u-#{$breakpoint-size}-padding-left {
+        padding-left: $spacing--default !important;
+      }
+    }
 
-     @include break($breakpoint-size) {
-       .u-#{$breakpoint-size}-padding-right {
-         padding-right: $spacing--default !important;
-       }
-     }
+    @include break($breakpoint-size) {
+      .u-#{$breakpoint-size}-padding-right {
+        padding-right: $spacing--default !important;
+      }
+    }
 
-     @include break($breakpoint-size) {
-       .u-#{$breakpoint-size}-padding-top {
-         padding-top: $spacing--default !important;
-       }
-     }
+    @include break($breakpoint-size) {
+      .u-#{$breakpoint-size}-padding-top {
+        padding-top: $spacing--default !important;
+      }
+    }
 
-   }
+  }
 
   @each $spacing-size, $standard-scale-spacing-value in $standard-scale-spacing-values {
 

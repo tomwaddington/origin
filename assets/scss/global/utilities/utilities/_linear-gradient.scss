@@ -53,7 +53,7 @@
     } @else if ("#{$side} #{$corner}" == "left bottom") or ("#{$side} #{$corner}" == "bottom left") {
       $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
     }
-      $spec: to $side $corner;
+    $spec: to $side $corner;
   } @else if $length == 1 {
     // Swap for backwards compatability
     @if $type == string {
@@ -99,8 +99,8 @@
   // If $pos is missing from mixin, reassign vars and add default position
   @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
     $G10: $G9; $G9: $G8; $G8: $G7; $G7: $G6; $G6: $G5;
-     $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
-     $pos: null;
+    $G5: $G4; $G4: $G3; $G3: $G2; $G2: $G1; $G1: $pos;
+    $pos: null;
   }
 
   @if $pos {
